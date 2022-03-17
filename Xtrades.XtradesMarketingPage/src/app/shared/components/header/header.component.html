@@ -1,0 +1,14 @@
+<div class="header responsive-main-container"
+  [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
+  <div [routerLink]="['/']"> <img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.svg' width="85" height="56"></div>
+  <div class="header__elements" *ngIf="!isMobile">
+    <span *ngFor="let element of headerProvider.headerElements">
+      <a class="link" [href]="element.directUrl">{{element.title}}</a>
+    </span>
+  </div>
+  <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleJoinChatClick()" *ngIf="!isMobile">Join
+    Chat</app-x-button>
+</div>
+<ng-container #mobileHeader *ngIf="isMobile && isMenuOpened">
+  <app-mobile-header (triggerClose)="onMobileMenuClose()"></app-mobile-header>
+</ng-container>

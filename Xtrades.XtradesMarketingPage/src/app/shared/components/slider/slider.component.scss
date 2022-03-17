@@ -1,0 +1,118 @@
+@import "../../../../styles/vars.scss";
+@import "../../../../styles/mixins.scss";
+
+.info-slide {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media (max-width: $md) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+::ng-deep .detailed-swiper-button-prev,
+::ng-deep .detailed-swiper-button-next {
+    width: 47px;
+    &::after {
+        color: var(--x-action);
+        font-size: 25px !important;
+        font-weight: 900;
+        padding: 30px 20px;
+        filter: brightness(1.1);
+    }
+    &.swiper-button-disabled {
+        pointer-events: unset;
+    }
+}
+::ng-deep .swiper-pagination {
+    --swiper-pagination-color: var(--x-action);
+    filter: brightness(1.1);
+}
+
+::ng-deep .detailed-swiper-button-prev {
+    background-image: url("/assets/arrow-left.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+::ng-deep .detailed-swiper-button-next {
+    background-image: url("/assets/arrow-right.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+::ng-deep .detailed-swiper-button-prev::after {
+    display: none;
+    left: 0;
+}
+
+::ng-deep .detailed-swiper-button-next::after {
+    display: none;
+    right: 0;
+}
+
+::ng-deep .detailed-swiper-pagination {
+    --swiper-pagination-color: white;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    left: 50% !important;
+}
+
+.swiper-page-order {
+    font-style: normal;
+    font-weight: bold;
+    @include dynamic-font(140px, 0.5);
+    text-align: center;
+    display: block;
+    background-color: #0c1424;
+    background-image: url("/assets/number-shadow.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.swiper-order {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em 0;
+    @media (max-width: $md) {
+        margin: 0 auto;
+    }
+}
+
+.detailed-swiper-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 130%;
+    text-align: left;
+    padding: 0 0 1em 0;
+}
+
+.detailed-swiper-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 130%;
+    padding: 0 0.5em;
+    text-align: left;
+
+    span {
+        --grey: rgba(95, 100, 108, 1);
+        -webkit-text-stroke: 1px var(--grey); /* width and color */
+        color: transparent;
+    }
+}

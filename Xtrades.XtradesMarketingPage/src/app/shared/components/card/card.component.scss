@@ -1,0 +1,71 @@
+@import "../../../../styles/vars.scss";
+
+
+.wrapper:not(:empty) + .default {
+  display: none;
+}
+
+.default {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--card-default-padding, 0px);
+  @media (max-width: $lg) {
+    left: calc(50% - 30px);
+    text-align: center;
+  }
+}
+
+.card {
+  padding: var(--card-padding);
+  box-shadow: 5px 15px 10px -5px rgb(0 0 0 / 20%);
+  background: var(--card-background);
+  color: var(--card-color, var(--black));
+  border-radius: 16px;
+  overflow: hidden;
+  width: var(--card-width, unset);
+  height: var(--card-height, 100%);
+
+  &__title {
+    padding: var(--card-title-padding);
+    font-size: var(--card-title-font-size, 35px);
+    font-weight: var(--card-title-font-weight, 1000);
+    line-height: normal;
+    max-width: 420px;
+    margin: var(--card-title-margin);
+    &.squeezed {
+      padding: 0px;
+      max-width: 10px;
+      padding-left: 20px;
+    }
+    @media (max-width: $lg) {
+      margin: var(--card-title-margin);
+    }
+  }
+
+  &__subtitle {
+    font-size: var(--card-subtitle-font-size, 18px);
+    font-weight: var(--card-subtitle-font-weight, 400);
+    line-height: 1.5em;
+    color: var(--card-subtitle-color, rgb(127, 129, 136));
+    &.squeezed {
+      padding: 10px 0px 30px 20px;
+    }
+  }
+
+  &__image {
+    padding: 20px 20px 0px;
+    img {
+      width: 27%;
+    }
+  }
+
+  &__content {
+    padding: var(--card-content-padding);
+    flex: 1;
+  }
+
+  &__button {
+    z-index: 1;
+  }
+}

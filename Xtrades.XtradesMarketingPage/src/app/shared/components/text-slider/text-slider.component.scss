@@ -1,0 +1,136 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+swiper,
+swiper > * {
+    width: 80%;
+    height: 100%;
+    @media (max-width: 991px) {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.gradient-overlay {
+    margin: 3em;
+    @media (max-width: $md) {
+        margin: .5em 0.5em 3em 0.5em;
+    }
+}
+
+::ng-deep .swiper-button-prev,
+::ng-deep .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    @media (max-width: $md) {
+        top: calc(100% - 1.5em);
+    }
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    &::after {
+        color: var(--x-action);
+        font-size: 25px !important;
+        font-weight: 900;
+        padding: 30px 20px;
+        filter: brightness(1.1);
+    }
+    &.swiper-button-disabled {
+        pointer-events: unset;
+    }
+}
+::ng-deep .swiper-pagination {
+    --swiper-pagination-color: var(--x-action);
+    filter: brightness(1.1);
+    position: absolute;
+    --swiper-pagination-color: white;
+    transform: translateX(-50%);
+    bottom: 0;
+    left: 10%;
+}
+::ng-deep .swiper-container-horizontal > .swiper-pagination.swiper-pagination-bullets {
+    left: 50%;
+    @media (max-width: $md) {
+        width: 50%;
+    }
+}
+::ng-deep .swiper-pagination .swiper-pagination-bullet {
+    color: #2F3659;
+    background-color: white;
+}
+::ng-deep .swiper-button-prev {
+    background-image: url("/assets/arrow-left.svg");
+    
+}
+::ng-deep .swiper-button-next {
+    background-image: url("/assets/arrow-right.svg");
+}
+::ng-deep .swiper-button-prev::after {
+    display: none;
+    left: 0;
+    bottom: -100%;
+}
+::ng-deep .swiper-button-next::after {
+    display: none;
+    right: 0;
+    bottom: -100%;
+}
+
+.testimonials {
+    &__testimonial {
+        border: 1px solid transparent;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        border-radius: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-image: url("/assets/slider-bg.webp"), linear-gradient(243.56deg, #24324f 0%, #0c1424 100%);
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom right, left;
+    }
+    &__quote {
+        font-style: normal;
+        font-weight: normal;
+        @include dynamic-font(28px, 0.75);
+        line-height: 180%;
+        padding: 2em 0 1.5em 0;
+        width: 80%;
+
+        &::before,
+        &::after {
+            display: block;
+            color: #2e4167;
+            position: absolute;
+            font-size: 120px;
+            z-index: 100;
+        }
+
+        &::before {
+            content: "“";
+            left: -7%;
+        }
+
+        &::after {
+            content: "”";
+            right: -5%;
+        }
+    }
+    &__signature {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 180%;
+        padding: 0.5em 0 2em 0.5em;
+        margin-bottom: 2em;
+    }
+
+    &__avatar {
+        --swiper-width: 70px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-top: 2em;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/vars.scss";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--hero-items-alignment, flex-start);
+  justify-content: center;
+  width: var(--app-hero-width, unset);
+  &__main {
+    width: var(--app-hero-width, unset);
+    @include dynamic-font(75px);
+  }
+  @media (max-width: $md) {
+    align-items: var(--hero-items-alignment, center);
+  }
+}

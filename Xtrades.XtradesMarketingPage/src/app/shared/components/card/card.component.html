@@ -1,0 +1,43 @@
+<!-- <div [attr.data-aos]="screenService.isMobile ? 'fade-left' : ''" class="card"> -->
+<app-icon-card *ngIf="iconPath" [iconPath]="iconPath" [iconAlt]="iconAlt"></app-icon-card>
+<div class="card relative">
+  <div *ngIf="backgroundNoise" class="background-noise">
+  </div>
+  <div class="default">
+    <div *ngIf="titleImgSrc" class="card__image">
+      <img lazy appImgLazy [src]="titleImgSrc" alt=''>
+    </div>
+    <ng-container *ngIf="screenService.isMobile">
+      <div *ngIf="title" class="card__title header-2" data-aos="fade-up" [class.squeezed]="squeezed">
+        {{title}}
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!screenService.isMobile">
+      <div *ngIf="title" class="card__title header-2" [class.squeezed]="squeezed">
+        {{title}}
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="screenService.isMobile">
+      <div *ngIf="subtitle" class="card__subtitle" data-aos="fade-up" [class.squeezed]="squeezed">
+        {{subtitle}}
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!screenService.isMobile">
+      <div *ngIf="subtitle" class="card__subtitle" [class.squeezed]="squeezed">
+        {{subtitle}}
+      </div>
+    </ng-container>
+
+    <div class="card__content">
+      <ng-content></ng-content>
+    </div>
+    <div class="card__button">
+      <ng-content select="[button]"></ng-content>
+    </div>
+  </div>
+  <div class="custom-content">
+    <ng-content select="[customContent]">
+    </ng-content>
+  </div>
+</div>

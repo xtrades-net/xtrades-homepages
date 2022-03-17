@@ -1,0 +1,15 @@
+@mixin dynamic-font($baseSize, $xs-factor: .58) {
+  font-size: $baseSize;
+  @media (max-width: 1200px) {
+    font-size: calc(0.9 * #{$baseSize});
+  }
+  @media (max-width: 992px) {
+    font-size: calc(0.75 * #{$baseSize});
+  }
+  @media (max-width: 768px) {
+    font-size: calc(0.66 * #{$baseSize});
+  }
+  @media (max-width: 576px) {
+    font-size: calc(#{$xs-factor} * #{$baseSize});
+  }
+}

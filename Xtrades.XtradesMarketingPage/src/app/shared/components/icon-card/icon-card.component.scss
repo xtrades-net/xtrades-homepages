@@ -1,0 +1,30 @@
+@import "../../../../styles/vars.scss";
+
+
+.icon-card {
+  width: 60px;
+  height: 60px;
+
+  position: var(--icon-card-position, absolute);
+  left: var(--icon-card-left);
+  top: var(--icon-card-top);
+  z-index: 1;
+
+  border-radius: 16px;
+  background: var(--main-gradient);
+
+  
+  @media (max-width: $lg) {
+    left: calc(50% - 30px);
+    text-align: center;
+  }
+
+  &__img {
+    width: 59px;
+    height: 59px;
+    top: .5px;
+    left: .5px;
+    background: #060e1f;
+    border-radius: 16px;
+  }
+}

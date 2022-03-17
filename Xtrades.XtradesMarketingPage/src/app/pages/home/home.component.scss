@@ -1,0 +1,602 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+:host {
+  font-weight: 1000;
+  min-height: 100vh;
+}
+
+.hero-section {
+  min-height: 40vh;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 1em;
+  @media (max-width: $md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 1em;
+    padding: 1em 0 0 0;
+  }
+  .hero {
+    &__main {
+      font-weight: 700;
+      text-align: left;
+      width: 120%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: url("/assets/text-bg.webp");
+      background-size: cover;
+      color: transparent;
+      &__header-detail {
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: url("/assets/text-bg-grey.webp");
+        background-size: cover;
+        color: transparent;
+      }
+      @media (max-width: $md) {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+    &__description {
+      max-width: 980px;
+      width: 80%;
+      font-size: 18px;
+      padding-bottom: 30px;
+      color: var(--grey);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 180%;
+      padding-top: 3em;
+      @media (max-width: 992px) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    &__buttons-row {
+      display: flex;
+      justify-content: left;
+      @media (max-width: 992px) {
+        justify-content: center;
+      }
+      flex-wrap: wrap;
+      gap: 10px;
+      * {
+        max-width: 350px;
+        flex: 1;
+        --x-button-height: 60px;
+        @media (max-width: 992px) {
+          --x-button-width: 100%;
+        }
+      }
+    }
+    &__desktop {
+      width: 100%;
+    }
+    &__desktop-img {
+      display: block;
+      transform: translate3d(100px, 0, 0);
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
+    &__desktop-levelup-img {
+      background: transparent;
+      bottom: 13%;
+      left: -20%;
+
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
+    &__mobile {
+      display: flex;
+      justify-content: center;
+    }
+    &__mobile-img {
+      display: none;
+      @media (max-width: $md) {
+        display: block;
+      }
+    }
+    &__mobile-levelup-img {
+      width: 35%;
+      left: 10%;
+      bottom: -5%;
+    }
+  }
+}
+
+.stats {
+  min-height: 200px;
+  overflow: hidden;
+
+  &__cards {
+    margin: 0 auto;
+  }
+  &__card-wrapper {
+    --card-background: var(--dark-grey-detail);
+    --card-padding: 1.5em 3em;
+    --card-title-margin: 0 auto;
+
+    max-height: 125px;
+    text-align: center;
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    &__card-wrapper {
+      width: 100%;
+      grid-row: unset;
+      grid-column: 1;
+    }
+  }
+}
+
+.app-separator {
+  margin: 1em 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.power-of-xtrades {
+  padding: var(--section-padding);
+  &__description {
+    max-width: 980px;
+    width: 70%;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    @media (max-width: $lg) {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__cards {
+    margin: 3em auto;
+  }
+  &__card-wrapper {
+    --card-background: linear-gradient(243.56deg, #24324f 0%, #0c1424 100%);
+    --card-title-margin: 0;
+    --card-padding: 4em 2em;
+    --icon-card-width: 60px;
+    --icon-card-height: 60px;
+
+    --card-title-font-weight: bold;
+    --card-title-padding: 0.5em 0;
+
+    text-align: left;
+
+    @media (max-width: $lg) {
+      --card-title-margin: auto;
+    }
+
+    --icon-card-top: -30px;
+    --icon-card-left: 30px;
+  }
+
+  &__hero {
+    @media (max-width: $lg) {
+      text-align: center;
+      margin: 0 auto;
+      justify-content: center;
+      --hero-items-alignment: center;
+      padding: 2em 0;
+    }
+  }
+  &__main {
+    @media (max-width: $lg) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  app-card:nth-of-type(2n + 1) {
+    transform: translate3d(0, 50px, 0);
+    @media (max-width: $lg) {
+      transform: none;
+    }
+  }
+
+  &__desktop-chat {
+    display: block;
+    margin: auto;
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
+
+  &__mobile-chat {
+    display: none;
+    @media (max-width: $lg) {
+      display: block;
+
+      .hero__buttons-row {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.xtrades-edge {
+  padding: var(--section-padding);
+  --icon-card-position: relative;
+
+  &__hero {
+    --hero-items-alignment: center;
+    justify-content: center;
+
+    width: 100%;
+    .hero {
+      align-items: center;
+    }
+  }
+
+  &__hero-description {
+    width: 60%;
+    padding: 2em 0;
+    text-align: center;
+    @media (max-width: $lg) {
+      width: 100%;
+    }
+  }
+
+  &__box-description {
+    @media (max-width: $lg) {
+      text-align: center;
+    }
+  }
+
+  &__icon-card {
+    padding: 0 0 1em 0;
+    @media (max-width: $lg) {
+      padding: 2em 0;
+    }
+  }
+
+  .flex {
+    padding: 0 0 3em 0;
+    .column {
+      width: 50%;
+      padding: 0 1em;
+      @media (max-width: $lg) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.xtrades-alerts {
+  padding: var(--section-padding);
+  overflow: hidden;
+
+  --icon-card-position: relative;
+  --x-button-max-width: 100%;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 1em;
+    .column {
+      width: 100%;
+      padding: 0 1em;
+      @media (max-width: $md) {
+        padding: 0;
+        margin: 0 auto;
+        justify-content: center;
+      }
+    }
+  }
+
+  .gradient-overlay {
+    width: 100%;
+    height: 100%;
+    max-width: 514px;
+    max-height: 548px;
+    margin: 0 auto;
+  }
+
+  &__card-wrapper {
+    --card-title-margin: 74px auto 0 auto;
+    --card-width: 100%;
+    --card-height: 100%;
+
+    min-width: 286px;
+    max-width: 512px;
+    max-height: 546px;
+
+    text-align: center;
+    background-size: cover;
+    border: 1px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 18px;
+    display: flex;
+    background-color: #0c1424;
+    background-image: url("/assets/membership-card-bg.webp");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, top;
+
+    max-width: 100vw !important;
+  }
+
+  &__hero {
+    --hero-items-alignment: center;
+    justify-content: center;
+
+    width: 100%;
+    .hero {
+      align-items: center;
+    }
+  }
+
+  .hero__buttons-row {
+    margin-bottom: 47px;
+  }
+
+  &__hero-description {
+    width: 60%;
+    padding: 2em 0;
+    text-align: center;
+    @media (max-width: $lg) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__box-description {
+    @media (max-width: $lg) {
+      text-align: center;
+    }
+  }
+
+  &__icon-card {
+    padding: 0 0 1em 0;
+    @media (max-width: $lg) {
+      padding: 2em 0;
+    }
+  }
+
+  app-slider {
+    width: 100%;
+    max-width: 625px;
+    margin: 0 auto;
+  }
+
+  .buttons-row__enter-discord {
+    display: flex;
+    justify-content: center;
+    --x-button-max-width: 100%;
+
+    white-space: nowrap;
+  }
+
+  &__card-label {
+    margin: 20px 0 0 0;
+  }
+
+  .buttons-row__pricing {
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 60px 0;
+    text-align: center;
+    sup {
+      font-size: 35px;
+      color: var(--grey);
+    }
+  }
+}
+
+.news {
+  padding: var(--section-padding);
+
+  &__hero {
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    --hero-items-alignment: center;
+  }
+
+  &__description {
+    width: 70%;
+    padding: 1em 0;
+  }
+
+  &__article-hero {
+    --hero-items-alignment: left;
+  }
+
+  app-label {
+    margin: 0.75em auto 0.75em 0;
+  }
+
+  &__article-main {
+    font-size: 25px;
+    padding-bottom: 0.75em;
+    @media (max-width: $lg) {
+      align-items: flex-start;
+      text-align: left;
+      text-justify: auto;
+    }
+  }
+
+  &__article-description {
+    font-size: 16px;
+  }
+
+  --app-hero-width: 100%;
+}
+
+.testimonials {
+  padding: var(--section-padding);
+  width: 100%;
+
+  &__hero {
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    --hero-items-alignment: center;
+  }
+
+  &__description {
+    width: 70%;
+    padding: 1em 0;
+  }
+}
+
+.faq {
+  padding: var(--section-padding);
+  width: 100%;
+
+  --app-hero-width: 100%;
+
+  &__hero {
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    --hero-items-alignment: center;
+    padding: 2em 0;
+  }
+
+  &__main {
+    @include dynamic-font(50px, 0.5);
+  }
+
+  &__article-hero {
+    padding: 1em;
+    .flex {
+      align-items: center;
+      padding-bottom: 0.75em;
+      @media (max-width: 992px) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__questions {
+    width: 100%;
+    max-width: 846px;
+    margin: 0 auto;
+  }
+
+  &__article-main {
+    font-size: 25px;
+    @media (max-width: $lg) {
+      align-items: flex-start;
+      text-align: left;
+      text-justify: auto;
+    }
+  }
+
+  &__article-description {
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+    height: 0;
+    &.expanded {
+      opacity: 1;
+      height: 100%;
+    }
+  }
+
+  &__toggle-button {
+    outline: none;
+    border: none;
+    background: url("/assets/open.svg");
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+  }
+
+  .expanded {
+    button {
+      transition: background-image 0.15s ease-in-out;
+      background: url("/assets/close.svg");
+    }
+  }
+}
+
+.mailing-list {
+  padding: var(--section-padding);
+  --hero-alignment-items: center;
+  --app-hero-width: 100%;
+  width: 100%;
+
+  .border-white {
+    border: 1px solid var(--white);
+  }
+  .overlay {
+    max-width: 547px;
+    margin: 0 auto;
+  }
+  &__wrapper {
+    padding: 4em;
+    background: url("/assets/mailing-list-bg.webp"), linear-gradient(243.56deg, #57376a 0%, #162441 100%);
+    background-position: no-repeat, no-repeat;
+    background-size: cover, cover;
+    border-radius: 18px;
+    @media (max-width: $md) {
+      padding: 3em 1em;
+    }
+  }
+  &__main {
+    padding: 1em 1em 0.5em 1em;
+  }
+  &__form {
+    padding: 0 1em 3em 1em;
+  }
+  &__label {
+    display: none;
+  }
+  &__input {
+    outline: none;
+    background: transparent;
+    max-width: 547px;
+    max-height: 66px;
+    width: 100%;
+    border-radius: 14px;
+    color: var(--white);
+    padding-right: 15em;
+
+    max-width: 547px;
+
+    @media (max-width: $md) {
+      padding-right: 5em;
+    }
+
+    &::placeholder {
+      color: var(--white);
+      font-style: normal;
+      font-weight: normal;
+      @include dynamic-font(16px, 0.75);
+      line-height: 180%;
+    }
+  }
+  &__btn {
+    outline: none;
+    background: transparent;
+    border: none;
+    height: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 1em;
+    right: 0;
+    top: 0;
+    color: var(--white);
+  }
+  .already-subscribed {
+    font-weight: 500;
+    padding: 1em 0;
+  }
+}

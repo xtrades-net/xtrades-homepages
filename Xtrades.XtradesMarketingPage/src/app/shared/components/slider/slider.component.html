@@ -1,0 +1,26 @@
+<swiper class="swiper" [config]="config">
+  <ng-template swiperSlide *ngFor="let image of inputData">
+    <div class="slide">
+
+      <div class="swiper-zoom-container flex column">
+        <div class="info-slide">
+          <div class="flex space-between">
+            <div class="swiper-page-order">#{{image.page}}</div>
+            <div class="swiper-order">
+              <div class="detailed-swiper-button-prev cursor-pointer"></div>
+              <div class="detailed-swiper-text cursor-pointer">{{image.page}}<span> / {{inputData.length}}</span>
+              </div>
+              <div class="detailed-swiper-button-next cursor-pointer"></div>
+            </div>
+          </div>
+          <div class="detailed-swiper-title">{{image.title}}</div>
+        </div>
+        <img lazy class="content__image" *ngIf="image.src" [src]="image.src" draggable="false"
+          width="600" height="300"
+          [title]="image.name ? image.name : ''" [alt]="image.alt">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-scrollbar"></div>
+  </ng-template>
+</swiper>

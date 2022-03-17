@@ -1,0 +1,26 @@
+<div class="content__wrapper">
+  <div class="content__swiper-container">
+    <swiper class="swiper" [config]="config">
+      <ng-template swiperSlide *ngFor="let item of testimonials">
+        <div class="slide column slider-container">
+          <div class="swiper-zoom-container">
+            <div class="gradient-overlay">
+              <div class="testimonials__testimonial flex column relative">
+                <div class="testimonials__quote relative" data-aos="fade-up">
+                  {{item.quote}}
+                </div>
+                <img lazy [src]="item.image" class="testimonials__avatar" alt="Avatar" data-aos="fade-up" />
+                <span class="testimonials__signature">{{item.name}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+
+        <div *ngIf="testimonials.length !== 1" class="swiper-button-prev cursor-pointer"></div>
+        <div *ngIf="testimonials.length !== 1" class="swiper-button-next cursor-pointer"></div>
+      </ng-template>
+    </swiper>
+  </div>
+</div>
