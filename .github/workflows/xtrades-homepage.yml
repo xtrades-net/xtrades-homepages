@@ -1,0 +1,36 @@
+name: Xtrades Homepage - Deploy to Production
+on:
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: 'Xtrades.XtradesMarketingPage/src'
+  NODE_VERSION: '14.x'
+  AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WWW }}
+  
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up Node.js version
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Npm install, build
+      run: |
+        npm install
+        npm run ng build
+      working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+    - name: Deploy
+      id: builddeploy
+      uses: Azure/static-web-apps-deploy@v1
+      with:
+        azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing api token for app
+        action: "upload"
+        app_location: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/dist/xtrades'
+        output_location: ''
+        skip_app_build: true
