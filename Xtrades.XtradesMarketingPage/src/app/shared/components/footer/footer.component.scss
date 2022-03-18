@@ -59,4 +59,9 @@
     font-weight: normal;
     white-space: pre-wrap;
     word-break: break-all;
+
+    &--text {
+        font-size: 8px;
+        padding: 0 10px;
+    }
 }

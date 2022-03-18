@@ -62,7 +62,9 @@ body {
     .header-1 {
         font-weight: 700;
         @include dynamic-font(62px, 0.5);
-        span, .faq__hero-detail, div {
+        span,
+        .faq__hero-detail,
+        div {
             color: #8892ad;
             font-weight: 500;
         }
@@ -172,7 +174,6 @@ input {
     }
 }
 
-
 .inactive-scroll {
     min-height: 100%;
     max-height: 100%;
@@ -220,7 +221,6 @@ input {
     text-align: center;
 }
 
-
 .gradient-overlay {
     background: var(--main-gradient);
     border: 1px solid transparent;
@@ -231,6 +231,21 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-   -webkit-transition-delay: 9999s;
-   transition-delay: 9999s;
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(221, 221, 221, 0.2);
+    border-radius: 8px;
 }
