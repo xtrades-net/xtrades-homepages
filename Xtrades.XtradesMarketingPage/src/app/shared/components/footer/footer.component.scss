@@ -38,6 +38,12 @@
         background: #182847;
         border-radius: 8px;
         margin-right: 1em;
+        padding: 0.2em;
+    }
+
+    &__image {
+        max-width: 88px;
+        max-height: 40px;
     }
 
     &__images-container {

@@ -8,6 +8,9 @@
   </div>
   <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleJoinChatClick()" *ngIf="!isMobile">Join
     Chat</app-x-button>
+  <ng-container *ngIf="isMobile">
+    <img img class="menu pointer" src='assets/xtrades-menu.svg' (click)="onMobileMenuOpen()" />
+  </ng-container>
 </div>
 <ng-container #mobileHeader *ngIf="isMobile && isMenuOpened">
   <app-mobile-header (triggerClose)="onMobileMenuClose()"></app-mobile-header>

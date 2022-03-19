@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   handleJoinChatClick(): void {
-    window.location.href = 'https://discord.com/invite/xtrades';
+    window.location.href = 'http://discord.gg/xtrades';
   }
 
   onMobileMenuOpen(): void {
