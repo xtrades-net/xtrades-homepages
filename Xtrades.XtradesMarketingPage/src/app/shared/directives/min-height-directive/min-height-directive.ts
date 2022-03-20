@@ -1,5 +1,6 @@
-import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
-import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Event as NavigationEvent } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Directive({
@@ -15,10 +16,17 @@ export class MinHeightDirective implements OnInit {
 
   ngOnInit(): void {
     this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: RouterEvent) => {
-        if (event.url !== '/')
-          this.renderer.setStyle(this.el.nativeElement, 'min-height', '100%');
+      .pipe(
+        filter(
+          (event: NavigationEvent): event is NavigationEnd =>
+            event instanceof NavigationEnd
+        )
+      )
+      .subscribe((e: NavigationEvent) => {
+        if (e instanceof NavigationEnd) {
+          if (e.url !== '/')
+            this.renderer.setStyle(this.el.nativeElement, 'min-height', '100%');
+        }
       });
   }
 }
