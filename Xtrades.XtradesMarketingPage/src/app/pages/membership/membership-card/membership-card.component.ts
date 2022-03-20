@@ -7,6 +7,6 @@ import { MembershipCard } from '../membership/membership.model';
   styleUrls: ['./membership-card.component.scss'],
 })
 export class MembershipCardComponent {
-  @Input() data: MembershipCard;
+  @Input() data!: MembershipCard;
   @Output() actionClicked = new EventEmitter();
 }

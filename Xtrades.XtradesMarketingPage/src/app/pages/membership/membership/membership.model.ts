@@ -6,7 +6,7 @@ export class MembershipCardPriceTag {
   ) {}
 }
 
-export class MembershipCard {
+export type MembershipCard = {
   selected: boolean;
   title: string;
   priceTag: MembershipCardPriceTag;
@@ -22,7 +22,7 @@ export class MembershipCard {
   paymentDescription: string;
   oneTimePayment?: boolean;
   lostFeatures: { name: string; description: string }[];
-}
+};
 
 export enum MembershipPossibleActions {
   cancelPlan = 'Cancel Plan',
