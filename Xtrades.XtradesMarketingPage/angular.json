@@ -26,7 +26,7 @@
                             "src/Xtrades-logo.ico",
                             "src/assets",
                             "src/_redirects",
-                            "src/homepage.config.json"
+                            "src/staticwebapp.config.json"
                         ],
                         "styles": [
                             "node_modules/aos/dist/aos.css",
@@ -99,7 +99,7 @@
                             "src/Xtrades-logo.ico",
                             "src/assets",
                             "src/_redirects",
-                            "src/homepage.config.json"
+                            "src/staticwebapp.config.json"
                         ],
                         "styles": [
                             "node_modules/aos/dist/aos.css",
