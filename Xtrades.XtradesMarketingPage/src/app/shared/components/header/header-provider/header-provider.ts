@@ -8,6 +8,7 @@ export class HeaderProvider {
 
   constructor() {
     this.populateHeaderElements([
+      HeaderElement.apply({ title: 'Home', directUrl: '' }),
       // HeaderElement.apply({ title: 'App', directUrl: 'app' }),
       // HeaderElement.apply({ title: 'Learn', directUrl: 'learn' }),
       // HeaderElement.apply({ title: 'Earn', directUrl: 'earn' }),
