@@ -28,6 +28,13 @@ const routes: Routes = [
         (m) => m.TermsAndConditionsModule
       ),
   },
+  {
+    path: 'plans',
+    loadChildren: () =>
+      import('./pages/membership/membership.module').then(
+        (m) => m.MembershipModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 

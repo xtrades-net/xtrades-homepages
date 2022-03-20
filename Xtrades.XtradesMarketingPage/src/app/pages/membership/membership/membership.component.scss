@@ -1,0 +1,19 @@
+.membership {
+    &__header {
+        padding: 0.5em 0;
+        width: 50%;
+        font-weight: 700;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+        padding: 20px 0px 20px 10px;
+        flex-wrap: wrap;
+        app-membership-card {
+            flex: 1 1 0;
+            min-width: 210px;
+            min-height: 100%;
+        }
+    }
+}

@@ -24,7 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/Xtrades-logo.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "node_modules/aos/dist/aos.css",
@@ -98,7 +99,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/Xtrades-logo.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "node_modules/aos/dist/aos.css",

@@ -1,8 +1,5 @@
 @import "../../../../styles/mixins";
-
 .hero {
-    white-space: pre-wrap;
-    word-break: break-all;
     padding: 2em 1em;
     &__main {
         padding: 1.5em 0 0 0;
@@ -11,4 +8,12 @@
     &__description {
         padding: 1em 0;
     }
+}
+
+.padding-md {
+    padding: 1em;
+}
+
+.padding-sm {
+    padding: .5em 0;
 }

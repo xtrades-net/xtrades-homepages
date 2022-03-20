@@ -1,0 +1,6 @@
+<div class="membership column responsive-main-container">
+    <div class="membership__header header header-1 header-1-gradient-overlay center"  data-aos="fade-up">Membership Plans</div>
+    <div class="membership__wrapper row">
+        <app-membership-card *ngFor="let option of options" [data]="option" class="membership__card"></app-membership-card>
+    </div>
+</div>
