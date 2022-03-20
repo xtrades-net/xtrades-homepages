@@ -1,0 +1,127 @@
+.card {
+  padding: 24px 24px 48px 24px;
+
+  border: 1px solid #e2eaf1;
+  border-radius: 16px;
+
+  height: 100%;
+  min-width: 210px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__color-green {
+    border-top: solid 8px #5dc0ab;
+
+    .icon {
+      background-color: #5dc0ab;
+    }
+  }
+
+  &__color-yellow {
+    border-top: solid 8px #f6c344;
+
+    .icon {
+    background-color: #f6c344;
+    }
+  }
+
+  &__color-blue {
+    border-top: solid 8px #66defb;
+
+    .icon {
+      background-color: #66defb;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-tag {
+    padding: 10px 0 20px 0;
+    display: flex;
+    align-items: flex-end;
+    &--price {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+    &--price-before {
+      font-size: 26px;
+      font-weight: 400;
+      text-decoration: line-through;
+      color: var(--x-fail);
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    min-height: 40px;
+    padding: .3em 0;
+    font-weight: 400;
+  }
+
+  &__features {
+    width: 100%;
+    padding: 1em 0;
+
+    &__prefix {
+      margin-top: 20px;
+      min-height: 19px;
+    }
+
+    &__feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px;
+      &--description {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__action {
+    margin-top: 10px;
+    min-height: 44px;
+
+    &__error {
+      color: var(--x-fail);
+    }
+
+    &--button {
+      width: 100%;
+      --border-width: 1.5px;
+      --border-color: var(--x-text-extra-light);
+      &.selected {
+        --border-color: var(--x-red-primary);
+        --color: var(--x-red-primary);
+      }
+      &--img {
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__info {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.icon {
+  width: 8px;
+  height: 8px;
+  -webkit-mask: url(/assets/check-solid.svg) no-repeat center center;
+  mask: url(/assets/check-solid.svg) no-repeat center center;
+}

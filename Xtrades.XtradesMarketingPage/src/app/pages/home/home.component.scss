@@ -3,7 +3,6 @@
 
 :host {
   font-weight: 1000;
-  min-height: 100vh;
 }
 
 .hero-section {
@@ -24,14 +23,8 @@
   }
   .hero {
     &__main {
-      font-weight: 700;
       text-align: left;
       width: 120%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-image: url("/assets/text-bg.webp");
-      background-size: cover;
-      color: transparent;
       &__header-detail {
         -webkit-background-clip: text;
         background-clip: text;

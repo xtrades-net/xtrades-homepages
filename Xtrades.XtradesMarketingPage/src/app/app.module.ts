@@ -6,6 +6,7 @@ import { HeaderModule } from '@shared/components/header/header.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from '@shared/components/footer/footer.module';
+import { DirectivesModule } from '@shared/directives/directives.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { FooterModule } from '@shared/components/footer/footer.module';
     HeaderModule,
     FooterModule,
     HttpClientModule,
+    DirectivesModule,
   ],
   providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],

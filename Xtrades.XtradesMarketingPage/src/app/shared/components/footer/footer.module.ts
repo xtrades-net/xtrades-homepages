@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuDropdownModule } from '../menu-dropdown/menu-dropdown.module';
 import { XButtonModule } from '../x-button/x-button.module';
 import { FooterComponent } from './footer.component';
 import { SeparatorModule } from '../separator/separator.module';
@@ -11,7 +10,6 @@ import { RouterModule } from '@angular/router';
   declarations: [FooterComponent],
   imports: [
     CommonModule,
-    MenuDropdownModule,
     XButtonModule,
     SeparatorModule,
     HeroModule,

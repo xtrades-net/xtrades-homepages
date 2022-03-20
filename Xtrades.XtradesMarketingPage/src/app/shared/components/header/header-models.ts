@@ -1,4 +1,10 @@
-import { MenuDropdownElement } from '../menu-dropdown/menu-dropdown-element/menu-dropdown-element.component';
+export class MenuDropdownElement {
+  constructor(
+    public title?: string,
+    public elements?: MenuDropdownElement[],
+    public directUrl?: string
+  ) {}
+}
 
 export class HeaderElement implements MenuDropdownElement {
   constructor(

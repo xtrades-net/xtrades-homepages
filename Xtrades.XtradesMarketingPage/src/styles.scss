@@ -68,6 +68,14 @@ body {
         }
     }
 
+    .header-1-gradient-overlay {
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: url("/assets/text-bg.webp");
+        background-size: cover;
+        color: transparent;
+    }
+
     .header-2 {
         font-weight: 600;
         font-size: 50px;
