@@ -1,32 +1,66 @@
 .button {
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  color: var(--x-button-color, var(--white));
-  background: var(--x-button-background, unset);
-  background-color: var(--x-button-background-color, var(--black));
-  max-width: var(--x-button-max-width);
-  transition: 0.3s;
-  padding: var(--x-button-padding);
-  font-size: var(--x-button-font-size, 18px);
-  font-weight: var(--x-button-font-weight, 700);
-  font-style: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: --brand-black;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--x-button-color, var(--white));
+    background: var(--x-button-background, unset);
+    background-color: var(--x-button-background-color, var(--black));
+    max-width: var(--x-button-max-width);
+    transition: 0.3s;
+    padding: var(--x-button-padding);
+    font-size: var(--x-button-font-size, 18px);
+    font-weight: var(--x-button-font-weight, 700);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: --brand-black;
 
-  &:hover {
-    background-color: var(--white);
-    color: var(--brand-black);
-  }
+    &.inverted {
+        background-color: var(--white);
+        color: var(--brand-black);
+        --clr-neon: var(--white);
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        border: var(--clr-neon) 0.125em solid;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 0.55em 0.25em var(--clr-neon);
+            opacity: 0;
+            background-color: var(--clr-neon);
+            z-index: -1;
+            transition: opacity 100ms linear;
+        }
 
-  &.inverted {
-    color: var(--brand-black);
-    background-color: var(--white);
-  }
+        &:hover,
+        &:focus {
+            text-shadow: none;
+        }
 
-  &.disabled {
-    pointer-events: none;
-    opacity: 0.6;
-  }
+        &:hover::after,
+        &:focus::after {
+            animation: pulsate 1s infinite alternate;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+}
+
+@keyframes pulsate {
+    100% {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0.5;
+    }
 }
