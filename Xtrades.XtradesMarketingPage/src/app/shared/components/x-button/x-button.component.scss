@@ -16,51 +16,24 @@
     color: --brand-black;
 
     &.inverted {
-        background-color: var(--white);
-        color: var(--brand-black);
-        --clr-neon: var(--white);
-        display: inline-block;
-        cursor: pointer;
-        text-decoration: none;
-        border: var(--clr-neon) 0.125em solid;
+        border: 1px solid #fff;
+        color: #000;
+        background-image: -webkit-linear-gradient(30deg, #fff 50%, transparent 50%);
+        background-image: linear-gradient(30deg, #fff 50%, transparent 50%);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: background 300ms ease-in-out;
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            box-shadow: 0 0 0.55em 0.25em var(--clr-neon);
-            opacity: 0;
-            background-color: var(--clr-neon);
-            z-index: -1;
-            transition: opacity 100ms linear;
-        }
-
-        &:hover,
-        &:focus {
-            text-shadow: none;
-        }
-
-        &:hover::after,
-        &:focus::after {
-            animation: pulsate 1s infinite alternate;
+        &:hover {
+            background-position: 100%;
+            color: var(--white);
         }
     }
 
     &.disabled {
         pointer-events: none;
         opacity: 0.6;
-    }
-}
-
-@keyframes pulsate {
-    100% {
-        opacity: 1;
-    }
-
-    0% {
-        opacity: 0.5;
     }
 }
