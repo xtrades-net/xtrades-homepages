@@ -1,0 +1,19 @@
+<!-- <div class="tabs"> -->
+
+<div class="nav flex spacer-top">
+    {{index}}
+    <div class="placeholder"></div>
+    <button appToggle [isNav]="true" class="collapsible" [routerLink]="['server-rules']" [ngClass]="index === 1 || 0 ? 'active' : ''">Xtrades Server Rules and Code
+        of Conduct</button>
+    <button appToggle [isNav]="true" class="collapsible" [routerLink]="['server-guidelines']" [ngClass]="index === 2 ? 'active' : ''">Server Guide</button>
+    <button appToggle [isNav]="true" class="collapsible" [routerLink]="['faq']" [ngClass]="index === 3 ? 'active' : ''">FAQ</button>
+    <button appToggle [isNav]="true" class="collapsible" [routerLink]="['analyst-guidelines']" [ngClass]="index === 4 ? 'active' : ''">Xtrades Analyst
+        Guidelines</button>
+    <div class="placeholder"></div>
+</div>
+
+<div class="tabs__router responsive-main-container">
+    <app-card class="stats__card-wrapper card-wrapper">
+        <router-outlet></router-outlet>
+    </app-card>
+</div>

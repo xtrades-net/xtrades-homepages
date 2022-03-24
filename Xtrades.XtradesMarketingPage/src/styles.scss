@@ -241,3 +241,12 @@ input:-webkit-autofill:active {
     background-color: rgba(221, 221, 221, 0.2);
     border-radius: 8px;
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.subheader {
+    @include dynamic-font(32px,
+    0.5);
+}
