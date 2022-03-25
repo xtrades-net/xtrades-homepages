@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DiscordComponent } from './discord/discord.component';
 import { RouterModule } from '@angular/router';
-import { TabsComponent } from './tabs/tabs.component';
-import { TabComponent } from './tab/tab.component';
 import { HeroModule } from '@shared/components/hero/hero.module';
 import { XButtonModule } from '@shared/components/x-button/x-button.module';
 import { FaqComponent } from './faq/faq.component';
@@ -16,8 +14,6 @@ import { CardModule } from '@shared/components/card/card.module';
 @NgModule({
   declarations: [
     DiscordComponent,
-    TabsComponent,
-    TabComponent,
     FaqComponent,
     AnalystGuidelinesComponent,
     ServerGuideComponent,

@@ -3,7 +3,8 @@
 
 .nav {
     min-width: 300px;
-    width: 100%;
+    display: flex;
+    flex: 1;
     position: sticky;
     top: 0;
     position: -webkit-sticky;

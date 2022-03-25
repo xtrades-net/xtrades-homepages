@@ -1,7 +1,0 @@
-<div class="nav nav-tabs flex">
-  <div *ngFor="let tab of tabs" class="tab flex pointer" (click)="selectTab(tab)" [class.active]="tab.active">
-    {{tab.title}}
-  </div>
-  <div class="placeholder"></div>
-</div>
-<ng-content></ng-content>
