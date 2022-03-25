@@ -1,106 +1,45 @@
 @import "../../../../styles/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-// .nav > * {
-    // border-top: 1px solid white;
-// }
-// :host {
-//     text-align: justify;
-// }
-
-.header-1 {
-    @include dynamic-font(36px, 0.5);
-}
-
-
-// .nav .column {
-//     width: 100%;
-// }
-
-button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+.nav {
+    min-width: 300px;
     width: 100%;
-    // min-height: 100px;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    min-height: 140px;
+    height: 100%;
 }
-
-button {
-    padding: 0 0.5em;
-    border: 1px solid white;
-    // border-bottom: 1px solid white;
-    // width: 100%;
-}
-.active {
-    border-bottom: 1px solid transparent;
-}
-
-.placeholder {
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid white;
-}
-
-.stats__card-wrapper {
-    --card-background: linear-gradient(243.56deg, #24324f 0%, #0c1424 100%);
-    --card-title-margin: 0;
-    --card-padding: 4em 2em;
-    --icon-card-width: 60px;
-    --icon-card-height: 60px;
-
-    --card-title-font-weight: bold;
-    --card-title-padding: 0.5em 0;
-
-    text-align: left;
-
-    --icon-card-top: -30px;
-    --icon-card-left: 30px;
-}
-
-// .collapsible {
-//     border: 1px solid white;
-//     color: white;
-//     cursor: pointer;
-//     padding: 18px;
-//     width: 100%;
-//     // height: 100%;
-//     text-align: left;
-//     outline: none;
-//     font-size: 15px;
-// }
-
-// /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-// .active,
-// .collapsible:hover {
-//     background-color: #ccc;
-// }
-
-// /* Style the collapsible content. Note: hidden by default */
-// .content {
-//     padding: 0 18px;
-//     display: none;
-//     overflow: hidden;
-//     background-color: #f1f1f1;
-//     border: 1px solid white;
-// }
-
-// .collapsible:after {
-//     content: "\02795"; /* Unicode character for "plus" sign (+) */
-//     font-size: 13px;
-//     color: white;
-//     float: right;
-//     margin-left: 5px;
-// }
-
-// .active:after {
-//     content: "\2796"; /* Unicode character for "minus" sign (-) */
-// }
 
 .tabs__router {
-    padding-top: 2em;
+    margin: 0 1em 1em 1em;
+}
+
+.button {
+    --button-detail: #9e38ff;
+    font-family: "Press Start 2P", cursive;
+    text-transform: uppercase;
+    background: none;
+    color: inherit;
+    display: block;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    background: #050810;
+    border: 1px solid var(--button-detail);
+    border-radius: 6px;
+    padding: 15px 20px 15px 40px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-weight: 700;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button:hover, .active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--button-detail);
+    border-bottom: solid 8px var(--button-detail);
 }
