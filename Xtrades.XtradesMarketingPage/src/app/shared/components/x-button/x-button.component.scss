@@ -1,32 +1,39 @@
 .button {
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  color: var(--x-button-color, var(--white));
-  background: var(--x-button-background, unset);
-  background-color: var(--x-button-background-color, var(--black));
-  max-width: var(--x-button-max-width);
-  transition: 0.3s;
-  padding: var(--x-button-padding);
-  font-size: var(--x-button-font-size, 18px);
-  font-weight: var(--x-button-font-weight, 700);
-  font-style: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: --brand-black;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--x-button-color, var(--white));
+    background: var(--x-button-background, unset);
+    background-color: var(--x-button-background-color, var(--black));
+    max-width: var(--x-button-max-width);
+    transition: 0.3s;
+    padding: var(--x-button-padding);
+    font-size: var(--x-button-font-size, 18px);
+    font-weight: var(--x-button-font-weight, 700);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: --brand-black;
 
-  &:hover {
-    background-color: var(--white);
-    color: var(--brand-black);
-  }
+    &.inverted {
+        border: 1px solid #fff;
+        color: #000;
+        background-image: -webkit-linear-gradient(30deg, #fff 50%, transparent 50%);
+        background-image: linear-gradient(30deg, #fff 50%, transparent 50%);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 0%;
+        -webkit-transition: background 300ms ease-in-out;
+        transition: background 300ms ease-in-out;
+        position: relative;
+        &:hover {
+            background-position: 100%;
+            color: var(--white);
+        }
+    }
 
-  &.inverted {
-    color: var(--brand-black);
-    background-color: var(--white);
-  }
-
-  &.disabled {
-    pointer-events: none;
-    opacity: 0.6;
-  }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
 }
