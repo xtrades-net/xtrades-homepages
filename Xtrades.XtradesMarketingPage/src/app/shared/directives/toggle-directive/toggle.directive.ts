@@ -3,6 +3,7 @@ import {
   ElementRef,
   HostBinding,
   HostListener,
+  Input,
   OnInit,
 } from '@angular/core';
 import { ScreenService } from 'src/app/core/screen.service';
@@ -11,6 +12,7 @@ import { ScreenService } from 'src/app/core/screen.service';
   selector: '[appToggle]',
 })
 export class ToggleDirective implements OnInit {
+  @Input() isNav = false;
   @HostBinding('class.expanded') isActive = false;
   isMobile = false;
 
@@ -20,6 +22,9 @@ export class ToggleDirective implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (this.isNav) {
+      return;
+    }
     this.screenService.screenSize$.subscribe((x) => {
       this.isMobile = x.width < 992;
       if (!this.isMobile) this.toggleVisibility();
@@ -28,7 +33,11 @@ export class ToggleDirective implements OnInit {
   }
 
   @HostListener('click', ['$event']) onClick() {
-    this.toggleVisibility();
+    if (this.isNav) {
+      this.expandRoute();
+    } else {
+      this.toggleVisibility();
+    }
   }
 
   toggleVisibility() {
@@ -39,5 +48,15 @@ export class ToggleDirective implements OnInit {
     !description.classList.contains('expanded')
       ? description.classList.add('expanded')
       : description.classList.remove('expanded');
+  }
+
+  expandRoute() {
+    // const route =
+    //   this.elRef.nativeElement.parentElement.querySelector('.wrapper');
+    const route = this.elRef.nativeElement.nextSibling;
+    !route.classList.contains('expanded')
+      ? route.classList.add('expanded')
+      : route.classList.remove('expanded');
+    console.log(route.classList);
   }
 }

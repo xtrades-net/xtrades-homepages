@@ -33,8 +33,7 @@ body {
     --deep-blue-rgba: 22, 60, 105;
     --header-font-color: black;
     /* #585b60 */
-    --header-element-font-color-hover: #585b60/* #137ED9 */
-    ;
+    --header-element-font-color-hover: #585b60 /* #137ED9 */;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-display: swap;
@@ -52,8 +51,7 @@ body {
     --section-padding: 5em 0;
     .header-1 {
         font-weight: 700;
-        @include dynamic-font(62px,
-        0.5);
+        @include dynamic-font(62px, 0.5);
         span,
         .faq__hero-detail,
         div {
@@ -123,8 +121,8 @@ body {
         }
     }
     *,
-     ::after,
-     ::before {
+    ::after,
+    ::before {
         box-sizing: border-box;
     }
     .responsive-main-container {
@@ -240,4 +238,16 @@ input:-webkit-autofill:active {
 ::-webkit-scrollbar-thumb {
     background-color: rgba(221, 221, 221, 0.2);
     border-radius: 8px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.subheader {
+    @include dynamic-font(32px, 0.5);
+}
+
+.spacer-top-sm {
+    margin-top: 1em;
 }
