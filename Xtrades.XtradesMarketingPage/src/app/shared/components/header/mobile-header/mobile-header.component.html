@@ -7,7 +7,8 @@
         <div class="main-mobile-header-body">
             <div class="header__elements">
                 <span *ngFor="let element of headerProvider.headerElements">
-                    <a class="link" [href]="element.directUrl">{{element.title}}</a>
+                    <a class="link" (click)="onMenuClose()" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
+                    {{element.directUrl}}
                 </span>
             </div>
             <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleJoinChatClick()">Join Chat

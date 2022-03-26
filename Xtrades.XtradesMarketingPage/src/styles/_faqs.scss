@@ -1,0 +1,72 @@
+.faq {
+    padding: var(--section-padding);
+    width: 100%;
+
+    --app-hero-width: 100%;
+
+    &__hero {
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+        --hero-items-alignment: center;
+        padding: 2em 0;
+    }
+
+    &__main {
+        @include dynamic-font(50px, 0.5);
+    }
+
+    &__article-hero {
+        --article-hero-padding: 1em;
+        padding: var(--article-hero-padding);
+        .flex {
+            align-items: center;
+            padding-bottom: 0.75em;
+            @media (max-width: 992px) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__questions {
+        width: 100%;
+        max-width: 846px;
+        margin: 0 auto;
+    }
+
+    &__article-main {
+        font-size: 25px;
+        @media (max-width: $lg) {
+            align-items: flex-start;
+            text-align: left;
+            text-justify: auto;
+        }
+    }
+
+    &__article-description {
+        font-size: 16px;
+        opacity: 0;
+        transition: all 0.15s ease-in-out;
+        height: 0;
+        &.expanded {
+            opacity: 1;
+            height: 100%;
+        }
+    }
+
+    &__toggle-button {
+        outline: none;
+        border: none;
+        background: url("/assets/open.svg");
+        width: 28px;
+        height: 28px;
+        background-repeat: no-repeat;
+    }
+
+    .expanded {
+        button {
+            transition: background-image 0.15s ease-in-out;
+            background: url("/assets/close.svg");
+        }
+    }
+}

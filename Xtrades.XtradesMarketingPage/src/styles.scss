@@ -1,6 +1,8 @@
 @import "styles/fonts";
 @import "styles/mixins";
 @import "styles/layout";
+@import "styles/faqs";
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -22,6 +24,7 @@ body {
     --grey: #c0c1c3;
     --white: #ffffff;
     --brand-purple: #3719ee;
+    --brand-main-purple: #9e38ff;
     --light-purple-detail: rgba(184, 136, 255, 1);
     --x-text-extra-light: #a2b1c3;
     --x-text-gray-placeholder: #888a90;
@@ -82,7 +85,6 @@ body {
     }
     .format-text {
         text-align: justify;
-        white-space: pre-wrap;
     }
     img {
         max-width: 100%;
@@ -250,4 +252,22 @@ input:-webkit-autofill:active {
 
 .spacer-top-sm {
     margin-top: 1em;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+::selection {
+    background: var(--brand-main-purple);
+    color: var(--white);
+}
+
+::-moz-selection {
+    background: var(--brand-main-purple);
+    color: var(--white);
+}
+
+.active-router-link {
+    font-weight: 700;
 }

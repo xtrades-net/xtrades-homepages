@@ -10,6 +10,7 @@ import { ServerGuideComponent } from './server-guide/server-guide.component';
 import { ServerRulesComponent } from './server-rules/server-rules.component';
 import { DirectivesModule } from '@shared/directives/directives.module';
 import { CardModule } from '@shared/components/card/card.module';
+import { SeparatorModule } from '@shared/components/separator/separator.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CardModule } from '@shared/components/card/card.module';
     XButtonModule,
     CardModule,
     DirectivesModule,
+    SeparatorModule,
     RouterModule.forChild([
       {
         path: '',

@@ -11,19 +11,19 @@
             </div>
         </app-hero>
         <div>
-            <div class="footer-element cursor-pointer" [routerLink]="['terms-and-conditions']">
+            <div class="footer-element cursor-pointer">
                 <div class="footer-element__content">
-                    <span class="footer-element__content__text">Terms & Conditions</span>
-                </div>
-            </div>
-            <div class="footer-element cursor-pointer" [routerLink]="['refund-policy']">
-                <div class="footer-element__content">
-                    <span class="footer-element__content__text">Refund Policy</span>
+                    <span class="footer-element__content__text" [routerLink]="['terms-and-conditions']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">Terms & Conditions</span>
                 </div>
             </div>
             <div class="footer-element cursor-pointer">
                 <div class="footer-element__content">
-                    <span class="footer-element__content__text" [routerLink]="['/privacy-policy']">Privacy Policy</span>
+                    <span class="footer-element__content__text"  [routerLink]="['refund-policy']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">Refund Policy</span>
+                </div>
+            </div>
+            <div class="footer-element cursor-pointer">
+                <div class="footer-element__content">
+                    <span class="footer-element__content__text" [routerLink]="['/privacy-policy']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">Privacy Policy</span>
                 </div>
             </div>
         </div>
