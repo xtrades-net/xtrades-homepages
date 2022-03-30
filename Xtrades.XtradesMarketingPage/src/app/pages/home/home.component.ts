@@ -97,7 +97,7 @@ export class HomeComponent implements OnInit {
     {
       quote:
         'In addition to the excellent service provided by the analysts, Xtrades has an amazing and welcoming community where I feel at home.',
-      image: 'https://ik.imagekit.io/do9ptuquenl/testimonial1_tK0ChwaDly.jpg',
+      image: '../assets/testimonial1.webp',
       name: 'Yung Boul Tommy',
     },
   ];
