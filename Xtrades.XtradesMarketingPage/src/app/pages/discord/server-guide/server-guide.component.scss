@@ -1,7 +1,31 @@
+@import "../../../../styles/vars";
+
 :host {
     --x-button-max-width: 200px;
+    text-align: justify;
 }
 
 .disclaimer--text {
     font-size: 12px;
+}
+
+.signup-container {
+    align-items: center;
+    padding: 2em 0;
+    &__text {
+        max-width: 60%;
+        @media (max-width: $md) {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+div strong {
+    color: var(--light-purple-detail);
+}
+
+li::marker {
+    color: var(--light-purple-detail);
+    content: '#';
 }

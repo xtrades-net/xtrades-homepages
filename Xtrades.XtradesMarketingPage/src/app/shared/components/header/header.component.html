@@ -3,7 +3,7 @@
   <div [routerLink]="['/']"> <img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.svg' width="85" height="56"></div>
   <div class="header__elements" *ngIf="!isMobile">
     <span *ngFor="let element of headerProvider.headerElements">
-      <a class="link" [href]="element.directUrl">{{element.title}}</a>
+      <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
     </span>
   </div>
   <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleJoinChatClick()" *ngIf="!isMobile">Join

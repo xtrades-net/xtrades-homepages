@@ -35,11 +35,11 @@ const routes: Routes = [
         (m) => m.MembershipModule
       ),
   },
-  {
-    path: 'discord',
-    loadChildren: () =>
-      import('./pages/discord/discord.module').then((m) => m.DiscordModule),
-  },
+  // {
+  //   path: 'discord',
+  //   loadChildren: () =>
+  //     import('./pages/discord/discord.module').then((m) => m.DiscordModule),
+  // },
   { path: '**', redirectTo: '' },
 ];
 
