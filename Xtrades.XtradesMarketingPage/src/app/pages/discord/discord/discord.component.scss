@@ -23,7 +23,6 @@
 .button {
     --button-detail: #9e38ff;
     font-family: "Press Start 2P", cursive;
-    text-transform: uppercase;
     background: none;
     color: inherit;
     display: block;
@@ -33,7 +32,8 @@
     background: #050810;
     border: 1px solid var(--button-detail);
     border-radius: 6px;
-    padding: 15px 20px 15px 40px;
+    padding: 10px;
+    letter-spacing: -.5px;
     margin-bottom: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     position: relative;
