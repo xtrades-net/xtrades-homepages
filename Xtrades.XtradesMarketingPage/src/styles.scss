@@ -79,13 +79,14 @@ body {
     --size_l: 1200px;
     --main-gradient: linear-gradient(65.06deg, rgba(131, 151, 202, 0.3) -7.34%, rgba(255, 255, 255, 0.3) 99.39%);
     --section-padding: 5em 0;
+    --description-color: #8892ad;
     .header-1 {
         font-weight: 700;
         @include dynamic-font(62px, 0.49);
         span,
         .faq__hero-detail,
         div {
-            color: #8892ad;
+            color: var(--description-color);
             font-weight: 500;
         }
     }
@@ -109,6 +110,14 @@ body {
     }
     .text {
         padding: 1em 0;
+    }
+    .link {
+        text-decoration: none;
+        color:var(--white);
+        padding-left: 0;
+        span {
+            color: var(--description-color);
+        }
     }
     .format-text {
         text-align: justify;
