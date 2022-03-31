@@ -81,7 +81,7 @@ body {
     --section-padding: 5em 0;
     .header-1 {
         font-weight: 700;
-        @include dynamic-font(62px, 0.5);
+        @include dynamic-font(62px, 0.49);
         span,
         .faq__hero-detail,
         div {
@@ -214,10 +214,6 @@ input {
     padding: 0 0.8em;
 }
 
-.center {
-    text-align: center;
-}
-
 .left {
     text-align: left;
 }
@@ -271,10 +267,6 @@ input:-webkit-autofill:active {
 
 .uppercase {
     text-transform: uppercase;
-}
-
-.subheader {
-    @include dynamic-font(32px, 0.5);
 }
 
 .spacer-top-sm {
