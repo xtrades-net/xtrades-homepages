@@ -1,16 +1,16 @@
-<section class="hero-section" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
+<section class="hero-section flex" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
     <app-hero class="hero">
         <div class="hero__main relative header-1 header-1-gradient-overlay" data-aos="fade-up" data-aos-delay="500">
             The Future <span class="hero__hero-detail">of Trader</span> Collaboration
         </div>
-        <div image class="hero__mobile relative">
-            <app-main-image-animation class="hero__mobile-img"></app-main-image-animation>
+        <div image class="hero__mobile flex relative">
+            <app-main-image-animation class="hero__mobile-img" width="500" height="500"></app-main-image-animation>
             <img class="hero__mobile-levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
         </div>
-        <div class="hero__description" description  data-aos="fade-up" data-aos-delay="500">
+        <div class="hero__description description" description  data-aos="fade-up" data-aos-delay="500">
             Interact with retail traders across the globe, new and experienced.
         </div>
-        <div class="hero__buttons-row" buttons  data-aos="fade-up" data-aos-delay="500">
+        <div class="hero__buttons-row flex" buttons  data-aos="fade-up" data-aos-delay="500">
             <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true" (click)="handleJoinChatClick()">
                 Join Now
             </app-x-button>
@@ -267,7 +267,7 @@
     <div class="faq__questions column" *ngFor="let item of faqs; let i = index" [attr.data-index]="i" appToggle>
         <app-hero class="faq__article-hero" data-aos="fade-up">
             <div class="flex space-between">
-                <div class="faq__article-main header-1">
+                <div class="faq__article-main">
                     {{item.question}}
                 </div>
                 <button aria-label="Toggle FAQ" class="faq__toggle-button cursor-pointer"></button>

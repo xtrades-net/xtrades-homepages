@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import SwiperCore, {
   SwiperOptions,
   Navigation,
@@ -13,9 +13,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar]);
   templateUrl: './text-slider.component.html',
   styleUrls: ['./text-slider.component.scss'],
 })
-export class TextSliderComponent implements OnInit {
+export class TextSliderComponent {
   @Input() config: SwiperOptions = {};
   @Input() testimonials: any = [];
-
-  ngOnInit(): void {}
 }
