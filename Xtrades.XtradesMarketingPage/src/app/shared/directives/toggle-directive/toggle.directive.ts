@@ -3,6 +3,7 @@ import {
   ElementRef,
   HostBinding,
   HostListener,
+  Input,
   OnInit,
 } from '@angular/core';
 import { ScreenService } from 'src/app/core/screen.service';
@@ -33,8 +34,11 @@ export class ToggleDirective implements OnInit {
 
   toggleVisibility() {
     this.isActive = !this.isActive;
-    const mainElement =
-      this.elRef.nativeElement.querySelector('.faq__article-hero');
+    let mainElement = this.elRef.nativeElement;
+    if (mainElement.querySelector('.faq__article-hero')) {
+      mainElement =
+        this.elRef.nativeElement.querySelector('.faq__article-hero');
+    }
     const description = mainElement.querySelector('.faq__article-description');
     !description.classList.contains('expanded')
       ? description.classList.add('expanded')
