@@ -1,13 +1,17 @@
 <div class="mobile-header">
     <div class="responsive-main-container">
         <div class="top-bar">
-            <div routerLink="['']"> <img lazy img class="logo pointer" width="85" height="56" src='assets/xtrades-logo.svg'></div>
-            <img lazy img class="menu pointer" alt="Mobile Menu Button" src='assets/xtrades-icon-close.svg' (click)="onMenuClose()" />
+            <div routerLink="['']"> <img lazy img class="logo pointer" width="85" height="56"
+                    src='assets/xtrades-logo.svg'></div>
+            <img lazy img class="menu pointer" alt="Mobile Menu Button" src='assets/xtrades-icon-close.svg'
+                (click)="onMenuClose('')" />
         </div>
         <div class="main-mobile-header-body">
             <div class="header__elements">
                 <span *ngFor="let element of headerProvider.headerElements">
-                    <a class="link" (click)="onMenuClose()" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
+                    <a class="link" (click)="onMenuClose(element.directUrl)" [routerLink]="element.directUrl"
+                        routerLinkActive="active-router-link"
+                        [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
                 </span>
             </div>
             <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleJoinChatClick()">Join Chat

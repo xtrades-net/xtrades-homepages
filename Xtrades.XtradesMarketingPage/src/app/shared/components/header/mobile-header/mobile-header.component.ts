@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ScreenService } from 'src/app/core/screen.service';
-import { HeaderElementListComponent } from '../header-element-list/header-element-list.component';
 import { HeaderProvider } from '../header-provider/header-provider';
 
 @Component({
@@ -19,12 +18,11 @@ export class MobileHeaderComponent implements OnInit {
 
   @Output() triggerClose = new EventEmitter<Event>();
 
-  headerElementListComponent = HeaderElementListComponent;
 
   ngOnInit(): void {
     this.screenService.screenSize$.subscribe((x) => {
       this.isMobile = x.width < 992;
-      if (!this.isMobile) this.onMenuClose();
+      if (!this.isMobile) this.onMenuClose('');
       return this.isMobile;
     });
   }
@@ -33,7 +31,10 @@ export class MobileHeaderComponent implements OnInit {
     window.location.href = 'https://discord.com/invite/xtrades';
   }
 
-  onMenuClose(): void {
+  onMenuClose(link: string | undefined): void {
+    if (link && link.indexOf('https') > -1) {
+      window.open(link, '_blank');
+    }
     this.triggerClose.emit();
   }
 }

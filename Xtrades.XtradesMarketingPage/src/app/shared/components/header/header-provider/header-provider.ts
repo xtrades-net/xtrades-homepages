@@ -15,10 +15,11 @@ export class HeaderProvider {
       // HeaderElement.apply({ title: 'About us', directUrl: 'about' }),
       // HeaderElement.apply({ title: 'Gear', directUrl: 'gear' }),
       HeaderElement.apply({ title: 'Plans', directUrl: 'plans' }),
-      // HeaderElement.apply({
-      //   title: 'Discord',
-      //   directUrl: 'discord/server-rules',
-      // }),
+      HeaderElement.apply({
+        title: 'Docs',
+        directUrl:
+          'https://xtrades.gitbook.io/documentation/v/discord-guidelines/',
+      }),
     ]);
   }
 

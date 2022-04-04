@@ -3,7 +3,6 @@ import { ScreenService } from '@core/screen.service';
 import { AutoUnsub } from '@core/decorators';
 import { BodyScrollingService } from '@core/body-scrolling.service';
 import { HeaderProvider } from './header-provider/header-provider';
-import { HeaderElementListComponent } from './header-element-list/header-element-list.component';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +19,6 @@ export class HeaderComponent implements OnInit {
 
   isMobile = false;
   isMenuOpened = false;
-  headerElementListComponent = HeaderElementListComponent;
 
   ngOnInit(): void {
     this.screenService.screenSize$.subscribe(
@@ -30,6 +28,12 @@ export class HeaderComponent implements OnInit {
 
   handleJoinChatClick(): void {
     window.location.href = 'http://discord.gg/xtrades';
+  }
+
+  onRouterLinkClick(link: string | undefined) {
+    if (link && link.indexOf('https') > -1) {
+      window.open(link, '_blank');
+    }
   }
 
   onMobileMenuOpen(): void {
