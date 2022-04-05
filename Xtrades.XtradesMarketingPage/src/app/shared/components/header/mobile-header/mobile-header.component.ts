@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ScreenService } from 'src/app/core/screen.service';
 import { HeaderProvider } from '../header-provider/header-provider';
 
@@ -7,9 +8,10 @@ import { HeaderProvider } from '../header-provider/header-provider';
   templateUrl: './mobile-header.component.html',
   styleUrls: ['./mobile-header.component.scss'],
 })
-export class MobileHeaderComponent implements OnInit {
+export class MobileHeaderComponent implements OnInit, OnDestroy {
   @Input() isMobile = true;
   @Input() onClose: any;
+  subscription = new Subscription();
 
   constructor(
     public headerProvider: HeaderProvider,
@@ -19,11 +21,13 @@ export class MobileHeaderComponent implements OnInit {
   @Output() triggerClose = new EventEmitter<Event>();
 
   ngOnInit(): void {
-    this.screenService.screenSize$.subscribe((x) => {
-      this.isMobile = x.width < 992;
-      if (!this.isMobile) this.onMenuClose();
-      return this.isMobile;
-    });
+    this.subscription.add(
+      this.screenService.screenSize$.subscribe((x) => {
+        this.isMobile = x.width < 992;
+        if (!this.isMobile) this.onMenuClose();
+        return this.isMobile;
+      })
+    );
   }
 
   handleJoinChatClick(): void {
@@ -32,5 +36,9 @@ export class MobileHeaderComponent implements OnInit {
 
   onMenuClose(): void {
     this.triggerClose.emit();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
