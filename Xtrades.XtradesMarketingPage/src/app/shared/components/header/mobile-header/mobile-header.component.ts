@@ -18,11 +18,10 @@ export class MobileHeaderComponent implements OnInit {
 
   @Output() triggerClose = new EventEmitter<Event>();
 
-
   ngOnInit(): void {
     this.screenService.screenSize$.subscribe((x) => {
       this.isMobile = x.width < 992;
-      if (!this.isMobile) this.onMenuClose('');
+      if (!this.isMobile) this.onMenuClose();
       return this.isMobile;
     });
   }
@@ -31,10 +30,7 @@ export class MobileHeaderComponent implements OnInit {
     window.location.href = 'https://discord.com/invite/xtrades';
   }
 
-  onMenuClose(link: string | undefined): void {
-    if (link && link.indexOf('https') > -1) {
-      window.open(link, '_blank');
-    }
+  onMenuClose(): void {
     this.triggerClose.emit();
   }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from '@core/screen.service';
-import { AutoUnsub } from '@core/decorators';
 import { BodyScrollingService } from '@core/body-scrolling.service';
 import { HeaderProvider } from './header-provider/header-provider';
 
@@ -9,7 +8,6 @@ import { HeaderProvider } from './header-provider/header-provider';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-@AutoUnsub()
 export class HeaderComponent implements OnInit {
   constructor(
     public headerProvider: HeaderProvider,
@@ -28,12 +26,6 @@ export class HeaderComponent implements OnInit {
 
   handleJoinChatClick(): void {
     window.location.href = 'http://discord.gg/xtrades';
-  }
-
-  onRouterLinkClick(link: string | undefined) {
-    if (link && link.indexOf('https') > -1) {
-      window.open(link, '_blank');
-    }
   }
 
   onMobileMenuOpen(): void {

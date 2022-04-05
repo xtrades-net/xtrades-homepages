@@ -7,7 +7,6 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ScreenService } from '@core/screen.service';
-import { AutoUnsub } from '@core/decorators';
 import { SwiperOptions } from 'swiper';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Utils } from '../../utils/utils';
@@ -19,7 +18,6 @@ import { ExtendedCounterAnimationOptions } from '../../animations/animations';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-@AutoUnsub()
 export class HomeComponent {
   @ViewChild('email') input: ElementRef | any;
   sliderImages: Array<any> = [
