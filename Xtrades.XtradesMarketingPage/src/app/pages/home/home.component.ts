@@ -19,8 +19,8 @@ import { ExtendedCounterAnimationOptions } from '../../animations/animations';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-// @AutoUnsub()
-export class HomeComponent implements OnInit {
+@AutoUnsub()
+export class HomeComponent {
   @ViewChild('email') input: ElementRef | any;
   sliderImages: Array<any> = [
     {
@@ -130,8 +130,6 @@ export class HomeComponent implements OnInit {
     private httpService: HttpClient,
     private cdr: ChangeDetectorRef
   ) {}
-
-  ngOnInit(): void {}
 
   handleJoinChatClick(): void {
     window.location.href = 'http://discord.gg/xtrades';
