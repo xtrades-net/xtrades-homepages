@@ -1,24 +1,20 @@
-<section class="hero-section flex" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
-    <app-hero class="hero">
-        <div class="hero__main relative header-1 header-1-gradient-overlay" data-aos="fade-up" data-aos-delay="500">
-            The Future <span class="hero__hero-detail">of Trader</span> Collaboration
-        </div>
-        <div image class="hero__mobile flex relative">
-            <app-main-image-animation class="hero__mobile-img" width="500" height="500"></app-main-image-animation>
-            <img class="hero__mobile-levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
-        </div>
-        <div class="hero__description description" description  data-aos="fade-up" data-aos-delay="500">
+<section class="hero flex grid-container" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
+    <div class="hero__main relative header-1 header-1-gradient-overlay main" data-aos="fade-up" data-aos-delay="500">
+        The Future <span class="hero__hero-detail">of Trader</span> Collaboration
+    </div>
+    <div image class="hero__mobile flex relative animation" data-aos="fade-up" data-aos-delay="500">
+        <app-main-image-animation class="hero__main-img" width="500" height="500"></app-main-image-animation>
+        <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
+    </div>
+    <div class="column hero__joinnow hero-description">
+        <div class="hero__description description" description data-aos="fade-up" data-aos-delay="500">
             Interact with retail traders across the globe, new and experienced.
         </div>
-        <div class="hero__buttons-row flex" buttons  data-aos="fade-up" data-aos-delay="500">
+        <div class="hero__buttons-row flex" buttons data-aos="fade-up" data-aos-delay="500">
             <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true" (click)="handleJoinChatClick()">
                 Join Now
             </app-x-button>
         </div>
-    </app-hero>
-    <div class="hero__desktop relative">
-        <app-main-image-animation class="hero__desktop-img relative"></app-main-image-animation>
-        <img class="hero__desktop-levelup-img absolute" data-aos="fade-up" data-aos-delay="500" src="assets/levelup.svg" />
     </div>
 </section>
 <section class="stats responsive-main-container">
