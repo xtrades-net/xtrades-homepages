@@ -5,7 +5,7 @@
     </div>
     <div class="card__price-tag" *ngIf="data.priceTag">
       <div class="card__price-tag--price">${{data.priceTag.userCost || data.priceTag.price}}</div>
-      <div class="card__price-tag--period" [class.selected]="data.selected"><span class="card__price-tag--separator" [ngClass]="data.priceTag.period === 'Single Payment' ? 'hidden' : ''">/</span> {{data.priceTag.period}}</div>
+      <div class="card__price-tag--period" [class.selected]="data.selected"><span class="card__price-tag--separator" [ngClass]="data.priceTag.period === 'Single Payment' ? 'is-visible' : ''">/</span> {{data.priceTag.period}}</div>
     </div>
     <div *ngIf="data.description" class="card__description" [class.selected]="data.selected">
       {{data.description}}
