@@ -105,7 +105,7 @@ export class MembershipComponent {
     {
       selected: false,
       title: 'Lifetime',
-      priceTag: { userCost: 999, period: 'Single Payment' },
+      priceTag: { userCost: 988, period: 'Single Payment' },
       oneTimePayment: true,
       planId: 'lifetime',
       description:
