@@ -1,0 +1,30 @@
+<app-modal [id]="modalId">
+    <div class="subscribe-modal__logo-wrapper">
+        <div [routerLink]="['/']"><img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.svg' width="75.8px" height="52.6px"></div>
+        <div class="subscribe-modal__logo-text">Xtrades</div>
+    </div>
+    <div class="subscribe-modal__header-1 header-1">
+        <span class="hero__hero-detail">Get</span> 10% of
+        <span class="hero__hero-detail">your membership today</span>
+        <div class="subscribe-modal__description description">
+            Become an elite member of our community and gain access to perks that will allow you to become the best possible trader you can be! Perks can include access to analysts, online webinars, coaching, and much more!
+        </div>
+        <form class="subscribe-modal__mailing-list mailing-list" (ngSubmit)="onSubmit()">
+            <div class="form-group mailing-list__form">
+                <label for="email" class="mailing-list__label">Email</label>
+                <div class="overlay relative flex">
+                    <input type="email" class="mailing-list__input form-control" name="email" id="email" ngModel
+                        placeholder="Enter your email" required #email="ngModel"
+                        (input)="validateEmail(email.value)" [(ngModel)]="emailModel.email" />
+                        <app-x-button class="button" [isColorInverted]="true" type="submit" (triggerClick)="onSubmit()" class="btn btn-success mailing-list__btn cursor-pointer"
+                        [disabled]="email.errors?.['pattern']">Submit
+                        </app-x-button>
+                </div>
+                <div class="already-subscribed" *ngIf="alreadySubscribed">
+                    You've already subscribed. Thanks!
+                </div>
+            </div>
+        </form>
+    </div>
+    <button class="subscribe-modal__resign-button cursor-pointer" (click)="onCloseModal()">No thanks, I’ll sign up for an account instead</button>
+</app-modal>
