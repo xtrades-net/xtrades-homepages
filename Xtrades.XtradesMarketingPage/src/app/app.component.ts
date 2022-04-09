@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ModalService } from '@core/modal.service';
+import { ModalService } from '@shared/components/modal/modal.service';
 import * as AOS from 'aos';
 import 'aos/dist/aos.css';
 import { timer } from 'rxjs';

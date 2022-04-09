@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from '@shared/components/footer/footer.module';
 import { DirectivesModule } from '@shared/directives/directives.module';
-import { ModalModule } from '@core/modal/modal.module';
+import { ModalModule } from '@shared/components/modal/modal.module';
 import { FormsModule } from '@angular/forms';
 import { XButtonModule } from '@shared/components/x-button/x-button.module';
 
