@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from '@shared/components/footer/footer.module';
 import { DirectivesModule } from '@shared/directives/directives.module';
+import { ModalModule } from '@core/modal/modal.module';
+import { FormsModule } from '@angular/forms';
+import { XButtonModule } from '@shared/components/x-button/x-button.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +21,9 @@ import { DirectivesModule } from '@shared/directives/directives.module';
     FooterModule,
     HttpClientModule,
     DirectivesModule,
+    ModalModule,
+    FormsModule,
+    XButtonModule,
   ],
   providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],

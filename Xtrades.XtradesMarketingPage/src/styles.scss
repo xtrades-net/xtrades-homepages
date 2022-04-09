@@ -1,3 +1,4 @@
+@import "styles/reset";
 @import "styles/fonts";
 @import "styles/mixins";
 @import "styles/layout";
@@ -298,4 +299,8 @@ input:-webkit-autofill:active {
 
 .active-router-link {
     font-weight: 700;
+}
+
+.modal-open {
+    overflow: hidden;
 }
