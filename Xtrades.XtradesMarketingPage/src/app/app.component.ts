@@ -1,9 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { ModalService } from '@shared/components/modal/modal.service';
 import * as AOS from 'aos';
 import 'aos/dist/aos.css';
-import { timer } from 'rxjs';
-import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -22,14 +20,6 @@ export class AppComponent implements OnInit, OnDestroy {
       offset: 40,
       once: true,
     });
-
-    this.openModalTimeout = setTimeout(() => {
-      this.openModal('subscribe-modal');
-    }, 5000);
-  }
-
-  openModal(id: string) {
-    this.modalService.open(id);
   }
 
   closeModal(id: string) {

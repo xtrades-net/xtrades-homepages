@@ -5,10 +5,17 @@ import { SubscribeModalComponent } from './subscribe-modal/subscribe-modal.compo
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { XButtonModule } from '@shared/components/x-button/x-button.module';
+import { HttpClientJsonpModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ModalComponent, SubscribeModalComponent],
   exports: [ModalComponent, SubscribeModalComponent],
-  imports: [CommonModule, RouterModule, FormsModule, XButtonModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    XButtonModule,
+    HttpClientJsonpModule,
+  ],
 })
 export class ModalModule {}

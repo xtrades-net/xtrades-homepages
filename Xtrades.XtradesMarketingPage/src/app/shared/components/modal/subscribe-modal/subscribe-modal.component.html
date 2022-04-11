@@ -1,6 +1,7 @@
 <app-modal [id]="modalId">
     <div class="subscribe-modal__logo-wrapper">
-        <div [routerLink]="['/']"><img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.svg' width="75.8px" height="52.6px"></div>
+        <div [routerLink]="['/']"><img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.svg'
+                width="75.8px" height="52.6px"></div>
         <div class="subscribe-modal__logo-text">Xtrades</div>
     </div>
     <div class="subscribe-modal__header-1 header-1">
@@ -14,11 +15,11 @@
                 <label for="email" class="mailing-list__label">Email</label>
                 <div class="overlay relative flex">
                     <input type="email" class="mailing-list__input form-control" name="email" id="email" ngModel
-                        placeholder="Enter your email" required #email="ngModel"
-                        (input)="validateEmail(email.value)" [(ngModel)]="emailModel.email" />
-                        <app-x-button class="button" [isColorInverted]="true" type="submit" (triggerClick)="onSubmit()" class="btn btn-success mailing-list__btn cursor-pointer"
-                        [disabled]="email.errors?.['pattern']">Submit
-                        </app-x-button>
+                        placeholder="Enter your email" required #email="ngModel" (input)="validateEmail(email.value)"
+                        [(ngModel)]="emailModel.email" />
+                    <app-x-button class="button" [isColorInverted]="true" type="submit" (triggerClick)="onSubmit()" class="btn btn-success mailing-list__btn cursor-pointer" [disabled]="email.errors?.['pattern']">
+                        Submit
+                    </app-x-button>
                 </div>
                 <div class="already-subscribed" *ngIf="alreadySubscribed">
                     You've already subscribed. Thanks!
