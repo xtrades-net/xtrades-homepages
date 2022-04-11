@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     this.openModalTimeout = setTimeout(() => {
       this.openModal('subscribe-modal');
-    }, 2000);
+    }, 5000);
   }
 
   openModal(id: string) {
