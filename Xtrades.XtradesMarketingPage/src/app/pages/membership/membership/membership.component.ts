@@ -105,7 +105,7 @@ export class MembershipComponent {
     {
       selected: false,
       title: 'Lifetime',
-      priceTag: { userCost: 999, period: 'life' },
+      priceTag: { userCost: 988, period: 'Single Payment' },
       oneTimePayment: true,
       planId: 'lifetime',
       description:
@@ -113,7 +113,7 @@ export class MembershipComponent {
       featuresList: [
         'Lifetime webinar pass',
         'Lifetime full chat access',
-        '2 hours of live choaching with dedicated analysts',
+        '2 hours of live coaching with dedicated analysts',
       ],
       lostFeatures: [],
       possibleAction: null,
