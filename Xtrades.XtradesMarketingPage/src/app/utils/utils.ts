@@ -2,7 +2,7 @@ export class Utils {
   static isDevOrLocalhost() {
     return (
       window.location.href.includes('localhost') ||
-      window.location.href.includes('alpha')
+      window.location.href.includes('gracious')
     );
   }
   static isLocalhost() {
