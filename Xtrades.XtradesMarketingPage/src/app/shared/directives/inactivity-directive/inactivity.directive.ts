@@ -13,7 +13,7 @@ export class InactivityDirective implements OnDestroy {
   constructor(private modalService: ModalService) {
     this.scrollSubscription.add(
       fromEvent(window, 'scroll')
-        .pipe(debounceTime(15000))
+        .pipe(debounceTime(8000))
         .subscribe(() => {
           if (
             !Utils.getCookie('isSubscribedToMemberships') &&

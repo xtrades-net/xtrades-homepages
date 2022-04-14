@@ -1,4 +1,3 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   ChangeDetectorRef,
   Component,
@@ -25,6 +24,7 @@ export class SubscribeModalComponent {
 
   isEmailValid = false;
   alreadySubscribed = false;
+  isSuccessfullySubscibed = false;
 
   @Output() triggerCloseModal = new EventEmitter();
 
@@ -60,8 +60,8 @@ export class SubscribeModalComponent {
   subscribeSuccess() {
     document.cookie = 'isSubscribedToMemberships=true';
     this.emailModel.email = '';
-    this.alreadySubscribed = true;
-    this.onCloseModal();
+    this.alreadySubscribed = false;
+    this.isSuccessfullySubscibed = true;
   }
 
   onCloseModal() {

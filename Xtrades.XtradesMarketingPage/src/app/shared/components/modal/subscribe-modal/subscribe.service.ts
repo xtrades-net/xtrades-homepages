@@ -8,7 +8,7 @@ import { Utils } from 'src/app/utils/utils';
 export class SubscribeService {
   mailChimpEndpoint = `${
     Utils.isDevOrLocalhost()
-      ? '/https://gmail.us14.list-manage.com/subscribe/post-json?u=d15f69d16a62c78740028c34f&id=124ad0906a'
+      ? 'https://gmail.us14.list-manage.com/subscribe/post-json?u=d15f69d16a62c78740028c34f&id=124ad0906a'
       : 'https://xtrades.us2.list-manage.com/subscribe/post-json?u=8240d0edce3faaa377adab2bf&amp;id=9a827ae35e'
   }`;
 
