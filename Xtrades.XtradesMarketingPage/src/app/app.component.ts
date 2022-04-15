@@ -1,4 +1,4 @@
-import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ModalService } from '@shared/components/modal/modal.service';
 import * as AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,9 +7,8 @@ import 'aos/dist/aos.css';
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title = 'homepage';
-  openModalTimeout: any;
 
   constructor(private modalService: ModalService) {}
 
@@ -24,9 +23,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   closeModal(id: string) {
     this.modalService.close(id);
-  }
-
-  ngOnDestroy(): void {
-    clearTimeout(this.openModalTimeout);
   }
 }
