@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from '@shared/components/footer/footer.module';
 import { DirectivesModule } from '@shared/directives/directives.module';
+import { ModalModule } from '@shared/components/modal/modal.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { DirectivesModule } from '@shared/directives/directives.module';
     FooterModule,
     HttpClientModule,
     DirectivesModule,
+    ModalModule,
   ],
   providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],

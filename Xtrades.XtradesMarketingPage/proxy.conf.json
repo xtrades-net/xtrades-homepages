@@ -6,5 +6,13 @@
         "pathRewrite": {
             "^/emailOctopus": ""
         }
+    },
+    "/mailchimp": {
+        "target": "https://gmail.us14.list-manage.com/subscribe",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/mailchimp": ""
+        }
     }
 }
