@@ -23,7 +23,6 @@ export class SubscribeModalComponent {
   };
 
   isEmailValid = false;
-  alreadySubscribed = false;
   isSuccessfullySubscibed = false;
 
   @Output() triggerCloseModal = new EventEmitter();
@@ -60,7 +59,6 @@ export class SubscribeModalComponent {
   subscribeSuccess() {
     document.cookie = 'isSubscribedToMemberships=true';
     this.emailModel.email = '';
-    this.alreadySubscribed = false;
     this.isSuccessfullySubscibed = true;
   }
 
