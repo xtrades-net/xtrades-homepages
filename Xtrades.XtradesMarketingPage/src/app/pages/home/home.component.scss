@@ -28,7 +28,10 @@
     &__main-img {
         transform: translate3d(30px, 0, 0);
         @media (max-width: $md) {
-            transform: translate3d(-10px, 0, 0);
+          transform: translate3d(-30px, 0, 0);
+      }
+        @media (max-width: $lg) {
+            transform: translate3d(-15px, 0, 0);
         }
     }
     &__joinnow {

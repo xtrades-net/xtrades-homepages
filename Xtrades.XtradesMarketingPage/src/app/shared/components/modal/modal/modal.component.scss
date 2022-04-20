@@ -1,0 +1,80 @@
+:host {
+    display: none;
+
+    width: 100%;
+    max-width: 656px;
+
+    height: 100%;
+    max-height: 437px;
+
+    @media (max-width: 960px) {
+        max-width: 100vw;
+    }
+
+    .modal {
+        min-width: 656px;
+        min-height: 437px;
+
+        position: fixed;
+        top: calc(50% - 217.5px);
+        left: calc(50% - 328px);
+
+        z-index: 10;
+
+        @media (max-width: 960px) {
+            left: 0;
+        }
+
+        overflow: auto;
+
+        &__body {
+            padding: 32px;
+            background: url('../../../../../assets/modal-bg.svg');
+            background-size: cover;
+            border-radius: 15px;
+
+            position: relative;
+            max-width: 620px;
+            min-height: 437px;
+
+            @media (max-width: 960px) {
+                max-width: 100vw;
+                max-height: min-content;
+            }
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+
+            position: absolute;
+            left: 624px;
+            top: 0;
+
+            background: url("/assets/close.svg");
+            background-size: cover;
+            background-repeat: none;
+
+            cursor: pointer;
+
+            @media (max-width: 960px) {
+                top: 32px;
+                left: calc(100vw - 50px);
+            }
+        }
+    }
+}
+
+.modal__background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: var(--brand-black);
+    opacity: .75;
+
+    z-index: 9;
+}
