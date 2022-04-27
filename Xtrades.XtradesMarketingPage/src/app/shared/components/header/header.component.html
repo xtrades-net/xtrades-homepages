@@ -1,6 +1,6 @@
 <div class="header responsive-main-container"
   [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
-  <div [routerLink]="['/']"> <img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.svg' width="85" height="56"></div>
+  <div [routerLink]="['/']"> <img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.png'  width="85" height="62" /></div>
   <div class="header__elements" *ngIf="!isMobile">
     <span *ngFor="let element of headerProvider.headerElements">
       <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
