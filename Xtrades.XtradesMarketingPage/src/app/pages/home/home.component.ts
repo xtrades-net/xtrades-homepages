@@ -129,8 +129,8 @@ export class HomeComponent {
     private cdr: ChangeDetectorRef
   ) {}
 
-  handleJoinChatClick(): void {
-    window.location.href = 'http://discord.gg/xtrades';
+  handleGoToBetaAppClick(): void {
+    window.location.href = 'https://app.beta.xtrades.net/';
   }
 
   onSubmit() {
