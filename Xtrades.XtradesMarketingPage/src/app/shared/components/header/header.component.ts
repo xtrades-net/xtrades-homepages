@@ -28,8 +28,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     );
   }
 
-  handleJoinChatClick(): void {
-    window.location.href = 'http://discord.gg/xtrades';
+  handleGoToBetaAppClick(): void {
+    window.location.href = 'https://app.beta.xtrades.net/';
   }
 
   onMobileMenuOpen(): void {
