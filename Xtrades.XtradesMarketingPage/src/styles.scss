@@ -112,14 +112,6 @@ body {
     .text {
         padding: 1em 0;
     }
-    .link {
-        text-decoration: none;
-        color:var(--white);
-        padding-left: 0;
-        span {
-            color: var(--description-color);
-        }
-    }
     .format-text {
         text-align: justify;
     }
@@ -220,21 +212,22 @@ input {
 
 .link {
     text-decoration: none;
-    color: var(--white);
-    padding: 0 0.8em;
-    color: var(--brand-main-purple);
-    background-image: -webkit-linear-gradient(30deg, var(--brand-main-purple) 50%, transparent 50%);
-    background-image: linear-gradient(30deg, var(--brand-main-purple) 50%, transparent 50%);
+    color: transparent;
+    padding: 0 0.8em 0 0;
     background-clip: text;
     background-size: 500px;
     background-repeat: no-repeat;
     background-position: 0%;
-    -webkit-transition: background 300ms ease-in-out;
-    transition: background 300ms ease-in-out;
+    -webkit-transition: background-position 300ms ease-in-out;
+    transition: background-position 300ms ease-in-out;
     position: relative;
+    background-position: 0%;
+    background-image: linear-gradient(30deg, white 50%, var(--brand-main-purple) 50%);
     &:hover {
         background-position: 100%;
-        color: var(--brand-main-purple);
+    }
+    span {
+        color: var(--description-color);
     }
 }
 
