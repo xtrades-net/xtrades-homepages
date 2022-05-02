@@ -260,7 +260,7 @@
             Frequently <span class="faq__hero-detail">Asked</span> Questions
         </div>
     </app-hero>
-    <div class="faq__questions column" *ngFor="let item of faqs; let i = index" [attr.data-index]="i" appToggle>
+    <div class="faq__questions column cursor-pointer" *ngFor="let item of faqs; let i = index" [attr.data-index]="i" appToggle>
         <app-hero class="faq__article-hero" data-aos="fade-up">
             <div class="flex space-between">
                 <div class="faq__article-main">
