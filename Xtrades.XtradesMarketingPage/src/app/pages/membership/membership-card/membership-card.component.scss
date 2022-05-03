@@ -120,7 +120,7 @@
 }
 
 .icon {
-  width: 8px;
+  min-width: 8px;
   height: 8px;
   -webkit-mask: url(/assets/check-solid.svg) no-repeat center center;
   mask: url(/assets/check-solid.svg) no-repeat center center;
