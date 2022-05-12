@@ -15,6 +15,7 @@ export class HeaderProvider {
       // HeaderElement.apply({ title: 'About us', directUrl: 'about' }),
       // HeaderElement.apply({ title: 'Gear', directUrl: 'gear' }),
       HeaderElement.apply({ title: 'Plans', directUrl: 'plans' }),
+      HeaderElement.apply({ title: 'Newsroom', directUrl: 'newsroom' }),
     ]);
   }
 

@@ -1,0 +1,77 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.mailing-list {
+    padding: var(--section-padding);
+    --app-hero-width: 100%;
+  
+    .border-white {
+      border: 1px solid var(--white);
+    }
+    .overlay {
+      max-width: 547px;
+      margin: 0 auto;
+    }
+    &__wrapper {
+      padding: 4em;
+      background: url("/assets/mailing-list-bg.webp"), linear-gradient(243.56deg, #57376a 0%, #162441 100%);
+      background-position: no-repeat, no-repeat;
+      background-size: cover, cover;
+      border-radius: 18px;
+      @media (max-width: $md) {
+        padding: 3em 1em;
+      }
+    }
+    &__main {
+      padding: 1em 1em 0.5em 1em;
+    }
+    &__form {
+      padding: 0 1em 3em 1em;
+    }
+    &__label {
+      display: none;
+    }
+    &__input {
+      outline: none;
+      background: transparent;
+      max-width: 547px;
+      max-height: 66px;
+      width: 100%;
+      border-radius: 14px;
+      color: var(--white);
+      padding-right: 15em;
+  
+      max-width: 547px;
+  
+      @media (max-width: $md) {
+        padding-right: 5em;
+      }
+  
+      &::placeholder {
+        color: var(--white);
+        font-style: normal;
+        font-weight: normal;
+        @include dynamic-font(16px, 0.75);
+        line-height: 180%;
+      }
+    }
+    &__btn {
+      outline: none;
+      background: transparent;
+      border: none;
+      height: 100%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      padding-right: 1em;
+      right: 0;
+      top: 0;
+      color: var(--white);
+    }
+    .already-subscribed {
+      font-weight: 500;
+      padding: 1em 0;
+    }
+  }
+  

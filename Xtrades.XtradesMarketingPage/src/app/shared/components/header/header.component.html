@@ -1,8 +1,8 @@
 <div class="header responsive-main-container"
   [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
-  <div [routerLink]="['/']"> <img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.png'  width="85" height="62" /></div>
+  <div *ngIf="isMainHeader" [routerLink]="['/']"> <img lazy img class="logo" alt="Xtrades Logo" src='assets/xtrades-logo.png'  width="85" height="62" /></div>
   <div class="header__elements" *ngIf="!isMobile">
-    <span *ngFor="let element of headerProvider.headerElements">
+    <span *ngFor="let element of (headerElements.length !== 0 ? headerElements : headerProvider.headerElements)">
       <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
     </span>
     <span>
@@ -12,7 +12,7 @@
       <a class="link" target="_blank" href="https://xtrades.gitbook.io/documentation/v/discord-guidelines/" routerLinkActive="active-router-link">Docs</a>
     </span>
   </div>
-  <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" *ngIf="!isMobile">Join Now</app-x-button>
+  <app-x-button *ngIf="isMainHeader && !isMobile" class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Join Now</app-x-button>
   <ng-container *ngIf="isMobile">
     <img img class="menu pointer" alt="Mobile Menu Button" src='assets/xtrades-menu.svg' (click)="onMobileMenuOpen()" />
   </ng-container>

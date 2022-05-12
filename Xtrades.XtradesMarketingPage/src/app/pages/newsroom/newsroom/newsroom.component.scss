@@ -1,0 +1,14 @@
+.newsroom {
+    justify-content: space-between;
+
+    &__header {
+        margin: 0 auto;
+    }
+    &__mailing-list {
+        max-width: 45%;
+    }
+    &__blog-posts {
+        max-width: 45%;
+        margin: 80px 0;
+    }
+}

@@ -10,11 +10,17 @@ import { SliderModule } from './components/slider/slider.module';
 import { LabelComponent } from './components/label/label.component';
 import { TextSliderModule } from './components/text-slider/text-slider.module';
 import { FooterModule } from './components/footer/footer.module';
+import { NewsComponent } from './components/news/news.component';
+import { MailingListComponent } from './components/mailing-list/mailing-list.component';
+import { FormsModule } from '@angular/forms';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
 
 @NgModule({
-  declarations: [LabelComponent],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent],
   imports: [
     CommonModule,
+    FormsModule,
     CardModule,
     HeaderModule,
     HeroModule,
@@ -37,6 +43,10 @@ import { FooterModule } from './components/footer/footer.module';
     LabelComponent,
     TextSliderModule,
     FooterModule,
+    NewsComponent,
+    MailingListComponent,
+    BlogCardComponent,
+    BlogPostComponent,
   ],
 })
-export class SharedModule {}
+export class SharedModule { }
