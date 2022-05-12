@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "aos": "^2.3.4",
-    "buttercms": "^1.2.9",
     "lottie-web": "^5.9.1",
     "ngx-lottie": "^8.0.1",
     "rxjs": "~7.5.0",
