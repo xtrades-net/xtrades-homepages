@@ -1,0 +1,16 @@
+<div class="newsroom column">
+  <div class="newsroom__header header header-1 header-1-gradient-overlay px-2" data-aos="fade-up">Newsroom</div>
+  <div class="newsroom__wrapper row">
+    <img src="./assets/newsroom.png" alt="Newsroom Xtrades" />
+  </div>
+  <div class="card__title header-2" data-aos="fade-up"></div>
+
+  <div class="flex responsive-main-container newsroom">
+    <div class="column newsroom__mailing-list">
+      <app-mailing-list></app-mailing-list>
+    </div>
+    <div class="column newsroom__blog-posts">
+      <app-blog-card [id]="id" (goToBlogPost)="goToBlogPost($event)"></app-blog-card>
+    </div>
+  </div>
+</div>

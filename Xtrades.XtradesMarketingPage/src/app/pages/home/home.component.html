@@ -31,7 +31,7 @@
             [subtitle]="'Vetted Pros'">
         </app-card>
         <app-card class="stats__card-wrapper card-wrapper" data-aos-delay="500" data-aos="fade-up" [title]="'$2.2mln'"
-            [subtitle]="'Paid to Date'"> 
+            [subtitle]="'Paid to Date'">
         </app-card>
     </div>
 </section>
@@ -186,62 +186,7 @@
     </div>
 </section>
 <app-separator></app-separator>
-<section class="news responsive-main-container column">
-    <app-hero class="news__hero">
-        <div class="news__main header-1" data-aos="fade-up">
-            News
-        </div>
-        <div class="news__description description center" description>
-            Get to Know Xtrades
-        </div>
-    </app-hero>
-    <div class="news__cards cards flex">
-        <div class="column" data-aos="fade-up">
-            <img lazy src="assets/news-1.webp" alt="Xtrades Edge" width="614" height="393" />
-            <app-label [label]="'Top News'"></app-label>
-            <app-hero class="news__article-hero left">
-                <div class="news__article-main header-1">
-                    How Do Alerts Work ?
-                </div>
-                <div class="news__article-description description" description>
-                    Xtrades presents a platform for traders to build a reputation amongst the community by tracking
-                    their trade alerts. The most effective traders are then provided a spotlight in the community
-                    and given priority viewing of their trades.
-                </div>
-            </app-hero>
-        </div>
-        <div class="column" data-aos="fade-up">
-            <img lazy src="assets/news-2.webp" alt="Xtrades Edge" width="614" height="393" />
-
-            <app-label [label]="'Other News'"></app-label>
-            <app-hero class="news__article-hero left">
-                <div class="news__article-main header-1">
-                    Shared Technical Analysis
-                </div>
-                <div class="news__article-description description" description>
-                    We allow traders to share a variety of Technical Analysis concepts in the Discord and our app
-                    through content creations like Video Lessons, Courses, and our visualization features.
-                </div>
-            </app-hero>
-        </div>
-        <div class="column" data-aos="fade-up">
-            <img lazy src="assets/news-3.webp" alt="Xtrades Edge" width="614" height="393" />
-
-            <app-label [label]="'Interesting'"></app-label>
-            <app-hero class="news__article-hero">
-                <div class="news__article-main header-1">
-                    Optimized for Collaboration
-                </div>
-                <div class="news__article-description description" description>
-                    Receive hyper custom alerts from any type of trader you want from our platform, and also isolate
-                    singular traders to receive custom Push Notifications of your liking. All of our features are
-                    built towards incentivizing the best of the best to come on our platform and share their
-                    knowledge.
-                </div>
-            </app-hero>
-        </div>
-    </div>
-</section>
+<app-news></app-news>
 <app-separator></app-separator>
 <section class="testimonials responsive-main-container column">
     <app-hero class="testimonials__hero">
@@ -275,30 +220,4 @@
         <app-separator></app-separator>
     </div>
 </section>
-<section class="mailing-list responsive-main-container flex column">
-    <div class="gradient-overlay center border-white">
-        <div class="mailing-list__wrapper">
-            <app-hero class="mailing-list__hero">
-                <div class="mailing-list__main header-1 center" data-aos="fade-up">
-                    Join <span class="mailing-list__hero-detail">Our</span> Mailing <span
-                        class="mailing-list__hero-detail">List</span>
-                </div>
-            </app-hero>
-            <form (ngSubmit)="onSubmit()">
-                <div class="form-group mailing-list__form">
-                    <label for="email" class="mailing-list__label">Email</label>
-                    <div class="overlay relative">
-                        <input type="email" class="mailing-list__input form-control" name="email" id="email" ngModel
-                            placeholder="Enter your email address" required #email="ngModel"
-                            (input)="validateEmail(email.value)" [(ngModel)]="emailModel.email" />
-                        <button type="submit" class="btn btn-success mailing-list__btn cursor-pointer absolute"
-                            [disabled]="email.errors?.['pattern']">Sign Up</button>
-                    </div>
-                    <div class="already-subscribed" *ngIf="alreadySubscribed">
-                        You've already subscribed. Thanks!
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+<app-mailing-list></app-mailing-list>

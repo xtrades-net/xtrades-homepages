@@ -9,14 +9,16 @@ import { HeaderProvider } from '../header-provider/header-provider';
   styleUrls: ['./mobile-header.component.scss'],
 })
 export class MobileHeaderComponent implements OnInit, OnDestroy {
+  @Input() headerElements = [];
   @Input() isMobile = true;
+  @Input() isDropdown = false;
   @Input() onClose: any;
   subscription = new Subscription();
 
   constructor(
     public headerProvider: HeaderProvider,
     public screenService: ScreenService
-  ) {}
+  ) { }
 
   @Output() triggerClose = new EventEmitter<Event>();
 

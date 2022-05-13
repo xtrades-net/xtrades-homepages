@@ -35,6 +35,13 @@ const routes: Routes = [
         (m) => m.MembershipModule
       ),
   },
+  {
+    path: 'newsroom',
+    loadChildren: () =>
+      import('./pages/newsroom/newsroom.module').then(
+        (m) => m.NewsroomModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 
@@ -44,4 +51,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
