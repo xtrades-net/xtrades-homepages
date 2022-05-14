@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ScreenService } from '@core/screen.service';
 import { BodyScrollingService } from '@core/body-scrolling.service';
 import { HeaderProvider } from './header-provider/header-provider';
@@ -10,6 +10,9 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  @Input() isMainHeader = true;
+  @Input() headerElements = [];
+
   constructor(
     public headerProvider: HeaderProvider,
     public screenService: ScreenService,

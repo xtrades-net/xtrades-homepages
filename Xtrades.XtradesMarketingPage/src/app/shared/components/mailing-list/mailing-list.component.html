@@ -1,0 +1,27 @@
+<section class="mailing-list responsive-main-container flex column">
+    <div class="gradient-overlay center border-white">
+        <div class="mailing-list__wrapper">
+            <app-hero class="mailing-list__hero">
+                <div class="mailing-list__main header-1 center" data-aos="fade-up">
+                    Join <span class="mailing-list__hero-detail">Our</span> Mailing <span
+                        class="mailing-list__hero-detail">List</span>
+                </div>
+            </app-hero>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group mailing-list__form">
+                    <label for="email" class="mailing-list__label">Email</label>
+                    <div class="overlay relative">
+                        <input type="email" class="mailing-list__input form-control" name="email" id="email" ngModel
+                            placeholder="Enter your email address" required #email="ngModel"
+                            (input)="validateEmail(email.value)" [(ngModel)]="emailModel.email" />
+                        <button type="submit" class="btn btn-success mailing-list__btn cursor-pointer absolute"
+                            [disabled]="email.errors?.['pattern']">Sign Up</button>
+                    </div>
+                    <div class="already-subscribed" *ngIf="alreadySubscribed">
+                        You've already subscribed. Thanks!
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

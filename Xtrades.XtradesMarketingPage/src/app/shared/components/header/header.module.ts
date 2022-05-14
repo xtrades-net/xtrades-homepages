@@ -8,6 +8,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [HeaderComponent, MobileHeaderComponent],
   imports: [CommonModule, XButtonModule, RouterModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, MobileHeaderComponent],
 })
 export class HeaderModule {}
