@@ -19,13 +19,13 @@ export class NewsroomComponent {
   blogPosts = [
     {
       id: '1',
-      author: '',
+      author: 'AnkitCreates',
       date: '14.05.2022',
       title: 'What Is Webull? How to Sign Up and What You Need to Know!'
     },
     {
       id: '2',
-      author: '',
+      author: 'AnkitCreates',
       date: '14.05.2022',
       title: 'What is TradingView?'
     }
