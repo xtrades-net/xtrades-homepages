@@ -6,11 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./blog-card.component.scss']
 })
 export class BlogCardComponent {
-  @Input() id = 0;
+  @Input() blogPost: any;
   @Output() goToBlogPost = new EventEmitter();
 
   onClickBlogCard() {
-    this.goToBlogPost.emit(this.id);
+    this.goToBlogPost.emit(this.blogPost.id);
   }
 
 }

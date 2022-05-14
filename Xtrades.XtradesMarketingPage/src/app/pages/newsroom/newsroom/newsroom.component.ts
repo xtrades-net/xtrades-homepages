@@ -15,6 +15,20 @@ export class NewsroomComponent {
     "Xhub uploads",
     "Ideas",
     "Tools"
+  ];
+  blogPosts = [
+    {
+      id: '1',
+      author: '',
+      date: '14.05.2022',
+      title: 'What Is Webull? How to Sign Up and What You Need to Know!'
+    },
+    {
+      id: '2',
+      author: '',
+      date: '14.05.2022',
+      title: 'What is TradingView?'
+    }
   ]
 
   constructor(private router: Router, private bodyScrolling: BodyScrollingService) { }

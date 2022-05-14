@@ -10,7 +10,7 @@
       <app-mailing-list></app-mailing-list>
     </div>
     <div class="column newsroom__blog-posts">
-      <app-blog-card [id]="id" (goToBlogPost)="goToBlogPost($event)"></app-blog-card>
+      <app-blog-card *ngFor="let blogPost of blogPosts" [id]="blogPost.id" (goToBlogPost)="goToBlogPost($event)" [blogPost]="blogPost"></app-blog-card>
     </div>
   </div>
 </div>

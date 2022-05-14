@@ -1,6 +1,11 @@
 @import "../../../../styles/vars";
 
 .blog-card {
+    &__image-wrapper {
+        @media (max-width: $md) {
+            align-items: center;
+        }
+    }
     &__post-image {
         max-width: 270px;
         @media (max-width: $md) {
@@ -8,6 +13,7 @@
         }
     }
     &__post-header {
-        font-size: 28px;
+        font-size: 24px;
+        align-items: center;
     }
 }
