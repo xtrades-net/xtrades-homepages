@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NewsroomComponent } from './newsroom/newsroom.component';
 import { SharedModule } from '@shared/shared.module';
 import { BlogPostComponent } from '@shared/components/blog-post/blog-post.component';
+import { ModalModule } from '@shared/components/modal/modal.module';
 
 @NgModule({
   declarations: [NewsroomComponent],
@@ -17,6 +18,7 @@ import { BlogPostComponent } from '@shared/components/blog-post/blog-post.compon
       },
       { path: ':id', component: BlogPostComponent },
     ]),
+    ModalModule
   ],
 })
 export class NewsroomModule {}
