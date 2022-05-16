@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BodyScrollingService } from '@core/body-scrolling.service';
+import { ModalService } from '@shared/components/modal/modal.service';
 
 @Component({
   selector: 'app-newsroom',
@@ -28,10 +29,28 @@ export class NewsroomComponent {
       author: 'AnkitCreates',
       date: '14.05.2022',
       title: 'What is TradingView?'
+    },
+    {
+      id: '3',
+      author: 'AnkitCreates',
+      date: '16.05.2022',
+      title: 'Copy Trading: What Investors Need to Know'
+    },
+    {
+      id: '4',
+      author: 'AnkitCreates',
+      date: '16.05.2022',
+      title: 'How to Make the Most Out of Stock Alerts: Tips for Maximum Profits'
+    },
+    {
+      id: '5',
+      author: 'AnkitCreates',
+      date: '16.05.2022',
+      title: 'Why Real-Time Alerts are Essential for Investors?'
     }
   ]
 
-  constructor(private router: Router, private bodyScrolling: BodyScrollingService) { }
+  constructor(private router: Router) { }
 
   goToBlogPost(event: number) {
     this.router.navigateByUrl(`newsroom/${event}`);
