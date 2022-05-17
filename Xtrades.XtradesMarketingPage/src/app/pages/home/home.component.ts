@@ -130,7 +130,7 @@ export class HomeComponent {
   ) {}
 
   handleGoToBetaAppClick(): void {
-    window.location.href = 'https://app.beta.xtrades.net/';
+    window.location.href = 'https://app.xtrades.net/';
   }
 
   onSubmit() {

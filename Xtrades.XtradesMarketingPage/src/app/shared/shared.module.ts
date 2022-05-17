@@ -15,9 +15,10 @@ import { MailingListComponent } from './components/mailing-list/mailing-list.com
 import { FormsModule } from '@angular/forms';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { BlogPost6Component } from './components/blog-post/blog-post-6.component';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component],
   imports: [
     CommonModule,
     FormsModule,
