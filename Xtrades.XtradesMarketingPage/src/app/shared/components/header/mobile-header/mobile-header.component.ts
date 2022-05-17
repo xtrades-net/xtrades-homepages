@@ -33,7 +33,7 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
   }
 
   handleGoToBetaAppClick(): void {
-    window.location.href = 'https://app.beta.xtrades.net/';
+    window.location.href = 'https://app.xtrades.net/';
   }
 
   onMenuClose(): void {

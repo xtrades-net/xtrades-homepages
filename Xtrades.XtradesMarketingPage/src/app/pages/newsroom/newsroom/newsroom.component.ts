@@ -47,8 +47,14 @@ export class NewsroomComponent {
       author: 'AnkitCreates',
       date: '16.05.2022',
       title: 'Why Real-Time Alerts are Essential for Investors?'
+    },
+    {
+      id: '6',
+      author: 'AnkitCreates',
+      date: '17.05.2022',
+      title: 'How to Read Option Alerts: The Ultimate Guide'
     }
-  ]
+  ].reverse();
 
   constructor(private router: Router) { }
 
