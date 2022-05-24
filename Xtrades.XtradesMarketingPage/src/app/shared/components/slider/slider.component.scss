@@ -17,6 +17,10 @@
     }
 }
 
+.content__image {
+    border-radius: 16px;
+}
+
 ::ng-deep .detailed-swiper-button-prev,
 ::ng-deep .detailed-swiper-button-next {
     width: 47px;
