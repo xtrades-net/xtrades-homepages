@@ -1,16 +1,17 @@
 <section class="hero flex grid-container" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
-    <div class="hero__main relative header-1 header-1-gradient-overlay main" data-aos="fade-up" data-aos-delay="500">
+    <div class="hero__main relative header-1 header-1-gradient-overlay main" data-aos="fade-up"  >
         The Future <span class="hero__hero-detail">of Trader</span> Collaboration
     </div>
-    <div image class="hero__mobile flex relative animation" data-aos="fade-up" data-aos-delay="500">
-        <app-main-image-animation class="hero__main-img" width="500" height="500"></app-main-image-animation>
+    <div image class="hero__mobile flex relative animation" data-aos="fade-up"  >
+        <!-- <app-main-image-animation class="hero__main-img" width="500" height="500"></app-main-image-animation> -->
+        <app-video-hero></app-video-hero>
         <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
     </div>
     <div class="column hero__joinnow hero-description">
-        <div class="hero__description description" description data-aos="fade-up" data-aos-delay="500">
+        <div class="hero__description description" description data-aos="fade-up"  >
             Interact with retail traders across the globe, new and experienced.
         </div>
-        <div class="hero__buttons-row flex" buttons data-aos="fade-up" data-aos-delay="500">
+        <div class="hero__buttons-row flex" buttons data-aos="fade-up"  >
             <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
                 Beta App
             </app-x-button>
@@ -19,18 +20,18 @@
 </section>
 <section class="stats responsive-main-container">
     <div class="stats__cards">
-      <h1 style="text-align:center; color:#fff;" data-aos="fade-up" data-aos-delay="500">Stock Trading On Discord for Real-Time Stocks Alerts</h1>
+      <h1 style="text-align:center; color:#fff;" data-aos="fade-up"  >Stock Trading On Discord for Real-Time Stocks Alerts</h1>
     </div>
 </section>
 <section class="stats responsive-main-container">
     <div class="stats__cards cards">
-        <app-card class="stats__card-wrapper card-wrapper" data-aos-delay="500" data-aos="fade-up" [title]="'20,000+'"
+        <app-card class="stats__card-wrapper card-wrapper"   data-aos="fade-up" [title]="'20,000+'"
             [subtitle]="'Active Members Daily'">
         </app-card>
-        <app-card class="stats__card-wrapper card-wrapper" data-aos-delay="500" data-aos="fade-up" [title]="'50'"
+        <app-card class="stats__card-wrapper card-wrapper"   data-aos="fade-up" [title]="'50'"
             [subtitle]="'Vetted Pros'">
         </app-card>
-        <app-card class="stats__card-wrapper card-wrapper" data-aos-delay="500" data-aos="fade-up" [title]="'$2.2mln'"
+        <app-card class="stats__card-wrapper card-wrapper"   data-aos="fade-up" [title]="'$2.2mln'"
             [subtitle]="'Paid to Date'">
         </app-card>
     </div>
