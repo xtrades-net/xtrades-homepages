@@ -1,12 +1,12 @@
-<section class="hero flex grid-container" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
+<section class="hero flex grid-container relative" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
     <div class="hero__main relative header-1 header-1-gradient-overlay main" data-aos="fade-up"  >
         The Future <span class="hero__hero-detail">of Trader</span> Collaboration
     </div>
-    <div image class="hero__mobile flex relative animation" data-aos="fade-up"  >
+    <div image class="hero__mobile flex relative animation" data-aos="fade-up">
         <!-- <app-main-image-animation class="hero__main-img" width="500" height="500"></app-main-image-animation> -->
         <app-video-hero></app-video-hero>
-        <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
     </div>
+    <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
     <div class="column hero__joinnow hero-description">
         <div class="hero__description description" description data-aos="fade-up"  >
             Interact with retail traders across the globe, new and experienced.
