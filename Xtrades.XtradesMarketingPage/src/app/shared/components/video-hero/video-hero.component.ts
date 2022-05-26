@@ -12,6 +12,13 @@ export class VideoHeroComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.backgroundImage.nativeElement.addEventListener('load', () => this.backgroundLoaded = true);
+    setTimeout(function() {
+      (document.querySelector('.web-demo__play-video-arrow') as HTMLElement)?.click();
+    }, 5000);
+  }
+
+  play() {
+    this.playVideo = true;
   }
 
 }
