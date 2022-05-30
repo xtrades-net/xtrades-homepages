@@ -64,7 +64,7 @@ export class NewsroomComponent {
       id: '7',
       url: 'why-swing-trading',
       author: 'AnkitCreates',
-      date: '30.05.2022',
+      date: '31.05.2022',
       title: 'Why Swing Trading Is More Lucrative Than Day Trading'
     }
   ].reverse();
