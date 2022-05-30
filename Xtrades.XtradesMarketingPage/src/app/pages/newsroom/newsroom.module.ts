@@ -16,7 +16,7 @@ import { ModalModule } from '@shared/components/modal/modal.module';
         path: '',
         component: NewsroomComponent,
       },
-      { path: ':id', component: BlogPostComponent },
+      { path: ':url', component: BlogPostComponent },
     ]),
     ModalModule
   ],

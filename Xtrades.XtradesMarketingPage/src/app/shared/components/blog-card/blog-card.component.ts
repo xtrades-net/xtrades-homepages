@@ -10,7 +10,7 @@ export class BlogCardComponent {
   @Output() goToBlogPost = new EventEmitter();
 
   onClickBlogCard() {
-    this.goToBlogPost.emit(this.blogPost.id);
+    this.goToBlogPost.emit(this.blogPost);
   }
 
 }
