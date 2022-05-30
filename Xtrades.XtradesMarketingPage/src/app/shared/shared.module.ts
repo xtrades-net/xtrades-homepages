@@ -16,10 +16,11 @@ import { FormsModule } from '@angular/forms';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogPost6Component } from './components/blog-post/blog-post-6.component';
+import { BlogPost7Component } from './components/blog-post/blog-post-7.component';
 import { VideoHeroComponent } from './components/video-hero/video-hero.component';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, VideoHeroComponent],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, VideoHeroComponent],
   imports: [
     CommonModule,
     FormsModule,
