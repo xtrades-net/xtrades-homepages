@@ -36,10 +36,10 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'newsroom',
+    path: 'blogs',
     loadChildren: () =>
-      import('./pages/newsroom/newsroom.module').then(
-        (m) => m.NewsroomModule
+      import('./pages/blogs/blogs.module').then(
+        (m) => m.BlogsModule
       ),
   },
   { path: '**', redirectTo: '' },
