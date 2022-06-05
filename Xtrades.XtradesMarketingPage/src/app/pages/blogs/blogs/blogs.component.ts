@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
-import { BodyScrollingService } from '@core/body-scrolling.service';
-import { ModalService } from '@shared/components/modal/modal.service';
 
 @Component({
-  selector: 'app-newsroom',
-  templateUrl: './newsroom.component.html',
-  styleUrls: ['./newsroom.component.scss']
+  selector: 'app-blogs',
+  templateUrl: './blogs.component.html',
+  styleUrls: ['./blogs.component.scss']
 })
-export class NewsroomComponent {
+export class BlogsComponent {
   id = 1;
   headerElements = [
     "Blogs",
@@ -72,6 +70,6 @@ export class NewsroomComponent {
   constructor(private router: Router) { }
 
   goToBlogPost(event: RouterEvent) {
-    this.router.navigateByUrl(`newsroom/${event.url}`);
+    this.router.navigateByUrl(`blogs/${event.url}`);
   }
 }

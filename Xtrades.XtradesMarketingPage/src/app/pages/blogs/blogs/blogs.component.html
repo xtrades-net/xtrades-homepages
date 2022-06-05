@@ -1,13 +1,13 @@
-<div class="newsroom column">
-  <div class="newsroom__header header header-1 header-1-gradient-overlay px-2" data-aos="fade-up">Newsroom</div>
+<div class="blogs column">
+  <div class="blogs__header header header-1 header-1-gradient-overlay px-2" data-aos="fade-up">Blogs</div>
   <div class="card__title header-2" data-aos="fade-up"></div>
 
-  <div class="column responsive-main-container newsroom">
+  <div class="column responsive-main-container blogs">
       <app-blog-card *ngFor="let blogPost of blogPosts" [id]="blogPost.id" (goToBlogPost)="goToBlogPost($event)" [blogPost]="blogPost"></app-blog-card>
   </div>
 </div>
 <app-modal [id]="'mailing-modal'" class="modal">
-    <div class="column newsroom__mailing-list">
+    <div class="column blogs__mailing-list">
       <app-mailing-list></app-mailing-list>
     </div>
 </app-modal>
