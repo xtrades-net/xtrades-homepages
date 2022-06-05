@@ -163,6 +163,10 @@
             records will be able to monetize their information to our Audience.
         </div>
     </app-hero>
+    <div (click)="showReadMoreSection = !showReadMoreSection" class="center cursor-pointer">
+        {{ showReadMoreSection ? 'Read less ...' : 'Read more ...' }}
+    </div>
+    <app-homepage-content [ngClass]="showReadMoreSection ? '' : 'is-visible is-height'"></app-homepage-content>
     <div class="flex">
         <div class="column">
             <div class="gradient-overlay">

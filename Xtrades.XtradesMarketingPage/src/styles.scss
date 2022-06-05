@@ -312,3 +312,15 @@ input:-webkit-autofill:active {
 .modal-open {
     overflow: hidden;
 }
+
+.clear-list-style {
+    list-style-type:none;
+}
+
+.is-visible {
+    visibility: hidden;
+}
+
+.is-height {
+    height: 0;
+}

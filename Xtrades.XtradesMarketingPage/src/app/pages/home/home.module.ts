@@ -4,17 +4,17 @@ import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '@shared/directives/directives.module';
 import { SharedModule } from '@shared/shared.module';
 import { HomeComponent } from './home.component';
-import { MainImageAnimationComponent } from './main-image-animation/main-image-animation.component';
-
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { HomepageContentComponent } from './homepage-content/homepage-content.component';
+import { MainImageAnimationComponent } from './main-image-animation/main-image-animation.component';
 
 export function playerFactory() {
   return player;
 }
 
 @NgModule({
-  declarations: [HomeComponent, MainImageAnimationComponent],
+  declarations: [HomeComponent, MainImageAnimationComponent, HomepageContentComponent],
   imports: [
     SharedModule,
     DirectivesModule,
