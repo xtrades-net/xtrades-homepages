@@ -9,6 +9,10 @@
     padding-left: 15px;
 }
 
+.p-2 {
+    padding: 15px;
+}
+
 .mpt-2 {
     @media(max-width: $md) {
         padding-top: 15px;

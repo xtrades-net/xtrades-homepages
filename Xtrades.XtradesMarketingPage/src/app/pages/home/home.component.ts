@@ -122,6 +122,7 @@ export class HomeComponent {
 
   isEmailValid = false;
   alreadySubscribed = false;
+  showReadMoreSection = false;
 
   constructor(
     public screenService: ScreenService,
