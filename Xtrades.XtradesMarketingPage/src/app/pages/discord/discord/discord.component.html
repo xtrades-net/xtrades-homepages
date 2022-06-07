@@ -1,0 +1,13 @@
+<div class="discord relative flex responsive-main-container">
+    <div class="nav flex spacer-top-sm column menu">
+        <a class="button pointer" [routerLink]="['server-rules']" routerLinkActive="active">Xtrades Server Rules and
+            Code of
+            Conduct</a>
+        <a class="button pointer" [routerLink]="['server-guidelines']" routerLinkActive="active">Server Guide</a>
+        <a class="button pointer" [routerLink]="['faq']" routerLinkActive="active">FAQ</a>
+        <a class="button pointer" [routerLink]="['analyst-guidelines']" routerLinkActive="active">Xtrades Analyst Guidelines</a>
+    </div>
+    <div class="tabs__router">
+        <router-outlet></router-outlet>
+    </div>
+</div>
