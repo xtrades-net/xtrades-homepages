@@ -129,7 +129,7 @@ export class MembershipComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any>('/membership-plans').subscribe(res => {
+    this.http.get<any>('https://app.xtrades.net/api/v2/payments/plans').subscribe(res => {
       this.options.forEach((option: any) => {
         res.data.plans.forEach((plan: any) => {
           if (option.name === plan.name) {
