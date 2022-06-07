@@ -7,10 +7,4 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class BlogCardComponent {
   @Input() blogPost: any;
-  @Output() goToBlogPost = new EventEmitter();
-
-  onClickBlogCard() {
-    this.goToBlogPost.emit(this.blogPost);
-  }
-
 }

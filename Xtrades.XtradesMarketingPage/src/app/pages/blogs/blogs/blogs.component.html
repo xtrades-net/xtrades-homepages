@@ -3,7 +3,7 @@
   <div class="card__title header-2" data-aos="fade-up"></div>
 
   <div class="column responsive-main-container blogs">
-      <app-blog-card *ngFor="let blogPost of blogPosts" [id]="blogPost.id" (goToBlogPost)="goToBlogPost($event)" [blogPost]="blogPost"></app-blog-card>
+      <app-blog-card *ngFor="let blogPost of blogPosts" [id]="blogPost.id" [blogPost]="blogPost"></app-blog-card>
   </div>
 </div>
 <app-modal [id]="'mailing-modal'" class="modal">

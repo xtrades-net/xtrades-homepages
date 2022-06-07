@@ -1,17 +1,19 @@
-<div class="blog-card flex cursor-pointer" data-aos="fade-up" (click)="onClickBlogCard()">
-    <div class="blog-card__image-wrapper column px-2">
-        <img lazy src="assets/news-1.webp" class="blog-card__post-image" alt="Xtrades Edge" width="614" height="393" />
-    </div>
-    <div class="blog-card__post column pl-2">
-        <div class="blog-card__post-header flex space-between px-2">
-            <app-label [label]="'Trading'"></app-label>
-            <div>{{blogPost.date}}</div>
+<a class="link" [href]="blogPost.href">
+    <div class="blog-card flex cursor-pointer" data-aos="fade-up">
+        <div class="blog-card__image-wrapper column px-2">
+            <img lazy src="assets/news-1.webp" class="blog-card__post-image" alt="Xtrades Edge" width="614" height="393" />
         </div>
-
-        <app-hero class="blog-card__post-hero left px-2">
-            <div class="blog-card__post-header header-2" header-2>
-                {{blogPost.title}}
+        <div class="blog-card__post column pl-2">
+            <div class="blog-card__post-header flex space-between px-2">
+                <app-label [label]="'Trading'"></app-label>
+                <div>{{blogPost.date}}</div>
             </div>
-        </app-hero>
+    
+            <app-hero class="blog-card__post-hero left px-2">
+                <div class="blog-card__post-header header-2" header-2>
+                    {{blogPost.title}}
+                </div>
+            </app-hero>
+        </div>
     </div>
-</div>
+</a>
