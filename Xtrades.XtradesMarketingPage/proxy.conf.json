@@ -14,5 +14,13 @@
         "pathRewrite": {
             "^/mailchimp": ""
         }
+    },
+    "/membership-plans": {
+        "target": "https://app.xtrades.net/api/v2/payments/plans",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/membership-plans": ""
+        }
     }
 }

@@ -127,4 +127,16 @@ export class MembershipComponent {
   opt: any = [];
 
   constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get<any>('https://app.xtrades.net/api/v2/payments/plans').subscribe(res => {
+      this.options.forEach((option: any) => {
+        res.data.plans.forEach((plan: any) => {
+          if (option.name === plan.name) {
+            this.opt.push({...plan, ...option});
+          }
+        });
+      });
+    });
+  }
 }
