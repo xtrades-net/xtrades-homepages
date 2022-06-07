@@ -9,6 +9,8 @@ export class MembershipCardPriceTag {
 export type MembershipCard = {
   selected: boolean;
   title: string;
+  name: string;
+  price: number;
   priceTag: MembershipCardPriceTag;
   description: string;
   featuresList: string[];

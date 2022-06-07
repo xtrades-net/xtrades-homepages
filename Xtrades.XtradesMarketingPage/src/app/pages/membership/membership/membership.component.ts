@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { MembershipCard } from './membership.model';
 
 @Component({
   selector: 'app-membership',
@@ -9,10 +9,10 @@ import { MembershipCard } from './membership.model';
 export class MembershipComponent {
   expanded = true;
 
-  options: MembershipCard[] = [
+  options: any = [
     {
       selected: false,
-      title: 'Elite',
+      name: 'elite',
       priceTag: { userCost: 48, period: 'month' },
       description: 'Our monthly plan',
       planId: 'elite',
@@ -55,7 +55,7 @@ export class MembershipComponent {
     },
     {
       selected: false,
-      title: 'Elite +',
+      name: 'plus',
       priceTag: { userCost: 388, period: 'year' },
       planId: 'plus',
       description:
@@ -104,7 +104,7 @@ export class MembershipComponent {
     },
     {
       selected: false,
-      title: 'Lifetime',
+      name: 'lifetime',
       priceTag: { userCost: 988, period: 'Single Payment' },
       oneTimePayment: true,
       planId: 'lifetime',
@@ -122,4 +122,21 @@ export class MembershipComponent {
       paymentDescription: '',
     },
   ];
+
+  plans: any;
+  opt: any = [];
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get<any>('/membership-plans').subscribe(res => {
+      this.options.forEach((option: any) => {
+        res.data.plans.forEach((plan: any) => {
+          if (option.name === plan.name) {
+            this.opt.push({...plan, ...option});
+          }
+        });
+      });
+    });
+  }
 }
