@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { ScreenService } from '@core/screen.service';
 import * as _ from 'lodash';
-import { Utils } from 'src/app/utils/utils';
+import { SubscribeService } from '../modal/subscribe-modal/subscribe.service';
 
 @Component({
   selector: 'app-mailing-list',
@@ -20,7 +20,7 @@ export class MailingListComponent {
 
   constructor(
     public screenService: ScreenService,
-    private httpService: HttpClient,
+    private subscribeService: SubscribeService,
     private cdr: ChangeDetectorRef
   ) { }
 
@@ -46,34 +46,10 @@ export class MailingListComponent {
   }, 200);
 
   confirmSubscription() {
-    this.httpService
-      .post(
-        `${Utils.isLocalhost()
-          ? '/emailOctopus'
-          : 'https://hidden-bayou-43712.herokuapp.com/https://emailoctopus.com/api/1.5/'
-        }lists/${Utils.isDevOrLocalhost()
-          ? 'ae80632f-98e6-11ec-9258-0241b9615763'
-          : '6e571cde-993d-11ec-9258-0241b9615763'
-        }/contacts`,
-        {
-          api_key: 'a398538f-2712-49ca-8268-631ec7ad51bf',
-          email_address: this.input.control.value,
-        }
-      )
-      .subscribe({
-        next: (res) => this.subscribeSuccess(),
-        error: (error: HttpErrorResponse) => {
-          if (
-            error.error &&
-            error.error.error &&
-            error.error.error.code === 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS'
-          ) {
-            this.subscribeSuccess();
-          } else {
-            alert('something went wrong :(, please try again later');
-          }
-        },
-      });
+    this.subscribeService.subscribeToMainHomepageList(this.input.value).subscribe({
+      next: (v) => this.subscribeSuccess(),
+      error: (e) => alert('something went wrong :(, please try again later'),
+    });
   }
 
   subscribeSuccess() {
