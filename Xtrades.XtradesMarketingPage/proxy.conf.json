@@ -1,12 +1,4 @@
 {
-    "/emailOctopus": {
-        "target": "https://emailoctopus.com/api/1.5/",
-        "secure": true,
-        "changeOrigin": true,
-        "pathRewrite": {
-            "^/emailOctopus": ""
-        }
-    },
     "/mailchimp": {
         "target": "https://gmail.us14.list-manage.com/subscribe",
         "secure": true,
