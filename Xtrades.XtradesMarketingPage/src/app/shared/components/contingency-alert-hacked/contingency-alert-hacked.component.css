@@ -1,0 +1,15 @@
+.main {
+  font-size: 30px;
+  font-style: italic;
+  margin: 5% 15%;
+  word-wrap: break-word;
+}
+
+.linkcontg {
+  word-wrap: break-word;
+}
+.warning {
+  color:crimson;
+  font-size: 40px;
+  font-weight: 700;
+}

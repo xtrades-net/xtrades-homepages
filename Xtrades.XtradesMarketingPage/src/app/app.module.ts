@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { FooterModule } from '@shared/components/footer/footer.module';
 import { DirectivesModule } from '@shared/directives/directives.module';
 import { ModalModule } from '@shared/components/modal/modal.module';
+import { ContingencyAlertHackedComponent } from '@shared/components/contingency-alert-hacked/contingency-alert-hacked.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContingencyAlertHackedComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
