@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { ModalService } from '../modal/modal.service';
 
 @Component({
   selector: 'app-video-hero',
@@ -10,15 +11,19 @@ export class VideoHeroComponent implements AfterViewInit {
   playVideo = false;
   backgroundLoaded = false;
 
+  constructor(private modalService: ModalService) {}
+
   ngAfterViewInit(): void {
     this.backgroundImage.nativeElement.addEventListener('load', () => this.backgroundLoaded = true);
-    setTimeout(function() {
-      (document.querySelector('.web-demo__play-video-arrow') as HTMLElement)?.click();
-    }, 5000);
   }
 
   play() {
-    this.playVideo = true;
+    // this.playVideo = true;
+    this.modalService.open('video-modal');
+  }
+
+  closeModal($event: any) {
+    this.modalService.close('video-modal');
   }
 
 }

@@ -6,10 +6,11 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { XButtonModule } from '@shared/components/x-button/x-button.module';
 import { HttpClientJsonpModule } from '@angular/common/http';
+import { VideoModalComponent } from './video-modal/video-modal.component';
 
 @NgModule({
-  declarations: [ModalComponent, SubscribeModalComponent],
-  exports: [ModalComponent, SubscribeModalComponent],
+  declarations: [ModalComponent, SubscribeModalComponent, VideoModalComponent],
+  exports: [ModalComponent, SubscribeModalComponent, VideoModalComponent],
   imports: [
     CommonModule,
     RouterModule,
