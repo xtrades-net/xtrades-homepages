@@ -9,9 +9,10 @@ import { FooterModule } from '@shared/components/footer/footer.module';
 import { DirectivesModule } from '@shared/directives/directives.module';
 import { ModalModule } from '@shared/components/modal/modal.module';
 import { ContingencyAlertHackedComponent } from '@shared/components/contingency-alert-hacked/contingency-alert-hacked.component';
+import { BannerComponent } from '@shared/components/banner/banner.component';
 
 @NgModule({
-  declarations: [AppComponent, ContingencyAlertHackedComponent],
+  declarations: [AppComponent, ContingencyAlertHackedComponent, BannerComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -20,7 +21,7 @@ import { ContingencyAlertHackedComponent } from '@shared/components/contingency-
     FooterModule,
     HttpClientModule,
     DirectivesModule,
-    ModalModule,
+    ModalModule
   ],
   providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],
