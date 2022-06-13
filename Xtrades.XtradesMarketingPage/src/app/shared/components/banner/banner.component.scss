@@ -1,0 +1,59 @@
+@import "../../../../styles/vars.scss";
+
+.banner {
+  height: 60px;
+  width: 100vwh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 25px;
+  --x-fail: #fb5a5c;
+  --x-success-light: #e6f9f5;
+  --x-fail-light: #ffeeef;
+
+  background-color: var(--x-fail);
+  color: white;
+
+  &__icon {
+    background-color: var(--x-fail-light);
+    border-radius: 99px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: red;
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+    svg {
+      width: 15px;
+    }
+    path {
+      color: red;
+      fill: red;
+          height: 30px;
+    width: 30px;
+    font-size: 10px;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    font-size: 17px;
+    font-weight: var(--font-weight-bold);
+    color: white;
+  }
+  &__button {
+    --ion-color-primary: var(--x-fail);
+    --ion-color-primary-tint: white;
+    color: white;
+    background-color: var(--ion-color-primary);
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid white;
+    padding: .5em 1em;
+    border-radius: 8px;
+    // --box-shadow: 0px 5px 10px rgba(0, 165, 234, 0.18);
+  }
+}

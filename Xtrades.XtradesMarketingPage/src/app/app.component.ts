@@ -21,6 +21,10 @@ export class AppComponent implements OnInit {
     });
   }
 
+  openErrorModal() {
+    this.modalService.open('error-modal');
+  }
+
   closeModal(id: string) {
     this.modalService.close(id);
   }

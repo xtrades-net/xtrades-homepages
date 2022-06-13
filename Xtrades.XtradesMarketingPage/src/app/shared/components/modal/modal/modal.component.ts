@@ -7,7 +7,8 @@ import { ModalService } from '@shared/components/modal/modal.service';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit, OnDestroy {
-  @Input() id: string = '';
+  @Input() id = '';
+  @Input() type = '';
   private element: any;
 
   constructor(private modalService: ModalService, private el: ElementRef) {

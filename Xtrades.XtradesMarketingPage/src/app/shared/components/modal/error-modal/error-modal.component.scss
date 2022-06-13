@@ -1,0 +1,89 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/vars";
+
+.subscribe-modal {
+  background-color: white;
+    &__logo-wrapper {
+      display: flex;
+    }
+    &__logo-text {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: -0.8px;
+
+        display: flex;
+        align-items: center;
+
+        background: linear-gradient(90deg, #B5B3E9 0%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        padding-left: 10px;
+    }
+    &__header-1 {
+      @include dynamic-font(48px, 0.7);
+      line-height: 44px;
+      padding: 17px 0;
+    }
+    &__description {
+      padding: 17px 0 24px 0;
+      font-size: 16px;
+      @media (max-width: $lg) {
+        font-size: 14px !important;
+      }
+      font-style: normal;
+      font-weight: 400 !important;
+      line-height: 24px  !important;
+    letter-spacing: -0.3px !important;
+
+/* paper */
+
+color: #F7F9FC !important;
+    }
+    &__resign-button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.02em;
+        text-decoration-line: underline;
+        color: #00A5EA;
+    }
+}
+
+.mailing-list {
+    &__form {
+      justify-content: center;
+    }
+    &__label {
+      display: none;
+    }
+    &__input {
+      outline: none;
+      background: transparent;
+      background: rgba(83, 80, 153, 0.45);
+      color: var(--white);
+      border-radius: 8px;
+      min-height: 58px;
+      min-width: 326px;
+      &::placeholder {
+        color: var(--white) !important;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+        line-height: 20px !important;
+      }
+    }
+    &__btn {
+      padding-left: 16px;
+      @media (max-width: 960px) {
+        padding: 2px;
+        margin: 0 auto;
+    }
+    }
+    .already-subscribed {
+      font-weight: 500;
+      padding: 0.15em 0;
+      font-size: .3em;
+    }
+}
