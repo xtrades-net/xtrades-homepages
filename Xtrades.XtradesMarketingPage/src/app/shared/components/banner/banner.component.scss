@@ -7,11 +7,11 @@
   flex-direction: row;
   align-items: center;
   padding: 0 25px;
-  --x-fail: #fb5a5c;
+  --x-warn: #ec9a00;
   --x-success-light: #e6f9f5;
   --x-fail-light: #ffeeef;
 
-  background-color: var(--x-fail);
+  background-color: var(--x-warn);
   color: white;
 
   &__icon {
@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 20px;
-    color: red;
+    color: var(--x-warn);
     height: 30px;
     width: 30px;
     font-size: 10px;
@@ -31,8 +31,8 @@
       margin: 5px;
     }
     path {
-      color: red;
-      fill: red;
+      color: var(--x-warn);
+      fill: var(--x-warn);
           height: 30px;
     width: 30px;
     font-size: 10px;
