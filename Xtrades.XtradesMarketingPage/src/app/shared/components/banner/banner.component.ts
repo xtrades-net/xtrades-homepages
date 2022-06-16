@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
-  @Input() bannerText = 'WARNING: Xtrades & CryptoTraders Discord servers hacked';
+  @Input() bannerText = 'CAUTION: Xtrades & CryptoTraders Discord servers hacked';
   @Input() buttonText = 'See more';
   @Input() errorText = '';
   @Input() iconPath = 'warning';
