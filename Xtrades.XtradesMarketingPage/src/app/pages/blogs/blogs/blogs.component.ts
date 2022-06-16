@@ -71,6 +71,14 @@ export class BlogsComponent {
       date: '31.05.2022',
       href: 'https://www.xtrades.net/blogs/why-swing-trading',
       title: 'Why Swing Trading Is More Lucrative Than Day Trading'
+    },
+    {
+      id: '8',
+      url: 'getting-started-with-stock-trading',
+      author: 'AnkitCreates',
+      date: '16.06.2022',
+      href: '/blogs/getting-started-with-stock-trading',
+      title: 'Getting started with Stock Trading. Everything you need to know.'
     }
   ].reverse();
 
