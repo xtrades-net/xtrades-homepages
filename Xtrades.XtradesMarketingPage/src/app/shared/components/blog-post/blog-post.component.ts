@@ -57,11 +57,19 @@ export class BlogPostComponent {
       author: 'AnkitCreates',
       date: '31.05.2022',
       title: 'Why Swing Trading Is More Lucrative Than Day Trading'
+    },
+    {
+      id: '8',
+      url: 'getting-started-with-stock-trading',
+      author: 'AnkitCreates',
+      date: '16.06.2022',
+      title: 'Getting Started with Stock Trading: Everything You Need to Know'
     }
   ]
 
   constructor(private router: Router) {
     this.url = this.router.url.split("/")[this.router.url.split("/").length - 1];
     this.id = Number(this.blogPosts.find(post => post.url === this.url)?.id);
+    console.log(this.url, this.id);
   }
 }
