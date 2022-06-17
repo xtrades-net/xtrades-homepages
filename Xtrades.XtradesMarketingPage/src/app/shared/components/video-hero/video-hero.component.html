@@ -4,5 +4,5 @@
       <img loading="eager" class="web-demo__img web-demo__img--absolute" data-aos="fade-up" [class.hidden]="backgroundLoaded" src="assets/main-img.svg">
       <img class="web-demo__play-video-arrow cursor-pointer" src="assets/play-circle-solid.svg" (click)="play()">
     </div>
-    <iframe *ngIf="playVideo" class="web-demo__iframe" src="https://www.youtube.com/embed/ZH3favfPvCM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<app-video-modal [modalId]="'video-modal'" [play]="playVideo" (triggerCloseModal)="closeModal($event)"></app-video-modal>

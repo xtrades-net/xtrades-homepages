@@ -17,12 +17,12 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogPost6Component } from './components/blog-post/blog-post-6.component';
 import { BlogPost7Component } from './components/blog-post/blog-post-7.component';
-import { VideoHeroComponent } from './components/video-hero/video-hero.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { BlogPost8Component } from './components/blog-post/blog-post-8.component';
+import { VideoHeroModule } from './components/video-hero/video-hero.module';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, VideoHeroComponent, LoaderComponent],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, LoaderComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -35,6 +35,7 @@ import { BlogPost8Component } from './components/blog-post/blog-post-8.component
     SliderModule,
     TextSliderModule,
     FooterModule,
+    VideoHeroModule,
   ],
   exports: [
     CommonModule,
@@ -52,7 +53,6 @@ import { BlogPost8Component } from './components/blog-post/blog-post-8.component
     MailingListComponent,
     BlogCardComponent,
     BlogPostComponent,
-    VideoHeroComponent,
     LoaderComponent
   ],
 })

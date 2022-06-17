@@ -7,10 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { XButtonModule } from '@shared/components/x-button/x-button.module';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
+import { VideoModalComponent } from './video-modal/video-modal.component';
 
 @NgModule({
-  declarations: [ModalComponent, SubscribeModalComponent, ErrorModalComponent],
-  exports: [ModalComponent, SubscribeModalComponent, ErrorModalComponent],
+  declarations: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent],
+  exports: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent],
   imports: [
     CommonModule,
     RouterModule,
