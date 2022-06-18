@@ -70,6 +70,5 @@ export class BlogPostComponent {
   constructor(private router: Router) {
     this.url = this.router.url.split("/")[this.router.url.split("/").length - 1];
     this.id = Number(this.blogPosts.find(post => post.url === this.url)?.id);
-    console.log(this.url, this.id);
   }
 }

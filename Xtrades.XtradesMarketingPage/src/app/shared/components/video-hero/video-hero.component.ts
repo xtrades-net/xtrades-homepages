@@ -24,8 +24,6 @@ export class VideoHeroComponent implements AfterViewInit {
   }
 
   closeModal($event: any) {
-    // console.log(this.closeModal);
-    // this.player.nativeElement.pause()
-    // this.modalService.close($event.id);
+    this.modalService.close($event.id);
   }
 }

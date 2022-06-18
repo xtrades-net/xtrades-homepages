@@ -1,5 +1,5 @@
 <div [class.full-width]="playVideo">
-    <div *ngIf="!playVideo" class="web-demo">
+    <div class="web-demo">
       <img #background [class.hidden]="!backgroundLoaded" class="web-demo__img" src="assets/main-img.svg">
       <img loading="eager" class="web-demo__img web-demo__img--absolute" data-aos="fade-up" [class.hidden]="backgroundLoaded" src="assets/main-img.svg">
       <img class="web-demo__play-video-arrow cursor-pointer" src="assets/play-circle-solid.svg" (click)="play()">
