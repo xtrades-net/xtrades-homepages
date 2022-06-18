@@ -8,6 +8,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { HomepageContentComponent } from './homepage-content/homepage-content.component';
 import { MainImageAnimationComponent } from './main-image-animation/main-image-animation.component';
+import { VideoHeroModule } from '@shared/components/video-hero/video-hero.module';
 
 export function playerFactory() {
   return player;
@@ -17,6 +18,7 @@ export function playerFactory() {
   declarations: [HomeComponent, MainImageAnimationComponent, HomepageContentComponent],
   imports: [
     SharedModule,
+    VideoHeroModule,
     DirectivesModule,
     FormsModule,
     RouterModule.forChild([
