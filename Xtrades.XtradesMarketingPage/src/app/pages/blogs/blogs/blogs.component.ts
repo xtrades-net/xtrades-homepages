@@ -79,6 +79,14 @@ export class BlogsComponent {
       date: '16.06.2022',
       href: '/blogs/getting-started-with-stock-trading',
       title: 'Getting started with Stock Trading. Everything you need to know.'
+    },
+    {
+      id: '9',
+      url: 'how-to-make-money-of-penny-stocks',
+      author: 'AnkitCreates',
+      date: '29.06.2022',
+      href: '/blogs/how-to-make-money-of-penny-stocks',
+      title: 'How to Make Money off Penny Stocks: The Complete Guide'
     }
   ].reverse();
 

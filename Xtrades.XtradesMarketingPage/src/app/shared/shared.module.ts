@@ -20,9 +20,10 @@ import { BlogPost7Component } from './components/blog-post/blog-post-7.component
 import { LoaderComponent } from './components/loader/loader.component';
 import { BlogPost8Component } from './components/blog-post/blog-post-8.component';
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
+import { BlogPost9Component } from './components/blog-post/blog-post-9.component';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, LoaderComponent],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, LoaderComponent],
   imports: [
     CommonModule,
     FormsModule,
