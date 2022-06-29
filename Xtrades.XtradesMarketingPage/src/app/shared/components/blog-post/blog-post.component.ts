@@ -64,6 +64,13 @@ export class BlogPostComponent {
       author: 'AnkitCreates',
       date: '16.06.2022',
       title: 'Getting Started with Stock Trading: Everything You Need to Know'
+    },
+    {
+      id: '9',
+      url: 'how-to-make-money-of-penny-stocks',
+      author: 'AnkitCreates',
+      date: '29.06.2022',
+      title: 'How to Make Money off Penny Stocks: The Complete Guide'
     }
   ]
 
