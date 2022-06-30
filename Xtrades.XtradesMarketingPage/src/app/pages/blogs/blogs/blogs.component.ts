@@ -18,7 +18,7 @@ export class BlogsComponent {
   blogPosts = [
     {
       id: '1',
-      author: 'AnkitCreates',
+      snippet: "If you're looking for a commission-free investing app with a wide variety of investment options, Webull is worth considering. This blog post will provide an overview of Webull and how to sign up.",
       url: 'what-is-webull',
       date: '13.05.2022',
       href: 'https://www.xtrades.net/blogs/what-is-webull',
@@ -26,7 +26,7 @@ export class BlogsComponent {
     },
     {
       id: '2',
-      author: 'AnkitCreates',
+      snippet: 'TradingView offers a wide range of features and tools that help traders analyze charts more effectively. Some of these features include: Various chart types (bar charts, candlestick charts, etc.) Annotations and drawing tools',
       url: 'what-is-tradingview',
       date: '14.05.2022',
       href: 'https://www.xtrades.net/blogs/what-is-tradingview',
@@ -34,7 +34,7 @@ export class BlogsComponent {
     },
     {
       id: '3',
-      author: 'AnkitCreates',
+      snippet: 'Copy trading is a relatively new phenomenon that has been growing in popularity in recent years. It is a way for investors to copy the trades of other traders with the hope of achieving the same or better results.',
       url: 'copy-trading',
       date: '16.05.2022',
       href: 'https://www.xtrades.net/blogs/copy-trading',
@@ -42,7 +42,7 @@ export class BlogsComponent {
     },
     {
       id: '4',
-      author: 'AnkitCreates',
+      snippet: 'Making money in the stock market is all about being able to act quickly on the best opportunities. That"s why stock alerts are such an important tool for investors',
       url: 'how-to-make-most-of-stock-alerts',
       date: '16.05.2022',
       href: 'https://www.xtrades.net/blogs/how-to-make-most-of-stock-alerts',
@@ -50,7 +50,7 @@ export class BlogsComponent {
     },
     {
       id: '5',
-      author: 'AnkitCreates',
+      snippet: "It's no secret that investors need to stay on top of their portfolios at all times. With the market constantly shifting, is crucial to have up-to-date information at your fingertips. That's where real-time alerts come in.",
       url: 'why-real-time-alerts-are-essential',
       date: '16.05.2022',
       href: 'https://www.xtrades.net/blogs/why-real-time-alerts-are-essential',
@@ -58,7 +58,7 @@ export class BlogsComponent {
     },
     {
       id: '6',
-      author: 'AnkitCreates',
+      snippet: 'Option alerts are an essential tool for options traders. They allow you to stay informed about changing market conditions and take advantage of new trading opportunities.',
       url: 'how-to-read-option-alerts',
       date: '17.05.2022',
       href: 'https://www.xtrades.net/blogs/how-to-read-option-alerts',
@@ -67,7 +67,7 @@ export class BlogsComponent {
     {
       id: '7',
       url: 'why-swing-trading',
-      author: 'AnkitCreates',
+      snippet: 'Swing trading is a type of investment strategy that allows traders to hold positions for more extended periods, typically days or weeks. Swing traders typically buy stocks with the intention of selling them at a higher price in the future.',
       date: '31.05.2022',
       href: 'https://www.xtrades.net/blogs/why-swing-trading',
       title: 'Why Swing Trading Is More Lucrative Than Day Trading'
@@ -75,7 +75,7 @@ export class BlogsComponent {
     {
       id: '8',
       url: 'getting-started-with-stock-trading',
-      author: 'AnkitCreates',
+      snippet: 'New investors often feel intimidated by the idea of trading stocks, but if you"re interested in learning how it works and what mistakes new traders will make when they start out today, keep reading!',
       date: '16.06.2022',
       href: '/blogs/getting-started-with-stock-trading',
       title: 'Getting started with Stock Trading. Everything you need to know.'
@@ -83,7 +83,7 @@ export class BlogsComponent {
     {
       id: '9',
       url: 'how-to-make-money-of-penny-stocks',
-      author: 'AnkitCreates',
+      snippet: 'In the world of finance, penny stocks are a classically dangerous investment. They are often small, speculative companies that trade on the over-the-counter market or penny stock exchanges.',
       date: '29.06.2022',
       href: '/blogs/how-to-make-money-of-penny-stocks',
       title: 'How to Make Money off Penny Stocks: The Complete Guide'

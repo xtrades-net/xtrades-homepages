@@ -21,9 +21,10 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { BlogPost8Component } from './components/blog-post/blog-post-8.component';
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { BlogPost9Component } from './components/blog-post/blog-post-9.component';
+import { TruncatePipe } from './components/blog-card/truncate.pipe';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, LoaderComponent],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, LoaderComponent, TruncatePipe],
   imports: [
     CommonModule,
     FormsModule,
@@ -54,7 +55,7 @@ import { BlogPost9Component } from './components/blog-post/blog-post-9.component
     MailingListComponent,
     BlogCardComponent,
     BlogPostComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
 })
 export class SharedModule { }
