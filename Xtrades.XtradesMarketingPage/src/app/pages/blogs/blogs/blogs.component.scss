@@ -1,8 +1,9 @@
 @import "../../../../styles/vars";
 
 .blogs {
-    justify-content: space-between;
     width: 100%;
+    justify-content: center;
+    margin: 0 auto;
 
     &__header {
         margin: 0 auto;
@@ -13,10 +14,20 @@
         }
     }
     &__blog-posts {
-        margin: 80px 0;
+        margin: 40px auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 90%;
 
         @media (max-width: $md) {
             max-width: 100%;
+        }
+    }
+    &__blog-post {
+        width: 30%;
+        padding: 15px;
+        @media(max-width: $md) {
+            width: 100%;
         }
     }
 }
