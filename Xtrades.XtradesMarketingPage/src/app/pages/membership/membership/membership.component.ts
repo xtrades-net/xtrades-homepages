@@ -149,6 +149,9 @@ export class MembershipComponent {
             this.opt.push({...plan, ...option});
           }
         });
+        if (option.name === 'trial') {
+          this.opt.push({...option});
+        }
       });
     });
   }
