@@ -18,6 +18,14 @@
     }
   }
 
+  &__color-purple {
+    border-top: solid 8px #616bb5;
+
+    .icon {
+      background-color: #616bb5;
+    }
+  }
+
   &__color-yellow {
     border-top: solid 8px #f6c344;
 
