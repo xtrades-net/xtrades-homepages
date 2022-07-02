@@ -4,7 +4,7 @@
       {{data.title}}
     </div>
     <div class="card__price-tag" *ngIf="data.priceTag">
-      <div class="card__price-tag--price">${{data.price}}</div>
+      <div class="card__price-tag--price">${{data.price || 0 }}</div>
       <div class="card__price-tag--period" [class.selected]="data.selected"><span class="card__price-tag--separator" [class.is-visible]="data.priceTag.period === 'Single Payment'">/</span> {{data.priceTag.period}}</div>
     </div>
     <div *ngIf="data.description" class="card__description" [class.selected]="data.selected">

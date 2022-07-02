@@ -56,6 +56,12 @@
     }
     &__buttons-row {
         padding: 15px 0;
+        .text-container {
+          // padding: 0 0 15px 0;
+          bottom: 25%;
+          width: 80%;
+          left: 10%;
+        }
     }
 }
 
