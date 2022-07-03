@@ -27,6 +27,9 @@
     &__title {
         h3 { 
             height: 60px;
+            @media(max-width: $lg) {
+                font-size: 14px;
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ export class BlogsComponent {
       snippet: "If you're looking for a commission-free investing app with a wide variety of investment options, Webull is worth considering. This blog post will provide an overview of Webull and how to sign up.",
       url: 'what-is-webull',
       date: '13.05.2022',
-      href: 'https://www.xtrades.net/blogs/what-is-webull',
+      href: '/blogs/what-is-webull',
       title: 'What Is Webull? How to Sign Up and What You Need to Know!'
     },
     {
@@ -29,7 +29,7 @@ export class BlogsComponent {
       snippet: 'TradingView offers a wide range of features and tools that help traders analyze charts more effectively. Some of these features include: Various chart types (bar charts, candlestick charts, etc.) Annotations and drawing tools',
       url: 'what-is-tradingview',
       date: '14.05.2022',
-      href: 'https://www.xtrades.net/blogs/what-is-tradingview',
+      href: '/blogs/what-is-tradingview',
       title: 'What is TradingView?'
     },
     {
@@ -37,7 +37,7 @@ export class BlogsComponent {
       snippet: 'Copy trading is a relatively new phenomenon that has been growing in popularity in recent years. It is a way for investors to copy the trades of other traders with the hope of achieving the same or better results.',
       url: 'copy-trading',
       date: '16.05.2022',
-      href: 'https://www.xtrades.net/blogs/copy-trading',
+      href: '/blogs/copy-trading',
       title: 'Copy Trading: What Investors Need to Know'
     },
     {
@@ -45,7 +45,7 @@ export class BlogsComponent {
       snippet: 'Making money in the stock market is all about being able to act quickly on the best opportunities. That"s why stock alerts are such an important tool for investors',
       url: 'how-to-make-most-of-stock-alerts',
       date: '16.05.2022',
-      href: 'https://www.xtrades.net/blogs/how-to-make-most-of-stock-alerts',
+      href: '/blogs/how-to-make-most-of-stock-alerts',
       title: 'How to Make the Most Out of Stock Alerts: Tips for Maximum Profits'
     },
     {
@@ -53,7 +53,7 @@ export class BlogsComponent {
       snippet: "It's no secret that investors need to stay on top of their portfolios at all times. With the market constantly shifting, is crucial to have up-to-date information at your fingertips. That's where real-time alerts come in.",
       url: 'why-real-time-alerts-are-essential',
       date: '16.05.2022',
-      href: 'https://www.xtrades.net/blogs/why-real-time-alerts-are-essential',
+      href: '/blogs/why-real-time-alerts-are-essential',
       title: 'Why Real-Time Alerts are Essential for Investors?'
     },
     {
@@ -61,7 +61,7 @@ export class BlogsComponent {
       snippet: 'Option alerts are an essential tool for options traders. They allow you to stay informed about changing market conditions and take advantage of new trading opportunities.',
       url: 'how-to-read-option-alerts',
       date: '17.05.2022',
-      href: 'https://www.xtrades.net/blogs/how-to-read-option-alerts',
+      href: '/blogs/how-to-read-option-alerts',
       title: 'How to Read Option Alerts: The Ultimate Guide'
     },
     {
@@ -69,7 +69,7 @@ export class BlogsComponent {
       url: 'why-swing-trading',
       snippet: 'Swing trading is a type of investment strategy that allows traders to hold positions for more extended periods, typically days or weeks. Swing traders typically buy stocks with the intention of selling them at a higher price in the future.',
       date: '31.05.2022',
-      href: 'https://www.xtrades.net/blogs/why-swing-trading',
+      href: '/blogs/why-swing-trading',
       title: 'Why Swing Trading Is More Lucrative Than Day Trading'
     },
     {

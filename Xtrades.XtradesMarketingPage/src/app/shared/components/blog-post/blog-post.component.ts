@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog-post',
-  templateUrl: './blog-post.component.html'
+  templateUrl: './blog-post.component.html',
+  styleUrls: ['./blog-post.component.scss']
 })
 export class BlogPostComponent {
   url = '';
