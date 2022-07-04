@@ -10,6 +10,11 @@
   justify-content: space-between;
   flex-direction: column;
 
+  &__wrapper {
+    justify-content: space-between;
+    height:100%;
+  }
+
   &__color-green {
     border-top: solid 8px #5dc0ab;
 
@@ -101,19 +106,16 @@
   &__action {
     margin-top: 10px;
     min-height: 44px;
-
-    &__error {
-      color: var(--x-fail);
-    }
+    color: var(--white);
 
     &--button {
       width: 100%;
       --border-width: 1.5px;
-      --border-color: var(--x-text-extra-light);
-      &.selected {
-        --border-color: var(--x-red-primary);
-        --color: var(--x-red-primary);
-      }
+      --border-color: var(--white);
+      color: white;
+      padding: 5px;
+      border-radius: 6px;
+      border: 1px solid white;
       &--img {
         padding-right: 5px;
       }
