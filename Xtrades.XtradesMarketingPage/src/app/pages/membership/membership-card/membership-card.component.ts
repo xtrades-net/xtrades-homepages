@@ -16,6 +16,6 @@ export class MembershipCardComponent {
   }
 
   onSubscribeClick() {
-    window.location.href = 'https://app.xtrades.net/login/sign-up?redirectUrl=plans';
+    window.open('https://app.xtrades.net/login/sign-up?redirectUrl=plans', '_blank');
   }
 }
