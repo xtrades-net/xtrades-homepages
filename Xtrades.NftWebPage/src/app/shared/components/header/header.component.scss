@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 15px 0;
 
   &__elements {
     display: flex;
@@ -28,4 +28,5 @@
 
 .align-right {
   display: flex;
+  margin-right: 15px;
 }

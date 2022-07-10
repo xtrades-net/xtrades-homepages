@@ -8,7 +8,7 @@
     </span>
   </div>
   <div class="align-right">
-    <app-x-button *ngIf="isMainHeader" class="button uppercase" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Connect</app-x-button>
+    <app-x-button *ngIf="isMainHeader" class="button uppercase margin-right" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Connect</app-x-button>
     <ng-container *ngIf="isMobile">
       <img img class="menu cursor-pointer pl-2" alt="Mobile Menu Button" src='assets/logos/menu.svg' (click)="onMobileMenuOpen()" />
     </ng-container>
