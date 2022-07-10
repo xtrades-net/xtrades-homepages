@@ -1,0 +1,15 @@
+<section class="footer responsive-main-container column">
+    <img *ngIf="isMobile" lazy img class="logo margin-auto" alt="Xtrades Logo" src='./../../../../assets/logos/xtrades.svg' width="56px" height="35px" />
+    <div class="footer__elements flex px-2">
+        <span class="footer__element link uppercase" [routerLink]="['terms-and-conditions']"
+            routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">About</span>
+        <span class="footer__element link uppercase" [routerLink]="['refund-policy']"
+            routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">Contact</span>
+        <img *ngIf="!isMobile" lazy img class="logo" alt="Xtrades Logo" src='./../../../../assets/logos/xtrades.svg' width="56px" height="35px" />
+        <span class="footer__element link uppercase" [routerLink]="['/privacy-policy']"
+            routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">Help</span>
+        <span class="footer__element link uppercase" [routerLink]="['/privacy-policy']"
+            routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">Terms of service</span>
+    </div>
+</section>
+<div class="copyright center"> <a class="link cursor-pointer" href="/">Xtradex ©</a><span>All rights reserved</span></div>
