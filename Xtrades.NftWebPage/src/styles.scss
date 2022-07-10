@@ -1,0 +1,33 @@
+:root {
+    --brand-main-bg: #081223;
+    --brand-color: #8EFCDC;
+    --brand-text: #CED7F3;
+    --brand-dark: #0D1210;
+    --brand-main-gradient: linear-gradient(270deg, rgba(206, 215, 243, 0.42) 0%, rgba(206, 215, 243, 0) 100%);
+
+    background-color: var(--brand-main-bg);
+    color: var(--brand-text);
+    .responsive-main-container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1276px;
+        display: flex;
+    }
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 100vh;
+}
+
+@import "styles/reset";
+@import "styles/fonts";
+@import "styles/layout";
+@import "styles/paddings";
+@import "styles/links";
+@import "styles/selection";
+@import "styles/scrollbar";
+@import "styles/custom";
