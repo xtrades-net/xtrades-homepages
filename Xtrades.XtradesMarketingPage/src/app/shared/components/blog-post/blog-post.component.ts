@@ -63,6 +63,12 @@ export class BlogPostComponent {
       url: 'how-to-make-money-of-penny-stocks',
       date: '29.06.2022',
       title: 'How to Make Money off Penny Stocks: The Complete Guide'
+    },
+    {
+      id: '10',
+      url: 'using-stock-alerts-to-improve-your-investing-strategy',
+      date: '11.07.2022',
+      title: 'Using Stock Alerts to Improve Your Investing Strategy: Learn the Trading Strategies of the Pros'
     }
   ]
 

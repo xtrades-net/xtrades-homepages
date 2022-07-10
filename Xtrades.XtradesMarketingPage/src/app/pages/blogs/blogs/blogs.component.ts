@@ -87,6 +87,14 @@ export class BlogsComponent {
       date: '29.06.2022',
       href: '/blogs/how-to-make-money-of-penny-stocks',
       title: 'How to Make Money off Penny Stocks: The Complete Guide'
+    },
+    {
+      id: '10',
+      url: 'using-stock-alerts-to-improve-your-investing-strategy',
+      snippet: 'Stock alerts are a great way to stay informed about the market. They can help you make better investment decisions and protect your investments from large fluctuations that could harm their value. Stock alerts can also be an excellent tool for day traders and investors who want to take advantage of short-term opportunities in the market.',
+      date: '11.07.2022',
+      href: '/blogs/using-stock-alerts-to-improve-your-investing-strategy',
+      title: 'Using Stock Alerts to Improve Your Investing Strategy'
     }
   ].reverse();
 
