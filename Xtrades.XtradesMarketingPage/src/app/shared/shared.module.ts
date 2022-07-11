@@ -22,9 +22,10 @@ import { BlogPost8Component } from './components/blog-post/blog-post-8.component
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { BlogPost9Component } from './components/blog-post/blog-post-9.component';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
+import { BlogPost10Component } from './components/blog-post/blog-post-10.component';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, LoaderComponent, TruncatePipe],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, BlogPost10Component, LoaderComponent, TruncatePipe],
   imports: [
     CommonModule,
     FormsModule,
@@ -55,6 +56,7 @@ import { TruncatePipe } from './components/blog-card/truncate.pipe';
     MailingListComponent,
     BlogCardComponent,
     BlogPostComponent,
+    BlogPost10Component,
     LoaderComponent,
   ],
 })

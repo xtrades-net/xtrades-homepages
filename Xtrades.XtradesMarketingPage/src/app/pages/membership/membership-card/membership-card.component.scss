@@ -1,3 +1,5 @@
+@import "../../../../styles/vars";
+
 .card {
   padding: 24px 24px 48px 24px;
 
@@ -53,6 +55,10 @@
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
+      @media(max-width: $md) {
+        font-size: 16px !important;
+      }
+
   }
 
   &__price-tag {
@@ -135,8 +141,4 @@
   height: 8px;
   -webkit-mask: url(/assets/check-solid.svg) no-repeat center center;
   mask: url(/assets/check-solid.svg) no-repeat center center;
-}
-
-.card__title {
-  text-align: center;
 }
