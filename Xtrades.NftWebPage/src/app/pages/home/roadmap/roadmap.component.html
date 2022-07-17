@@ -1,0 +1,9 @@
+<section class="roadmap responsive-main-container column">
+    <h2 class="roadmap__header-2 header-2 px-4">Roadmap</h2>
+    <div class="roadmap__wrapper px-4">
+        <div class="icon-card relative cursor-pointer" *ngFor="let step of steps">
+            <img [src]="step.url" />
+            <h3 class="px-2">{{step.text}}</h3>
+        </div>
+    </div>
+</section>
