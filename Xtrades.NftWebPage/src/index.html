@@ -6,13 +6,59 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .full-screen {
+      /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+        height: 0;
+        width: 100vw;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        margin: 0;
+        top: 0;
+        background-color: rgb(0,0,0); /* Black fallback color */
+        overflow: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+    .full-height {
+      height: 100vh;
+    }
+
+    .inactive-scroll {
+      min-height: 100%;
+      max-height: 100%;
+      max-height: 100vh;
+      max-height: -webkit-fill-available;
+      overflow: hidden;
+      overflow: clip;
+      -webkit-overflow-scrolling: none;
+      overscroll-behavior: none;
+  }
+
+    .loading {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      -webkit-animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        to { -webkit-transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <body>
-    <div class=“preloader-wrapper” id=“app-preloader”>
-      <img class=“preloader-wrapper__logo” src=“/assets/loading.gif” />
-      <!-- <img class=“preloader-wrapper__logo” src=“/assets/triColorLogo.svg” /> -->
-      <!-- <div class=“progress-line” id=“progress-line”></div> -->
+  <body class="relative inactive-scroll">
+    <div class="full-screen full-height absolute flex center">
+      <div class="loading"></div>
     </div>
     <app-root></app-root>
     <noscript>Please enable JavaScript to continue using this application.</noscript>
