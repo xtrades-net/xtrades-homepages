@@ -90,6 +90,14 @@ export class BlogsComponent {
     },
     {
       id: '10',
+      url: 'using-stock-alerts-to-improve-your-investing-strategy',
+      snippet: 'Stock alerts are a great way to stay informed about the market. They can help you make better investment decisions and protect your investments from large fluctuations that could harm their value. Stock alerts can also be an excellent tool for day traders and investors who want to take advantage of short-term opportunities in the market.',
+      date: '11.07.2022',
+      href: '/blogs/using-stock-alerts-to-improve-your-investing-strategy',
+      title: 'Using Stock Alerts to Improve Your Investing Strategy'
+    },
+    {
+      id: '11',
       url: 'what-are-the-best-social-trading-applications-or-platforms',
       snippet: "When it comes to investing and trading, there are a lot of different options out there. If you're looking for a way to take advantage of the wisdom of the crowd, then you should consider using a social trading platform.",
       href: '/blogs/what-are-the-best-social-trading-applications-or-platforms',
