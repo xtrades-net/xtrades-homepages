@@ -95,6 +95,14 @@ export class BlogsComponent {
       date: '11.07.2022',
       href: '/blogs/using-stock-alerts-to-improve-your-investing-strategy',
       title: 'Using Stock Alerts to Improve Your Investing Strategy'
+    },
+    {
+      id: '11',
+      url: 'what-are-the-best-social-trading-applications-or-platforms',
+      snippet: "When it comes to investing and trading, there are a lot of different options out there. If you're looking for a way to take advantage of the wisdom of the crowd, then you should consider using a social trading platform.",
+      href: '/blogs/what-are-the-best-social-trading-applications-or-platforms',
+      date: '18.07.2022',
+      title: 'What Are The Best Social Trading Applications or Platforms?'
     }
   ].reverse();
 

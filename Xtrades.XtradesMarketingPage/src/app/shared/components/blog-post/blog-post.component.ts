@@ -69,6 +69,12 @@ export class BlogPostComponent {
       url: 'using-stock-alerts-to-improve-your-investing-strategy',
       date: '11.07.2022',
       title: 'Using Stock Alerts to Improve Your Investing Strategy: Learn the Trading Strategies of the Pros'
+    }, 
+    {
+      id: '11',
+      url: 'what-are-the-best-social-trading-applications-or-platforms',
+      date: '18.07.2022',
+      title: 'What Are The Best Social Trading Applications or Platforms?'
     }
   ]
 
