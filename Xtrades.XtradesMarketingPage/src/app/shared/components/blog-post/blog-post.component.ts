@@ -63,6 +63,12 @@ export class BlogPostComponent {
       url: 'how-to-make-money-of-penny-stocks',
       date: '29.06.2022',
       title: 'How to Make Money off Penny Stocks: The Complete Guide'
+    },
+    {
+      id: '10',
+      url: 'what-are-the-best-social-trading-applications-or-platforms',
+      date: '18.07.2022',
+      title: 'What Are The Best Social Trading Applications or Platforms?'
     }
   ]
 
