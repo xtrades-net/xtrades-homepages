@@ -24,6 +24,10 @@ body {
     flex-direction: column;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .flex-end {
     align-items: flex-end;
     justify-content: flex-end;

@@ -8,9 +8,7 @@ export class HeaderProvider {
 
   constructor() {
     this.populateHeaderElements([
-      HeaderElement.apply({ title: 'White paper', directUrl: '' }),
-      HeaderElement.apply({ title: 'Cryptotraders', directUrl: '' }),
-      HeaderElement.apply({ title: 'Xtrades', directUrl: '' }),
+      HeaderElement.apply({ title: 'White paper', directUrl: '' })
     ]);
   }
 

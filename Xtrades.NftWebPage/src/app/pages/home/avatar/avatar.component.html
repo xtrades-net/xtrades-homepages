@@ -1,0 +1,7 @@
+<div class="avatar column relative" [ngClass]="!hasTransparentBackground? 'spacing' : ''">
+    <div *ngIf="hasTransparentBackground" class='avatar__background icon-card'>
+        <img [src]="avatar.avatarLink" />
+    </div>
+    <img *ngIf="!hasTransparentBackground" [src]="avatar.avatarLink" />
+    <span class="avatar__name uppercase absolute">{{avatar.name}}</span>
+</div>

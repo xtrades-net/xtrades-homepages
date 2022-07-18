@@ -1,0 +1,10 @@
+.our-numbers {
+    &__wrapper {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    &__subtext {
+        text-align: center;
+    }
+}
