@@ -82,4 +82,9 @@ export class BlogPostComponent {
     this.url = this.router.url.split("/")[this.router.url.split("/").length - 1];
     this.id = Number(this.blogPosts.find(post => post.url === this.url)?.id);
   }
+
+  ngAfterViewInit() {
+    document.querySelector('body')?.classList.remove('inactive-scroll');
+    document.querySelector('.full-screen')?.classList.remove('full-height');
+  }
 }
