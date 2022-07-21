@@ -2,7 +2,7 @@
     <div class="top-bar" *ngIf="!isDropdown">
         <div routerLink="['']"> <img *ngFor="let logo of logos" lazy img class="logo cursor-pointer" width="56px" height="35px"
                 [src]='logo'></div>
-        <img lazy img class="menu cursor-pointer" alt="Mobile Menu Button" src='assets/logos/close.svg'
+        <img lazy img class="menu cursor-pointer" alt="Mobile Menu Button" width="47px" height="42px" src='assets/logos/close.svg'
             (click)="onMenuClose()" />
     </div>
     <app-separator></app-separator>
