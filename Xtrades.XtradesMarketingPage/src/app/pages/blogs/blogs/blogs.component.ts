@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+import { LoadingService } from '@core/loading.service';
 
 @Component({
   selector: 'app-blogs',
@@ -106,7 +107,11 @@ export class BlogsComponent {
     }
   ].reverse();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loadingService: LoadingService) { }
+
+  ngAfterViewInit() {
+    this.loadingService.removeLoader();
+  }
 
   goToBlogPost(event: RouterEvent) {
     this.router.navigateByUrl(`blogs/${event.url}`);

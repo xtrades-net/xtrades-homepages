@@ -16,6 +16,10 @@
     cursor: pointer;
   }
 
+  .connect-button {
+    z-index: 3;
+  }
+
   &__icon {
     font-size: 40px;
     margin-right:10px;

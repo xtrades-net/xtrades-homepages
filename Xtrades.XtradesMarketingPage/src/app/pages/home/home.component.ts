@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
@@ -12,13 +13,14 @@ import { HttpClient } from '@angular/common/http';
 import * as _ from 'lodash';
 import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
+import { LoadingService } from '@core/loading.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   @ViewChild('email') input: ElementRef | any;
   sliderImages: Array<any> = [
     {
@@ -126,10 +128,14 @@ export class HomeComponent {
 
   constructor(
     public screenService: ScreenService,
-    private httpService: HttpClient,
     private cdr: ChangeDetectorRef,
-    private subscribeService: SubscribeService
+    private subscribeService: SubscribeService,
+    private loadingService: LoadingService
   ) {}
+
+  ngAfterViewInit(): void {
+    this.loadingService.removeLoader();
+  }
 
   handleGoToBetaAppClick(): void {
     window.location.href = 'https://app.xtrades.net/';

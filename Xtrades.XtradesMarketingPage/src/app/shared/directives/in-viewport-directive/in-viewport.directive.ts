@@ -39,10 +39,6 @@ export class InViewportDirective implements AfterViewInit, AfterContentChecked {
     this.checkForIntersectingElement();
   }
 
-  private isIntersectionObserverReady(): boolean {
-    return !!(window && window.IntersectionObserver);
-  }
-
   private checkForIntersectingElement() {
     this.observer = new IntersectionObserver(
       ([entry]) => {
