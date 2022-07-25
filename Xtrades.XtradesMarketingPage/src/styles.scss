@@ -343,3 +343,20 @@ a {
     width: 80%;
     margin: 0 auto;
 }
+
+.ngx-file-drop__drop-zone {
+    border: 1px solid white !important;
+    min-height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+}
+
+  .ngx-file-drop__content {
+    align-items: center;
+    color: white !important;
+    display: flex;
+    min-height: 400px !important;
+    justify-content: center;
+}
