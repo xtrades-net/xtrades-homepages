@@ -104,6 +104,14 @@ export class BlogsComponent {
       href: '/blogs/what-are-the-best-social-trading-applications-or-platforms',
       date: '18.07.2022',
       title: 'What Are The Best Social Trading Applications or Platforms?'
+    },
+    {
+      id: '12',
+      url: 'how-to-start-stock-training',
+      snippet: "The world of stock trading can be daunting for those who are new to it. This blog post will walk you through everything necessary to get started, from buying your first shares all the way up to achieving success on Wall Street! We'll cover basic information like how much money one should invest with a brokerage account and some tips & tricks designed just as much towards beginners like yourself looking to make their experience successful. So whether or not this is something currently happening within your life - whether you are trying out different financial avenues because finances aren't going quite right lately - you're covered. Learning how to start stock trading can help in your journey to financial success!",
+      href: '/blogs/how-to-start-stock-training',
+      date: '25.07.2022',
+      title: 'How to start Stock Trading: The Basics, Tips and Tricks'
     }
   ].reverse();
 

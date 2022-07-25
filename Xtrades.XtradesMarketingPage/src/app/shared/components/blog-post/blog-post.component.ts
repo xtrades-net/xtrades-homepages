@@ -75,6 +75,12 @@ export class BlogPostComponent {
       url: 'what-are-the-best-social-trading-applications-or-platforms',
       date: '18.07.2022',
       title: 'What Are The Best Social Trading Applications or Platforms?'
+    }, 
+    {
+      id: '12',
+      url: 'how-to-start-stock-training',
+      date: '25.07.2022',
+      title: 'How to start Stock Trading: The Basics, Tips and Tricks'
     }
   ]
 
