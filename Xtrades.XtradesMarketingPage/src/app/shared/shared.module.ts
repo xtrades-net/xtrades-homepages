@@ -17,11 +17,11 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
-import { BlogPost10Component, BlogPost11Component, BlogPost1Component, BlogPost2Component, BlogPost3Component, BlogPost4Component, BlogPost5Component, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component } from './components/blog-post';
+import { BlogPost10Component, BlogPost11Component, BlogPost1Component, BlogPost2Component, BlogPost3Component, BlogPost4Component, BlogPost5Component, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, BlogPost12Component } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 
 @NgModule({
-  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost1Component, BlogPost2Component, BlogPost3Component, BlogPost4Component, BlogPost5Component, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, BlogPost10Component, BlogPost11Component, LoaderComponent, TruncatePipe],
+  declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost1Component, BlogPost2Component, BlogPost3Component, BlogPost4Component, BlogPost5Component, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, BlogPost10Component, BlogPost11Component, BlogPost12Component, LoaderComponent, TruncatePipe],
   imports: [
     CommonModule,
     FormsModule,
