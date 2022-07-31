@@ -1,3 +1,4 @@
+import { HttpClient, HttpParams, HttpStatusCode } from '@angular/common/http';
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 import { LoadingService } from '@core/loading.service';
@@ -111,10 +112,11 @@ export class DiscountComponent {
     }
   ].reverse();
   @ViewChild('email') input: ElementRef | any;
-  registerFormModel = {
+  registerFormModel: any = {
     name: '',
     discordUsername: '',
     email: '',
+    military: undefined,
     agreement: false,
   };
 
@@ -125,7 +127,8 @@ export class DiscountComponent {
     public screenService: ScreenService,
     private subscribeService: SubscribeService,
     private cdr: ChangeDetectorRef,
-    private router: Router, private loadingService: LoadingService
+    private router: Router, private loadingService: LoadingService,
+    private http: HttpClient
   ) { }
 
   handleGoToBetaAppClick(): void {
@@ -133,10 +136,12 @@ export class DiscountComponent {
   }
 
   onSubmit() {
-    if (!this.registerFormModel.email || !this.isEmailValid) {
-      return;
-    }
-    this.confirmSubscription();
+    // if (!this.registerFormModel.email || !this.isEmailValid) {
+    //   return;
+    // }
+    console.log('on submit');
+    // this.confirmSubscription();
+    this.register();
   }
 
   validateEmail = _.debounce((email: string) => {
@@ -148,19 +153,6 @@ export class DiscountComponent {
       this.cdr.markForCheck();
     }
   }, 200);
-
-  confirmSubscription() {
-    this.subscribeService.subscribeToMainHomepageList(this.input.value).subscribe({
-      next: (v) => this.subscribeSuccess(),
-      error: (e) => alert('something went wrong :(, please try again later'),
-    });
-  }
-
-  subscribeSuccess() {
-    localStorage.setItem('isSubscribed', 'true');
-    this.registerFormModel.email = '';
-    this.alreadySubscribed = true;
-  }
 
   ngAfterViewInit() {
     this.loadingService.removeLoader();
@@ -174,6 +166,7 @@ export class DiscountComponent {
 
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
+    // this.registerFormModel.military = files;
     for (const droppedFile of files) {
 
       // Is it a file?
@@ -183,6 +176,8 @@ export class DiscountComponent {
 
           // Here you can access the real file
           console.log(droppedFile.relativePath, file);
+    
+          this.registerFormModel.military = file;
 
           /**
           // You could upload it like this:
@@ -209,11 +204,25 @@ export class DiscountComponent {
     }
   }
 
-  public fileOver(event: any){
-    console.log(event);
+
+  public scroll(el: HTMLElement) {
+    el.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 
-  public fileLeave(event: any){
-    console.log(event);
+  register(): void {
+    const formData = new FormData();
+    Object.keys(this.registerFormModel).forEach(key => {
+      formData.append(key, this.registerFormModel[key]);
+    });
+
+    this.http.post('https://getform.io/f/3578cda6-16d8-46f7-bd73-c7b31619207b',
+     formData).subscribe(res => {
+      try {
+        console.log(res);
+      } catch (e) {
+      }
+    });
   }
 }
