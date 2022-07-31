@@ -201,7 +201,7 @@ export class DiscountComponent {
       formData.append("files[]",  this.uploadedFiles[i]);
     }
 
-    this.http.post('https://getform.io/f/266bc0d3-6763-4d05-9afb-423d9251b427',
+    this.http.post('https://getform.io/f/ab440b56-db1f-48af-bf72-79c68fc01d1b',
      formData).subscribe(res => {
         console.log(res);
         this.isTouched = false;
