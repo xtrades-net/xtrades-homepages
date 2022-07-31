@@ -64,8 +64,8 @@
         </app-hero>
     </div>
     <div class="flex column">
-        <form (ngSubmit)="onSubmit()" class="military-discount-form__register-form" enctype="multipart/form-data">
-            <div class="form-group military-discount-form__form column">
+    <form (ngSubmit)="onSubmit()" class="military-discount-form__register-form" enctype="multipart/form-data">
+        <div class="form-group military-discount-form__form column">
                 <label for="name" class="military-discount-form__label px-2">Name</label>
                 <div class="overlay relative">
                     <input type="name" class="military-discount-form__input form-control" name="name" id="name" ngModel
@@ -96,18 +96,18 @@
                         (input)="validateEmail(email.value)" [ngClass]="!registerFormModel.email && isTouched ? 'error-input' : ''"  [(ngModel)]="registerFormModel.email" />
                     <img *ngIf="!registerFormModel.email && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
                 </div>
-                <div class="px-2" [ngClass]="!registerFormModel.email && isTouched? 'error' : ''" *ngIf="!registerFormModel.discordUsername && isTouched">
+                <div class="px-2" [ngClass]="!registerFormModel.email && isTouched? 'error' : ''" *ngIf="!registerFormModel.email && isTouched">
                     Email is missing or invalid. Please enter valid entry.
                 </div>
             </div>
             <div class="px-2"><label for="file" class="military-discount-form__label">Identification proof</label>
             </div>
-                <ngx-file-drop dropZoneLabel="Drop files here"  [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''" (onFileDrop)="dropped($event)" [multiple]='true' class="military-discount-form__input-file form-control relative">
-                    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector"   [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''">
+            <ngx-file-drop dropZoneLabel="Drop files here" [ngClass]="!registerFormModel.military && isTouched ? 'error-input' : ''" (onFileDrop)="dropped($event)" [multiple]='true' class="military-discount-form__input-file form-control relative">
+                    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
                         <div class="column cursor-pointer">
-                            <div  [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''">Drag or drop your ID here</div>
-                            <button type="button"  [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''" (click)="openFileSelector()" class="link cursor-pointer">Browse Files</button>
-                            <img *ngIf="!registerFormModel.file && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon-file shrink" /> 
+                            <div  [ngClass]="!registerFormModel.military && isTouched ? 'error-input' : ''">Drag or drop your ID here</div>
+                            <button type="button"  [ngClass]="!registerFormModel.military && isTouched ? 'error-input' : ''" (click)="openFileSelector()" class="link cursor-pointer">Browse Files</button>
+                            <img *ngIf="!registerFormModel.military && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon-file shrink" /> 
                         </div>
                     </ng-template>
                 </ngx-file-drop>
@@ -120,7 +120,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="error px-2" *ngIf="!registerFormModel.discordUsername && isTouched">
+                <div class="error px-2" *ngIf="uploadedFiles.length === 0 && isTouched">
                     Identification proof is required
                 </div>
             <div class="military-discount-form__checkbox-wrapper column px-2">
@@ -138,8 +138,9 @@
                 </div>
             </div>
             <app-x-button (click)="onSubmit()" type="submit" [isColorInverted]="true" class="btn btn-success military-discount-form__register cursor-pointer absolute"
-            [disabled]="email.errors?.['pattern']">Sign Up</app-x-button>
+            >Sign Up</app-x-button>
         </form>
     </div>
 </section>
 <app-mailing-list></app-mailing-list>
+<app-thank-you-modal [modalId]="'thank-you-modal'" (triggerCloseModal)="closeModal($event)"></app-thank-you-modal>

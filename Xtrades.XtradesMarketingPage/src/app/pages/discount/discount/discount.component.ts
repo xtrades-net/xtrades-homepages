@@ -3,6 +3,7 @@ import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/co
 import { Router, RouterEvent } from '@angular/router';
 import { LoadingService } from '@core/loading.service';
 import { ScreenService } from '@core/screen.service';
+import { ModalService } from '@shared/components/modal/modal.service';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
 import * as _ from 'lodash';
 import { NgxFileDropEntry } from 'ngx-file-drop';
@@ -116,9 +117,10 @@ export class DiscountComponent {
     name: '',
     discordUsername: '',
     email: '',
-    military: File,
+    military: '',
     agreement: false,
   };
+  uploadedFiles: any = [];
 
   isTouched = false;
   isEmailValid = false;
@@ -126,7 +128,7 @@ export class DiscountComponent {
 
   constructor(
     public screenService: ScreenService,
-    private subscribeService: SubscribeService,
+    private modalService: ModalService,
     private cdr: ChangeDetectorRef,
     private router: Router, private loadingService: LoadingService,
     private http: HttpClient
@@ -139,7 +141,7 @@ export class DiscountComponent {
   onSubmit() {
     const { name, discordUsername, email, military, agreement } = this.registerFormModel;
     this.isTouched = true;
-    if (!name || !discordUsername || !email || !military || !agreement || !this.registerFormModel.email || !this.isEmailValid) {
+    if (!name || !discordUsername || !email || !agreement || !military || !this.registerFormModel.email || !this.isEmailValid) {
       return;
     }
     this.register();
@@ -167,40 +169,17 @@ export class DiscountComponent {
 
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
-    // this.registerFormModel.military = files;
     for (const droppedFile of files) {
 
-      // Is it a file?
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
         fileEntry.file((file: File) => {
-
-          // Here you can access the real file
-          console.log(droppedFile.relativePath, file);
-    
-          this.registerFormModel.military = file;
-
-          /**
-          // You could upload it like this:
-          const formData = new FormData()
-          formData.append('logo', file, relativePath)
-
-          // Headers
-          const headers = new HttpHeaders({
-            'security-token': 'mytoken'
-          })
-
-          this.http.post('https://mybackend.com/api/upload/sanitize-and-save-logo', formData, { headers: headers, responseType: 'blob' })
-          .subscribe(data => {
-            // Sanitized logo returned from backend
-          })
-          **/
-
+            this.uploadedFiles.push(file);
+            this.registerFormModel.military = this.uploadedFiles[0];
         });
       } else {
         // It was a directory (empty directories are added, otherwise only files)
         const fileEntry = droppedFile.fileEntry as FileSystemDirectoryEntry;
-        console.log(droppedFile.relativePath, fileEntry);
       }
     }
   }
@@ -218,13 +197,33 @@ export class DiscountComponent {
       formData.append(key, this.registerFormModel[key]);
     });
 
-    this.http.post('https://getform.io/f/3578cda6-16d8-46f7-bd73-c7b31619207b',
+    for (let i =  0; i <  this.uploadedFiles.length; i++)  {  
+      formData.append("files[]",  this.uploadedFiles[i]);
+    }
+
+    this.http.post('https://getform.io/f/266bc0d3-6763-4d05-9afb-423d9251b427',
      formData).subscribe(res => {
-      try {
         console.log(res);
         this.isTouched = false;
-      } catch (e) {
+        this.modalService.open('thank-you-modal');
+    }, err => {
+      if(err.status === 200) {
+        this.modalService.open('thank-you-modal');
+        this.registerFormModel = {
+          name: '',
+          discordUsername: '',
+          email: '',
+          military: '',
+          'files[]': undefined,
+          agreement: false,
+        };
+        this.isTouched = false;
+        this.files = [];
       }
     });
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }
