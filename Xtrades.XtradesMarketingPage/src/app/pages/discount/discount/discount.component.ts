@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams, HttpStatusCode } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 import { LoadingService } from '@core/loading.service';
@@ -116,10 +116,11 @@ export class DiscountComponent {
     name: '',
     discordUsername: '',
     email: '',
-    military: undefined,
+    military: File,
     agreement: false,
   };
 
+  isTouched = false;
   isEmailValid = false;
   alreadySubscribed = false;
 
@@ -136,11 +137,11 @@ export class DiscountComponent {
   }
 
   onSubmit() {
-    // if (!this.registerFormModel.email || !this.isEmailValid) {
-    //   return;
-    // }
-    console.log('on submit');
-    // this.confirmSubscription();
+    const { name, discordUsername, email, military, agreement } = this.registerFormModel;
+    this.isTouched = true;
+    if (!name || !discordUsername || !email || !military || !agreement || !this.registerFormModel.email || !this.isEmailValid) {
+      return;
+    }
     this.register();
   }
 
@@ -221,6 +222,7 @@ export class DiscountComponent {
      formData).subscribe(res => {
       try {
         console.log(res);
+        this.isTouched = false;
       } catch (e) {
       }
     });

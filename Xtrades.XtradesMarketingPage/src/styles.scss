@@ -347,10 +347,12 @@ a {
 .ngx-file-drop__drop-zone {
     border: 1px solid white !important;
     min-height: 250px !important;
+    max-width: 862px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white !important;
+    margin-left: 0 !important;
 }
 
   .ngx-file-drop__content {
@@ -359,4 +361,12 @@ a {
     display: flex;
     min-height: 400px !important;
     justify-content: center;
+}
+
+.error-input .ngx-file-drop__drop-zone {
+  background: #541515 !important;
+  &::placeholder {
+    color: black !important;
+    font-weight: 700 !important;
+  }
 }

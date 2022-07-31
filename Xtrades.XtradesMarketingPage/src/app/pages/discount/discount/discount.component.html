@@ -65,36 +65,50 @@
     </div>
     <div class="flex column">
         <form (ngSubmit)="onSubmit()" class="military-discount-form__register-form" enctype="multipart/form-data">
-            <div class="form-group military-discount-form__form">
-                <label for="name" class="military-discount-form__label">Name</label>
+            <div class="form-group military-discount-form__form column">
+                <label for="name" class="military-discount-form__label px-2">Name</label>
                 <div class="overlay relative">
                     <input type="name" class="military-discount-form__input form-control" name="name" id="name" ngModel
-                        placeholder="Enter your name" required #name="ngModel" [(ngModel)]="registerFormModel.name" />
+                        placeholder="Enter your name" required #name="ngModel" [(ngModel)]="registerFormModel.name"
+                        [ngClass]="!registerFormModel.name && isTouched ? 'error-input' : ''"  />
+                    <img *ngIf="!registerFormModel.name && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
                 </div>
-                <div class="already-subscribed" *ngIf="alreadySubscribed">
-                    You've already subscribed. Thanks!
+                <div class="error px-2" *ngIf="!registerFormModel.name && isTouched">
+                    Name is required
                 </div>
             </div>
-            <div class="form-group military-discount-form__form">
-                <label for="discordUsername" class="military-discount-form__label">Discord Username</label>
+            <div class="form-group military-discount-form__form column">
+                <label for="discordUsername" class="military-discount-form__label px-2">Discord Username</label>
                 <div class="overlay relative">
                     <input type="name" class="military-discount-form__input form-control" name="discordUsername" id="discordUsername" ngModel
-                        placeholder="Enter your Discord Username" required #name="ngModel" [(ngModel)]="registerFormModel.discordUsername" />
+                        placeholder="Enter your Discord Username" required #name="ngModel" [ngClass]="!registerFormModel.discordUsername && isTouched ? 'error-input' : ''"  [(ngModel)]="registerFormModel.discordUsername" />
+                        <img *ngIf="!registerFormModel.discordUsername && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
+                </div>
+                <div class="error px-2" *ngIf="!registerFormModel.discordUsername && isTouched">
+                    Discord Username is required
                 </div>
             </div>
-            <div class="form-group military-discount-form__form">
-                <label for="email" class="military-discount-form__label">Email</label>
+            <div class="form-group military-discount-form__form column pb-4">
+                <label for="email" class="military-discount-form__label px-2">Email</label>
                 <div class="overlay relative">
                     <input type="email" class="military-discount-form__input form-control border-white" name="email" id="email" ngModel
                         placeholder="Enter your email address" required #email="ngModel"
-                        (input)="validateEmail(email.value)" [(ngModel)]="registerFormModel.email" />
+                        (input)="validateEmail(email.value)" [ngClass]="!registerFormModel.email && isTouched ? 'error-input' : ''"  [(ngModel)]="registerFormModel.email" />
+                    <img *ngIf="!registerFormModel.email && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
+                </div>
+                <div class="px-2" [ngClass]="!registerFormModel.email && isTouched? 'error' : ''" *ngIf="!registerFormModel.discordUsername && isTouched">
+                    Email is missing or invalid. Please enter valid entry.
                 </div>
             </div>
-            <div class="center">
-                <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" [multiple]='true' class="military-discount-form__input form-control">
-                    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-                        Drag or drop your ID here
-                      <button type="button" (click)="openFileSelector()">Browse Files</button>
+            <div class="px-2"><label for="file" class="military-discount-form__label">Identification proof</label>
+            </div>
+                <ngx-file-drop dropZoneLabel="Drop files here"  [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''" (onFileDrop)="dropped($event)" [multiple]='true' class="military-discount-form__input-file form-control relative">
+                    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector"   [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''">
+                        <div class="column cursor-pointer">
+                            <div  [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''">Drag or drop your ID here</div>
+                            <button type="button"  [ngClass]="!registerFormModel.file && isTouched ? 'error-input' : ''" (click)="openFileSelector()" class="link cursor-pointer">Browse Files</button>
+                            <img *ngIf="!registerFormModel.file && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon-file shrink" /> 
+                        </div>
                     </ng-template>
                 </ngx-file-drop>
                 <div class="upload-table">
@@ -106,17 +120,24 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <div class="military-discount-form__checkbox-wrapper flex">
+                <div class="error px-2" *ngIf="!registerFormModel.discordUsername && isTouched">
+                    Identification proof is required
+                </div>
+            <div class="military-discount-form__checkbox-wrapper column px-2">
                 <div class="form-group military-discount-form__form">
-                    <label for="agreement" class="military-discount-form__label">Terms and policy agreement</label>
                     <div class="overlay relative">
-                        <input type="checkbox" class="military-discount-form__input-checkbox form-control border-white" name="agreement" id="agreement" ngModel required #agreement="ngModel" [(ngModel)]="registerFormModel.agreement" />
+                        <input type="checkbox" class="military-discount-form__input-checkbox form-control border-white" name="agreement" id="agreement" ngModel required #agreement="ngModel" [(ngModel)]="registerFormModel.agreement" [ngClass]="!registerFormModel.agreement && isTouched ? 'error-input' : ''" />
                     </div>
-                <div class="military-discount-form__checkbox-agreement"><span class="error">*</span>I agree to the <a href="/terms-and-conditions" class="link">terms and policy</a></div>
+                <div class="military-discount-form__checkbox-agreement">
+                    <span [ngClass]="!registerFormModel.agreement && isTouched ? 'error' : ''">*</span>
+                    I agree to the <a target="_blank" href="/terms-and-conditions" class="link">terms and policy</a></div>
+                </div>
+                <br />
+                <div class="error px-2" *ngIf="!registerFormModel.discordUsername && isTouched">
+                    Accept the terms and policy
                 </div>
             </div>
-            <app-x-button (click)="register()" type="submit" [isColorInverted]="true" class="btn btn-success military-discount-form__register cursor-pointer absolute"
+            <app-x-button (click)="onSubmit()" type="submit" [isColorInverted]="true" class="btn btn-success military-discount-form__register cursor-pointer absolute"
             [disabled]="email.errors?.['pattern']">Sign Up</app-x-button>
         </form>
     </div>

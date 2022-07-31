@@ -111,19 +111,38 @@
   padding: var(--section-padding);
   --app-hero-width: 100%;
   &__main {
-    padding: 15px 15px 7.5px 15px;
+    padding: 15px 15px 7.5px 0;
   }
   &__form {
     padding: 15px 0;
     display: flex;
   }
-  &__label {
-    display: none;
+  &__icon {
+    outline: none;
+    background: transparent;
+    border: none;
+    height: 90%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    right: 2.5px;
+    top: 2.5px;
+  }
+  &__icon-file {
+    height: 90%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 auto;
   }
   &__input {
     outline: none;
     background: transparent;
-    min-width: 547px;
+    min-width: 300px;
+    max-width: 547px;
     max-height: 66px !important;
     width: 100% !important;
     border-radius: 14px !important;
@@ -132,6 +151,25 @@
     @media (max-width: $md) {
       padding-right: 5em;
     }
+    &::placeholder {
+      color: var(--white);
+      font-style: normal;
+      font-weight: normal;
+      @include dynamic-font(16px, 0.75);
+      line-height: 180%;
+    }
+  }
+
+  
+  &__input-file {
+    outline: none;
+    background: transparent;
+    min-width: 300px;
+    max-width: 407px;
+    max-height: 66px !important;
+    width: 100% !important;
+    border-radius: 14px !important;
+    color: var(--white) !important;
 
     &::placeholder {
       color: var(--white);
@@ -147,25 +185,11 @@
   }
 
   input[type="checkbox"] {
-    /* Add if not using autoprefixer */
     -webkit-appearance: none;
     appearance: none;
-    // /* For iOS < 15 to remove gradient background */
     background-color: transparent;
-    /* Not removed via appearance */
     margin: 0;
-    // max-width: 15px;
     padding: 5px;
-    //   font: inherit;
-    // color: currentColor;
-    //   // width: 1.15em;
-    //   // height: 1.15em;
-    //   border: 0.15em solid currentColor;
-    //   border-radius: 0.15em;
-    //   transform: translateY(-0.075em);
-
-    //   display: grid;
-    //   place-content: center;
   }
 
   .form-control+.form-control {
@@ -181,8 +205,8 @@
     transform: scale(0);
     transform-origin: bottom left;
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em white;
-    background-color: white;
+    box-shadow: inset 1em 1em white !important;
+    background-color: white !important;
   }
 
 
@@ -201,4 +225,26 @@
     color: gray;
     cursor: not-allowed;
   }
+}
+
+.error-input {
+  background: #541515 !important;
+  color: black !important;
+  font-weight: 600 !important;
+  &::placeholder {
+    color: black !important;
+    font-weight: 600 !important;
+  }
+}
+
+.error {
+  color: #9D1313;
+}
+
+.overlay {
+  max-width: 538px;
+}
+
+.shrink {
+  max-width: 25%;
 }
