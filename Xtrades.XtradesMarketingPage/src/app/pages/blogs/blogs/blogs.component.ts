@@ -112,6 +112,14 @@ export class BlogsComponent {
       href: '/blogs/how-to-start-stock-training',
       date: '25.07.2022',
       title: 'How to start Stock Trading: The Basics, Tips and Tricks'
+    },
+    {
+      id: '13',
+      url: 'how-to-make-money-in-bear-market',
+      snippet: "It's no secret that the stock market is a volatile place. One day you're up, and the next, you're down. This can be especially true during a bear market when the markets are in decline and investments are losing value. If you're looking to make money in a bear market, it's essential to understand how these markets work and take appropriate action to protect your portfolio. This blog post will discuss seven tips for making money during a bear market and staying ahead of the curve!",
+      href: '/blogs/how-to-make-money-in-bear-market',
+      date: '01.08.2022',
+      title: 'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve'
     }
   ].reverse();
 

@@ -81,6 +81,12 @@ export class BlogPostComponent {
       url: 'how-to-start-stock-training',
       date: '25.07.2022',
       title: 'How to start Stock Trading: The Basics, Tips and Tricks'
+    },
+    {
+      id: '13',
+      url: 'how-to-make-money-in-bear-market',
+      date: '01.08.2022',
+      title: 'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve'
     }
   ]
 
