@@ -8,10 +8,11 @@ import { XButtonModule } from '@shared/components/x-button/x-button.module';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
 import { VideoModalComponent } from './video-modal/video-modal.component';
+import { ThankYouModalComponent } from './thank-you-modal/thank-you-modal.component';
 
 @NgModule({
-  declarations: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent],
-  exports: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent],
+  declarations: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent, ThankYouModalComponent],
+  exports: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent, ThankYouModalComponent],
   imports: [
     CommonModule,
     RouterModule,
