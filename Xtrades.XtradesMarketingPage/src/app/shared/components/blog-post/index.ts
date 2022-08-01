@@ -10,3 +10,5 @@ export * from './blog-post-9/blog-post-9.component';
 export * from './blog-post-10/blog-post-10.component';
 export * from './blog-post-11/blog-post-11.component';
 export * from './blog-post-12/blog-post-12.component';
+export * from './blog-post-13/blog-post-13.component';
+
