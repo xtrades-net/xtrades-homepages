@@ -12,6 +12,7 @@ import { AvatarComponent } from './avatar/avatar.component';
 import { TrustedAppsComponent } from './trusted-apps/trusted-apps.component';
 import { MainHeroComponent } from './main-hero/main-hero.component';
 import { ImageSeperatorComponent } from './image-seperator/image-seperator.component';
+import { ModalModule } from '@shared/components/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ImageSeperatorComponent } from './image-seperator/image-seperator.compo
   ],
   imports: [
     SharedModule,
+    ModalModule,
     DirectivesModule,
     RouterModule.forChild([
       {
