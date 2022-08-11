@@ -23,6 +23,7 @@
     "@angular/router": "~13.2.0",
     "aos": "^2.3.4",
     "lottie-web": "^5.9.1",
+    "ngx-file-drop": "^13.0.0",
     "ngx-lottie": "^8.0.1",
     "rxjs": "~7.5.0",
     "swiper": "^6.8.4",

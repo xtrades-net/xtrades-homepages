@@ -42,6 +42,13 @@ const routes: Routes = [
         (m) => m.BlogsModule
       ),
   },
+  {
+    path: 'discount',
+    loadChildren: () =>
+      import('./pages/discount/discount.module').then(
+        (m) => m.DiscountModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 

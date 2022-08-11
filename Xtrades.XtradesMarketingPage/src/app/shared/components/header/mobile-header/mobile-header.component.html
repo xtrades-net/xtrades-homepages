@@ -25,6 +25,9 @@
                         href="/documentation"
                         routerLinkActive="active-router-link">Docs</a>
                 </span>
+                <span *ngFor="let element of headerProvider.headerElementsLast">
+                    <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
+                </span>
             </div>
             <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Try Xtrades free
             </app-x-button>

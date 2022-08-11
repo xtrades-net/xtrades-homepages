@@ -1,0 +1,146 @@
+<section class="military-discount-hero responsive-main-container column">
+  <app-hero class="military-discount-hero__hero flex">
+      <div class="military-discount-hero__main header-1">
+        Exclusive<span class="military-discount-hero__hero-detail"> Military</span> Discount
+      </div>
+  </app-hero>
+  <div class="flex">
+      <div class="column">
+          <a href="https://app.xtrades.net/"><img lazy src="assets/xtrades-edge.webp" alt="Xtrades Edge" data-aos="fade-up" width="590" height="430" /></a>
+      </div>
+      <div class="column">
+          <div class="flex">
+              <div class="box column">
+                  <div class="military-discount-hero__box-description description" description>
+                    At Xtrades, we provide a default 20% discount to active military or veterans in the United States. If you qualify for this promotion, please fill out the form below to receive a discounted sign up link from us.
+                  </div>
+                  <div class="military-discount-hero__buttons-row" buttons>
+                    <app-x-button class="buttons-row__enter-discord" (click)="scroll(target)" [isColorInverted]="true">
+                        Register
+                    </app-x-button>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<app-separator></app-separator>
+<section class="military-discount-perks responsive-main-container column">
+  <div class="flex">
+      <app-hero class="military-discount-perks__hero">
+          <div class="military-discount-perks__main header-1" data-aos="fade-up" data-aos-offset="100"
+              data-aos-duration="400">
+              <span class="hero__hero-detail">The</span> Perks <span class="hero__hero-detail">of</span> joining Xtrades
+          </div>
+          <div class="military-discount-perks__description description" description>
+              Xtrades is the complete collaboration platform for traders – allowing optimized interaction to ensure consistent success.
+          </div>
+      </app-hero>
+  </div>
+  <div class="military-discount-perks__cards cards flex">
+      <app-card class="military-discount-perks__card-wrapper card-wrapper relative" data-aos="fade-up" data-aos-offset="200"
+          [title]="'Collaborate'"
+          [subtitle]="'With those that are in the position you wish to be in. Traders that have already accomplished the ability to consistently make profits in the markets.'"
+          [iconPath]="'/assets/learn.svg'" [iconAlt]="'Learn'">
+      </app-card>
+      <app-card class="military-discount-perks__card-wrapper card-wrapper relative" data-aos="fade-up" [title]="'Data Edge'"
+          [subtitle]="'Receive sentiment data on the hottest plays in the US Stocks and Options market.'"
+          [iconPath]="'/assets/earn.svg'" [iconAlt]="'Earn'">
+      </app-card>
+      <app-card class="military-discount-perks__card-wrapper card-wrapper relative" data-aos="fade-up" [title]="'Build Together'"
+          [subtitle]="'Our application creates opportunities to allow users to contribute and earn in the process!'"
+          [iconPath]="'/assets/build.svg'" [iconAlt]="'Build'">
+      </app-card>
+  </div>
+</section>
+<app-separator></app-separator>
+<section #target class="military-discount-form responsive-main-container column">
+    <div class="flex">
+        <app-hero class="military-discount-form__hero">
+            <div class="military-discount-form__main header-1" data-aos="fade-up" data-aos-offset="100"
+                data-aos-duration="400">
+                Register Form
+            </div>
+        </app-hero>
+    </div>
+    <div class="flex column">
+    <form (ngSubmit)="onSubmit()" class="military-discount-form__register-form" enctype="multipart/form-data">
+        <div class="form-group military-discount-form__form column">
+                <label for="name" class="military-discount-form__label px-2">Name</label>
+                <div class="overlay relative">
+                    <input type="name" class="military-discount-form__input form-control" name="name" id="name" ngModel
+                        placeholder="Enter your name" required #name="ngModel" [(ngModel)]="registerFormModel.name"
+                        [ngClass]="!registerFormModel.name && isTouched ? 'error-input' : ''"  />
+                    <img *ngIf="!registerFormModel.name && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
+                </div>
+                <div class="error px-2" *ngIf="!registerFormModel.name && isTouched">
+                    Name is required
+                </div>
+            </div>
+            <div class="form-group military-discount-form__form column">
+                <label for="discordUsername" class="military-discount-form__label px-2">Discord Username</label>
+                <div class="overlay relative">
+                    <input type="name" class="military-discount-form__input form-control" name="discordUsername" id="discordUsername" ngModel
+                        placeholder="Enter your Discord Username" required #name="ngModel" [ngClass]="!registerFormModel.discordUsername && isTouched ? 'error-input' : ''"  [(ngModel)]="registerFormModel.discordUsername" />
+                        <img *ngIf="!registerFormModel.discordUsername && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
+                </div>
+                <div class="error px-2" *ngIf="!registerFormModel.discordUsername && isTouched">
+                    Discord Username is required
+                </div>
+            </div>
+            <div class="form-group military-discount-form__form column pb-4">
+                <label for="email" class="military-discount-form__label px-2">Email</label>
+                <div class="overlay relative">
+                    <input type="email" class="military-discount-form__input form-control border-white" name="email" id="email" ngModel
+                        placeholder="Enter your email address" required #email="ngModel"
+                        (input)="validateEmail(email.value)" [ngClass]="!registerFormModel.email && isTouched ? 'error-input' : ''"  [(ngModel)]="registerFormModel.email" />
+                    <img *ngIf="!registerFormModel.email && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon absolute" />
+                </div>
+                <div class="px-2" [ngClass]="!registerFormModel.email && isTouched? 'error' : ''" *ngIf="!registerFormModel.email && isTouched">
+                    Email is missing or invalid. Please enter valid entry.
+                </div>
+            </div>
+            <div class="px-2"><label for="file" class="military-discount-form__label">Identification proof</label>
+            </div>
+            <ngx-file-drop dropZoneLabel="Drop files here" [ngClass]="!registerFormModel.military && isTouched ? 'error-input' : ''" (onFileDrop)="dropped($event)" [multiple]='true' class="military-discount-form__input-file form-control relative">
+                    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                        <div class="column cursor-pointer">
+                            <div  [ngClass]="!registerFormModel.military && isTouched ? 'error-input' : ''">Drag or drop your ID here</div>
+                            <button type="button"  [ngClass]="!registerFormModel.military && isTouched ? 'error-input' : ''" (click)="openFileSelector()" class="link cursor-pointer">Browse Files</button>
+                            <img *ngIf="!registerFormModel.military && isTouched" src="../../../../assets/images/error.svg" class="military-discount-form__icon-file shrink" /> 
+                        </div>
+                    </ng-template>
+                </ngx-file-drop>
+                <div class="upload-table">
+                    <table class="table">
+                        <tbody class="upload-name-style">
+                            <tr *ngFor="let item of files; let i=index">
+                                <td><strong>{{ item.relativePath }}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="error px-2" *ngIf="uploadedFiles.length === 0 && isTouched">
+                    Identification proof is required
+                </div>
+            <div class="military-discount-form__checkbox-wrapper column px-2">
+                <div class="form-group military-discount-form__form">
+                    <div class="overlay relative">
+                        <input type="checkbox" class="military-discount-form__input-checkbox form-control border-white" name="agreement" id="agreement" ngModel required #agreement="ngModel" [(ngModel)]="registerFormModel.agreement" [ngClass]="!registerFormModel.agreement && isTouched ? 'error-input' : ''" />
+                    </div>
+                <div class="military-discount-form__checkbox-agreement">
+                    <span [ngClass]="!registerFormModel.agreement && isTouched ? 'error' : ''">*</span>
+                    I agree to the <a target="_blank" href="/terms-and-conditions" class="link">terms and policy</a></div>
+                </div>
+                <br />
+                <div class="error px-2" *ngIf="!registerFormModel.discordUsername && isTouched">
+                    Accept the terms and policy
+                </div>
+            </div>
+            <app-x-button (click)="onSubmit()" type="submit" [isColorInverted]="true" class="btn btn-success military-discount-form__register cursor-pointer absolute"
+            >Sign Up</app-x-button>
+        </form>
+    </div>
+</section>
+<app-mailing-list></app-mailing-list>
+<app-thank-you-modal [modalId]="'thank-you-modal'" (triggerCloseModal)="closeModal($event)"></app-thank-you-modal>

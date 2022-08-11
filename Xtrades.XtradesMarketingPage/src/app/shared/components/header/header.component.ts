@@ -3,6 +3,7 @@ import { ScreenService } from '@core/screen.service';
 import { BodyScrollingService } from '@core/body-scrolling.service';
 import { HeaderProvider } from './header-provider/header-provider';
 import { Subscription } from 'rxjs';
+import { HeaderElement } from './header-models';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy {
   @Input() isMainHeader = true;
   @Input() headerElements = [];
+  @Input() headerElementsLast: HeaderElement[] = [];
 
   constructor(
     public headerProvider: HeaderProvider,

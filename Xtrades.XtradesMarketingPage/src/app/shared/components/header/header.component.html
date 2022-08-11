@@ -14,6 +14,9 @@
     <span>
       <a class="link" target="_blank" href="/documentation" routerLinkActive="active-router-link">Docs</a>
     </span>
+    <span *ngFor="let element of headerProvider.headerElementsLast">
+      <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
+    </span>
   </div>
   <app-x-button *ngIf="isMainHeader && !isMobile" class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Try Xtrades Free</app-x-button>
   <ng-container *ngIf="isMobile">
