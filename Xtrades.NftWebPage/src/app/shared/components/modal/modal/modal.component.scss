@@ -1,5 +1,4 @@
 :host {
-    background-color: red;
     display: none;
 
     width: 100%;
@@ -26,6 +25,8 @@
             left: 0;
         }
 
+        overflow: auto;
+
         &__body {
             padding: 32px;
             background: rgba(8, 18, 35, 0.98);
@@ -40,8 +41,9 @@
                 max-height: 80vh;
                 overflow-y: scroll;
                 overflow-x: hidden;
+                padding: 0px;
             }
-        
+        }
         &:after {
             content: '';
             display: block;
@@ -50,7 +52,7 @@
 
             position: absolute;
             left: 640px;
-            top: 15px;
+            top: 5px;
 
             background: url("/assets/images/close.svg");
             background-size: cover;
@@ -62,7 +64,6 @@
                 top: 32px;
                 left: calc(100vw - 50px);
             }
-        }
         }
     }
 }
@@ -79,4 +80,3 @@
 
     z-index: 9;
 }
-
