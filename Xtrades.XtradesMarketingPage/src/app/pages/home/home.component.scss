@@ -47,15 +47,24 @@
     }
     &__levelup-img {
         bottom: 20%;
-        left: 35%;
+        left: 70%;
         @media (max-width: $md) {
-            width: 35%;
-            left: 10%;
-            bottom: 40%;
+          top: -200%;
+          left: -140%;
+        }
+        @media (max-width: $sl) {
+          top: -200%;
+            left: -30%;
         }
     }
     &__buttons-row {
         padding: 15px 0;
+        .text-container {
+          // padding: 0 0 15px 0;
+          bottom: 25%;
+          width: 80%;
+          left: 10%;
+        }
     }
 }
 

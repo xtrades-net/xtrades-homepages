@@ -3,10 +3,8 @@
         The Future <span class="hero__hero-detail">of Trader</span> Collaboration
     </div>
     <div image class="hero__mobile flex relative animation" data-aos="fade-up">
-        <!-- <app-main-image-animation class="hero__main-img" width="500" height="500"></app-main-image-animation> -->
         <app-video-hero></app-video-hero>
     </div>
-    <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
     <div class="column hero__joinnow hero-description">
         <div class="hero__description description" description data-aos="fade-up"  >
             Interact with retail traders across the globe, new and experienced.
@@ -15,6 +13,7 @@
             <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
                 Beta App
             </app-x-button>
+            <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
         </div>
     </div>
 </section>
@@ -172,11 +171,14 @@
             <div class="gradient-overlay">
                 <app-card class="xtrades-alerts__card-wrapper" [title]="'Xtrades'">
                     <app-label class="xtrades-alerts__card-label" [label]="'Elite member'"></app-label>
-                    <div class="buttons-row__pricing">
+                    <div class="buttons-row__pricing relative">
                         <sup>$</sup><span id="membership-price" class="membership-price in-viewport" appInViewport
                             [options]="counterAnimationOptions" (inviewport)="animateCounterValue($event)"></span>
                     </div>
                     <div class="hero__buttons-row" buttons>
+                        <div class="text-container absolute">
+                            Sign up for 20 day free trial and get access to premium features!
+                        </div>
                         <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true"
                             (click)="handleGoToBetaAppClick()">
                             Try Xtrades Free

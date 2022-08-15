@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { LoadingService } from '@core/loading.service';
 import { ModalService } from '../modal/modal.service';
 
 @Component({
@@ -8,22 +9,26 @@ import { ModalService } from '../modal/modal.service';
 })
 export class VideoHeroComponent implements AfterViewInit {
   @ViewChild('background') backgroundImage!: ElementRef;
+  @ViewChild("player") player!: ElementRef; 
   playVideo = false;
   backgroundLoaded = false;
 
-  constructor(private modalService: ModalService) {}
-
+  constructor(
+    private modalService: ModalService,
+    private loadingService: LoadingService,
+  ) {}
+  
   ngAfterViewInit(): void {
+    this.loadingService.removeLoader();
     this.backgroundImage.nativeElement.addEventListener('load', () => this.backgroundLoaded = true);
   }
 
   play() {
-    // this.playVideo = true;
+    this.playVideo = true;
     this.modalService.open('video-modal');
   }
 
   closeModal($event: any) {
-    this.modalService.close('video-modal');
+    this.modalService.close($event.id);
   }
-
 }

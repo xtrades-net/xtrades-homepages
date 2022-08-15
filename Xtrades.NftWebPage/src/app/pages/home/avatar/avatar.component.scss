@@ -1,0 +1,19 @@
+.avatar {
+    background: rgba(206, 215, 243, 0.1);
+    color: var(--brand-color);
+    font-size: 26px;
+
+    &__background {
+        background: rgba(206, 215, 243, 0.1);
+    }
+
+    &__name {
+        bottom: -3%;
+        left: 20%;
+    }
+}
+
+.spacing {
+    padding: 30px;
+    margin: 15px;
+}

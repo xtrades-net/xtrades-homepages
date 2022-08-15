@@ -12,6 +12,19 @@ export class MembershipComponent {
   options: any = [
     {
       selected: false,
+      name: 'trial',
+      priceTag: { userCost: 0, period: '20 days' },
+      description: 'Our free trial',
+      planId: 'elite',
+      featuresList: [
+        'All of the Elite plan features'
+      ],
+      possibleAction: null,
+      color: 'purple',
+      paymentDescription: ``,
+    },
+    {
+      selected: false,
       name: 'elite',
       priceTag: { userCost: 48, period: 'month' },
       description: 'Our monthly plan',
@@ -136,6 +149,9 @@ export class MembershipComponent {
             this.opt.push({...plan, ...option});
           }
         });
+        if (option.name === 'trial') {
+          this.opt.push({...option});
+        }
       });
     });
   }

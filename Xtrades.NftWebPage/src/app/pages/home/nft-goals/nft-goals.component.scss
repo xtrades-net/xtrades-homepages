@@ -1,0 +1,32 @@
+@import "../../../../styles/vars";
+
+.nft-goals {
+    &__wrapper {
+        justify-content: space-between;
+        @media(max-width: $lg) {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__text, &__avatar {
+        width: 50%;
+        @media(max-width: $lg) {
+            width: 100%;
+        }
+    }
+    &__text {
+        width: 80%;
+        padding: 0 15px;
+    }
+}
+
+.text {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    display: flex;
+    align-items: center;
+    color: #CED7F3;
+}

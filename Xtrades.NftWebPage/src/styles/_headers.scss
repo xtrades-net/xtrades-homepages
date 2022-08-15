@@ -1,0 +1,29 @@
+
+.header-1 {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 120%;
+    color: #8A93AD;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: $lg) {
+        font-size: 44px;
+    }
+}
+
+
+.header-2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #CED7F3;
+    text-shadow: 0px 4px 35px rgba(206, 215, 243, 0.62);
+    text-align: center;
+}

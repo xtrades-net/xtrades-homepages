@@ -1,0 +1,71 @@
+@import "../../../../styles/vars.scss";
+
+.button {
+    text-align: center;
+    --x-button-padding: 14px 56px;
+    
+    --button-color: #0D1210;
+    color: var(--x-button-color, var(--white));
+    background: var(--x-button-background, unset);
+    background-color: var(--x-button-background-color, var(--black));
+    max-width: var(--x-button-max-width);
+    transition: 0.3s;
+    padding: var(--x-button-padding);
+    font-size: var(--x-button-font-size, 18px);
+    font-weight: var(--x-button-font-weight, 700);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: --brand-black;
+
+    @media(max-width: $md) {
+        padding: 10px 24px;
+    }
+
+
+    &.inverted {
+        --x-color-main: #fff;
+        border: 1px solid var(--brand-color);
+        color: var(--brand-color);
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    
+    &:after {
+      background: var(--brand-color);
+      content: "kjkjk";
+      height: 155px;
+      left: -75px;
+      opacity: .5;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      width: 50px;
+    }
+
+    &.brand {
+        background: var(--brand-color);
+        border: 1px solid var(--brand-color);
+        margin-right: 15px;
+        color: #0D1210;
+        &:after {
+            background: black;
+        }
+    }
+
+    &:hover {
+        &:after {
+            left: 120%;
+            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    }
+}

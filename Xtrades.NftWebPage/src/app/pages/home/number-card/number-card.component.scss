@@ -1,0 +1,56 @@
+@import "../../../../styles/vars";
+
+:host {
+    width: 30%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-card {
+    &__header {
+        /* Big numbers */
+
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 120%;
+        /* identical to box height, or 60px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        /* Green */
+
+        color: #8EFCDC;
+
+        @media(max-width: $lg) {
+            font-size: 24px;
+        }
+
+    }
+    &__subtext {
+        /* Text 18 */
+    
+        font-family: 'Roboto Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        /* or 32px */
+        
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    
+        /* subtext */
+        
+        color: #8A93AD;
+    
+    }
+}

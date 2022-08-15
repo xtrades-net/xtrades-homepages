@@ -1,0 +1,85 @@
+@import "../../../../styles/vars";
+
+.roadmap {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.icon-card {
+    background: rgba(206, 215, 243, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 15px;
+    z-index: 0;
+}
+
+.icon-card:hover {
+    color: var(--brand-color);
+}
+
+.icon-card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 25%;
+    left: 0;
+    height: 100%;
+    z-index: -10;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-color: #CED7F3;
+}
+
+.icon-card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 15%;
+    right: 0;
+    height: 100%;
+    z-index: -10;
+    border-top: 1px solid #CED7F3;
+    border-right: 1px solid #CED7F3;
+    border-bottom: 1px solid #CED7F3;
+}
+
+.icon-card:hover:before, .icon-card:hover:after {
+    border-color: var(--brand-color);
+}
+
+.icon-card:first-of-type {
+    min-width: 407px;
+    min-height: 300px;
+}
+
+.icon-card:nth-child(2) {
+    min-width: 625px;
+    min-height: 300px;
+}
+
+.icon-card:nth-child(3) {
+    min-width: 625px;
+    min-height: 300px;
+}
+
+.icon-card:nth-child(4) {
+    min-width: 407px;
+    min-height: 300px;
+}
+
+.icon-card {
+    @media(max-width: $lg) {
+        min-width: 100% !important;
+        min-height: 100% !important;
+    }
+}

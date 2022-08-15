@@ -1,0 +1,36 @@
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  &__elements {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    max-height: 62px;
+    cursor: pointer;
+  }
+
+  .connect-button {
+    z-index: 3;
+  }
+
+  &__icon {
+    font-size: 40px;
+    margin-right:10px;
+    cursor: pointer;
+    &:hover {
+      color: var(--header-element-font-color-hover);
+    }
+  }
+}
+
+.align-right {
+  display: flex;
+  margin-right: 15px;
+}

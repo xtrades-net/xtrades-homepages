@@ -1,0 +1,26 @@
+<div class="header" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
+  <div *ngIf="isMainHeader" [routerLink]="['/']">
+    <img *ngFor="let logo of logos" lazy img class="logo" alt="Xtrades Logo" [src]='logo' width="56px" height="35px" />
+  </div>
+  <div class="header__elements" *ngIf="!isMobile">
+    <span *ngFor="let element of (headerElements.length !== 0 ? headerElements : headerProvider.headerElements)">
+      <a class="link uppercase" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
+    </span>
+    <span>
+      <a class="link uppercase" target="_blank" href="https://www.xtrades.net/" routerLinkActive="active-router-link">Xtrades</a>
+    </span>
+    <span>
+      <a class="link uppercase" target="_blank" href="https://www.cryptotraders.com/" routerLinkActive="active-router-link">Cryptotraders</a>
+    </span>
+  </div>
+  <div class="align-right">
+    <app-x-button *ngIf="isMainHeader" class="button uppercase margin-right link connect-button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Connect</app-x-button>
+    <ng-container *ngIf="isMobile">
+      <img img class="menu cursor-pointer pl-2" alt="Mobile Menu Button" width="47px" height="42px" src='assets/logos/menu.svg' (click)="onMobileMenuOpen()" />
+    </ng-container>
+  </div>
+</div>
+<ng-container #mobileHeader *ngIf="isMobile && isMenuOpened">
+  <app-mobile-header [logos]="logos" (triggerClose)="onMobileMenuClose()"></app-mobile-header>
+</ng-container>
+<app-separator></app-separator>

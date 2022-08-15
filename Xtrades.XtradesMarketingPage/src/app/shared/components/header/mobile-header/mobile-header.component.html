@@ -14,6 +14,9 @@
                         [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
                 </span>
                 <span>
+                    <a class="link" target="_blank" href="https://app.xtrades.net/plans" routerLinkActive="active-router-link">Plans</a>
+                  </span>
+                <span>
                     <a class="link" target="_blank" href="https://app.xtrades.net/"
                         routerLinkActive="active-router-link">Beta App</a>
                 </span>
@@ -22,8 +25,11 @@
                         href="/documentation"
                         routerLinkActive="active-router-link">Docs</a>
                 </span>
+                <span *ngFor="let element of headerProvider.headerElementsLast">
+                    <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
+                </span>
             </div>
-            <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Join Now
+            <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Try Xtrades free
             </app-x-button>
         </div>
     </div>

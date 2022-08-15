@@ -74,7 +74,7 @@ body {
     --x-button-padding: 1.125em 1.825em;
     --x-button-font-size: 1em;
     --x-button-font-weight: 500;
-    --x-button-max-width: 140px;
+    --x-button-max-width: 200px;
     --size_xs: 576px;
     --size_s: 768px;
     --size_m: 992px;
@@ -102,6 +102,9 @@ body {
     .header-2 {
         font-weight: 600;
         font-size: 50px;
+        @media (max-width: $md) {
+            font-size: 24px;
+        }
     }
     .description {
         color: var(--grey);
@@ -323,4 +326,47 @@ input:-webkit-autofill:active {
 
 .is-height {
     height: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--brand-main-purple);
+}
+
+.blog-image {
+    margin: 0 auto;
+    display: flex !important;
+    padding: 15px 0;
+}
+
+.narrow {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ngx-file-drop__drop-zone {
+    border: 1px solid white !important;
+    min-height: 250px !important;
+    max-width: 862px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    margin-left: 0 !important;
+}
+
+  .ngx-file-drop__content {
+    align-items: center;
+    color: white !important;
+    display: flex;
+    min-height: 400px !important;
+    justify-content: center;
+}
+
+.error-input .ngx-file-drop__drop-zone {
+  background: #541515 !important;
+  &::placeholder {
+    color: black !important;
+    font-weight: 700 !important;
+  }
 }

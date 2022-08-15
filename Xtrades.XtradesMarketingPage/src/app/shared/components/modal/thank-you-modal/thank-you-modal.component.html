@@ -1,0 +1,13 @@
+<app-modal [id]="modalId">
+    <div class="flex column space-between" style="min-height: 437px;">
+        <div>
+            <div class="subscribe-modal__header-2 header-2 px-2">
+                Thank you for registering!
+            </div>
+            <div class="subscribe-modal__description description px-2">
+                We will notify you once verifed. In the mean time, you can get a preview by signing up for a free trial and join our Discord channel to be up to date with latest trends.
+            </div>
+        </div>
+        <app-x-button class="subscribe-modal__resign-button cursor-pointer self-end" (click)="onCloseModal()" [isColorInverted]="true">Done</app-x-button>
+    </div>
+</app-modal>

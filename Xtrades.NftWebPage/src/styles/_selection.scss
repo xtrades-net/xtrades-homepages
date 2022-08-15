@@ -1,0 +1,9 @@
+::selection {
+    background: var(--brand-color);
+    color: var(--brand-dark);
+}
+
+::-moz-selection {
+    background: var(--brand-color);
+    color: var(--white);
+}

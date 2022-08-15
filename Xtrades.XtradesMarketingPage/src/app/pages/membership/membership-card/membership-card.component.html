@@ -1,23 +1,26 @@
 <div class="card card__color-{{data.color}}" [class.selected]="data.selected">
-  <div class="card__wrapper">
-    <div *ngIf="data.title" class="card__title">
-      {{data.title}}
-    </div>
-    <div class="card__price-tag" *ngIf="data.priceTag">
-      <div class="card__price-tag--price">${{data.price}}</div>
-      <div class="card__price-tag--period" [class.selected]="data.selected"><span class="card__price-tag--separator" [class.is-visible]="data.priceTag.period === 'Single Payment'">/</span> {{data.priceTag.period}}</div>
-    </div>
-    <div *ngIf="data.description" class="card__description" [class.selected]="data.selected">
-      {{data.description}}
-    </div>
-    <div class="card__features">
-      <div *ngIf="data.featuresPrefix" class="card__features__prefix" [innerHtml]="data.featuresPrefix"></div>
-      <div>
-        <li *ngFor="let feature of data.featuresList" class="card__features__feature">
-          <div class="icon"></div>
-          <div class="card__features__feature--description">{{feature}}</div>
-        </li>
+  <div class="card__wrapper flex column">
+    <div class="top-wrapper">
+      <div *ngIf="data.title" class="card__title">
+        {{data.title}}
+      </div>
+      <div class="card__price-tag" *ngIf="data.priceTag">
+        <div class="card__price-tag--price">${{data.price || 0 }}</div>
+        <div class="card__price-tag--period" [class.selected]="data.selected"><span class="card__price-tag--separator" [class.is-visible]="data.priceTag.period === 'Single Payment'">/</span> {{data.priceTag.period}}</div>
+      </div>
+      <div *ngIf="data.description" class="card__description" [class.selected]="data.selected">
+        {{data.description}}
+      </div>
+      <div class="card__features">
+        <div *ngIf="data.featuresPrefix" class="card__features__prefix" [innerHtml]="data.featuresPrefix"></div>
+        <div>
+          <li *ngFor="let feature of data.featuresList" class="card__features__feature">
+            <div class="icon"></div>
+            <div class="card__features__feature--description">{{feature}}</div>
+          </li>
+        </div>
       </div>
     </div>
+    <div class="card__action"><button fill="outline" class="card__action--button pointer" (click)="onSubscribeClick()">Subscribe</button></div>
   </div>
 </div>

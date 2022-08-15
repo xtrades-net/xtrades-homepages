@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
@@ -12,13 +13,14 @@ import { HttpClient } from '@angular/common/http';
 import * as _ from 'lodash';
 import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
+import { LoadingService } from '@core/loading.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   @ViewChild('email') input: ElementRef | any;
   sliderImages: Array<any> = [
     {
@@ -30,37 +32,37 @@ export class HomeComponent {
     {
       title: 'Access Content',
       page: 2,
-      src: 'assets/Xtrades-slider-img.svg',
+      src: 'assets/images/Access Content.svg',
       alt: 'Access Content Image',
     },
     {
       title: 'Learn Together',
       page: 3,
-      src: 'assets/Xtrades-slider-img.svg',
+      src: 'assets/images/Learn Together.svg',
       alt: 'Learn together Image',
     },
     {
       title: 'Use Custom Tools',
       page: 4,
-      src: 'assets/Xtrades-slider-img.svg',
+      src: 'assets/images/Use Custom Tools.svg',
       alt: 'Use Custom Tools Image',
     },
     {
       title: 'Watch Video Lessons',
       page: 5,
-      src: 'assets/Xtrades-slider-img.svg',
+      src: 'assets/images/Watch Video lessons.svg',
       alt: 'Watch video lessons Image',
     },
     {
       title: 'Become Profitable',
       page: 6,
-      src: 'assets/Xtrades-slider-img.svg',
+      src: 'assets/images/Become Profitable.svg',
       alt: 'Becofe Profitable Image',
     },
     {
       title: 'Fruits Of Success',
       page: 7,
-      src: 'assets/Xtrades-slider-img.svg',
+      src: 'assets/images/Fruits of Success.svg',
       alt: 'Fruits of success Image',
     },
   ];
@@ -126,10 +128,14 @@ export class HomeComponent {
 
   constructor(
     public screenService: ScreenService,
-    private httpService: HttpClient,
     private cdr: ChangeDetectorRef,
-    private subscribeService: SubscribeService
+    private subscribeService: SubscribeService,
+    private loadingService: LoadingService
   ) {}
+
+  ngAfterViewInit(): void {
+    this.loadingService.removeLoader();
+  }
 
   handleGoToBetaAppClick(): void {
     window.location.href = 'https://app.xtrades.net/';

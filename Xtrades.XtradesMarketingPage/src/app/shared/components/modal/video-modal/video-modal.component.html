@@ -1,6 +1,3 @@
-<app-modal [id]="modalId" (triggerCloseModal)="onCloseModal()">
-    <div class="default-modal">
-        <!-- <video class="web-demo__iframe" src="https://www.youtube.com/embed/ZH3favfPvCM?autoplay=1" title="YouTube video player"></video> -->
-        <iframe width="320" height="240" src="https://youtu.be/ZH3favfPvCM" controls></iframe>
-    </div>
+<app-modal [id]="modalId">
+    <video #player width="100%" height="100%" controls src="../../../../../assets/videos/Xtrades Quickstart Guide.mp4" ></video>
 </app-modal>
