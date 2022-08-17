@@ -1,7 +1,6 @@
 @import "../../../../../styles/vars";
 
 .icon-card-roadmap {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +10,18 @@
     z-index: 0;
 
     position: relative;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__steps {
+        min-height: 140px;
+        max-width: 25%;
+        // word-break: break-all;
+        white-space: pre-wrap;
+    }
 
     @media (max-width: $lg) {
         padding: 15px 0;
