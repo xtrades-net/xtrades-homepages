@@ -3,8 +3,8 @@
         <img [src]="step.url" />
         <h3 class="px-2" *ngIf="step.text">{{step.text}}</h3>
     </div>
-    <div class="flex">
-        <div *ngFor="let boxContent of step.modal" class="icon-card relative cursor-pointer">
+    <div class="icon-card-roadmap__wrapper flex flex-wrap">
+        <div *ngFor="let boxContent of step.modal" class="icon-card icon-card-roadmap__steps relative cursor-pointer">
             <h3 class="p-2">{{boxContent}}</h3>
         </div>
     </div>

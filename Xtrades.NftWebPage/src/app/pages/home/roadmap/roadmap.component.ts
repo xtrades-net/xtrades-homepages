@@ -12,9 +12,8 @@ export class RoadmapComponent {
       text: 'Rep',
       url: '../../../assets/images/Rep.svg',
       modal: [
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)'
+        'Discord Verified NFT Holder',
+        'Application Verified NFT Holder',
       ]
     },
     {
@@ -22,26 +21,28 @@ export class RoadmapComponent {
       url: '../../../assets/images/save.svg',
       modal: [
         'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)'
       ]
     },
     {
       text: 'Earn',
       url: '../../../assets/images/Earn.svg',
       modal: [
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)'
+        '$Xbits (Staking)',
+        'Activate Increased Earnings and Rewards In-App (Power Up Exclusive to NFT Holders)',
+        'Floor Sweep Mechanism (50% of Creator Fees)'
       ]
     },
     {
       text: 'Tech',
       url: '../../../assets/images/tech.svg',
       modal: [
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)',
-        'All NFT Holders Receive Elite Membership (Access App Discounts and Features)'
+        
+        'Release Xtrades MVP (Done)',
+        'Release CryptoTraders MVP',
+        'Merge CT and XT Application',
+        'Integrate Xbits to CT and XT app',
+        'Continue creating utilities for Xbits',
+        'XTCT DAO (Decentralized Autonomous Organization)'
       ]
     },
   ];
