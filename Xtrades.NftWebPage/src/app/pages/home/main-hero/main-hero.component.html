@@ -1,22 +1,22 @@
 <section class="responsive-main-container flex center hero-section relative">
     <div class="hero-section__left-bar column">
-        <h1 class="header-1">
+        <h1 class="header-1 glitch">
                 <span class="header-detail">Gainlab Pass</span> (1000 Pieces)
         </h1>
         <div class="hero-section__description">
-            <div class="flex px-4">
+            <div class="flex px-4 glitch">
                 Explore the full benefits of Gainlab for Life <br />
                 Currently Featuring Stock Market and Crypto Platforms for Retail Traders
             </div>
             <div class="hero-section__bottom-bar center">
-                <app-x-button class="button uppercase" [isBrand]="true" [isColorInverted]="false" (triggerClick)="handleGoToBetaAppClick()">Join
+                <app-x-button class="button uppercase" [isBrand]="true" [isColorInverted]="false" (triggerClick)="handleGoToLinkClick('')">Join
                 </app-x-button>
-                <app-x-button class="button uppercase" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Discord
+                <app-x-button class="button uppercase" [isColorInverted]="true" (triggerClick)="handleGoToLinkClick('https://discord.gg/UsGmBr3eNm')">Discord
                 </app-x-button>
             </div>
         </div>
     </div>
     <div class="column hero-section__gif-bar">
-        <img src="./../../../assets/gifs/xpass.gif" />
+        <img class="glitch" src="./../../../assets/gifs/xpass.gif" />
     </div>
 </section>

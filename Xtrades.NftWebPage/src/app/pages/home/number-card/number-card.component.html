@@ -1,2 +1,19 @@
-<h3 class="number-card__header">{{number.value}}</h3>
+<div class="flex" *ngIf="number.type !== 'time'">
+    <span class="number-card__header">
+        {{number.additionalStartText}}
+    </span>
+    <span
+        class="number-card__header"
+        appInViewport
+        [options]="counterAnimationOptions"
+        (inviewport)="animateCounterValue($event)">
+        {{number.value}}
+    </span>
+    <span class="number-card__header">
+        {{number.additionalEndText}}
+    </span>
+</div>
+<div  *ngIf="number.type === 'time'" class="timer number-card__header">
+    <span class="timer-days"></span>:<span class="timer-hours"></span>:<span class="timer-mins"></span>:<span class="timer-secs"></span>
+</div> 
 <div class="number-card__subtext">{{number.description}}</div>

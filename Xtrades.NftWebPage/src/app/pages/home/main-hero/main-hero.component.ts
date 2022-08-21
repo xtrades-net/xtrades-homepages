@@ -12,7 +12,10 @@ export class MainHeroComponent implements AfterViewInit {
     document.querySelector('.full-screen')?.classList.remove('full-height');
   }
 
-  handleGoToBetaAppClick(): void {
-    window.location.href = 'https://app.xtrades.net/';
+  handleGoToLinkClick(link: string): void {
+    window.open(
+      link,
+      '_blank'
+    );
   }
 }

@@ -29,8 +29,8 @@ import { ModalModule } from '@shared/components/modal/modal.module';
   ],
   imports: [
     SharedModule,
-    ModalModule,
     DirectivesModule,
+    ModalModule,
     RouterModule.forChild([
       {
         path: '',
