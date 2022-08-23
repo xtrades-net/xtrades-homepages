@@ -19,7 +19,6 @@ import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
 import { BlogPost10Component, BlogPost11Component, BlogPost1Component, BlogPost2Component, BlogPost3Component, BlogPost4Component, BlogPost5Component, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, BlogPost12Component, BlogPost13Component } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
-import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [LabelComponent, NewsComponent, MailingListComponent, BlogCardComponent, BlogPostComponent, BlogPost1Component, BlogPost2Component, BlogPost3Component, BlogPost4Component, BlogPost5Component, BlogPost6Component, BlogPost7Component, BlogPost8Component, BlogPost9Component, BlogPost10Component, BlogPost11Component, BlogPost12Component, BlogPost13Component, LoaderComponent, TruncatePipe],
@@ -35,8 +34,7 @@ import { DirectivesModule } from './directives/directives.module';
     SliderModule,
     TextSliderModule,
     FooterModule,
-    VideoHeroModule,
-    DirectivesModule
+    VideoHeroModule
   ],
   exports: [
     CommonModule,
@@ -54,8 +52,7 @@ import { DirectivesModule } from './directives/directives.module';
     MailingListComponent,
     BlogCardComponent,
     BlogPostComponent,
-    LoaderComponent,
-    DirectivesModule
+    LoaderComponent
   ],
 })
 export class SharedModule { }
