@@ -1,7 +1,7 @@
-<div class="avatar column relative" [ngClass]="!hasTransparentBackground? 'spacing' : ''">
+<div class="avatar column relative" data-aos="zoom-in" data-aos-offset="700" [ngClass]="!hasTransparentBackground? 'spacing' : ''">
     <div *ngIf="hasTransparentBackground" class='avatar__background icon-card'>
-        <img [alt]="'Avatar'" [src]="avatar.avatarLink" />
+        <img [alt]="'Avatar'" class="glitch" [src]="avatar.avatarLink" />
     </div>
-    <img *ngIf="!hasTransparentBackground" [src]="avatar.avatarLink" />
-    <span class="avatar__name uppercase absolute">{{avatar.name}}</span>
+    <img *ngIf="!hasTransparentBackground" class="glitch" [src]="avatar.avatarLink" />
+    <span class="avatar__name uppercase absolute" appInViewport (inviewport)="typeWriter($event)"></span>
 </div>
