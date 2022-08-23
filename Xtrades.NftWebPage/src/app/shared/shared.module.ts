@@ -4,6 +4,7 @@ import { HeaderModule } from './components/header/header.module';
 import { SeparatorModule } from './components/separator/separator.module';
 import { FooterModule } from './components/footer/footer.module';
 import { XButtonModule } from './components/x-button/x-button.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [],
@@ -13,11 +14,13 @@ import { XButtonModule } from './components/x-button/x-button.module';
     SeparatorModule,
     XButtonModule,
     FooterModule,
+    DirectivesModule,
   ],
   exports: [
     CommonModule,
     HeaderModule,
     SeparatorModule,
+    DirectivesModule,
     XButtonModule,
     FooterModule
   ],
