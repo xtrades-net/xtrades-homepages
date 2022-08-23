@@ -34,7 +34,7 @@ import { BlogPostComponent } from './components/blog-post/blog-post.component';
     SliderModule,
     TextSliderModule,
     FooterModule,
-    VideoHeroModule,
+    VideoHeroModule
   ],
   exports: [
     CommonModule,
@@ -52,7 +52,7 @@ import { BlogPostComponent } from './components/blog-post/blog-post.component';
     MailingListComponent,
     BlogCardComponent,
     BlogPostComponent,
-    LoaderComponent,
+    LoaderComponent
   ],
 })
 export class SharedModule { }

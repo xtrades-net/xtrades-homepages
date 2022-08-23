@@ -13,12 +13,12 @@ export class InactivityDirective implements OnDestroy {
   constructor(private modalService: ModalService) {
     this.scrollSubscription.add(
       fromEvent(window, 'scroll')
-        .pipe(debounceTime(12000))
+        .pipe(debounceTime(1000))
         .subscribe(() => {
           if (
             !Utils.getCookie('isSubscribedToMemberships') &&
             !this.hasModalBeenShown &&
-            sessionStorage.getItem('hasModalBeenShown') === 'false'
+            sessionStorage.getItem('hasModalBeenShown') !== 'true'
           ) {
             this.modalService.open('subscribe-modal');
             this.hasModalBeenShown = true;
