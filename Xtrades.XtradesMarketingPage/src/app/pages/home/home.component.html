@@ -10,10 +10,13 @@
             Interact with retail traders across the globe, new and experienced.
         </div>
         <div class="hero__buttons-row flex" buttons data-aos="fade-up"  >
-            <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
+            <app-x-button class="buttons-row__enter" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
                 Beta App
             </app-x-button>
-            <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" />
+            <app-x-button class="buttons-row__enter download-app" [isColorInverted]="true" (click)="handleGoToDownloadAppClick()">
+                Download App
+            </app-x-button>
+            <!-- <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" /> -->
         </div>
     </div>
 </section>
@@ -54,9 +57,13 @@
                 Give our discord integrated web application a try:
             </div>
             <div class="hero__buttons-row" buttons>
-                <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true"
+                <app-x-button class="buttons-row__enter" [isColorInverted]="true"
                     (click)="handleGoToBetaAppClick()">
                     Beta App
+                </app-x-button>
+                
+                <app-x-button class="buttons-row__enter download-app" [isColorInverted]="true" (click)="handleGoToDownloadAppClick()">
+                    Download App
                 </app-x-button>
             </div>
         </app-hero>
@@ -81,7 +88,7 @@
             Give our discord integrated web application a try:
         </div>
         <div class="hero__buttons-row" buttons>
-            <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
+            <app-x-button class="buttons-row__enter" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
                 Beta App
             </app-x-button>
         </div>
@@ -179,7 +186,7 @@
                         <div class="text-container absolute">
                             Sign up for 20 day free trial and get access to premium features!
                         </div>
-                        <app-x-button class="buttons-row__enter-discord" [isColorInverted]="true"
+                        <app-x-button class="buttons-row__enter" [isColorInverted]="true"
                             (click)="handleGoToBetaAppClick()">
                             Try Xtrades Free
                         </app-x-button>
