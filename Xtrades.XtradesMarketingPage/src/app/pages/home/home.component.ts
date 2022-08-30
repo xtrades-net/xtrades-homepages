@@ -141,6 +141,10 @@ export class HomeComponent implements AfterViewInit {
     window.location.href = 'https://app.xtrades.net/';
   }
 
+  handleGoToDownloadAppClick(): void {
+    window.location.href = 'https://apps.apple.com/us/app/xtrades/id1619081753';
+  }
+
   onSubmit() {
     if (!this.emailModel.email || !this.isEmailValid) {
       return;

@@ -293,7 +293,7 @@
     margin: 0 auto;
   }
 
-  .buttons-row__enter-discord {
+  .buttons-row__enter {
     display: flex;
     justify-content: center;
     --x-button-max-width: 100%;
@@ -331,5 +331,12 @@
   &__description {
     width: 70%;
     padding: 1em 0;
+  }
+}
+
+.download-app {
+  padding-left: 15px;
+  @media (max-width: $md) {
+    padding: 15px;
   }
 }
