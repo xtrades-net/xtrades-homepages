@@ -9,7 +9,7 @@
       <a class="link" target="_blank" href="https://app.xtrades.net/plans" routerLinkActive="active-router-link">Plans</a>
     </span>
     <span>
-      <a class="link" target="_blank" href="https://app.xtrades.net/" routerLinkActive="active-router-link">Beta App</a>
+      <a class="link" target="_blank" href="https://app.xtrades.net/" routerLinkActive="active-router-link">Web Version</a>
     </span>
     <span>
       <a class="link" target="_blank" href="/documentation" routerLinkActive="active-router-link">Docs</a>
@@ -18,7 +18,8 @@
       <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
     </span>
   </div>
-  <app-x-button *ngIf="isMainHeader && !isMobile" class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Try Xtrades Free</app-x-button>
+  <app-x-button *ngIf="isMainHeader && !isMobile" class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Join Discord</app-x-button>
+  <app-x-button *ngIf="isMainHeader && !isMobile" class="button pl-2" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" >Sign Up</app-x-button>
   <ng-container *ngIf="isMobile">
     <img img class="menu pointer" alt="Mobile Menu Button" src='assets/xtrades-menu.svg' (click)="onMobileMenuOpen()" />
   </ng-container>
