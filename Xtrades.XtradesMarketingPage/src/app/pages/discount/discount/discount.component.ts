@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild,Renderer2 ,Inject } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 import { LoadingService } from '@core/loading.service';
 import { ScreenService } from '@core/screen.service';
@@ -7,6 +7,11 @@ import { ModalService } from '@shared/components/modal/modal.service';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
 import * as _ from 'lodash';
 import { NgxFileDropEntry } from 'ngx-file-drop';
+
+
+import { SeoService } from '@shared/service/seo.service';
+import { DOCUMENT , Location } from '@angular/common';
+import { Title_Description } from '@shared/components/blog-post/seo-config/seo.constants';
 
 @Component({
   selector: 'app-discount',
@@ -131,8 +136,24 @@ export class DiscountComponent {
     private modalService: ModalService,
     private cdr: ChangeDetectorRef,
     private router: Router, private loadingService: LoadingService,
-    private http: HttpClient
+    private http: HttpClient,
+    private location:Location,
+    private SEOService: SeoService,
+    private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document: Document
   ) { }
+
+  
+  ngOnInit(): void {
+    // the script info -----
+    let script = this._renderer2.createElement('script');
+    script.type = `application/ld+json`;
+    script.text = Title_Description.discountPageScript || ``
+    this._renderer2.appendChild(this._document.body, script);
+
+    // add cannonical link in page ---
+    this.SEOService.createCanonicalLink(this.location.path())
+  }
 
   handleGoToBetaAppClick(): void {
     window.location.href = 'https://app.xtrades.net/';

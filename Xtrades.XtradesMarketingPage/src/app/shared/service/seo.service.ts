@@ -26,7 +26,7 @@ export class SeoService {
   createCanonicalLink(url: string) {
     let link: HTMLLinkElement =this.dom.createElement('link');
     link.setAttribute('rel', 'canonical');
-    link.setAttribute('href', url);
+    link.setAttribute('href', "https://www.xtrades.net"+url);
     this.dom.head.appendChild(link);
   }
 

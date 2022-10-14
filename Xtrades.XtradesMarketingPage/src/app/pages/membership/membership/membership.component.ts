@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
+import { SeoService } from '@shared/service/seo.service';
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-membership',
   templateUrl: './membership.component.html',
@@ -139,7 +142,10 @@ export class MembershipComponent {
   plans: any;
   opt: any = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+    private SEOService: SeoService,
+    private location:Location
+  ) {}
 
   ngOnInit() {
     this.http.get<any>('https://app.xtrades.net/api/v2/payments/plans').subscribe(res => {
@@ -154,5 +160,7 @@ export class MembershipComponent {
         }
       });
     });
+    // add cannonical link in page ---
+    this.SEOService.createCanonicalLink(this.location.path())
   }
 }

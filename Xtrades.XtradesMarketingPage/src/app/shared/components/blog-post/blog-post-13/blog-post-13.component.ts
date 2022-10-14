@@ -3,7 +3,7 @@ import { Component, Input,ChangeDetectionStrategy, Renderer2,Inject} from '@angu
 import { SeoService } from '@shared/service/seo.service';
 import { ActivatedRoute } from '@angular/router';
 import { Title_Description } from '../seo-config/seo.constants';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT , Location } from '@angular/common';
 
 @Component({
   selector: 'app-blog-post-13',
@@ -16,6 +16,7 @@ export class BlogPost13Component {
   public list=Title_Description.List;
 
   constructor(
+    private location:Location,
     private SEOService: SeoService,
     private route: ActivatedRoute,
     private _renderer2: Renderer2,
@@ -33,5 +34,8 @@ export class BlogPost13Component {
         script.type = `application/ld+json`;
         script.text = componentObj?.Spt || ``
         this._renderer2.appendChild(this._document.body, script);
+   
+    // add cannonical link in page ---
+    this.SEOService.createCanonicalLink(this.location.path())
   }
 }

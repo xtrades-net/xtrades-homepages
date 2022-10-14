@@ -69,8 +69,7 @@ export class Title_Description{
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://www.xtrades.net/blogs/what-are-the-best-social-trading-
-                applications-or-platforms"
+                "@id": "https://www.xtrades.net/blogs/what-are-the-best-social-trading-applications-or-platforms"
                 },
                 "headline": "What Are The Best Social Trading Applications or Platforms?",
                 "description": "When it comes to investing and trading, there are a lot of different options out there. If you&#39;re looking for a way to take advantage of the wisdom of the crowd, then you should consider using a social trading platform.",
@@ -100,8 +99,7 @@ export class Title_Description{
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://www.xtrades.net/blogs/using-stock-alerts-to-improve-your-
-                investing-strategy"
+                "@id": "https://www.xtrades.net/blogs/using-stock-alerts-to-improve-your-investing-strategy"
                 },
                 "headline": "Using Stock Alerts to Improve Your Investing Strategy: Learn the Trading Strategies of the Pros",
                 "description": "Stock alerts are a great way to stay informed about the market. They can help you make better investment decisions and protect your investments from large fluctuations that could harm their value. Stock alerts can also be an excellent tool for day traders and investors who want to take advantage of short-term opportunities in the market.",
@@ -283,8 +281,7 @@ export class Title_Description{
                 "@type": "WebPage",
                 "@id": "https://www.xtrades.net/blogs/how-to-make-most-of-stock-alerts"
                 },
-                "headline": "How to Make the Most Out of Stock Alerts: Tips for Maximum
-                Profits",
+                "headline": "How to Make the Most Out of Stock Alerts: Tips for Maximum Profits",
                 "description": "Making money in the stock market is all about being able to act quickly on the best opportunities. That&#39;s why stock alerts are such an important tool for investors. By subscribing to a service that provides stock alerts, you can stay up-to-date on the latest movements in the market and make sure you don&#39;t miss out on any profitable opportunities.",
                 "image": "",
                 "author": {
@@ -395,7 +392,7 @@ export class Title_Description{
                 }`
         }
     ]
-    public static blockPageScript = `{
+    public static blogPageScript = `{
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Xtrades",
@@ -417,5 +414,15 @@ export class Title_Description{
         "query-input": "required name=search_term_string"
         }
         }`
-    public static disPageScript = ``
+    public static docPageScript = `{
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "name": "Xtrades",
+        "url": "https://www.xtrades.net/documentation",
+        "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{search_term_string}",
+        "query-input": "required name=search_term_string"
+        }
+        }`
 }

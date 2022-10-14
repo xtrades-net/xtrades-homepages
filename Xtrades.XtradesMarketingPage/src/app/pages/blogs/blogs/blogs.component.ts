@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component,Renderer2 ,Inject} from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
 import { LoadingService } from '@core/loading.service';
+
+import { SeoService } from '@shared/service/seo.service';
+import { DOCUMENT , Location } from '@angular/common';
+import { Title_Description } from '@shared/components/blog-post/seo-config/seo.constants';
 
 @Component({
   selector: 'app-blogs',
@@ -123,8 +127,24 @@ export class BlogsComponent {
     }
   ].reverse();
 
-  constructor(private router: Router, private loadingService: LoadingService) { }
+  constructor(private router: Router, private loadingService: LoadingService,
+    private location:Location,
+    private SEOService: SeoService,
+    private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document: Document
+    ) { }
 
+
+  ngOnInit(): void {
+    // the script info -----
+    let script = this._renderer2.createElement('script');
+    script.type = `application/ld+json`;
+    script.text = Title_Description.blogPageScript || ``
+    this._renderer2.appendChild(this._document.body, script);
+
+    // add cannonical link in page ---
+    this.SEOService.createCanonicalLink(this.location.path())
+  }
   ngAfterViewInit() {
     this.loadingService.removeLoader();
   }
