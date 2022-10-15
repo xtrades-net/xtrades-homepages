@@ -15,6 +15,9 @@ import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
 import { LoadingService } from '@core/loading.service';
 
+import { SeoService } from '@shared/service/seo.service';
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -130,8 +133,15 @@ export class HomeComponent implements AfterViewInit {
     public screenService: ScreenService,
     private cdr: ChangeDetectorRef,
     private subscribeService: SubscribeService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private SEOService: SeoService,
+    private location:Location
   ) {}
+
+  ngOnInit(): void {
+    // add cannonical link in page ---
+    this.SEOService.createCanonicalLink(this.location.path())
+  }
 
   ngAfterViewInit(): void {
     this.loadingService.removeLoader();

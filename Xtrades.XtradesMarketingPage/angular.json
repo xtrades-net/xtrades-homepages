@@ -130,6 +130,7 @@
     },
     "defaultProject": "xtrades",
     "cli": {
+      "analytics": "2ca247d0-4459-4c4c-92e0-91e52b2be0d5",
         "defaultCollection": "@angular-eslint/schematics"
     }
 }
