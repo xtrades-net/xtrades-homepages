@@ -29,6 +29,8 @@
                     <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
                 </span>
             </div>
+            <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToDiscord()">Join Discord
+            </app-x-button>
             <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Sign Up
             </app-x-button>
         </div>
