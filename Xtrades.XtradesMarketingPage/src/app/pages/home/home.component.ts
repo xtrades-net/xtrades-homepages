@@ -144,7 +144,7 @@ export class HomeComponent implements AfterViewInit {
     // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path())
 
-    this.http.get<any>('testimonials')
+    this.http.get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
     .pipe(
       filter(res => res.data = res.data.filter((data: { username: string; }) => data.username !== 'ScaredShirtless'))
     ).subscribe(res => {
