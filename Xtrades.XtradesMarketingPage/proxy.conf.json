@@ -14,5 +14,13 @@
         "pathRewrite": {
             "^/membership-plans": ""
         }
+    },
+    "/testimonials": {
+        "target": "https://app.xtrades.net/api/v2/Testimonials/testimonials",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/testimonials": ""
+        }
     }
 }

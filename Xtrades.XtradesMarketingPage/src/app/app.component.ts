@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '@shared/components/modal/modal.service';
 import * as AOS from 'aos';
@@ -10,7 +11,7 @@ import 'aos/dist/aos.css';
 export class AppComponent implements OnInit {
   title = 'homepage';
 
-  constructor(private modalService: ModalService) {}
+  constructor(private modalService: ModalService, private http: HttpClient) {}
 
   ngOnInit() {
     AOS.init({

@@ -6,11 +6,12 @@
           <div class="swiper-zoom-container">
             <div class="gradient-overlay">
               <div class="testimonials__testimonial flex column relative">
-                <div class="testimonials__quote relative" data-aos="fade-up">
-                  {{item.quote}}
+                <div *ngIf="item.content" class="testimonials__quote relative" data-aos="fade-up">
+                  {{ item.content | truncate:[200] }}
                 </div>
-                <img lazy [src]="item.image" class="testimonials__avatar" alt="Avatar" data-aos="fade-up" />
-                <span class="testimonials__signature">{{item.name}}</span>
+                <img lazy *ngIf="item.avatar" [src]="item.avatar" class="testimonials__avatar" alt="Avatar" data-aos="fade-up" />
+                <span class="testimonials__signature">{{item.dateTime | date}}</span>
+                <span class="testimonials__signature">{{item.username}}</span>
               </div>
             </div>
           </div>
