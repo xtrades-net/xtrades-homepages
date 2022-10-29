@@ -14,6 +14,7 @@ import * as _ from 'lodash';
 import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
 import { LoadingService } from '@core/loading.service';
+import { filter } from 'rxjs/operators';
 
 import { SeoService } from '@shared/service/seo.service';
 import { Location } from '@angular/common';
@@ -135,12 +136,21 @@ export class HomeComponent implements AfterViewInit {
     private subscribeService: SubscribeService,
     private loadingService: LoadingService,
     private SEOService: SeoService,
-    private location:Location
+    private location:Location,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
     // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path())
+
+    this.http.get<any>('testimonials')
+    .pipe(
+      filter(res => res.data = res.data.filter((data: { username: string; }) => data.username !== 'ScaredShirtless'))
+    ).subscribe(res => {
+      console.log(res.data);
+      this.testimonials = res.data;
+    });
   }
 
   ngAfterViewInit(): void {
