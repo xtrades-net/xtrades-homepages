@@ -38,16 +38,12 @@ const routes: Routes = [
   {
     path: 'blogs',
     loadChildren: () =>
-      import('./pages/blogs/blogs.module').then(
-        (m) => m.BlogsModule
-      ),
+      import('./pages/blogs/blogs.module').then((m) => m.BlogsModule),
   },
   {
-    path: 'discount',
+    path: 'militarydiscount',
     loadChildren: () =>
-      import('./pages/discount/discount.module').then(
-        (m) => m.DiscountModule
-      ),
+      import('./pages/discount/discount.module').then((m) => m.DiscountModule),
   },
   { path: '**', redirectTo: '' },
 ];
@@ -58,4 +54,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

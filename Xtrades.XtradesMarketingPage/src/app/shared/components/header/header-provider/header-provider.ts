@@ -10,10 +10,10 @@ export class HeaderProvider {
   constructor() {
     this.populateHeaderElements([
       HeaderElement.apply({ title: 'Home', directUrl: '' }),
-      HeaderElement.apply({ title: 'Blogs', directUrl: 'blogs' }),
+      HeaderElement.apply({ title: 'xBlog', directUrl: 'blogs' }),
     ]);
     this.populateHeaderElementsLast([
-      HeaderElement.apply({ title: 'Discount', directUrl: 'discount' }),
+      HeaderElement.apply({ title: 'Discount', directUrl: 'militarydiscount' }),
     ]);
   }
 
