@@ -45,6 +45,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/discount/discount.module').then((m) => m.DiscountModule),
   },
+  {
+    path: 'ourtraders',
+    loadChildren: () =>
+      import('./pages/ourtraders/ourtraders.module').then(
+        (m) => m.OurTradersModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 

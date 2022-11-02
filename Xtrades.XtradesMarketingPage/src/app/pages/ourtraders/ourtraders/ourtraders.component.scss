@@ -1,0 +1,36 @@
+.our-traders {
+    // background-color: rgba(241, 196, 15, 0.1);
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+}
+
+.profile {
+    width: 500px;
+    justify-content: flex-start;
+}
+
+.profile-text {
+    padding: 15px;
+}
+
+.profile-link {
+
+}
+
+.small {
+    width: 30%;
+}
+
+.huge {
+    width: 70%;
+}
+
+.scroller {
+    height: 400px;
+    overflow: scroll;
+}
+
+// .scroller > * {
+//     width: 100%;
+// }

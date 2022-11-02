@@ -19,9 +19,7 @@ export class MembershipComponent {
       priceTag: { userCost: 0, period: '20 days' },
       description: 'Our free trial',
       planId: 'elite',
-      featuresList: [
-        'All of the Elite plan features'
-      ],
+      featuresList: ['All of the Elite plan features'],
       possibleAction: null,
       color: 'purple',
       paymentDescription: ``,
@@ -142,25 +140,28 @@ export class MembershipComponent {
   plans: any;
   opt: any = [];
 
-  constructor(private http: HttpClient,
+  constructor(
+    private http: HttpClient,
     private SEOService: SeoService,
-    private location:Location
+    private location: Location
   ) {}
 
-  ngOnInit() {
-    this.http.get<any>('https://app.xtrades.net/api/v2/payments/plans').subscribe(res => {
-      this.options.forEach((option: any) => {
-        res.data.plans.forEach((plan: any) => {
-          if (option.name === plan.name) {
-            this.opt.push({...plan, ...option});
+  ngOnInit(): void {
+    this.http
+      .get<any>('https://app.xtrades.net/api/v2/payments/plans')
+      .subscribe((res) => {
+        this.options.forEach((option: any) => {
+          res.data.plans.forEach((plan: any) => {
+            if (option.name === plan.name) {
+              this.opt.push({ ...plan, ...option });
+            }
+          });
+          if (option.name === 'trial') {
+            this.opt.push({ ...option });
           }
         });
-        if (option.name === 'trial') {
-          this.opt.push({...option});
-        }
       });
-    });
     // add cannonical link in page ---
-    this.SEOService.createCanonicalLink(this.location.path())
+    this.SEOService.createCanonicalLink(this.location.path());
   }
 }
