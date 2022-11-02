@@ -136,21 +136,29 @@ export class HomeComponent implements AfterViewInit {
     private subscribeService: SubscribeService,
     private loadingService: LoadingService,
     private SEOService: SeoService,
-    private location:Location,
+    private location: Location,
     private http: HttpClient
   ) {}
 
   ngOnInit(): void {
     // add cannonical link in page ---
-    this.SEOService.createCanonicalLink(this.location.path())
+    this.SEOService.createCanonicalLink(this.location.path());
 
-    this.http.get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
-    .pipe(
-      filter(res => res.data = res.data.filter((data: { username: string; }) => data.username !== 'ScaredShirtless'))
-    ).subscribe(res => {
-      console.log(res.data);
-      this.testimonials = res.data;
-    });
+    this.http
+      .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
+      .pipe(
+        filter(
+          (res) =>
+            (res.data = res.data.filter(
+              (data: { username: string }) =>
+                data.username !== 'ScaredShirtless'
+            ))
+        )
+      )
+      .subscribe((res) => {
+        console.log(res.data);
+        this.testimonials = res.data;
+      });
   }
 
   ngAfterViewInit(): void {
@@ -183,10 +191,12 @@ export class HomeComponent implements AfterViewInit {
   }, 200);
 
   confirmSubscription() {
-    this.subscribeService.subscribeToMainHomepageList(this.input.value).subscribe({
-      next: (v) => this.subscribeSuccess(),
-      error: (e) => alert('something went wrong :(, please try again later'),
-    });
+    this.subscribeService
+      .subscribeToMainHomepageList(this.input.value)
+      .subscribe({
+        next: (v) => this.subscribeSuccess(),
+        error: (e) => alert('something went wrong :(, please try again later'),
+      });
   }
 
   subscribeSuccess() {
