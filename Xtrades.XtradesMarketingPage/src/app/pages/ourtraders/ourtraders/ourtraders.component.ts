@@ -113,7 +113,64 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
         name: 'Squeeze',
         icon: 'https://cdn.discordapp.com/avatars/568561012731543555/eeb3c900923ba1638e990bc2a501ef38.webp?size=100',
         url: 'https://app.xtrades.net/profile/squeeze'
-      }
+      },
+    ],
+    [
+      {
+        name: 'Angelic',
+        icon: 'https://cdn.discordapp.com/avatars/214215196342878208/5aa0a4f26865509b05e038611d36eb6b.webp?size=100',
+        url: 'https://app.xtrades.net/profile/angelic?tab=profile',
+      },
+      {
+        name: 'BigT4X',
+        icon: 'https://cdn.discordapp.com/avatars/798228789154676809/3c0b2a68ed7e2f011eb1cb4124b37669.webp?size=100',
+        url: 'https://app.xtrades.net/profile/bigt4x',
+      },
+      {
+        name: 'Byron',
+        icon: 'https://cdn.discordapp.com/avatars/443933735445069825/4789f48f40ccc9588a9042f045d10e1d.webp?size=100',
+        url: 'https://app.xtrades.net/profile/byron',
+      },
+      {
+        name: 'Free Runner',
+        icon: 'https://cdn.discordapp.com/avatars/529439744036438028/6992b74f8476c525927dbef0483c7287.webp?size=100',
+        url: 'https://app.xtrades.net/profile/carlhalden?tab=profile',
+      },
+      {
+        name: 'Hydra',
+        icon: 'https://cdn.discordapp.com/avatars/280067149412958209/0a51befab63415d3fae17543b2279130.webp?size=100',
+        url: 'https://app.xtrades.net/profile/63a8eb4c-36f3-4243-a696-9137eb5ff6f2?tab=profile',
+      },
+      {
+        name: 'Iggy',
+        icon: 'https://cdn.discordapp.com/avatars/806798149048860673/beed6a4b47abd3b16eebb151a62b844c.webp?size=100',
+        url: 'https://app.xtrades.net/profile/Iggy',
+      },
+      {
+        name: 'm o o n s h o o t',
+        icon: 'https://cdn.discordapp.com/avatars/283704832781451266/39177ac5e0a46c4f47194d77957185bc.webp?size=100',
+        url: 'https://app.xtrades.net/profile/moonshot',
+      },
+      {
+        name: 'sprout',
+        icon: 'https://cdn.discordapp.com/avatars/551790566007111680/d89cf20f15e38397f0d917a616146b96.webp?size=100',
+        url: 'https://app.xtrades.net/profile/sprout',
+      },
+      {
+        name: 'Stefan C',
+        icon: 'https://cdn.discordapp.com/avatars/152610857073901568/72a05b7b36d3ff38d0f586cae8e40397.webp?size=100',
+        url: 'https://app.xtrades.net/profile/5bd273a7-e5fd-4f0a-93e8-c406c3c60b52',
+      },
+      {
+        name: 'SwingJam',
+        icon: 'https://cdn.discordapp.com/avatars/305757695904841738/e77da6c29ada7007a3697c39e1cf3416.webp?size=100',
+        url: 'https://app.xtrades.net/profile/11a33b54-a6f4-445a-8d12-ecd5eaf4bf8c',
+      },
+      {
+        name: 'Yung Buck',
+        icon: 'https://cdn.discordapp.com/avatars/212782836082671627/d1ec38f61bf02704e7972be98315371f.webp?size=100',
+        url: 'https://app.xtrades.net/profile/yung_buck',
+      },
     ],
   ];
 
