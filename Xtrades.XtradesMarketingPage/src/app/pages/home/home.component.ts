@@ -24,7 +24,7 @@ import { Location } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnInit {
   @ViewChild('email') input: ElementRef | any;
   sliderImages: Array<any> = [
     {
