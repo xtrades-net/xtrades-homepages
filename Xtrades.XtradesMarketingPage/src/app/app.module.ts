@@ -9,6 +9,7 @@ import { FooterModule } from '@shared/components/footer/footer.module';
 import { DirectivesModule } from '@shared/directives/directives.module';
 import { ModalModule } from '@shared/components/modal/modal.module';
 import { BannerComponent } from '@shared/components/banner/banner.component';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, BannerComponent],
@@ -16,11 +17,12 @@ import { BannerComponent } from '@shared/components/banner/banner.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    SharedModule,
     HeaderModule,
     FooterModule,
     HttpClientModule,
     DirectivesModule,
-    ModalModule
+    ModalModule,
   ],
   providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],
