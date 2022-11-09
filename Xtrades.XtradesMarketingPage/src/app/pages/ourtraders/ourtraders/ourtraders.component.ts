@@ -172,6 +172,73 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
         url: 'https://app.xtrades.net/profile/yung_buck',
       },
     ],
+    [
+      {
+        name: '007 B.Axelrod',
+        icon: 'https://cdn.discordapp.com/avatars/636451998056579072/045335a136f1bc122edf100317d9c0ac.webp?size=100',
+        url: 'https://app.xtrades.net/profile/da767d71-ecc5-4ce0-b3dc-2c2f8de452a8',
+      },
+      {
+        name: 'BELLE DELPHINE ツ (CPG)',
+        icon: 'https://cdn.discordapp.com/avatars/311003050166714379/d1451dd0194d10dfe8979e6d3d6c3ee0.webp?size=100',
+        url: 'https://app.xtrades.net/profile/ee5c8f32-ab8f-49bb-959a-f42ce602425',
+      },
+      {
+        name: 'BigT4X',
+        icon: 'https://cdn.discordapp.com/avatars/798228789154676809/3c0b2a68ed7e2f011eb1cb4124b37669.webp?size=100',
+        url: 'https://app.xtrades.net/profile/bigt4x',
+      },
+      {
+        name: 'Brycat23',
+        icon: 'https://cdn.discordapp.com/avatars/623984968921776150/18596727ef59c1fa9a6145f1196f3df5.webp?size=100',
+        url: 'https://app.xtrades.net/profile/95059ce6-5870-41f0-91ed-96802eb454f7',
+      },
+      {
+        name: 'Byron',
+        icon: 'https://cdn.discordapp.com/avatars/443933735445069825/4789f48f40ccc9588a9042f045d10e1d.webp?size=100',
+        url: 'https://app.xtrades.net/profile/byron',
+      },
+      {
+        name: 'DanielS (Theta Gang)',
+        icon: 'https://cdn.discordapp.com/avatars/266749229584613386/a_6a1890ed7d6aa3dafc1503058abd1c8b.webp?size=100',
+        url: 'https://app.xtrades.net/profile/daniels_xt?tab=profile',
+      },
+      {
+        name: 'ebot_test3',
+        icon: 'https://discord.com/assets/c09a43a372ba81e3018c3151d4ed4773.png',
+        url: 'https://app.xtrades.net/profile/5c46fb45-addc-4732-a844-efbba7c1848a',
+      },
+      {
+        name: 'Carl Halden, Online',
+        icon: 'https://cdn.discordapp.com/avatars/529439744036438028/6992b74f8476c525927dbef0483c7287.webp?size=40',
+        url: 'https://app.xtrades.net/profile/carlhalden?tab=profile',
+      },
+      {
+        name: 'Hydra',
+        icon: 'https://cdn.discordapp.com/avatars/280067149412958209/0a51befab63415d3fae17543b2279130.webp?size=100',
+        url: 'https://app.xtrades.net/profile/63a8eb4c-36f3-4243-a696-9137eb5ff6f2?tab=profile',
+      },
+      {
+        name: 'm o o n s h o o t',
+        icon: 'https://cdn.discordapp.com/avatars/283704832781451266/39177ac5e0a46c4f47194d77957185bc.webp?size=100',
+        url: 'https://app.xtrades.net/profile/moonshot',
+      },
+      {
+        name: 'MD.Trading',
+        icon: 'https://cdn.discordapp.com/avatars/1020173429460189326/7da883a74a0407b0498a2d152c92a762.webp?size=40',
+        url: 'https://app.xtrades.net/profile/mdtrading?tab=profile',
+      },
+      {
+        name: 'Pyro',
+        icon: 'https://cdn.discordapp.com/avatars/480122361862160384/799f5d5717dbadf790f55d8c06e29552.webp?size=40',
+        url: 'https://app.xtrades.net/profile/pyro?tab=profile',
+      },
+      {
+        name: 'scepticule',
+        icon: 'https://cdn.discordapp.com/avatars/398244725783658516/fd19e483f5618c8be793393f90feed58.webp?size=100',
+        url: 'https://app.xtrades.net/profile/skepticule',
+      },
+    ],
   ];
 
   constructor(
