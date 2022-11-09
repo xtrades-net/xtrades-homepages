@@ -17,7 +17,7 @@
 .logo-link, .logo-link img {
     color: var(--brand-main-purple);
     fill: var(--brand-main-purple);
-    height: 32px;
+    height: 28px;
     padding: 0 5px;
     margin: 5px 0;
 }
@@ -25,4 +25,8 @@
 path {
     color: var(--brand-main-purple) !important;
     fill: var(--brand-main-purple) !important;
+}
+
+.align-bottom {
+    justify-content: flex-end;
 }
