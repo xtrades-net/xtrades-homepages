@@ -28,5 +28,9 @@ path {
 }
 
 .align-bottom {
-    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.android-align {
+    margin-top: 9px !important;
 }
