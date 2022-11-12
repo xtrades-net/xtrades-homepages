@@ -24,6 +24,7 @@
 
 .huge {
     width: 70%;
+    flex-wrap: wrap;
 }
 
 .scroller {
@@ -35,3 +36,8 @@
 // .scroller > * {
 //     width: 100%;
 // }
+
+.small-padding {
+    padding: 10px 0;
+    text-align: center;
+}
