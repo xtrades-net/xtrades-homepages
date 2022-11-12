@@ -7,40 +7,45 @@
 <div class="our-traders responsive-main-container">
 
     <div class="scroller small column">
-        <blockquote>
-            <div (click)="chooseRole(0)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Staff
-                Analyst</div>
-            <div (click)="chooseRole(1)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention  cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(41, 255, 181); background-color: rgba(41, 255, 181, 0.1);">@Senior
-                Analyst</div>
-            <div (click)="chooseRole(2)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(152, 255, 232); background-color: rgba(152, 255, 232, 0.1);">@Analyst
-            </div>
-            <div (click)="chooseRole(3)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(80, 184, 151); background-color: rgba(80, 184, 151, 0.1);">@Junior
-                Analyst</div>
-            <div (click)="chooseRole(4)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(186, 251, 132); background-color: rgba(186, 251, 132, 0.1);">@Top Trader
-            </div>
-            <div (click)="chooseRole(5)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(134, 230, 177); background-color: rgba(134, 230, 177, 0.1);">
-                @Contributor</div>
-            <div (click)="chooseRole(6)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(124, 173, 212); background-color: rgba(124, 173, 212, 0.1);">@Junior
-                Trader</div>
-            <div (click)="chooseRole(7)"
-                class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer" tabindex="-1"
-                role="button" style="color: rgb(194, 160, 134); background-color: rgba(194, 160, 134, 0.1);">@Prospect
-            </div>
-        </blockquote>
+        <div (click)="chooseRole(0)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">
+            @Staff
+            Analyst</div>
+        <div (click)="chooseRole(1)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention  cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(41, 255, 181); background-color: rgba(41, 255, 181, 0.1);">
+            @Senior
+            Analyst</div>
+        <div (click)="chooseRole(2)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(152, 255, 232); background-color: rgba(152, 255, 232, 0.1);">
+            @Analyst
+        </div>
+        <div (click)="chooseRole(3)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(80, 184, 151); background-color: rgba(80, 184, 151, 0.1);">
+            @Junior
+            Analyst</div>
+        <div (click)="chooseRole(4)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(186, 251, 132); background-color: rgba(186, 251, 132, 0.1);">
+            @Top Trader
+        </div>
+        <div (click)="chooseRole(5)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(134, 230, 177); background-color: rgba(134, 230, 177, 0.1);">
+            @Contributor</div>
+        <div (click)="chooseRole(6)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(124, 173, 212); background-color: rgba(124, 173, 212, 0.1);">
+            @Junior
+            Trader</div>
+        <div (click)="chooseRole(7)"
+            class="small-padding roleMention-11Aaqi desaturate-_Twf3u wrapper-1ZcZW- mention cursor-pointer"
+            tabindex="-1" role="button" style="color: rgb(194, 160, 134); background-color: rgba(194, 160, 134, 0.1);">
+            @Prospect
+        </div>
     </div>
 
     <div class="scroller huge column">
@@ -53,10 +58,10 @@
             </svg>
             <div class="flex center space-between">
                 <div class="profile-text cursor-pointer ml-2" data-text-variant="text-sm/semibold"
-                style="color: var(--header-primary);">
-                {{trader.name}}
-            </div>
-            <a [href]="trader.url" target="_blank" class="href">View Stats</a>
+                    style="color: var(--header-primary);">
+                    {{trader.name}}
+                </div>
+                <a [href]="trader.url" target="_blank" class="href">View Stats</a>
             </div>
         </div>
         <div class="p-2" *ngIf="traders.length === 0">Coming soon</div>
