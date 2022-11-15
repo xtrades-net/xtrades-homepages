@@ -45,6 +45,16 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
         icon: 'https://cdn.discordapp.com/avatars/398880706375319562/0fc8e5cb587a24efe09031deb9330f97.webp?size=100',
         url: 'https://app.xtrades.net/profile/wags',
       },
+      {
+        name: 'TimeHawk',
+        icon: 'https://cdn.discordapp.com/avatars/201836635376058368/a24fc46ad9d6674fe2b786a4d608df66.webp?size=40',
+        url: 'https://app.xtrades.net/profile/timehawk',
+      },
+      {
+        name: 'Kevin',
+        icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/542100078123548684/avatars/d2a888f6554306ad7136d6620d8e8947.webp?size=100',
+        url: 'https://app.xtrades.net/profile/kevin',
+      },
     ],
     [
       {
@@ -53,20 +63,10 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
         url: 'https://app.xtrades.net/profile/bahamut',
       },
       {
-        name: 'Kevin',
-        icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/542100078123548684/avatars/d2a888f6554306ad7136d6620d8e8947.webp?size=100',
-        url: 'https://app.xtrades.net/profile/kevin',
-      },
-      {
         name: 'Remy',
         icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/501245460439105548/avatars/7cc2cb7547bc6158ed70de894ac0e72c.webp?size=160',
         url: 'https://app.xtrades.net/profile/remy',
-      },
-      {
-        name: 'TimeHawk',
-        icon: 'https://cdn.discordapp.com/avatars/201836635376058368/a24fc46ad9d6674fe2b786a4d608df66.webp?size=40',
-        url: 'https://app.xtrades.net/profile/timehawk',
-      },
+      }
     ],
     [
       {

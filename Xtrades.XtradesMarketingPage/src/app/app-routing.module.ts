@@ -52,6 +52,13 @@ const routes: Routes = [
         (m) => m.OurTradersModule
       ),
   },
+  {
+    path: 'confirmation',
+    loadChildren: () =>
+      import('./pages/confirmation/confirmation.module').then(
+        (m) => m.ConfirmationModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 

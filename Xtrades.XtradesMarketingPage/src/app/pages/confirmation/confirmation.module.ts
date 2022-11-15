@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { DiscountComponent } from './discount/discount.component';
+import { ConfirmationComponent } from './confirmation.component';
 import { SharedModule } from '@shared/shared.module';
-import { ModalModule } from '@shared/components/modal/modal.module';
 import { FormsModule } from '@angular/forms';
-import { NgxFileDropModule } from 'ngx-file-drop';
 
 @NgModule({
-  declarations: [DiscountComponent],
+  declarations: [ConfirmationComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -16,11 +14,9 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     RouterModule.forChild([
       {
         path: '',
-        component: DiscountComponent,
+        component: ConfirmationComponent,
       },
     ]),
-    ModalModule,
-    NgxFileDropModule,
   ],
 })
-export class DiscountModule {}
+export class ConfirmationModule {}
