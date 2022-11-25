@@ -87,6 +87,12 @@ export class BlogPostComponent {
       url: 'how-to-make-money-in-bear-market',
       date: '01.08.2022',
       title: 'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve'
+    },
+      {
+      id: '14',
+      url: 'do-you-trade-penny-stocks',
+      date: '25.11.2022',
+      title: 'Do you trade Penny Stocks?'
     }
   ]
 
