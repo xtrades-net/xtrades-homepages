@@ -1,5 +1,6 @@
 import { DOCUMENT, Location } from '@angular/common';
 import { AfterViewInit, Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { GoogleAnalyticsService } from '@core/google-analytics.service';
 import { LoadingService } from '@core/loading.service';
 import { Title_Description } from '@shared/components/blog-post/seo-config/seo.constants';
 import { SeoService } from '@shared/service/seo.service';
@@ -15,7 +16,8 @@ export class ConfirmationComponent implements OnInit, AfterViewInit {
     private _renderer2: Renderer2,
     private SEOService: SeoService,
     @Inject(DOCUMENT) private _document: Document,
-    private location: Location
+    private location: Location,
+    private googleAnalyticsService: GoogleAnalyticsService
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +27,12 @@ export class ConfirmationComponent implements OnInit, AfterViewInit {
 
     // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
+
+    this.googleAnalyticsService.eventEmitter(
+      'confirmation_page',
+      'subscription',
+      'open page'
+    );
   }
 
   ngAfterViewInit(): void {
