@@ -91,7 +91,7 @@ export class BlogPostComponent {
       {
       id: '14',
       url: 'do-you-trade-penny-stocks',
-      date: '18.11.2022',
+      date: '18.11.2022', 
       title: 'Do you trade Penny Stocks?'
     }
   ]
