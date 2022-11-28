@@ -99,7 +99,14 @@ export class BlogPostComponent {
       url: 'trading-scripts-and-trading-channels-by-kevin-wan',
       date: '22.11.2022',
       title: 'Trading Scripts and Trading Channels by Kevin Wan'
+    },
+      {
+      id: '16',
+      url: 'how-to-start-stock-trading-by-kevin-wan',
+      date: '25.11.2022',
+      title: 'How to Start Stock Trading by Kevin Wan'
     }
+    
   ]
 
   constructor(private router: Router) {
