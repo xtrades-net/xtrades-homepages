@@ -10,7 +10,7 @@ import { DOCUMENT , Location } from '@angular/common';
   templateUrl: './blog-post-15.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogPost13Component {
+export class BlogPost15Component {
   @Input() id = 0;
   
   public list=Title_Description.List;
