@@ -93,6 +93,12 @@ export class BlogPostComponent {
       url: 'do-you-trade-penny-stocks',
       date: '18.11.2022',
       title: 'Do you trade Penny Stocks?'
+    },
+      {
+      id: '15',
+      url: 'trading-scripts-and-trading-channels-by-kevin-wan',
+      date: '22.11.2022',
+      title: 'Trading Scripts and Trading Channels by Kevin Wan'
     }
   ]
 
