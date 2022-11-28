@@ -105,6 +105,12 @@ export class BlogPostComponent {
       url: 'how-to-start-stock-trading-by-kevin-wan',
       date: '25.11.2022',
       title: 'How to Start Stock Trading by Kevin Wan'
+    },
+       {
+      id: '17',
+      url: 'how-to-start-stock-trading-by-kevin-wan',
+      date: '29.11.2022',
+      title: 'How to Start Stock Trading by Kevin Wan'
     }
     
   ]
