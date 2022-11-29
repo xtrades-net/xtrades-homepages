@@ -108,9 +108,15 @@ export class BlogPostComponent {
     },
        {
       id: '17',
-      url: 'how-to-start-stock-trading-by-kevin-wan',
+      url: 'the-rise-of-a-social-trading-application',
       date: '29.11.2022',
-      title: 'How to Start Stock Trading by Kevin Wan'
+      title: 'The Rise of a Social Trading Application: Xtrades'
+    },
+     {
+      id: '18',
+      url: 'what-is-copy-trading-how-do-i-get-involved',
+      date: '30.11.2022',
+      title: 'What is Copy Trading?  How do I get involved?'
     }
     
   ]
