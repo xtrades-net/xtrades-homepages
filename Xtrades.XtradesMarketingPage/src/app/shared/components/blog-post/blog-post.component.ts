@@ -117,6 +117,12 @@ export class BlogPostComponent {
       url: 'what-is-copy-trading-how-do-i-get-involved',
       date: '30.11.2022',
       title: 'What is Copy Trading?  How do I get involved?'
+    },
+     {
+      id: '19',
+      url: 'a-first-of-its-kind-application-for-traders',
+      date: '01.12.2022',
+      title: 'A first of its kind application for traders: The Xtrades App'
     }
     
   ]
