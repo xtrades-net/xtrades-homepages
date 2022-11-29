@@ -15,3 +15,5 @@ export * from './blog-post-14/blog-post-14.component';
 export * from './blog-post-15/blog-post-15.component';
 export * from './blog-post-16/blog-post-16.component';
 export * from './blog-post-17/blog-post-17.component';
+export * from './blog-post-18/blog-post-18.component';
+
