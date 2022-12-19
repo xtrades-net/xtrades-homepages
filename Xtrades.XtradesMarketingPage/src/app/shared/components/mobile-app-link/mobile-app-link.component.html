@@ -1,0 +1,14 @@
+<a class="mobile-app-link" href="{{ url }}" rel="noreferrer" target="_blank">
+  <span class="icon circle">
+    <img
+      *ngIf="icon === 'android'"
+      src="../../../../assets/android-bg.svg"
+      class="android-align"
+    /><img
+      *ngIf="icon === 'ios'"
+      src="../../../../assets/apple-bg.svg"
+      class="android-align"
+    />
+  </span>
+  <span class="label">{{ label }}</span>
+</a>

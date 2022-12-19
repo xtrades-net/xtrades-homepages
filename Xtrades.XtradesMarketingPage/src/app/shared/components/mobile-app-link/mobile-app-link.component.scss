@@ -1,0 +1,31 @@
+.mobile-app-link {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  .icon {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+
+    &.circle {
+      border-radius: 50%;
+    }
+
+    > img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  .label {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    padding-top: 2px;
+  }
+}

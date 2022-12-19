@@ -1,10 +1,11 @@
-export class Title_Description{
-    public static List=[
-        {
-          Path : "how-to-make-money-in-bear-market",
-          Title : "How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve",
-          Des : "Bear market is one of the biggest challenges for investors to manage money. Bear markets allow real investors to invest at a low price.",
-          Spt : `{
+export class Title_Description {
+  public static List = [
+    {
+      Path: 'how-to-make-money-in-bear-market',
+      Title:
+        'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve',
+      Des: 'Bear market is one of the biggest challenges for investors to manage money. Bear markets allow real investors to invest at a low price.',
+      Spt: `{
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "mainEntityOfPage": {
@@ -28,13 +29,13 @@ export class Title_Description{
             }
             },
             "datePublished": "2022-08-01"
-            }`
-        },
-        {
-            Path : "how-to-start-stock-training",
-            Title : "How to Start Stock Trading: The Basics, Tips, and Tricks",
-            Des : "Investing in shares may be top notch ideas, but here are some of the inventory marketplace fundamentals each starting investor needs to understand earlier than getting started.",
-            Spt : `{
+            }`,
+    },
+    {
+      Path: 'how-to-start-stock-training',
+      Title: 'How to Start Stock Trading: The Basics, Tips, and Tricks',
+      Des: 'Investing in shares may be top notch ideas, but here are some of the inventory marketplace fundamentals each starting investor needs to understand earlier than getting started.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -58,13 +59,13 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-07-25"
-                }`
-        },
-        {
-            Path : "what-are-the-best-social-trading-applications-or-platforms",
-            Title : "What Are The Best Social Trading Applications or Platforms?",
-            Des : "When it comes to investing and trading, We&#39;ve compared the best social trading platforms. Trading online using social platforms is more popular than at all.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'what-are-the-best-social-trading-applications-or-platforms',
+      Title: 'What Are The Best Social Trading Applications or Platforms?',
+      Des: 'When it comes to investing and trading, We&#39;ve compared the best social trading platforms. Trading online using social platforms is more popular than at all.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -86,15 +87,16 @@ export class Title_Description{
                 "@type": "ImageObject",
                 "url": "https://www.xtrades.net/assets/xtrades-logo.png"
                 }
-                },   
+                },
                 "datePublished": "2022-07-18"
-            }`
-        },
-        {
-            Path : "using-stock-alerts-to-improve-your-investing-strategy",
-            Title : "Using Stock Alerts to Improve Your Investing Strategy: Learn the Trading Strategies of the Pros",
-            Des : "Find out how stock price alerts can help you improve your investing strategy. Learn how to set up and use stock alerts.",
-            Spt : `{
+            }`,
+    },
+    {
+      Path: 'using-stock-alerts-to-improve-your-investing-strategy',
+      Title:
+        'Using Stock Alerts to Improve Your Investing Strategy: Learn the Trading Strategies of the Pros',
+      Des: 'Find out how stock price alerts can help you improve your investing strategy. Learn how to set up and use stock alerts.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -118,20 +120,20 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-07-11"
-                }`
-        },
-        {
-            Path : "how-to-make-money-of-penny-stocks",
-            Title : "How to Make Money off Penny Stocks: The Complete Guide",
-            Des : "Trading penny stocks has become more popular than ever, but if you&#39;re not using the right strategies, you could lose a lot of money off penny stock.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'how-to-make-money-of-penny-stocks',
+      Title: 'How to Make Money off Penny Stocks: The Complete Guide',
+      Des: 'Trading penny stocks has become more popular than ever, but if you&#39;re not using the right strategies, you could lose a lot of money off penny stock.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "https://www.xtrades.net/blogs/how-to-make-money-of-penny-stocks"
                 },
-                "headline": "How to Make Money off Penny Stocks: The Complete Guide", 
+                "headline": "How to Make Money off Penny Stocks: The Complete Guide",
                 "description": "They offer high rates of return on investments with a higher level of risk, trading all the while below a dollar per share. This is because penny stocks are often subject to manipulation and insider trading and can be very volatile. To find your Stock Trading Mentor to guide you in this crazy marketplace, the first step you need to take is to join this Penny Stock Discord.",
                 "image": "",
                 "author": {
@@ -148,13 +150,13 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-06-29"
-                }`
-        },
-        {
-            Path : "getting-started-with-stock-trading",
-            Title : "Getting Started with Stock Trading: Everything You Need to Know",
-            Des : "The process of buying and selling shares on the stock market is known as stock trading. There are a lot of things you need to know before you start stock trading.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'getting-started-with-stock-trading',
+      Title: 'Getting Started with Stock Trading: Everything You Need to Know',
+      Des: 'The process of buying and selling shares on the stock market is known as stock trading. There are a lot of things you need to know before you start stock trading.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -178,13 +180,13 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-06-16"
-                }`
-        },
-        {
-            Path : "why-swing-trading",
-            Title : "Why Swing Trading Is More Lucrative Than Day Trading",
-            Des : "Find out how day trading differs from swing trading, including how they work, capital requirements, and time commitment..",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'why-swing-trading',
+      Title: 'Why Swing Trading Is More Lucrative Than Day Trading',
+      Des: 'Find out how day trading differs from swing trading, including how they work, capital requirements, and time commitment..',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -208,15 +210,15 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-05-31"
-                }`
-        },
-        {
-            Path : "how-to-read-option-alerts",
-            Title : "How to Read Option Alerts: The Ultimate Guide",
-            Des : "An option alert is an essential tool for options traders. And you can take advantage of new trading opportunities by staying informed about changing market conditions.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'how-to-read-option-alerts',
+      Title: 'How to Read Option Alerts: The Ultimate Guide',
+      Des: 'An option alert is an essential tool for options traders. And you can take advantage of new trading opportunities by staying informed about changing market conditions.',
+      Spt: `{
                 "@context": "https://schema.org",
-                "@type": "BlogPosting",       
+                "@type": "BlogPosting",
                 "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "https://www.xtrades.net/blogs/how-to-read-option-alerts"
@@ -238,13 +240,13 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-05-17"
-                }`
-        },
-        {
-            Path : "why-real-time-alerts-are-essential",
-            Title : "Why Real-Time Alerts are Essential for Investors",
-            Des : "A real-time trading alert allows you to stay on top of all relevant information at all times. You&#39;ll be notified immediately if anything changes with your investments, allowing you to make quick decisions.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'why-real-time-alerts-are-essential',
+      Title: 'Why Real-Time Alerts are Essential for Investors',
+      Des: 'A real-time trading alert allows you to stay on top of all relevant information at all times. You&#39;ll be notified immediately if anything changes with your investments, allowing you to make quick decisions.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -257,7 +259,7 @@ export class Title_Description{
                 "author": {
                 "@type": "Organization",
                 "name": "Xtrades",
-                "url": "https://www.xtrades.net/blogs"          
+                "url": "https://www.xtrades.net/blogs"
                 },
                 "publisher": {
                 "@type": "Organization",
@@ -268,13 +270,14 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-05-16"
-                }`
-        },
-        {
-            Path : "how-to-make-most-of-stock-alerts",
-            Title : "How to Make the Most Out of Stock Alerts: Tips for Maximum Profits",
-            Des : "If you want to make the most out of stock alerts, make sure you stay updated on the latest market movements and don&#39;t miss out on any profitable opportunities.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'how-to-make-most-of-stock-alerts',
+      Title:
+        'How to Make the Most Out of Stock Alerts: Tips for Maximum Profits',
+      Des: 'If you want to make the most out of stock alerts, make sure you stay updated on the latest market movements and don&#39;t miss out on any profitable opportunities.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -299,13 +302,13 @@ export class Title_Description{
                 },
                 "datePublished": "2022-05-16"
                 }
-                `
-        },
-        {
-            Path : "copy-trading",
-            Title : "Copy Trading: What Investors Need to Know",
-            Des : "Online copy trading allows investors to copy the trades of other selected traders. Investors use it to make money without having to do all the research and analysis themselves.",
-            Spt : `{
+                `,
+    },
+    {
+      Path: 'copy-trading',
+      Title: 'Copy Trading: What Investors Need to Know',
+      Des: 'Online copy trading allows investors to copy the trades of other selected traders. Investors use it to make money without having to do all the research and analysis themselves.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -329,13 +332,13 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-05-16"
-                }`
-        },
-        {
-            Path : "what-is-tradingview",
-            Title : "What is TradingView?",
-            Des : "The main purpose of Tradingview is to connect traders, investors, educators, and investors to share ideas. TradingView offers a wide range of features and tools to help traders analyze charts more effectively.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'what-is-tradingview',
+      Title: 'What is TradingView?',
+      Des: 'The main purpose of Tradingview is to connect traders, investors, educators, and investors to share ideas. TradingView offers a wide range of features and tools to help traders analyze charts more effectively.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -359,13 +362,13 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-05-14"
-                }`
-        },
-        {
-            Path : "what-is-webull",
-            Title : "What Is Webull? How to Sign Up and What You Need to Know!",
-            Des : "In case you&#39;re looking for an app that offers a wide range of investment options without commissions, Webull is a good option. Here is an overview of Webull and how to sign up.",
-            Spt : `{
+                }`,
+    },
+    {
+      Path: 'what-is-webull',
+      Title: 'What Is Webull? How to Sign Up and What You Need to Know!',
+      Des: 'In case you&#39;re looking for an app that offers a wide range of investment options without commissions, Webull is a good option. Here is an overview of Webull and how to sign up.',
+      Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -389,10 +392,10 @@ export class Title_Description{
                 }
                 },
                 "datePublished": "2022-05-14"
-                }`
-        }
-    ]
-    public static blogPageScript = `{
+                }`,
+    },
+  ];
+  public static blogPageScript = `{
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Xtrades",
@@ -402,8 +405,8 @@ export class Title_Description{
         "target": "{search_term_string}",
         "query-input": "required name=search_term_string"
         }
-        }`
-    public static discountPageScript = `{
+        }`;
+  public static discountPageScript = `{
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Xtrades",
@@ -413,8 +416,8 @@ export class Title_Description{
         "target": "{search_term_string}",
         "query-input": "required name=search_term_string"
         }
-        }`
-    public static docPageScript = `{
+        }`;
+  public static docPageScript = `{
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Xtrades",
@@ -424,5 +427,5 @@ export class Title_Description{
         "target": "{search_term_string}",
         "query-input": "required name=search_term_string"
         }
-        }`
+        }`;
 }

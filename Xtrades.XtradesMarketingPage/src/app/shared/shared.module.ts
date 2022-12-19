@@ -40,6 +40,7 @@ import {
 } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
+import { MobileAppLinkComponent } from './components/mobile-app-link/mobile-app-link.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
+    MobileAppLinkComponent,
   ],
   imports: [
     CommonModule,
@@ -104,6 +106,7 @@ import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
+    MobileAppLinkComponent,
   ],
 })
 export class SharedModule {}

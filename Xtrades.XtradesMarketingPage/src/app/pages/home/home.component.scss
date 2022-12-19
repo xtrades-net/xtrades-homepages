@@ -1,71 +1,77 @@
 @import "../../../styles/vars";
 @import "../../../styles/mixins";
 
-
-.animation { grid-area: animation; }
-.main { grid-area: main; }
-.hero-description { grid-area: description; }
+.animation {
+  grid-area: animation;
+}
+.main {
+  grid-area: main;
+}
+.hero-description {
+  grid-area: description;
+}
 
 .hero {
-    padding: 50px 16px;
-    display: grid;
+  padding: 50px 16px;
+  display: grid;
+  grid-template-areas:
+    "main animation animation animation"
+    "description animation animation animation";
+  gap: 10px;
+  @media (max-width: $md) {
+    padding: 30px 16px;
     grid-template-areas:
-      'main animation animation animation'
-      'description animation animation animation';
-    gap: 10px;
+      "main"
+      "animation"
+      "description";
+  }
+  &__main {
+    margin-top: auto;
+    margin-bottom: 0;
     @media (max-width: $md) {
-        padding: 30px 16px;
-        grid-template-areas: 'main'
-                            'animation'
-                        'description';
+      text-align: center;
     }
-    &__main {
-        margin-top: auto;
-        margin-bottom: 0;
-        @media (max-width: $md) {
-            text-align: center;
-        }
+  }
+  &__main-img {
+    transform: translate3d(30px, 0, 0);
+    @media (max-width: $md) {
+      transform: translate3d(-30px, 0, 0);
     }
-    &__main-img {
-        transform: translate3d(30px, 0, 0);
-        @media (max-width: $md) {
-          transform: translate3d(-30px, 0, 0);
-      }
-        @media (max-width: $lg) {
-            transform: translate3d(-15px, 0, 0);
-        }
+    @media (max-width: $lg) {
+      transform: translate3d(-15px, 0, 0);
     }
-    &__joinnow {
-      @media (max-width: $md) {
-          align-items: center;
-          text-align: center;
-      }
+  }
+  &__joinnow {
+    @media (max-width: $md) {
+      align-items: center;
+      text-align: center;
     }
-    &__description {
+  }
+  &__description {
+    width: 80%;
+    padding: 15px 0;
+  }
+  &__levelup-img {
+    bottom: 20%;
+    left: 70%;
+    @media (max-width: $md) {
+      top: -200%;
+      left: -140%;
+    }
+    @media (max-width: $sl) {
+      top: -200%;
+      left: -30%;
+    }
+  }
+  &__buttons-row {
+    padding: 15px 0;
+    .text-container {
+      // padding: 0 0 15px 0;
+      bottom: 25%;
       width: 80%;
-      padding: 15px 0;
+      left: 10%;
     }
-    &__levelup-img {
-        bottom: 20%;
-        left: 70%;
-        @media (max-width: $md) {
-          top: -200%;
-          left: -140%;
-        }
-        @media (max-width: $sl) {
-          top: -200%;
-            left: -30%;
-        }
-    }
-    &__buttons-row {
-        padding: 15px 0;
-        .text-container {
-          // padding: 0 0 15px 0;
-          bottom: 25%;
-          width: 80%;
-          left: 10%;
-        }
-    }
+  }
 }
 
 .stats {
@@ -334,8 +340,12 @@
 }
 
 .download-app {
-  padding-left: 15px;
+  padding-left: 24px;
   @media (max-width: $md) {
-    padding: 15px;
+    padding: 24px 0 0 0;
   }
+}
+
+.pull-down {
+  padding-top: 24px;
 }

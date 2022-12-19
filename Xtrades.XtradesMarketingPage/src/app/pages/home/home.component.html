@@ -1,237 +1,415 @@
-<section class="hero flex grid-container relative" [class.responsive-main-container]="!(screenService.screenSize$ | async)?.isMobile">
-    <div class="hero__main relative header-1 header-1-gradient-overlay main" data-aos="fade-up"  >
-        The Future <span class="hero__hero-detail">of Trader</span> Collaboration
+<section
+  class="hero flex grid-container relative"
+  [class.responsive-main-container]="
+    !(screenService.screenSize$ | async)?.isMobile
+  "
+>
+  <div
+    class="hero__main relative header-1 header-1-gradient-overlay main"
+    data-aos="fade-up"
+  >
+    The Future <span class="hero__hero-detail">of Trader</span> Collaboration
+  </div>
+  <div image class="hero__mobile flex relative animation" data-aos="fade-up">
+    <app-video-hero></app-video-hero>
+  </div>
+  <div class="column hero__joinnow hero-description">
+    <div class="hero__description description" description data-aos="fade-up">
+      Xtrades is an interactive social platform servicing U.S. Options and Stock
+      Trading and Investing.
     </div>
-    <div image class="hero__mobile flex relative animation" data-aos="fade-up">
-        <app-video-hero></app-video-hero>
+    <div class="hero__buttons-row flex" buttons data-aos="fade-up">
+      <app-x-button
+        class="buttons-row__enter"
+        [isColorInverted]="true"
+        (click)="handleGoToBetaAppClick()"
+      >
+        20 Day Free Trial
+      </app-x-button>
+      <app-mobile-app-link
+        class="download-app"
+        icon="ios"
+        label="iOS"
+        url="https://apps.apple.com/us/app/xtrades/id1619081753"
+      ></app-mobile-app-link>
+      <app-mobile-app-link
+        class="download-app"
+        icon="android"
+        label="Android"
+        url="https://play.google.com/store/apps/details?id=net.xtrades.app&hl=pl&gl=US"
+      ></app-mobile-app-link>
+      <!-- <app-x-button
+        class="buttons-row__enter download-app"
+        [isColorInverted]="true"
+        (click)="handleGoToDownloadAppClick()"
+      >
+        IOS download
+      </app-x-button> -->
+      <!-- <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" /> -->
     </div>
-    <div class="column hero__joinnow hero-description">
-        <div class="hero__description description" description data-aos="fade-up"  >
-            Xtrades is an interactive social platform servicing U.S. Options and Stock Trading and Investing.
-        </div>
-        <div class="hero__buttons-row flex" buttons data-aos="fade-up"  >
-            <app-x-button class="buttons-row__enter" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
-                20 Day Free Trial
-            </app-x-button>
-            <app-x-button class="buttons-row__enter download-app" [isColorInverted]="true" (click)="handleGoToDownloadAppClick()">
-                IOS download
-            </app-x-button>
-            <!-- <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" /> -->
-        </div>
-    </div>
+  </div>
 </section>
 <section class="stats responsive-main-container column p-2">
-    <div class="stats__cards">
-      <h1 style="text-align:center; color:#fff;" data-aos="fade-up">Stock Trading On Discord for Real-Time Stocks Alerts</h1>
-    </div>
+  <div class="stats__cards">
+    <h1 style="text-align: center; color: #fff" data-aos="fade-up">
+      This place is like a gym for trading, I get better every day.
+    </h1>
+  </div>
 </section>
 <section class="stats responsive-main-container">
-    <div class="stats__cards cards">
-        <app-card class="stats__card-wrapper card-wrapper"   data-aos="fade-up" [title]="'17,500+'"
-            [subtitle]="'Active Members Daily'">
-        </app-card>
-        <app-card class="stats__card-wrapper card-wrapper"   data-aos="fade-up" [title]="'45+'"
-            [subtitle]="'Vetted Analysts'">
-        </app-card>
-        <app-card class="stats__card-wrapper card-wrapper"   data-aos="fade-up" [title]="'$2.4M+'"
-            [subtitle]="'Paid to Traders'">
-        </app-card>
-    </div>
+  <div class="stats__cards cards">
+    <app-card
+      class="stats__card-wrapper card-wrapper"
+      data-aos="fade-up"
+      [title]="'17,500+'"
+      [subtitle]="'Active Members Daily'"
+    >
+    </app-card>
+    <app-card
+      class="stats__card-wrapper card-wrapper"
+      data-aos="fade-up"
+      [title]="'45+'"
+      [subtitle]="'Vetted Analysts'"
+    >
+    </app-card>
+    <app-card
+      class="stats__card-wrapper card-wrapper"
+      data-aos="fade-up"
+      [title]="'$2.4M+'"
+      [subtitle]="'Paid to Traders'"
+    >
+    </app-card>
+  </div>
 </section>
 <app-separator [isAnimated]="true"></app-separator>
 <section class="power-of-xtrades responsive-main-container column">
-    <div class="flex">
-        <app-hero class="power-of-xtrades__hero">
-            <div class="power-of-xtrades__main header-1" data-aos="fade-up" data-aos-offset="100"
-                data-aos-duration="400">
-                <span class="hero__hero-detail">The</span> Power <span class="hero__hero-detail">of</span> Xtrades
-            </div>
-            <div class="power-of-xtrades__description description" description>
-                Xtrades is the complete collaboration platform for traders – allowing optimized interaction to
-                ensure
-                consistent success.
-            </div>
-        </app-hero>
-        <app-hero class="power-of-xtrades__desktop-chat">
-            <div class="power-of-xtrades__description description" description data-aos="fade-up" data-aos-duration="500">
-                Give our discord integrated web application a try:
-            </div>
-            <div class="hero__buttons-row" buttons>
-                <app-x-button class="buttons-row__enter" [isColorInverted]="true"
-                    (click)="handleGoToBetaAppClick()">
-                    20 Day Free Trial
-                </app-x-button>
-                
-                <app-x-button class="buttons-row__enter download-app" [isColorInverted]="true" (click)="handleGoToDownloadAppClick()">
-                    IOS download
-                </app-x-button>
-            </div>
-        </app-hero>
-    </div>
-    <div class="power-of-xtrades__cards cards flex">
-        <app-card class="power-of-xtrades__card-wrapper card-wrapper relative" data-aos="fade-up" data-aos-offset="200"
-            [title]="'Collaborate'"
-            [subtitle]="'With those that are in the position you wish to be in. Traders that have already accomplished the ability to consistently make profits in the markets.'"
-            [iconPath]="'/assets/learn.svg'" [iconAlt]="'Learn'">
-        </app-card>
-        <app-card class="power-of-xtrades__card-wrapper card-wrapper relative" data-aos="fade-up" [title]="'Data Edge'"
-            [subtitle]="'Receive sentiment data on the hottest plays in the US Stocks and Options market.'"
-            [iconPath]="'/assets/earn.svg'" [iconAlt]="'Earn'">
-        </app-card>
-        <app-card class="power-of-xtrades__card-wrapper card-wrapper relative" data-aos="fade-up" [title]="'Build Together'"
-            [subtitle]="'Our application creates opportunities to allow users to contribute and earn in the process!'"
-            [iconPath]="'/assets/build.svg'" [iconAlt]="'Build'">
-        </app-card>
-    </div>
-    <app-hero class="power-of-xtrades__mobile-chat" data-aos="fade-up">
-        <div class="power-of-xtrades__description description" description>
-            Give our discord integrated web application a try:
-        </div>
-        <div class="hero__buttons-row" buttons>
-            <app-x-button class="buttons-row__enter" [isColorInverted]="true" (click)="handleGoToBetaAppClick()">
-                Web Version
-            </app-x-button>
-        </div>
+  <div class="flex">
+    <app-hero class="power-of-xtrades__hero">
+      <div
+        class="power-of-xtrades__main header-1"
+        data-aos="fade-up"
+        data-aos-offset="100"
+        data-aos-duration="400"
+      >
+        <span class="hero__hero-detail">The</span> Power
+        <span class="hero__hero-detail">of</span> Xtrades
+      </div>
+      <div class="power-of-xtrades__description description" description>
+        Whether you're looking to learn, find trade ideas, or become an
+        influencer in the digital finance realm, Xtrades is the place to be. We
+        provide an all-in-one ecosystem for Ideas, Tools, and Social
+        Interaction.
+      </div>
     </app-hero>
+    <app-hero class="power-of-xtrades__desktop-chat">
+      <div
+        class="power-of-xtrades__description description"
+        description
+        data-aos="fade-up"
+        data-aos-duration="500"
+      >
+        Give our discord integrated application a try:
+      </div>
+      <div class="hero__buttons-row" buttons>
+        <app-x-button
+          class="buttons-row__enter"
+          [isColorInverted]="true"
+          (click)="handleGoToBetaAppClick()"
+        >
+          20 Day Free Trial
+        </app-x-button>
+        <div class="flex center pull-down">
+          <app-mobile-app-link
+            icon="ios"
+            label="iOS"
+            url="https://apps.apple.com/us/app/xtrades/id1619081753"
+          ></app-mobile-app-link>
+          <app-mobile-app-link
+            class="download-app"
+            icon="android"
+            label="Android"
+            url="https://play.google.com/store/apps/details?id=net.xtrades.app&hl=pl&gl=US"
+          ></app-mobile-app-link>
+        </div>
+        <!-- <app-x-button
+          class="buttons-row__enter download-app"
+          [isColorInverted]="true"
+          (click)="handleGoToDownloadAppClick()"
+        >
+          IOS download
+        </app-x-button> -->
+      </div>
+    </app-hero>
+  </div>
+  <div class="power-of-xtrades__cards cards flex">
+    <app-card
+      class="power-of-xtrades__card-wrapper card-wrapper relative"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      [title]="'Learn'"
+      [subtitle]="
+        'From real-time trade sharing, to feed posting about the next play, to getting coaching from statistically qualified analysts, to exploring our archive of hundreds of video lessons, courses and tools:  Our ecosystem has it all.'
+      "
+      [iconPath]="'/assets/learn.svg'"
+      [iconAlt]="'Learn'"
+    >
+    </app-card>
+    <app-card
+      class="power-of-xtrades__card-wrapper card-wrapper relative"
+      data-aos="fade-up"
+      [title]="'Earn'"
+      [iconPath]="'/assets/earn.svg'"
+      [iconAlt]="'Earn'"
+    >
+      <div subtitleContent>
+        Get rewarded for making great alerts, sharing insights with others, or
+        simply helping our community grow by inviting your friends. The ways to
+        earn are limitless, and we are constantly finding ways to give back. If
+        you believe you're capable of being an influencer on our platform, you
+        can apply
+        <a
+          href="https://forms.gle/hfF3HhJdaCfYDcvGA"
+          rel="noreferrer"
+          target="_blank"
+          >here</a
+        >.
+      </div>
+    </app-card>
+    <app-card
+      class="power-of-xtrades__card-wrapper card-wrapper relative"
+      data-aos="fade-up"
+      [title]="'Collaborate'"
+      [subtitle]="
+        'Our application is developed in a manner that allows for optimal sharing of information, from the slightest of trader and asset details to the organization of content ranging from Articles, to Videos, to Scripts, to Scanners, to Webinars.'
+      "
+      [iconPath]="'/assets/build.svg'"
+      [iconAlt]="'Build'"
+    >
+    </app-card>
+  </div>
+  <app-hero class="power-of-xtrades__mobile-chat" data-aos="fade-up">
+    <div class="power-of-xtrades__description description" description>
+      Give our discord integrated application a try:
+    </div>
+    <div class="hero__buttons-row" buttons>
+      <app-x-button
+        class="buttons-row__enter"
+        [isColorInverted]="true"
+        (click)="handleGoToBetaAppClick()"
+      >
+        Web Version
+      </app-x-button>
+    </div>
+  </app-hero>
 </section>
 <app-separator></app-separator>
 <section class="xtrades-edge responsive-main-container column">
-    <app-hero class="xtrades-edge__hero flex">
-        <div class="xtrades-edge__main header-1">
-           <span class="hero__hero-detail">A</span> One Stop <span class="hero__hero-detail"> Shop for Traders</span>
-        </div>
-    </app-hero>
-    <div class="flex">
-        <div class="column">
-            <a href="https://app.xtrades.net/"><img lazy src="assets/xtrades-edge.webp" alt="Xtrades Edge" data-aos="fade-up" width="590" height="430" /></a>
-        </div>
-        <div class="column">
-            <div class="flex">
-                <div class="box column">
-                    <app-icon-card [iconPath]="'/assets/track-and-trades.svg'" class="xtrades-edge__icon-card">
-                    </app-icon-card>
-                    <div class="xtrades-edge__box-description description" description>
-                        High Grossing Traders:  The info you receive from traders are vetted based on performance and trading habits earning the ability to spotlight their ideas to the team.
-                    </div>
-                </div>
-                <div class="box column">
-                    <app-icon-card [iconPath]="'/assets/internet-presence.svg'" class="xtrades-edge__icon-card">
-                    </app-icon-card>
-                    <div class="xtrades-edge__box-description description" description>
-                        Actionable:  With our Xcapture system, we carefully scan the timing of entered price to the market price to ensure accuracy of when the alert was provided.
-                    </div>
-                </div>
-            </div>
-            <div class="flex">
-                <div class="box column">
-                    <app-icon-card [iconPath]="'/assets/passive-income.svg'" class="xtrades-edge__icon-card">
-                    </app-icon-card>
-                    <div class="xtrades-edge__box-description description" description>
-                        80+ Paid Traders and that number continues to grow.  Engage in the application and lock in your seat as an influencer in the app.
-                    </div>
-                </div>
-                <div class="box column">
-                    <app-icon-card [iconPath]="'/assets/bell.svg'" class="xtrades-edge__icon-card"></app-icon-card>
-                    <div class="xtrades-edge__box-description description" description>
-                        Customize the individuals that you want to receive real-time notifications for, via Push, Text, and Email.
-                    </div>
-                </div>
-            </div>
-            <div class="flex">
-                <div class="box column">
-                    <app-icon-card [iconPath]="'/assets/push.svg'" class="xtrades-edge__icon-card"></app-icon-card>
-                    <div class="xtrades-edge__box-description description" description>
-                        Weekly Trade Recaps and Hand-Picked Educational Topics for New Traders from multiple
-                        Analysts and Educators each week.
-                    </div>
-                </div>
-                <div class="box column">
-                    <app-icon-card [iconPath]="'/assets/cart.svg'" class="xtrades-edge__icon-card"></app-icon-card>
-                    <div class="xtrades-edge__box-description description" description>
-                        A growing tool arsenal for Indicators, Scanner Settings, and Trading Scripts / Bots for
-                        every trading application available.
-                    </div>
-                </div>
-            </div>
-        </div>
+  <app-hero class="xtrades-edge__hero flex">
+    <div class="xtrades-edge__main header-1">
+      <span class="hero__hero-detail">A</span> One Stop
+      <span class="hero__hero-detail"> Shop for Traders</span>
     </div>
+  </app-hero>
+  <div class="flex">
+    <div class="column">
+      <a href="https://app.xtrades.net/"
+        ><img
+          lazy
+          src="assets/xtrades-edge.webp"
+          alt="Xtrades Edge"
+          data-aos="fade-up"
+          width="590"
+          height="430"
+      /></a>
+    </div>
+    <div class="column">
+      <div class="flex">
+        <div class="box column">
+          <app-icon-card
+            [iconPath]="'/assets/track-and-trades.svg'"
+            class="xtrades-edge__icon-card"
+          >
+          </app-icon-card>
+          <div class="xtrades-edge__box-description description" description>
+            High Grossing Traders: The info you receive from traders are vetted
+            based on performance and trading habits earning the ability to
+            spotlight their ideas to the team.
+          </div>
+        </div>
+        <div class="box column">
+          <app-icon-card
+            [iconPath]="'/assets/internet-presence.svg'"
+            class="xtrades-edge__icon-card"
+          >
+          </app-icon-card>
+          <div class="xtrades-edge__box-description description" description>
+            Actionable: With our Xcapture system, we carefully scan the timing
+            of entered price to the market price to ensure accuracy of when the
+            alert was provided.
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="box column">
+          <app-icon-card
+            [iconPath]="'/assets/passive-income.svg'"
+            class="xtrades-edge__icon-card"
+          >
+          </app-icon-card>
+          <div class="xtrades-edge__box-description description" description>
+            80+ Paid Traders and that number continues to grow. Engage in the
+            application and lock in your seat as an influencer in the app.
+          </div>
+        </div>
+        <div class="box column">
+          <app-icon-card
+            [iconPath]="'/assets/bell.svg'"
+            class="xtrades-edge__icon-card"
+          ></app-icon-card>
+          <div class="xtrades-edge__box-description description" description>
+            Customize the individuals that you want to receive real-time
+            notifications for, via Push, Text, and Email.
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="box column">
+          <app-icon-card
+            [iconPath]="'/assets/push.svg'"
+            class="xtrades-edge__icon-card"
+          ></app-icon-card>
+          <div class="xtrades-edge__box-description description" description>
+            Weekly Trade Recaps and Hand-Picked Educational Topics for New
+            Traders from multiple Analysts and Educators each week.
+          </div>
+        </div>
+        <div class="box column">
+          <app-icon-card
+            [iconPath]="'/assets/cart.svg'"
+            class="xtrades-edge__icon-card"
+          ></app-icon-card>
+          <div class="xtrades-edge__box-description description" description>
+            A growing tool arsenal for Indicators, Scanner Settings, and Trading
+            Scripts / Bots for every trading application available.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <app-separator></app-separator>
 <section class="xtrades-alerts responsive-main-container flex column">
-    <app-hero class="xtrades-alerts__hero flex">
-        <div class="xtrades-alerts__main header-1">
-            <span class="hero__hero-detail">What is</span> Xtrades <span class="hero__hero-detail"> ?</span>
-        </div>
-        <div class="xtrades-alerts__hero-description description" description>
-            Xtrades is a place for users to gain an A-Z understanding of the markets while also building their own
-            trading profile. Our Trading profile are statistically analyzed to provide you the best insights in
-            comparing your strengths and weaknesses against other traders in Stocks and Options. Those with proven
-            records will be able to monetize their information to our Audience.
-        </div>
-    </app-hero>
-    <div (click)="showReadMoreSection = !showReadMoreSection" class="center cursor-pointer">
-        {{ showReadMoreSection ? 'Read less ...' : 'Read more ...' }}
+  <app-hero class="xtrades-alerts__hero flex">
+    <div class="xtrades-alerts__main header-1">
+      <span class="hero__hero-detail">What is</span> Xtrades
+      <span class="hero__hero-detail"> ?</span>
     </div>
-    <app-homepage-content [ngClass]="showReadMoreSection ? '' : 'is-visible is-height'" class="p-2"></app-homepage-content>
-    <div class="flex">
-        <div class="column">
-            <div class="gradient-overlay">
-                <app-card class="xtrades-alerts__card-wrapper" [title]="'Xtrades'">
-                    <app-label class="xtrades-alerts__card-label" [label]="'Elite member'"></app-label>
-                    <div class="buttons-row__pricing relative">
-                        <sup>$</sup><span id="membership-price" class="membership-price in-viewport" appInViewport
-                            [options]="counterAnimationOptions" (inviewport)="animateCounterValue($event)"></span>
-                    </div>
-                    <div class="hero__buttons-row" buttons>
-                        <div class="text-container absolute">
-                            Sign up for 20 day free trial and get access to premium features!
-                        </div>
-                        <app-x-button class="buttons-row__enter" [isColorInverted]="true"
-                            (click)="handleGoToBetaAppClick()">
-                            Sign Up
-                        </app-x-button>
-                    </div>
-                </app-card>
+    <div class="xtrades-alerts__hero-description description" description>
+      Xtrades is a place for users to gain an A-Z understanding of the markets
+      while also building their own trading profile. Our Trading profile are
+      statistically analyzed to provide you the best insights in comparing your
+      strengths and weaknesses against other traders in Stocks and Options.
+      Those with proven records will be able to monetize their information to
+      our Audience.
+    </div>
+  </app-hero>
+  <div
+    (click)="showReadMoreSection = !showReadMoreSection"
+    class="center cursor-pointer"
+  >
+    {{ showReadMoreSection ? "Read less ..." : "Read more ..." }}
+  </div>
+  <app-homepage-content
+    [ngClass]="showReadMoreSection ? '' : 'is-visible is-height'"
+    class="p-2"
+  ></app-homepage-content>
+  <div class="flex">
+    <div class="column">
+      <div class="gradient-overlay">
+        <app-card class="xtrades-alerts__card-wrapper" [title]="'Xtrades'">
+          <app-label
+            class="xtrades-alerts__card-label"
+            [label]="'Elite member'"
+          ></app-label>
+          <div class="buttons-row__pricing relative">
+            <sup>$</sup
+            ><span
+              id="membership-price"
+              class="membership-price in-viewport"
+              appInViewport
+              [options]="counterAnimationOptions"
+              (inviewport)="animateCounterValue($event)"
+            ></span>
+          </div>
+          <div class="hero__buttons-row" buttons>
+            <div class="text-container absolute">
+              Sign up for 20 day free trial and get access to premium features!
             </div>
-        </div>
-        <div class="column">
-            <app-slider [inputData]="sliderImages" [detailedNavigation]="true" [config]="config"> </app-slider>
-        </div>
+            <app-x-button
+              class="buttons-row__enter"
+              [isColorInverted]="true"
+              (click)="handleGoToBetaAppClick()"
+            >
+              Sign Up
+            </app-x-button>
+          </div>
+        </app-card>
+      </div>
     </div>
+    <div class="column">
+      <app-slider
+        [inputData]="sliderImages"
+        [detailedNavigation]="true"
+        [config]="config"
+      >
+      </app-slider>
+    </div>
+  </div>
 </section>
 <app-separator></app-separator>
 <app-news></app-news>
 <app-separator></app-separator>
 <section class="testimonials responsive-main-container column">
-    <app-hero class="testimonials__hero">
-        <div class="testimonials__main header-1" data-aos="fade-up">
-            Testimonials
-        </div>
-    </app-hero>
-    <div class="testimonials__slider">
-        <app-text-slider [testimonials]="testimonials" [config]="testimonialsSliderConfig"></app-text-slider>
+  <app-hero class="testimonials__hero">
+    <div class="testimonials__main header-1" data-aos="fade-up">
+      Testimonials
     </div>
+  </app-hero>
+  <div class="testimonials__slider">
+    <app-text-slider
+      [testimonials]="testimonials"
+      [config]="testimonialsSliderConfig"
+    ></app-text-slider>
+  </div>
 </section>
 <app-separator></app-separator>
 <section class="faq responsive-main-container column">
-    <app-hero class="faq__hero">
-        <div class="faq__main header-1" data-aos="fade-up">
-            Frequently <span class="faq__hero-detail">Asked</span> Questions
-        </div>
-    </app-hero>
-    <div class="faq__questions column cursor-pointer" *ngFor="let item of faqs; let i = index" [attr.data-index]="i" appToggle>
-        <app-hero class="faq__article-hero" data-aos="fade-up">
-            <div class="flex space-between">
-                <div class="faq__article-main">
-                    {{item.question}}
-                </div>
-                <button aria-label="Toggle FAQ" class="faq__toggle-button cursor-pointer"></button>
-            </div>
-            <div class="faq__article-description description" description>
-                {{item.answer}}
-            </div>
-        </app-hero>
-        <app-separator></app-separator>
+  <app-hero class="faq__hero">
+    <div class="faq__main header-1" data-aos="fade-up">
+      Frequently <span class="faq__hero-detail">Asked</span> Questions
     </div>
+  </app-hero>
+  <div
+    class="faq__questions column cursor-pointer"
+    *ngFor="let item of faqs; let i = index"
+    [attr.data-index]="i"
+    appToggle
+  >
+    <app-hero class="faq__article-hero" data-aos="fade-up">
+      <div class="flex space-between">
+        <div class="faq__article-main">
+          {{ item.question }}
+        </div>
+        <button
+          aria-label="Toggle FAQ"
+          class="faq__toggle-button cursor-pointer"
+        ></button>
+      </div>
+      <div class="faq__article-description description" description>
+        {{ item.answer }}
+      </div>
+    </app-hero>
+    <app-separator></app-separator>
+  </div>
 </section>
 <app-mailing-list></app-mailing-list>
