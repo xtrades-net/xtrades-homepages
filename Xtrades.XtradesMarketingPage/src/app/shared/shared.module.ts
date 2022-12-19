@@ -31,6 +31,12 @@ import {
   BlogPost9Component,
   BlogPost12Component,
   BlogPost13Component,
+  BlogPost14Component,
+  BlogPost15Component,
+  BlogPost16Component,
+  BlogPost17Component,
+  BlogPost18Component,
+  BlogPost19Component,
 } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
@@ -55,6 +61,12 @@ import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-
     BlogPost11Component,
     BlogPost12Component,
     BlogPost13Component,
+    BlogPost14Component,
+    BlogPost15Component,
+    BlogPost16Component,
+    BlogPost17Component,
+    BlogPost18Component,
+    BlogPost19Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
