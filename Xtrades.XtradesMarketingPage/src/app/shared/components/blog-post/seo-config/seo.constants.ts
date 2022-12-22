@@ -1,6 +1,186 @@
 export class Title_Description {
   public static List = [
     {
+      Path: 'a-first-of-its-kind-application-for-traders',
+      Title: "A First Of It's Kind Application For Traders: The Xtrades App",
+      Des: 'Xtrades App is an interactive social platform for stock trading, investing, and options. Get the best insights in comparing your strengths and weaknesses against other traders in Stocks and Options.',
+      Spt: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.xtrades.net/blogs/a-first-of-its-kind-application-for-traders"
+            },
+            "headline": "A First Of It\'s Kind Application For Traders: The Xtrades App",
+            "description": "Xtrades App is an interactive social platform for stock trading, investing, and options. Get the best insights in comparing your strengths and weaknesses against other traders in Stocks and Options.",
+            "image": "",
+            "author": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "url": "https://www.xtrades.net/blogs"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+            }
+            },
+            "datePublished": "2022-12-01"
+            }`,
+    },
+    {
+      Path: 'what-is-copy-trading-how-do-i-get-involved',
+      Title: 'What Is Copy Trading? How Do I Get Involved?',
+      Des: 'Copy trading is often used by newbies traders to copy the same trades of more skilled investors. In short, copying the trades (work) of other traders in a good way.',
+      Spt: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.xtrades.net/blogs/what-is-copy-trading-how-do-i-get-involved"
+            },
+            "headline": "What Is Copy Trading? How Do I Get Involved?",
+            "description": "Copy trading is often used by newbies traders to copy the same trades of more skilled investors. In short, copying the trades (work) of other traders in a good way.",
+            "image": "",
+            "author": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "url": "https://www.xtrades.net/blogs"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+            }
+            },
+            "datePublished": "2022-11-30"
+            }`,
+    },
+    {
+      Path: 'the-rise-of-a-social-trading-application',
+      Title: 'The Rise Of A Social Trading Application: Xtrades',
+      Des: 'Social trading app or application/platform is a social network designed for traders. Social trading combines aspects of social media with online real-time trading in financial markets.',
+      Spt: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.xtrades.net/blogs/the-rise-of-a-social-trading-application"
+            },
+            "headline": "The Rise Of A Social Trading Application: Xtrades",
+            "description": "Social trading app or application/platform is a social network designed for traders. Social trading combines aspects of social media with online real-time trading in financial markets.",
+            "image": "",
+            "author": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "url": "https://www.xtrades.net/blogs"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+            }
+            },
+            "datePublished": "2022-11-29"
+            }`,
+    },
+    {
+      Path: 'how-to-start-stock-trading',
+      Title: 'How To Start Stock Trading',
+      Des: 'Stock trading is a kind of investing that emphasizes short-term profits over long-term gains. It can be risky If done without the proper knowledge. Before this make sure you know well about how the stock market works.',
+      Spt: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.xtrades.net/blogs/how-to-start-stock-trading"
+            },
+            "headline": "How To Start Stock Trading",
+            "description": "Stock trading is a kind of investing that emphasizes short-term profits over long-term gains. It can be risky If done without the proper knowledge. Before this make sure you know well about how the stock market works.",
+            "image": "",
+            "author": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "url": "https://www.xtrades.net/blogs"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+            }
+            },
+            "datePublished": "2022-11-25"
+            }`,
+    },
+    {
+      Path: 'trading-scripts-and-trading-channels',
+      Title: 'Trading Scripts and Trading Channels',
+      Des: 'Trading Scripts are indicators and strategies made with the help of programming language. Trading channels can be drawn on charts to help see uptrends and downtrends in a stock, commodity, ETF, etc.',
+      Spt: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.xtrades.net/blogs/trading-scripts-and-trading-channels"
+            },
+            "headline": "Trading Scripts and Trading Channels",
+            "description": "Trading Scripts are indicators and strategies made with the help of programming language. Trading channels can be drawn on charts to help see uptrends and downtrends in a stock, commodity, ETF, etc.",
+            "image": "",
+            "author": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "url": "https://www.xtrades.net/blogs"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+            }
+            },
+            "datePublished": "2022-11-22"
+            }`,
+    },
+    {
+      Path: 'xtrades-and-penny-stock-alerts',
+      Title: 'Xtrades And Penny Stock Alerts',
+      Des: 'Penny Stock Alerts are signals for potential trades. These alerts usually come from paid services that send out alerts through text messages, emails, or chat rooms.',
+      Spt: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.xtrades.net/blogs/xtrades-and-penny-stock-alerts"
+            },
+            "headline": "Xtrades And Penny Stock Alerts",
+            "description": "Penny Stock Alerts are signals for potential trades. These alerts usually come from paid services that send out alerts through text messages, emails, or chat rooms.",
+            "image": "",
+            "author": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "url": "https://www.xtrades.net/blogs"
+            },
+            "publisher": {
+            "@type": "Organization",
+            "name": "Xtrades",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+            }
+            },
+            "datePublished": "2022-11-18"
+            }`,
+    },
+    {
       Path: 'how-to-make-money-in-bear-market',
       Title:
         'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve',

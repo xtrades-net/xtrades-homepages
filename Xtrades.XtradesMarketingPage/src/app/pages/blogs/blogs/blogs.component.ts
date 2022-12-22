@@ -6,6 +6,15 @@ import { SeoService } from '@shared/service/seo.service';
 import { DOCUMENT, Location } from '@angular/common';
 import { Title_Description } from '@shared/components/blog-post/seo-config/seo.constants';
 
+export type BlogPost = {
+  id: string;
+  snippet: string;
+  url: string;
+  date: string;
+  href: string;
+  title: string;
+};
+
 @Component({
   selector: 'app-blogs',
   templateUrl: './blogs.component.html',
@@ -14,7 +23,7 @@ import { Title_Description } from '@shared/components/blog-post/seo-config/seo.c
 export class BlogsComponent {
   id = 1;
   headerElements = ['Blogs', 'Updates', 'Xhub uploads', 'Ideas', 'Tools'];
-  blogPosts = [
+  blogPosts: BlogPost[] = [
     {
       id: '1',
       snippet:
@@ -133,6 +142,60 @@ export class BlogsComponent {
       date: '01.08.2022',
       title:
         'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve',
+    },
+    {
+      id: '14',
+      url: 'xtrades-and-penny-stock-alerts',
+      snippet:
+        'Penny stocks are a pretty niche and particular field of trading.  In this field of trading, it requires a few leaders to really find these plays for the team.  Generally, you can get this done with a combination of a few watchful eyes and momentum trading scanners.  We have a lot of Penny Stock analysts in our team that are able to guide our team to victory in these sectors. At Xtrades, we are constantly rewarding the traders that are able to spot Penny Stocks fast and then turn these spotting into Penny Stock Alerts.  When you have Penny Stock Alerts that are of high accuracy, you build momentum within the community.',
+      href: '/blogs/xtrades-and-penny-stock-alerts',
+      date: '18.11.2022',
+      title: 'Xtrades And Penny Stock Alerts',
+    },
+    {
+      id: '15',
+      url: 'trading-scripts-and-trading-channels',
+      snippet:
+        'What are Trading Scripts? This is a great question.  A script is an automated creation that is there to help us as traders define that a technical parameter has been met.  Generally, people use Trading scripts for entries and exits, but they can also be optimized to show other things like unusual volume, or other factors like pattern recognition.',
+      href: '/blogs/trading-scripts-and-trading-channels',
+      date: '22.11.2022',
+      title: 'Trading Scripts and Trading Channels',
+    },
+    {
+      id: '16',
+      url: 'how-to-start-stock-trading',
+      snippet:
+        "Who currently has the best stock trading platform on the internet?  That's a good question my friend, but it's also an easy one to answer.  In order to claim to be the best stock trading platform on the internet, you must have the capability of creating an amazing stocks trading community. In order to do this, the proper incentivization and recognition systems must be in place.",
+      href: '/blogs/how-to-start-stock-trading',
+      date: '25.11.2022',
+      title: 'How To Start Stock Trading',
+    },
+    {
+      id: '17',
+      url: 'the-rise-of-a-social-trading-application',
+      snippet:
+        'The concept of social trading was not yet discovered until the late 21st century. Prior to this, people used websites like Stocktwits, or Twitter which are slowly becoming outdated in regards to their ability to truly supply users with a user experience that encompasses everything needed for traders to find a larger edge against their competitors.  Other than this, people were also led falsey astray by being shilled into boiler rooms, where the assets being alerted were simply pump and dumps that are only there to benefit the creators / owners of those boiler rooms. ',
+      href: '/blogs/the-rise-of-a-social-trading-application',
+      date: '29.11.2022',
+      title: 'The Rise Of A Social Trading Application: Xtrades',
+    },
+    {
+      id: '18',
+      url: 'what-is-copy-trading-how-do-i-get-involved',
+      snippet:
+        "In this current day and age - most people are too busy to actually try and find the best trades for themselves.  It's hard to integrate the overall market movement and fluidity into your daily process, which is why they usually sign up for a service that does this for them!  However there is an inconvenience factor that lies within this, which is the fact that customers still need to open their broker, and execute the trade themselves after receiving an alert from alerters / gurus out there.",
+      href: '/blogs/what-is-copy-trading-how-do-i-get-involved',
+      date: '30.11.2022',
+      title: 'What Is Copy Trading? How Do I Get Involved?',
+    },
+    {
+      id: '19',
+      url: 'a-first-of-its-kind-application-for-traders',
+      snippet:
+        "Have you ever thought of a trading app that encompassed everything you needed as a trader?  From receiving isolated push notifications, to finding the right mentor and coach that you can strictly follow and listen to for advice, to knowing what the general public thinks about an asset. What about getting educated or using the same tools as the traders that you're interested in following - this is all possible through downloading our Apple Store Xtrades App, or if you're an android uer, you can download our Xtrades Android App.",
+      href: '/blogs/a-first-of-its-kind-application-for-traders',
+      date: '01.12.2022',
+      title: "A First Of It's Kind Application For Traders: The Xtrades App",
     },
   ].reverse();
 
