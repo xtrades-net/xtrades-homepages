@@ -11,7 +11,6 @@ export class HeaderProvider {
     this.populateHeaderElements([
       HeaderElement.apply({ title: 'Home', directUrl: '' }),
       HeaderElement.apply({ title: 'xBlog', directUrl: 'blogs' }),
-      HeaderElement.apply({ title: 'Our Traders', directUrl: 'ourtraders' }),
     ]);
     this.populateHeaderElementsLast([
       HeaderElement.apply({ title: 'Discount', directUrl: 'militarydiscount' }),

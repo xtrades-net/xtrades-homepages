@@ -3,6 +3,7 @@ import {
   AfterViewInit,
   Component,
   Inject,
+  Input,
   OnInit,
   Renderer2,
 } from '@angular/core';
@@ -22,6 +23,8 @@ interface Trader {
   styleUrls: ['./ourtraders.component.scss'],
 })
 export class OurTradersComponent implements OnInit, AfterViewInit {
+  @Input() isMobile: boolean = false;
+
   traders: Trader[] = [];
   allRoles: Trader[][] = [
     [
@@ -66,7 +69,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
         name: 'Remy',
         icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/501245460439105548/avatars/7cc2cb7547bc6158ed70de894ac0e72c.webp?size=160',
         url: 'https://app.xtrades.net/profile/remy',
-      }
+      },
     ],
     [
       {
@@ -92,7 +95,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       {
         name: 'Squeeze',
         icon: 'https://cdn.discordapp.com/avatars/568561012731543555/eeb3c900923ba1638e990bc2a501ef38.webp?size=100',
-        url: 'https://app.xtrades.net/profile/squeeze'
+        url: 'https://app.xtrades.net/profile/squeeze',
       },
     ],
     [
@@ -248,7 +251,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       {
         name: 'JTrader',
         icon: 'https://cdn.discordapp.com/avatars/220921823288754176/58f2c9dd7af951a398cd374068fc6b29.webp?size=100',
-        url: 'https://app.xtrades.net/profile/c5fba689-3285-495c-8575-6eca52a9f17f?tab=profile'
+        url: 'https://app.xtrades.net/profile/c5fba689-3285-495c-8575-6eca52a9f17f?tab=profile',
       },
       {
         name: 'Mr M',

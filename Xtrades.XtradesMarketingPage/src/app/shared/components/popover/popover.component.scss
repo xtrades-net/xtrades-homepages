@@ -1,0 +1,46 @@
+:host {
+  position: relative;
+}
+
+.popover-container {
+  opacity: 0;
+  padding: 56px 32px 32px;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.15s ease-in-out, transform 0.2s ease-in-out;
+  transform-origin: 50% 0;
+  transform: translateY(8px);
+  width: 640px;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    position: absolute;
+    top: 8px;
+    border-bottom: 16px solid #101e30;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 24px;
+    z-index: -1;
+    background: linear-gradient(243.56deg, #24324f 0%, #0c1424 100%);
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 6px rgb(0 0 0 / 32%);
+  }
+}
+
+.popover-trigger:hover + .popover-container,
+.popover-container:hover {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
+}

@@ -1,0 +1,11 @@
+<div
+  [ngClass]="{ 'accordion-trigger': true, 'is-open': isOpen$ | async }"
+  (click)="toggle()"
+>
+  <ng-content select="[trigger]"></ng-content>
+</div>
+<div [ngClass]="{ 'accordion-container': true, 'is-open': isOpen$ | async }">
+  <div class="accordion-body">
+    <ng-content></ng-content>
+  </div>
+</div>

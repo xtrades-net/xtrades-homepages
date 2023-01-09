@@ -1,0 +1,50 @@
+:host {
+  padding: 1em 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-trigger {
+  padding-bottom: 1em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &:before {
+    background: #04080f;
+    border-radius: 8px 8px 0 0;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: -16px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  &.is-open {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.accordion-container {
+  opacity: 0;
+  max-width: calc(100vw - 40px);
+  width: 640px;
+  max-height: 0;
+  transition: opacity 0.1s ease-in-out;
+
+  > .accordion-body {
+    background: #04080f;
+    border-radius: 0 0 8px 8px;
+  }
+
+  &.is-open {
+    max-height: none;
+    opacity: 1;
+  }
+}
