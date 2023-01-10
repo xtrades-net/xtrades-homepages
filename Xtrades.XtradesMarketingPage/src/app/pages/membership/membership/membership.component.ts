@@ -16,7 +16,7 @@ export class MembershipComponent {
     {
       selected: false,
       name: 'trial',
-      priceTag: { userCost: 0, period: '20 days' },
+      priceTag: { userCost: 0, period: '9 days' },
       description: 'Our free trial',
       planId: 'elite',
       featuresList: ['All of the Elite plan features'],
