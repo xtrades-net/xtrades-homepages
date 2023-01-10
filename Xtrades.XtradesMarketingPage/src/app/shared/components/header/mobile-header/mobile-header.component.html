@@ -1,38 +1,91 @@
 <div class="mobile-header">
-    <div class="responsive-main-container">
-        <div class="top-bar" *ngIf="!isDropdown">
-            <div routerLink="['']"> <img lazy img class="logo pointer" width="85" height="62"
-                    src='assets/xtrades-logo.png'></div>
-            <img lazy img class="menu pointer" alt="Mobile Menu Button" src='assets/xtrades-icon-close.svg'
-                (click)="onMenuClose()" />
-        </div>
-        <div class="main-mobile-header-body">
-            <div class="header__elements">
-                <span *ngFor="let element of (headerElements.length !== 0 ? headerElements : headerProvider.headerElements)">
-                    <a class="link" (click)="onMenuClose()" [routerLink]="element.directUrl"
-                        routerLinkActive="active-router-link"
-                        [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
-                </span>
-                <span>
-                    <a class="link" target="_blank" href="https://app.xtrades.net/plans" routerLinkActive="active-router-link">Plans</a>
-                  </span>
-                <!-- <span>
+  <div class="responsive-main-container">
+    <div class="top-bar" *ngIf="!isDropdown">
+      <div routerLink="['']">
+        <img
+          lazy
+          img
+          class="logo pointer"
+          width="85"
+          height="62"
+          src="assets/xtrades-logo.png"
+        />
+      </div>
+      <img
+        lazy
+        img
+        class="menu pointer"
+        alt="Mobile Menu Button"
+        src="assets/xtrades-icon-close.svg"
+        (click)="onMenuClose()"
+      />
+    </div>
+    <div class="main-mobile-header-body">
+      <div class="header__elements">
+        <span
+          *ngFor="
+            let element of headerElements.length !== 0
+              ? headerElements
+              : headerProvider.headerElements
+          "
+        >
+          <a
+            class="link"
+            (click)="onMenuClose()"
+            [routerLink]="element.directUrl"
+            routerLinkActive="active-router-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ element.title }}</a
+          >
+        </span>
+        <app-accordion>
+          <span class="link cursor-pointer" trigger> Our Traders </span>
+          <app-ourtraders [isMobile]="true"></app-ourtraders>
+        </app-accordion>
+        <span>
+          <a
+            class="link"
+            target="_blank"
+            href="https://app.xtrades.net/plans"
+            routerLinkActive="active-router-link"
+            >Plans</a
+          >
+        </span>
+        <!-- <span>
                     <a class="link" target="_blank" href="https://app.xtrades.net/"
                         routerLinkActive="active-router-link">20 Day Free Trial</a>
                 </span> -->
-                <span>
-                    <a class="link" target="_blank"
-                        href="/documentation"
-                        routerLinkActive="active-router-link">Docs</a>
-                </span>
-                <span *ngFor="let element of headerProvider.headerElementsLast">
-                    <a class="link" [routerLink]="element.directUrl" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
-                </span>
-            </div>
-            <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToDiscord()">Join Discord
-            </app-x-button>
-            <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Sign Up
-            </app-x-button>
-        </div>
+        <span>
+          <a
+            class="link"
+            target="_blank"
+            href="/documentation"
+            routerLinkActive="active-router-link"
+            >Docs</a
+          >
+        </span>
+        <span *ngFor="let element of headerProvider.headerElementsLast">
+          <a
+            class="link"
+            [routerLink]="element.directUrl"
+            routerLinkActive="active-router-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ element.title }}</a
+          >
+        </span>
+      </div>
+      <app-x-button
+        class="button"
+        [isColorInverted]="true"
+        (triggerClick)="handleGoToDiscord()"
+        >Join Discord
+      </app-x-button>
+      <app-x-button
+        class="button"
+        [isColorInverted]="true"
+        (triggerClick)="handleGoToBetaAppClick()"
+        >Sign Up
+      </app-x-button>
     </div>
+  </div>
 </div>

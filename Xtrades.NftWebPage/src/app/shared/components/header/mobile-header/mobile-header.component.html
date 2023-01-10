@@ -1,30 +1,79 @@
 <div class="mobile-header">
-    <div class="top-bar" *ngIf="!isDropdown">
-        <div routerLink="['']"> <img *ngFor="let logo of logos" lazy img class="logo cursor-pointer" width="56px" height="35px"
-                [src]='logo'></div>
-        <img lazy img class="menu cursor-pointer" alt="Mobile Menu Button" width="47px" height="42px" src='assets/logos/close.svg'
-            (click)="onMenuClose()" />
+  <div class="top-bar" *ngIf="!isDropdown">
+    <div routerLink="['']">
+      <img
+        *ngFor="let logo of logos"
+        lazy
+        img
+        class="logo cursor-pointer"
+        width="56px"
+        height="35px"
+        [src]="logo"
+      />
     </div>
-    <app-separator></app-separator>
-    <div class="main-mobile-header-body">
-        <div class="header__elements">
-            <span *ngFor="let element of (headerElements.length !== 0 ? headerElements : headerProvider.headerElements)">
-                <a class="link uppercase" (click)="onMenuClose()" [routerLink]="element.directUrl"
-                    routerLinkActive="active-router-link"
-                    [routerLinkActiveOptions]="{exact: true}">{{element.title}}</a>
-            </span>
-            <span>
-              <a class="link uppercase" target="_blank" href="https://www.xtrades.net/" routerLinkActive="active-router-link">Xtrades</a>
-            </span>
-            <span>
-              <a class="link uppercase" target="_blank" href="https://www.cryptotraders.com/" routerLinkActive="active-router-link">Cryptotraders</a>
-            </span>
-        </div>
-        <div class="row">
-            <app-x-button class="button uppercase" [isBrand]="true" [isColorInverted]="false" (triggerClick)="handleGoToBetaAppClick()">Join
-            </app-x-button>
-            <app-x-button class="button uppercase" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()">Discord
-            </app-x-button>
-        </div>
+    <img
+      lazy
+      img
+      class="menu cursor-pointer"
+      alt="Mobile Menu Button"
+      width="47px"
+      height="42px"
+      src="assets/logos/close.svg"
+      (click)="onMenuClose()"
+    />
+  </div>
+  <app-separator></app-separator>
+  <div class="main-mobile-header-body">
+    <div class="header__elements">
+      <span
+        *ngFor="
+          let element of headerElements.length !== 0
+            ? headerElements
+            : headerProvider.headerElements
+        "
+      >
+        <a
+          class="link uppercase"
+          (click)="onMenuClose()"
+          [routerLink]="element.directUrl"
+          routerLinkActive="active-router-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ element.title }}</a
+        >
+      </span>
+      <span>
+        <a
+          class="link uppercase"
+          target="_blank"
+          href="https://www.xtrades.net/"
+          routerLinkActive="active-router-link"
+          >Xtrades</a
+        >
+      </span>
+      <span>
+        <a
+          class="link uppercase"
+          target="_blank"
+          href="https://www.cryptotraders.com/"
+          routerLinkActive="active-router-link"
+          >Cryptotraders</a
+        >
+      </span>
     </div>
+    <div class="row">
+      <app-x-button
+        class="button uppercase"
+        [isBrand]="true"
+        [isColorInverted]="false"
+        (triggerClick)="handleGoToBetaAppClick()"
+        >Join
+      </app-x-button>
+      <app-x-button
+        class="button uppercase"
+        [isColorInverted]="true"
+        (triggerClick)="handleGoToBetaAppClick()"
+        >Discord
+      </app-x-button>
+    </div>
+  </div>
 </div>

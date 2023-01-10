@@ -41,6 +41,8 @@ import {
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
 import { MobileAppLinkComponent } from './components/mobile-app-link/mobile-app-link.component';
+import { PopoverModule } from './components/popover/popover.module';
+import { AccordionModule } from './components/accordion/accordion.module';
 
 @NgModule({
   declarations: [
@@ -86,6 +88,8 @@ import { MobileAppLinkComponent } from './components/mobile-app-link/mobile-app-
     TextSliderModule,
     FooterModule,
     VideoHeroModule,
+    PopoverModule,
+    AccordionModule,
   ],
   exports: [
     CommonModule,

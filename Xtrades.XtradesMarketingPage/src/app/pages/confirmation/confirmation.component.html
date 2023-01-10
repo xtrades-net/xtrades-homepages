@@ -1,14 +1,33 @@
 <div class="responsive-main-container column px-2">
-    <div class="description center px-2" data-aos="fade-up">
-        Congrats, on joining the team. Your journey towards financial freedom begins here. Please visit the below areas
-        to begin interacting with our community. On the app, you will be asked to connect your Discord account that you
-        wish to associate with your Xtrades account. Please make sure you are signed into the correct discord on your
-        BROWSER when connecting, as that will be the account we associate. Thanks, and good luck trading the markets!"
-    </div>
-    <div class="flex center px-4">
-        <app-x-button class="button" [isColorInverted]="true" (triggerClick)="handleGoToDiscord()" data-aos="fade-up">Join Discord
-        </app-x-button>
-        <app-x-button class="button pl-2" [isColorInverted]="true" (triggerClick)="handleGoToBetaAppClick()" data-aos="fade-up">Go to App
-        </app-x-button>
-    </div>
+  <div class="description center px-2" data-aos="fade-up">
+    Congrats, on joining the team. Your journey towards financial freedom begins
+    here. Please visit the below areas to begin interacting with our community.
+    On the app, you will be asked to connect your Discord account that you wish
+    to associate with your Xtrades account. Please make sure you are signed into
+    the correct discord on your BROWSER when connecting, as that will be the
+    account we associate. Thanks, and good luck trading the markets!"
+  </div>
+  <div>
+    <img
+      alt="trial started"
+      src="./../../../../assets/trial-started-image.webp"
+      class="blog-image"
+    />
+  </div>
+  <div class="flex center px-4">
+    <app-x-button
+      class="button"
+      [isColorInverted]="true"
+      (triggerClick)="handleGoToDiscord()"
+      data-aos="fade-up"
+      >Join Discord
+    </app-x-button>
+    <app-x-button
+      class="button pl-2"
+      [isColorInverted]="true"
+      (triggerClick)="handleGoToBetaAppClick()"
+      data-aos="fade-up"
+      >Go to App
+    </app-x-button>
+  </div>
 </div>
