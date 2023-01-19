@@ -166,7 +166,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
   }
 
   handleGoToBetaAppClick(): void {
-    window.location.href = 'https://app.xtrades.net/';
+    window.open('https://app.xtrades.net?modal=signup', '_blank');
   }
 
   handleGoToDownloadAppClick(): void {

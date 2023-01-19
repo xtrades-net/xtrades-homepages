@@ -33,11 +33,11 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
   }
 
   handleGoToDiscord(): void {
-    window.location.href = 'https://discord.com/invite/xtrades';
+    window.open('https://discord.com/invite/xtrades', '_blank');
   }
 
   handleGoToBetaAppClick(): void {
-    window.location.href = 'https://app.xtrades.net/';
+    window.open('https://app.xtrades.net?modal=signup', '_blank');
   }
 
   onMenuClose(): void {
