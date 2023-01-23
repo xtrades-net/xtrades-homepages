@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-export type MobileAppLinkIcon = 'android' | 'ios';
+export type MobileAppLinkIcon = 'android' | 'discord' | 'ios';
 
 @Component({
   selector: 'app-mobile-app-link',

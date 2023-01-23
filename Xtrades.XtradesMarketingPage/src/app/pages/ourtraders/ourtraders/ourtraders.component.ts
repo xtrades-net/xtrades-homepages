@@ -30,7 +30,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
     [
       {
         name: 'Alexander_96',
-        icon: 'https://cdn.discordapp.com/avatars/580893757033938946/0bebef11b220963bf1c1698f4aeeb844.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/598921fe-d2f2-448d-a9da-b77200842d9e.png?size=100',
         url: 'https://app.xtrades.net/profile/Alexander',
       },
       {
@@ -45,7 +45,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Wags',
-        icon: 'https://cdn.discordapp.com/avatars/398880706375319562/0fc8e5cb587a24efe09031deb9330f97.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/1a0f5bab-2638-48cb-a467-7e5293c977aa.png?size=100',
         url: 'https://app.xtrades.net/profile/wags',
       },
       {
@@ -111,7 +111,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Byron',
-        icon: 'https://cdn.discordapp.com/avatars/443933735445069825/4789f48f40ccc9588a9042f045d10e1d.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/30938644-1c99-45e8-82e8-43e729fcc463.png?size=100',
         url: 'https://app.xtrades.net/profile/byron',
       },
       {
@@ -178,7 +178,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Byron',
-        icon: 'https://cdn.discordapp.com/avatars/443933735445069825/4789f48f40ccc9588a9042f045d10e1d.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/30938644-1c99-45e8-82e8-43e729fcc463.png?size=100',
         url: 'https://app.xtrades.net/profile/byron',
       },
       {
@@ -208,7 +208,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Pyro',
-        icon: 'https://cdn.discordapp.com/avatars/480122361862160384/799f5d5717dbadf790f55d8c06e29552.webp?size=40',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/9f400e2e-cbcc-4f1e-a4c8-1a8ee785ac69.png?size=40',
         url: 'https://app.xtrades.net/profile/pyro?tab=profile',
       },
       {
@@ -255,7 +255,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Mr M',
-        icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/801056759422386176/avatars/9a9cd49d1c7a12eb342063bbd879b753.webp?size=160',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/6b6c7f45-ac50-4849-bfa0-8edfc7a3faef.png?size=160',
         url: 'https://app.xtrades.net/profile/6b6c7f45-ac50-4849-bfa0-8edfc7a3faef?tab=profile',
       },
       {
@@ -265,12 +265,12 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Tatoepaladin',
-        icon: 'https://cdn.discordapp.com/avatars/92534638425161728/ddc7de3b651fbec11a31f80c17268c9c.webp?size=1000',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/bf498713-8e1e-4687-ac3e-fca4b07bc737.png?size=1000',
         url: 'https://app.xtrades.net/profile/tatoepaladin?tab=profile',
       },
       {
         name: 'TerraIncognita',
-        icon: 'https://cdn.discordapp.com/avatars/723276661574860831/d80e985692c55239ec3e1d39b8ddc7d6.webp?size=1000',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/f6bd9d04-5d9a-42b0-bc7f-22b4e83d30c8.png?size=1000',
         url: 'https://app.xtrades.net/profile/terraincognita?tab=profile',
       },
       {
@@ -307,17 +307,17 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'combs',
-        icon: 'https://cdn.discordapp.com/avatars/604861141042200586/9f1fc6dfa2eb727af3fd6dbb9a2b81fa.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/3af793e2-2d4b-4ec4-b8b6-183ae6761004.png?size=100',
         url: 'https://app.xtrades.net/profile/icomber10?tab=profile',
       },
       {
         name: 'deluxe',
-        icon: 'https://cdn.discordapp.com/avatars/150749650612256768/e7b9e5fda6ac49735bc8b12b03350923.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/6f460958-24c9-41b6-af86-a5c2a4afc27b.png?size=100',
         url: 'https://app.xtrades.net/profile/deluxe?tab=profile',
       },
       {
         name: 'DrPheelz',
-        icon: 'https://cdn.discordapp.com/avatars/388517580077400074/3adbb89c1832da356a23121beb7d652a.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/93ab3323-9a5c-4723-b932-5ed258c55949.png?size=100',
         url: 'https://app.xtrades.net/profile/drpheelz?tab=profile',
       },
       {
@@ -327,12 +327,12 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'HighFlyingBull🐃💸',
-        icon: 'https://cdn.discordapp.com/avatars/823971605209284676/bacf63cf6ddde576f6d628a0fe5f0caf.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/72f61fd4-5157-4854-9c36-11d33bf740bf.png?size=100',
         url: 'https://app.xtrades.net/profile/highflyingbull?tab=profile',
       },
       {
         name: 'Juice',
-        icon: 'https://cdn.discordapp.com/avatars/392476656318545921/76b43ce41afaf7cfbc58cf7d838f8f32.webp?size=40',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/b4e760a1-ba78-46aa-9262-f1f3872c4930.png?size=40',
         url: 'https://app.xtrades.net/profile/juice?tab=profile',
       },
       {
@@ -347,7 +347,7 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
       },
       {
         name: 'Mr Options',
-        icon: 'https://cdn.discordapp.com/avatars/241173947356282881/6f328c14724d280e2732231f1eb5c738.webp?size=100',
+        icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/b37bdb73-b760-436a-ba40-8adc74884187.png?size=100',
         url: 'https://app.xtrades.net/profile/mr_options?tab=profile',
       },
     ],
