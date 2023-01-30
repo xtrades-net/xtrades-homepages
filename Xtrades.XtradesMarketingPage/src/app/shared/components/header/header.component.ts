@@ -33,11 +33,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     );
   }
 
-  handleGoToDiscord(): void {
-    window.open('https://discord.com/invite/xtrades', '_blank');
+  login(): void {
+    window.open('https://app.xtrades.net?modal=signin', '_blank');
   }
 
-  handleGoToBetaAppClick(): void {
+  signup(): void {
     window.open('https://app.xtrades.net?modal=signup', '_blank');
   }
 

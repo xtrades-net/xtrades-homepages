@@ -70,14 +70,14 @@
     *ngIf="isMainHeader && !isMobile"
     class="button"
     [isColorInverted]="true"
-    (triggerClick)="handleGoToDiscord()"
+    (triggerClick)="signup()"
     >Sign Up</app-x-button
   >
   <app-x-button
     *ngIf="isMainHeader && !isMobile"
     class="button pl-2"
     [isColorInverted]="true"
-    (triggerClick)="handleGoToBetaAppClick()"
+    (triggerClick)="login()"
     >Login</app-x-button
   >
   <ng-container *ngIf="isMobile">
