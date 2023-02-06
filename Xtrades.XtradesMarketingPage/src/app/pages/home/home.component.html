@@ -26,32 +26,23 @@
       >
         9 Day Free Trial
       </app-x-button>
-      <app-mobile-app-link
-        class="download-app"
-        icon="ios"
-        label="iOS"
-        url="https://apps.apple.com/us/app/xtrades/id1619081753"
-      ></app-mobile-app-link>
-      <app-mobile-app-link
-        class="download-app"
-        icon="android"
-        label="Android"
-        url="https://play.google.com/store/apps/details?id=net.xtrades.app&hl=en&gl=US"
-      ></app-mobile-app-link>
-      <app-mobile-app-link
-        class="download-app"
-        icon="discord"
-        label="Discord"
-        url="https://discord.com/invite/xtrades"
-      ></app-mobile-app-link>
-      <!-- <app-x-button
-        class="buttons-row__enter download-app"
-        [isColorInverted]="true"
-        (click)="handleGoToDownloadAppClick()"
-      >
-        IOS download
-      </app-x-button> -->
-      <!-- <img class="hero__levelup-img absolute" alt="Xtrades Level up" src="assets/levelup.svg" /> -->
+      <div class="download-app flex flex-row space-x-6">
+        <app-mobile-app-link
+          icon="ios"
+          label="iOS"
+          url="https://apps.apple.com/us/app/xtrades/id1619081753"
+        ></app-mobile-app-link>
+        <app-mobile-app-link
+          icon="android"
+          label="Android"
+          url="https://play.google.com/store/apps/details?id=net.xtrades.app&hl=en&gl=US"
+        ></app-mobile-app-link>
+        <app-mobile-app-link
+          icon="discord"
+          label="Discord"
+          url="https://discord.com/invite/xtrades"
+        ></app-mobile-app-link>
+      </div>
     </div>
   </div>
 </section>
@@ -124,32 +115,6 @@
         >
           9 Day Free Trial
         </app-x-button>
-        <div class="flex center pull-down">
-          <app-mobile-app-link
-            icon="ios"
-            label="iOS"
-            url="https://apps.apple.com/us/app/xtrades/id1619081753"
-          ></app-mobile-app-link>
-          <app-mobile-app-link
-            class="download-app"
-            icon="android"
-            label="Android"
-            url="https://play.google.com/store/apps/details?id=net.xtrades.app&hl=en&gl=US"
-          ></app-mobile-app-link>
-          <app-mobile-app-link
-            class="download-app"
-            icon="discord"
-            label="Discord"
-            url="https://discord.com/invite/xtrades"
-          ></app-mobile-app-link>
-        </div>
-        <!-- <app-x-button
-          class="buttons-row__enter download-app"
-          [isColorInverted]="true"
-          (click)="handleGoToDownloadAppClick()"
-        >
-          IOS download
-        </app-x-button> -->
       </div>
     </app-hero>
   </div>

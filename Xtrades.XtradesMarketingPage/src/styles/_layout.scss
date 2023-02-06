@@ -1,26 +1,39 @@
 @import "./vars";
 
 .flex {
-    display: flex;
-    @media (max-width: $md) {
-        flex-direction: column;
-    }
+  display: flex;
+
+  @media (max-width: $md) {
+    flex-direction: column;
+  }
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-end {
-    align-items: flex-end;
-    justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .self-end {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .space-between {
-    justify-content: space-between;
+  justify-content: space-between;
+}
+
+.space-x-6 {
+  > * {
+    &:nth-child(n + 2) {
+      margin-left: 24px;
+    }
+  }
 }
