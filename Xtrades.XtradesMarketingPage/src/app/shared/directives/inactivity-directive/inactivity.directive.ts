@@ -27,7 +27,7 @@ export class InactivityDirective implements OnDestroy {
   private subscribeToScrollEvent() {
     this.scrollSubscription.add(
       fromEvent(window, 'scroll')
-        .pipe(take(1), debounceTime(30000))
+        .pipe(debounceTime(30000), take(1))
         .subscribe(() => {
           this.modalService.open('subscribe-modal');
         })
