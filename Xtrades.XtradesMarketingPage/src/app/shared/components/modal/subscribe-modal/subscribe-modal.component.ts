@@ -57,7 +57,7 @@ export class SubscribeModalComponent {
   }
 
   subscribeSuccess() {
-    document.cookie = 'isSubscribedToMemberships=true';
+    localStorage.setItem('isSubscribedToMemberships', 'true');
     this.emailModel.email = '';
     this.isSuccessfullySubscibed = true;
   }

@@ -11,8 +11,20 @@ import { VideoModalComponent } from './video-modal/video-modal.component';
 import { ThankYouModalComponent } from './thank-you-modal/thank-you-modal.component';
 
 @NgModule({
-  declarations: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent, ThankYouModalComponent],
-  exports: [ModalComponent, SubscribeModalComponent, ErrorModalComponent, VideoModalComponent, ThankYouModalComponent],
+  declarations: [
+    ModalComponent,
+    SubscribeModalComponent,
+    ErrorModalComponent,
+    VideoModalComponent,
+    ThankYouModalComponent,
+  ],
+  exports: [
+    ModalComponent,
+    SubscribeModalComponent,
+    ErrorModalComponent,
+    VideoModalComponent,
+    ThankYouModalComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,
