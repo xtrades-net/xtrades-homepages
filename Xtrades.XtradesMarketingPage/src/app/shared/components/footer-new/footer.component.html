@@ -1,0 +1,54 @@
+<footer class="footer">
+  <div class="wrapper">
+    <div class="mail-box">
+      <h6 class="title">Join Our Mailing List</h6>
+      <div class="mail-box-input-wrapper">
+        <form class="form flex-column" #myForm="ngForm" (ngSubmit)="saveSubscriber(myForm, emailEl.value)"
+              *ngIf="!isSubscribed">
+          <div class="form">
+            <input type="email" ngModel name="subscriberEmail" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                   placeholder="enter your email address" #emailEl>
+            <button type="submit" [disabled]="isLoading">
+              SEND
+            </button>
+          </div>
+          <div *ngIf="isInvalid(myForm)" class="validation-error">
+            Email is required!
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="links-wrapper">
+      <div class="link-wrapper">
+        <span>Billing & General Support</span>
+        <b>
+          <a href="mailto:hello@xtrades.net">hello@xtrades.net</a>
+        </b>
+      </div>
+      <div class="link-wrapper">
+        <span>Los Angeles, CA 90028</span>
+        <b>
+          <a href="tel:1-530-723-5499">1-530-723-5499</a>
+        </b>
+      </div>
+      <div class="link-wrapper">
+        <a href="#" onclick="return false;" routerLink="/terms-and-conditions">Terms & Conditions</a>
+      </div>
+      <div>
+        <a class="link-wrapper" href="#" onclick="return false;" routerLink="/refund-policy">Refund Policy</a>
+      </div>
+      <div class="link-wrapper">
+        <a href="#" onclick="return false;" routerLink="/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="copyright-wrapper">
+      <span>© Copyright 2023 - Xtrades. All rights reserved.</span>
+      <div class="social">
+        <a href="#" onclick="return false;"><img src="assets/pro-algo/fb.svg" alt="fb"></a>
+        <a href="#" onclick="return false;"><img src="assets/pro-algo/twt.svg" alt="tw"></a>
+        <a href="#" onclick="return false;"><img src="assets/pro-algo/ig.svg" alt="ig"></a>
+        <a href="#" onclick="return false;"><img src="assets/pro-algo/ln.svg" alt="ln"></a>
+      </div>
+    </div>
+  </div>
+</footer>

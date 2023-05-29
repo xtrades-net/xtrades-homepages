@@ -1,8 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ModalService } from '@shared/components/modal/modal.service';
 import * as AOS from 'aos';
-import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +8,7 @@ import 'aos/dist/aos.css';
 export class AppComponent implements OnInit {
   title = 'homepage';
 
-  constructor(private modalService: ModalService, private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
     AOS.init({
@@ -20,13 +17,5 @@ export class AppComponent implements OnInit {
       offset: 40,
       once: true,
     });
-  }
-
-  openErrorModal() {
-    this.modalService.open('error-modal');
-  }
-
-  closeModal(id: string) {
-    this.modalService.close(id);
   }
 }
