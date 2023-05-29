@@ -26,6 +26,7 @@ export class FooterComponent implements OnInit {
       return;
     }
     try {
+      this.isLoading = true;
       await this.subscriptionService.saveSubscriber(email);
       this.isSubscribed = true;
     } catch (e) {
