@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import { SeoService } from '@shared/service/seo.service';
 import { Location } from '@angular/common';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-membership',
@@ -143,8 +144,15 @@ export class MembershipComponent {
   constructor(
     private http: HttpClient,
     private SEOService: SeoService,
+    private router: Router,
     private location: Location
-  ) {}
+  ) {
+    this.router.events.subscribe(($event) => {
+      if ($event instanceof NavigationEnd) {
+        window.location.href = 'https://app.xtrades.net/plans';
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.http
