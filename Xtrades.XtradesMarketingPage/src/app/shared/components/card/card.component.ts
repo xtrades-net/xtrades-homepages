@@ -8,13 +8,12 @@ import { ScreenService } from '@core/screen.service';
 })
 export class CardComponent implements OnInit {
   @Input() title = '';
-  @Input() subtitle: string = '';
+  @Input() subtitle = '';
   @Input() titleImgSrc = '';
   @Input() backgroundNoise = false;
   @Input() squeezed = false;
   @Input() iconPath = '';
   @Input() iconAlt = '';
-  @Input() link = '';
 
   constructor(public screenService: ScreenService) {}
 
