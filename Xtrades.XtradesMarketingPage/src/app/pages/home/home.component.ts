@@ -113,7 +113,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
     },
     {
       question: 'Do You Offer Crypto?',
-      answer: `We do not, but our partner server <a href="https://www.cryptotraders.com/ target="_blank">cryptotraders.com</a> specializes in finding great trading opportunities to earn Crypto and Stocks. Led by a Trader that turned $8K into $1.4M (70BTC) during the 2017 Bull Market. The pricing is Equal on this front.`,
+      answer: `We do not, but our partner server <a href="https://www.cryptotraders.com/" target="_blank">cryptotraders.com</a> specializes in finding great trading opportunities to earn Crypto and Stocks. Led by a Trader that turned $8K into $1.4M (70BTC) during the 2017 Bull Market. The pricing is Equal on this front.`,
       link: '<a href="https://www.cryptotraders.com/" target="_blank">cryptotraders.com</a>',
     },
   ];
