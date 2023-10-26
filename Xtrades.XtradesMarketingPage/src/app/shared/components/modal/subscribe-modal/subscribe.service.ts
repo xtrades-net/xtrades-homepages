@@ -47,6 +47,7 @@ export class SubscribeService {
       .set('EMAIL', email)
       .set(group, '1')
       .set('b_123abc123abc123abc123abc123abc123abc', '');
+
     const mailChimpUrl = `${this.mailChimpEndpoint}&${params.toString()}`;
     return this.http.jsonp(mailChimpUrl, 'c');
   }

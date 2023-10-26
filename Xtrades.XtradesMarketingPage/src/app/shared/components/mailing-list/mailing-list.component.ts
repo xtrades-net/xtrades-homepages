@@ -1,5 +1,10 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { ScreenService } from '@core/screen.service';
 import * as _ from 'lodash';
 import { SubscribeService } from '../modal/subscribe-modal/subscribe.service';
@@ -7,7 +12,7 @@ import { SubscribeService } from '../modal/subscribe-modal/subscribe.service';
 @Component({
   selector: 'app-mailing-list',
   templateUrl: './mailing-list.component.html',
-  styleUrls: ['./mailing-list.component.scss']
+  styleUrls: ['./mailing-list.component.scss'],
 })
 export class MailingListComponent {
   @ViewChild('email') input: ElementRef | any;
@@ -22,7 +27,7 @@ export class MailingListComponent {
     public screenService: ScreenService,
     private subscribeService: SubscribeService,
     private cdr: ChangeDetectorRef
-  ) { }
+  ) {}
 
   handleGoToBetaAppClick(): void {
     window.location.href = 'https://app.xtrades.net/';
@@ -46,10 +51,12 @@ export class MailingListComponent {
   }, 200);
 
   confirmSubscription() {
-    this.subscribeService.subscribeToMainHomepageList(this.input.value).subscribe({
-      next: (v) => this.subscribeSuccess(),
-      error: (e) => alert('something went wrong :(, please try again later'),
-    });
+    this.subscribeService
+      .subscribeToMainHomepageList(this.input.value)
+      .subscribe({
+        next: (v) => this.subscribeSuccess(),
+        error: (e) => alert('something went wrong :(, please try again later'),
+      });
   }
 
   subscribeSuccess() {
@@ -57,5 +64,4 @@ export class MailingListComponent {
     this.emailModel.email = '';
     this.alreadySubscribed = true;
   }
-
 }
