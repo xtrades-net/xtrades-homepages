@@ -370,15 +370,9 @@
           class="faq__toggle-button cursor-pointer"
         ></button>
       </div>
-      <div class="faq__article-description description">
-        <ng-container *ngIf="item.link; else noLink">
-          <span [innerHTML]="item.answer"></span>
-        </ng-container>
-        <ng-template #noLink>{{ item.answer }}</ng-template>
+      <div class="faq__article-description description" description [innerHTML]="item.answer">
+        <!-- {{ item.answer }} -->
       </div>
-      <!-- <div class="faq__article-description description" description>
-        {{ item.link? (item.answer.replace('insert-link', <a href="">test</a>)) : item.answer }}
-      </div> -->
     </app-hero>
     <app-separator></app-separator>
   </div>
