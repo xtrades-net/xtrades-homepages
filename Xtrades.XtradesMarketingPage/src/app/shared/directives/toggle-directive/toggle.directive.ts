@@ -28,8 +28,11 @@ export class ToggleDirective implements OnInit {
     });
   }
 
-  @HostListener('click', ['$event']) onClick() {
-    this.toggleVisibility();
+  @HostListener('click', ['$event']) onClick(event: MouseEvent) {
+    const clickedElement = event.target as HTMLElement;
+    if (clickedElement.className !== 'link-without-toogle-effect') {
+      this.toggleVisibility();
+    }
   }
 
   toggleVisibility() {
