@@ -109,7 +109,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
     {
       question: 'Is Xtrades Worth It?',
       answer:
-        "Xtrades was initially created to fill a very large gap in the market. We saw that education and guidance relating to the short-term US markets were extremely overpriced. Blind leading the blind, while at the same time charging unreasonable amounts to provide their information. We've developed a team of very experienced veterans that are willing to provide our insights for a low price of only $48/month - undercutting the entire overpriced system we see today of furus charging $100-$200/month for hardly any resources.",
+        "Xtrades was initially created to fill a very large gap in the market. We saw that education and guidance relating to the short-term US markets were extremely overpriced. Blind leading the blind, while at the same time charging unreasonable amounts to provide their information. We've developed a team of very experienced veterans that are willing to provide our insights for a low price of only $38/month - undercutting the entire overpriced system we see today of furus charging $100-$200/month for hardly any resources.",
     },
     {
       question: 'Do You Offer Crypto?',
