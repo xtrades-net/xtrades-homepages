@@ -1,4 +1,3 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   ChangeDetectorRef,
   Component,
@@ -8,6 +7,7 @@ import {
 import { ScreenService } from '@core/screen.service';
 import * as _ from 'lodash';
 import { SubscribeService } from '../modal/subscribe-modal/subscribe.service';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-mailing-list',
@@ -22,11 +22,14 @@ export class MailingListComponent {
 
   isEmailValid = false;
   alreadySubscribed = false;
+  successfullySubscribed = false;
+  alreadySubscribedStore = false;
 
   constructor(
     public screenService: ScreenService,
     private subscribeService: SubscribeService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private gtmService: GoogleTagManagerService
   ) {}
 
   handleGoToBetaAppClick(): void {
@@ -51,17 +54,33 @@ export class MailingListComponent {
   }, 200);
 
   confirmSubscription() {
-    this.subscribeService
-      .subscribeToMainHomepageList(this.input.value)
-      .subscribe({
-        next: (v) => this.subscribeSuccess(),
-        error: (e) => alert('something went wrong :(, please try again later'),
+    if (!this.alreadySubscribedStore) {
+      this.gtmService.pushTag({
+        event: 'mailingList',
+        email: this.input.value,
       });
+      this.successfullySubscribed = true;
+      setTimeout(() => {
+        this.successfullySubscribed = false;
+        this.subscribeSuccess();
+      }, 3000);
+    } else {
+      this.alreadySubscribed = true;
+      setTimeout(() => {
+        this.alreadySubscribed = false;
+      }, 3000);
+    }
+    // this.subscribeService
+    //   .subscribeToMainHomepageList(this.input.value)
+    //   .subscribe({
+    //     next: (v) => this.subscribeSuccess(),
+    //     error: (e) => alert('something went wrong :(, please try again later'),
+    //   });
   }
 
   subscribeSuccess() {
     localStorage.setItem('isSubscribed', 'true');
     this.emailModel.email = '';
-    this.alreadySubscribed = true;
+    this.alreadySubscribedStore = true;
   }
 }

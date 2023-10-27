@@ -26,7 +26,7 @@
       padding: 1em 1em 0.5em 1em;
     }
     &__form {
-      padding: 0 1em 3em 1em;
+      padding: 0 1em 1em 1em;
     }
     &__label {
       display: none;
@@ -67,9 +67,10 @@
       top: 0;
       color: var(--white);
     }
-    .already-subscribed {
+    .already-subscribed-wrap {
       font-weight: 500;
       padding: 1em 0;
+      height: 2em;
     }
   }
   

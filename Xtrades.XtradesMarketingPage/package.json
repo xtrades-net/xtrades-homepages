@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "angular-google-tag-manager": "1.4.3",
     "aos": "^2.3.4",
     "discord.js": "^14.3.0",
     "lottie-web": "^5.9.1",

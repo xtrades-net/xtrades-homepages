@@ -17,8 +17,13 @@
                         <button type="submit" class="btn btn-success mailing-list__btn cursor-pointer absolute"
                             [disabled]="email.errors?.['pattern']">Sign Up</button>
                     </div>
-                    <div class="already-subscribed" *ngIf="alreadySubscribed">
-                        You've already subscribed. Thanks!
+                    <div class="already-subscribed-wrap">
+                        <div class="already-subscribed" *ngIf="alreadySubscribed">
+                            You've already subscribed. Thanks!
+                        </div>
+                        <div class="already-subscribed" *ngIf="successfullySubscribed">
+                            Subscribed successfully!
+                        </div>
                     </div>
                 </div>
             </form>
