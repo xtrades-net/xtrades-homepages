@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from '@shared/components/banner/banner.component';
+import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 
 @NgModule({
   declarations: [AppComponent, BannerComponent],
@@ -13,6 +14,9 @@ import { BannerComponent } from '@shared/components/banner/banner.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    GoogleTagManagerModule.forRoot({
+      id: 'GTM-MZJJNMV',
+    }),
   ],
   providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],

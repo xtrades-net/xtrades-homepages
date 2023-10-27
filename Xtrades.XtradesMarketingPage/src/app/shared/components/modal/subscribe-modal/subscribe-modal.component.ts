@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import * as _ from 'lodash';
 import { SubscribeService } from './subscribe.service';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-subscribe-modal',
@@ -29,7 +30,8 @@ export class SubscribeModalComponent {
 
   constructor(
     private cdr: ChangeDetectorRef,
-    private subscribeService: SubscribeService
+    private subscribeService: SubscribeService,
+    private gtmService: GoogleTagManagerService
   ) {}
 
   onSubmit() {
@@ -50,10 +52,18 @@ export class SubscribeModalComponent {
   }, 200);
 
   confirmSubscription() {
-    this.subscribeService.subscribeToList(this.input.value).subscribe({
-      next: (v) => this.subscribeSuccess(),
-      error: (e) => alert('something went wrong :(, please try again later'),
+    this.gtmService.pushTag({
+      event: 'tenPercentDiscount',
+      email: this.input.value,
     });
+    this.subscribeSuccess();
+    setTimeout(() => {
+      this.isSuccessfullySubscibed = false;
+    }, 3000);
+    // this.subscribeService.subscribeToList(this.input.value).subscribe({
+    //   next: (v) => this.subscribeSuccess(),
+    //   error: (e) => alert('something went wrong :(, please try again later'),
+    // });
   }
 
   subscribeSuccess() {
