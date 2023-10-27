@@ -155,7 +155,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
         )
       )
       .subscribe((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         this.testimonials = res.data;
       });
   }
