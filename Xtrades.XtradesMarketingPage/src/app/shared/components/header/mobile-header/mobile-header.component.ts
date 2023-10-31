@@ -37,7 +37,7 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
   }
 
   signup(): void {
-    window.open('https://app.xtrades.net?modal=signup', '_blank');
+    window.open('https://app.xtrades.net/plans', '_blank');
   }
 
   onMenuClose(): void {
