@@ -89,22 +89,20 @@ export class HomeComponent implements AfterViewInit, OnInit {
     spaceBetween: 50,
     pagination: { clickable: true },
     scrollbar: false,
+    autoplay: {
+      delay: 10000, // 10 seconds in milliseconds
+      disableOnInteraction: false,
+    },
     zoom: {
       maxRatio: 2,
     },
+    speed: 1000,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   };
-  testimonials = [
-    {
-      quote:
-        'In addition to the excellent service provided by the analysts, Xtrades has an amazing and welcoming community where I feel at home.',
-      image: '../assets/testimonial1.webp',
-      name: 'Yung Boul Tommy',
-    },
-  ];
+  testimonials = [];
   faqs = [
     {
       question: 'Is Xtrades Worth It?',
@@ -155,7 +153,6 @@ export class HomeComponent implements AfterViewInit, OnInit {
         )
       )
       .subscribe((res) => {
-        // console.log(res.data);
         this.testimonials = res.data;
       });
   }

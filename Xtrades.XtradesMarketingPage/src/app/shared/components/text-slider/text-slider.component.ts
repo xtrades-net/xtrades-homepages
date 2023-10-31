@@ -4,9 +4,10 @@ import SwiperCore, {
   Navigation,
   Pagination,
   Scrollbar,
-} from 'swiper';
+  Autoplay,
+  } from 'swiper';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
 @Component({
   selector: 'app-text-slider',
@@ -15,5 +16,5 @@ SwiperCore.use([Navigation, Pagination, Scrollbar]);
 })
 export class TextSliderComponent {
   @Input() config: SwiperOptions = {};
-  @Input() testimonials: any = [];
-}
+  @Input() testimonials!: any;
+ }

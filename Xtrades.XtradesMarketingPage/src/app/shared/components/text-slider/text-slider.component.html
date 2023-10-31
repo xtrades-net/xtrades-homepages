@@ -1,4 +1,4 @@
-<div class="content__wrapper">
+<div *ngIf="testimonials.length" class="content__wrapper">
   <div class="content__swiper-container">
     <swiper class="swiper" [config]="config">
       <ng-template swiperSlide *ngFor="let item of testimonials">

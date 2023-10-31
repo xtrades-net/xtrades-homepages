@@ -12,9 +12,9 @@ export class HeaderProvider {
       HeaderElement.apply({ title: 'Home', directUrl: '' }),
       HeaderElement.apply({ title: 'xBlog', directUrl: 'blogs' }),
     ]);
-    this.populateHeaderElementsLast([
-      HeaderElement.apply({ title: 'Discount', directUrl: 'militarydiscount' }),
-    ]);
+    // this.populateHeaderElementsLast([
+    //   HeaderElement.apply({ title: 'Discount', directUrl: 'militarydiscount' }),
+    // ]);
   }
 
   public populateHeaderElements(headerElements: HeaderElement[]) {
