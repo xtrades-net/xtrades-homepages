@@ -22,7 +22,7 @@
     </div>
     <div class="main-mobile-header-body">
       <div class="header__elements">
-        <span
+        <!-- <span
           *ngFor="
             let element of headerElements.length !== 0
               ? headerElements
@@ -37,12 +37,32 @@
             [routerLinkActiveOptions]="{ exact: true }"
             >{{ element.title }}</a
           >
-        </span>
-        <app-accordion>
+        </span> -->
+        <ng-container *ngIf="!hideNavLinks; else notHomePage">
+          <span *ngFor="
+              let element of headerElements.length !== 0
+                ? headerElements
+                : headerProvider.headerElements
+            ">      
+            <a 
+              class="link"
+              [routerLink]="element.directUrl"
+              routerLinkActive="active-router-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >{{ element.title }}</a
+            >
+          </span>
+          </ng-container>
+          <ng-template #notHomePage>
+            <span>
+              <a class="link" [routerLink]="['/']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </span>
+          </ng-template>
+        <app-accordion *ngIf="!hideNavLinks">
           <span class="link cursor-pointer" trigger> Our Traders </span>
           <app-ourtraders [isMobile]="true"></app-ourtraders>
         </app-accordion>
-        <span>
+        <span *ngIf="!hideNavLinks">
           <a
             class="link"
             target="_blank"
@@ -55,7 +75,7 @@
                     <a class="link" target="_blank" href="https://app.xtrades.net/"
                         routerLinkActive="active-router-link">20 Day Free Trial</a>
                 </span> -->
-        <span>
+        <span *ngIf="!hideNavLinks">
           <a
             class="link"
             target="_blank"

@@ -5,12 +5,12 @@
         <div class="slide column slider-container">
           <div class="swiper-zoom-container">
             <div class="gradient-overlay">
-              <div class="testimonials__testimonial flex column relative">
+              <div class="testimonials__testimonial flex column relative button-next">
                 <div *ngIf="item.content" class="testimonials__quote relative" data-aos="fade-up">
                   {{ item.content | truncate:[200] }}
                 </div>
                 <img lazy *ngIf="item.avatar" [src]="item.avatar" class="testimonials__avatar" alt="Avatar" data-aos="fade-up" />
-                <span class="testimonials__signature">{{item.dateTime | date}}</span>
+                <span class="testimonials__signature" >{{item.dateTime | date}}</span>
                 <span class="testimonials__signature">{{item.username}}</span>
               </div>
             </div>
@@ -19,8 +19,8 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-scrollbar"></div>
 
-        <div *ngIf="testimonials.length !== 1" class="swiper-button-prev cursor-pointer"></div>
-        <div *ngIf="testimonials.length !== 1" class="swiper-button-next cursor-pointer"></div>
+        <div *ngIf="testimonials.length !== 1" class="swiper-button-prev cursor-pointer button-prev"></div>
+        <div *ngIf="testimonials.length !== 1" class="swiper-button-next cursor-pointer button-next"></div>
       </ng-template>
     </swiper>
   </div>

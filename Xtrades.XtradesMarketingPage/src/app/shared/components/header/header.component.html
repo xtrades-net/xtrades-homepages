@@ -16,14 +16,13 @@
     />
   </div>
   <div class="header__elements" *ngIf="!isMobile">
-    <span
-      *ngFor="
+    <ng-container *ngIf="!hideNavLinks; else notHomePage">
+    <span *ngFor="
         let element of headerElements.length !== 0
           ? headerElements
           : headerProvider.headerElements
-      "
-    >
-      <a
+      ">      
+      <a 
         class="link"
         [routerLink]="element.directUrl"
         routerLinkActive="active-router-link"
@@ -31,12 +30,18 @@
         >{{ element.title }}</a
       >
     </span>
+    </ng-container>
+    <ng-template #notHomePage>
+      <span>
+        <a class="link" [routerLink]="['/']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      </span>
+    </ng-template>
     <app-popover>
-      <a class="link cursor-pointer" trigger>Our Traders</a>
+      <a *ngIf="!hideNavLinks" class="link cursor-pointer" trigger>Our Traders</a>
       <app-ourtraders></app-ourtraders>
     </app-popover>
     <span>
-      <a
+      <a *ngIf="!hideNavLinks"
         class="link"
         target="_blank"
         href="https://xtrades.gitbook.io/documentation/alert-capture-bot-xcapture/overview"
@@ -48,7 +53,7 @@
       <a class="link" target="_blank" href="https://app.xtrades.net/" routerLinkActive="active-router-link">20 Day Free Trial</a>
     </span> -->
     <span>
-      <a
+      <a *ngIf="!hideNavLinks"
         class="link"
         target="_blank"
         href="https://xtrades.gitbook.io/documentation/about-us/about-xtrades"

@@ -98,8 +98,8 @@ export class HomeComponent implements AfterViewInit, OnInit {
     },
     speed: 1000,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.button-next',
+      prevEl: '.button-prev',
     },
   };
   testimonials = [];
