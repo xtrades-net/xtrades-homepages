@@ -25,7 +25,7 @@ swiper > * {
     position: absolute;
     top: 50%;
     @media (max-width: $md) {
-        top: calc(100% - 1.5em);
+        top: calc(102% - 1.5em);
     }
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -47,13 +47,14 @@ swiper > * {
     position: absolute;
     --swiper-pagination-color: white;
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: -20px;
     left: 10%;
 }
 ::ng-deep .swiper-container-horizontal > .swiper-pagination.swiper-pagination-bullets {
     left: 50%;
     @media (max-width: $md) {
-        width: 50%;
+        width: 80%;
+        bottom: -20px;
     }
 }
 ::ng-deep .swiper-pagination .swiper-pagination-bullet {
