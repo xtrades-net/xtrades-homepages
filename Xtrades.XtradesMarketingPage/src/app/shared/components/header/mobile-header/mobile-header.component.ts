@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angu
 import { Subscription } from 'rxjs';
 import { ScreenService } from 'src/app/core/screen.service';
 import { HeaderProvider } from '../header-provider/header-provider';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-mobile-header',
@@ -14,10 +15,12 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
   @Input() isDropdown = false;
   @Input() onClose: any;
   subscription = new Subscription();
+  public hideNavLinks = false;
 
   constructor(
     public headerProvider: HeaderProvider,
-    public screenService: ScreenService
+    public screenService: ScreenService,
+    private location: Location
   ) { }
 
   @Output() triggerClose = new EventEmitter<Event>();
@@ -30,6 +33,11 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
         return this.isMobile;
       })
     );
+    if(this.location.path().includes('blogs')){
+      this.hideNavLinks = true;
+    } else {
+      this.hideNavLinks = false;
+    }
   }
 
   login(): void {

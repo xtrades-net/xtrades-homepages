@@ -4,6 +4,7 @@ import { BodyScrollingService } from '@core/body-scrolling.service';
 import { HeaderProvider } from './header-provider/header-provider';
 import { Subscription } from 'rxjs';
 import { HeaderElement } from './header-models';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +15,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Input() isMainHeader = true;
   @Input() headerElements = [];
   @Input() headerElementsLast: HeaderElement[] = [];
+  public hideNavLinks = false;
 
   constructor(
     public headerProvider: HeaderProvider,
     public screenService: ScreenService,
-    private bodyScrolling: BodyScrollingService
+    private bodyScrolling: BodyScrollingService, 
+    private location: Location
   ) {}
 
   isMobile = false;
@@ -31,6 +34,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
         (x) => (this.isMobile = x.width < 992)
       )
     );
+    
+    if(this.location.path().includes('blogs')){
+      this.hideNavLinks = true;
+    } else {
+      this.hideNavLinks = false;
+    }
   }
 
   login(): void {
