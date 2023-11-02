@@ -127,6 +127,12 @@ export class BlogPostComponent {
       date: '01.12.2022',
       title: "A First Of It's Kind Application For Traders: The Xtrades App",
     },
+    {
+      id: '20',
+      url: 'differences-between-penny-stocks-and-normal-stocks',
+      date: '02.11.2023',
+      title: "What are the differences between Penny Stocks and Normal Stocks?",
+    },
   ];
 
   constructor(private router: Router) {
