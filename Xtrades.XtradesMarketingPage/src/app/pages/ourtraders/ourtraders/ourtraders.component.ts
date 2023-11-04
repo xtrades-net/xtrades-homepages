@@ -380,7 +380,6 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
 
   chooseRole(index: number) {
     this.traders = this.allRoles[index];
-    console.log(this.traders);
     if (!this.traders) {
       this.traders = [];
     }

@@ -36,9 +36,13 @@
         <a class="link" [routerLink]="['/']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       </span>
     </ng-template>
-    <app-popover>
+    <app-popover [width]="'640px'">
       <a *ngIf="!hideNavLinks" class="link cursor-pointer" trigger>Our Traders</a>
       <app-ourtraders></app-ourtraders>
+    </app-popover>
+    <app-popover [width]="'300px'">
+      <a *ngIf="!hideNavLinks" class="link cursor-pointer" trigger>Elite Products</a>
+      <app-products></app-products>
     </app-popover>
     <span>
       <a *ngIf="!hideNavLinks"

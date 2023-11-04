@@ -65,6 +65,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'elite-products',
+        loadChildren: () =>
+          import('../../pages/products/products.module').then(
+            (m) => m.ProductsModule
+          ),
+      },
+      {
         path: 'confirmation',
         loadChildren: () =>
           import('../../pages/confirmation/confirmation.module').then(
