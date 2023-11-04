@@ -1,0 +1,41 @@
+.elite-products {
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 0;
+  text-align: left;
+
+  &.is-mobile {
+    flex-direction: column;
+  }
+}
+
+.hoverable-role {
+  transition: color 0.15s ease-in-out;
+
+  &:before {
+    border-radius: 0;
+    left: 0;
+  }
+
+  &:hover {
+    color: #fff !important;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+
+.scroller {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 400px;
+  flex-wrap: nowrap;
+}
+
+.small-padding {
+  padding: 10px 0;
+  text-align: center;
+}

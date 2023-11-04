@@ -1,0 +1,9 @@
+<div class="elite-products responsive-main-container" [ngClass]="{ 'is-mobile': isMobile }">
+    <div *ngFor="let product of productsPages; index as i">
+        <div (click)="handleGoToDestination(i)"
+            class="small-padding cursor-pointer hoverable-role"
+            tabindex="-1" role="button" [style.color]="product.color" [style.background-color]="product.backgroundColor">
+            {{product.name}}
+        </div>
+    </div>
+</div>
