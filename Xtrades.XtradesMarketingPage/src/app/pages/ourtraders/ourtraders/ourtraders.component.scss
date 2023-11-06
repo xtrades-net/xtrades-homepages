@@ -4,6 +4,14 @@
   margin: 0 auto;
   justify-content: space-between;
   padding: 0;
+  .instagram-btn {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+  }
 
   &.is-mobile {
     flex-direction: column;
@@ -48,7 +56,6 @@
   justify-content: flex-start;
 }
 
-.profile-link,
 .hoverable-role {
   position: relative;
 
@@ -71,20 +78,17 @@
     }
   }
 }
-
 .profile-link {
+  padding-left: 15px;
+}
+.profile-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  bottom: 0;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 1;
   .href {
-    transition: color 0.15s ease-in-out;
-  }
-
-  &:hover {
-    &:before {
-      opacity: 1;
-    }
-
-    .href {
-      color: #fff;
-    }
+    color: #fff;
   }
 }
 
@@ -107,9 +111,6 @@
 
 .profile-text {
   padding: 15px;
-}
-
-.profile-link {
 }
 
 .small {
@@ -136,4 +137,8 @@
 .small-padding {
   padding: 10px 0;
   text-align: center;
+}
+
+.align-center {
+  align-items: center;
 }

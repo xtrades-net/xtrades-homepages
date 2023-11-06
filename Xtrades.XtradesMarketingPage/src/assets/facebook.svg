@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0"
-    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
-AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAllBMVEX///9JSZI7V5o7WZk7
-WZg6WZg7WZg9XJk7Wpg7WZhAYJ88WZk7WphAVZU7WZg5W5k8WZg7WZhHY56QocW4w9rT2ujV2+l5
-jrlUbqXi5vD///+KnMK7xtuLncI/XJr8/P329/rU2+hVb6Zyh7Vac6g9W5lkfK1ed6tBXptmfa+A
-lLxrgrFXcadWcKa2wdnCy99DYJxNaaIE6E6qAAAAEXRSTlMAB0mYwdrzGZfyCIT1GMgt498NJSsA
-AAABYktHRACIBR1IAAAACXBIWXMAAAPzAAAD8wF1XGupAAAAB3RJTUUH5gQTFBMfTC1LRQAAAQZJ
-REFUOMuFk2t/giAUxlFAUfLWysp2L1tbzbbv/+UGppwjsJ/PK/T5A+cGIUZBSBmPIs5oGBBXsUgq
-o0TElp3KRTXRQqbYz/LKUZ6BX5SVR2Vh9nt9RQxnpOj85cNqXdeb8ZZ7HBL87a7R2o/fss8Pxf/Y
-+82TyUVnK8B/flHua/22MX+Eqh+qz7vefsBxJgEJ0edRA8dJJiGhZt0uTxr4OJ9bAChhZv3ZjPoC
-gBHuAS4AcBJ5gCsAEQK+u5t2b133gwG4wpsFR0F6AYbS9AJ0vlC41C6gSo2b5QJi2m4H6NuNBsYB
-pDVyNjCMHAytBZSZPfbtr5LpNYz9/MOZf3rzj/f/5/8Hakw87NTyKVIAAAAldEVYdGRhdGU6Y3Jl
-YXRlADIwMjItMDQtMTlUMTc6MTk6MzErMDM6MDB209eQAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIy
-LTA0LTE5VDE3OjE5OjMxKzAzOjAwB45vLAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9y
-Z5vuPBoAAAAASUVORK5CYII=" />
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 291.319 291.319" xml:space="preserve">
+<g>
+	<path style="fill:#3B5998;" d="M145.659,0c80.45,0,145.66,65.219,145.66,145.66c0,80.45-65.21,145.659-145.66,145.659
+		S0,226.109,0,145.66C0,65.219,65.21,0,145.659,0z"/>
+	<path style="fill:#FFFFFF;" d="M163.394,100.277h18.772v-27.73h-22.067v0.1c-26.738,0.947-32.218,15.977-32.701,31.763h-0.055
+		v13.847h-18.207v27.156h18.207v72.793h27.439v-72.793h22.477l4.342-27.156h-26.81v-8.366
+		C154.791,104.556,158.341,100.277,163.394,100.277z"/>
+</g>
 </svg>
