@@ -15,6 +15,7 @@ interface Trader {
   name: string;
   icon: string;
   url: string;
+  instagramUrl?: string;
 }
 
 @Component({
@@ -28,6 +29,12 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
   traders: Trader[] = [];
   allRoles: Trader[][] = [
     [
+      {
+        name: 'Kevin',
+        icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/542100078123548684/avatars/d2a888f6554306ad7136d6620d8e8947.webp?size=100',
+        url: 'https://app.xtrades.net/profile/kevin',
+        instagramUrl: 'https://www.instagram.com/kevallin/',
+      },
       {
         name: 'Alexander_96',
         icon: 'https://xtradescoreprod.blob.core.windows.net/avatars/598921fe-d2f2-448d-a9da-b77200842d9e.png?size=100',
@@ -52,11 +59,6 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
         name: 'TimeHawk',
         icon: 'https://cdn.discordapp.com/avatars/201836635376058368/a24fc46ad9d6674fe2b786a4d608df66.webp?size=40',
         url: 'https://app.xtrades.net/profile/timehawk',
-      },
-      {
-        name: 'Kevin',
-        icon: 'https://cdn.discordapp.com/guilds/542224582317441034/users/542100078123548684/avatars/d2a888f6554306ad7136d6620d8e8947.webp?size=100',
-        url: 'https://app.xtrades.net/profile/kevin',
       },
     ],
     [
