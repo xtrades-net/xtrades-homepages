@@ -44,12 +44,12 @@ export class ProductsComponent implements OnInit, AfterViewInit {
         color: 'rgb(134, 230, 177)',
         backgroundColor: 'rgba(134, 230, 177, 0.1)',
       },
-      // {
-      //   name: 'Tools & Services',
-      //   url: 'https://app.xtrades.net/tools',
-      // color: 'rgb(186, 251, 132)',
-      // backgroundColor: 'rgba(186, 251, 132, 0.1)',
-      // },
+      {
+        name: 'Tools & Services',
+        url: 'https://app.xtrades.net/tools',
+        color: 'rgb(152, 255, 232)',
+        backgroundColor: 'rgba(152, 255, 232, 0.1)',
+      },
     ];
 
   constructor(
@@ -69,8 +69,6 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
     // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
-    console.log(this.productsPages);
-    
   }
 
   ngAfterViewInit(): void {
