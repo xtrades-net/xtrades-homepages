@@ -34,8 +34,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
         (x) => (this.isMobile = x.width < 992)
       )
     );
-    
-    if(this.location.path().includes('blogs')){
+
+    if(this.location.path() === '/blogs'){
       this.hideNavLinks = true;
     } else {
       this.hideNavLinks = false;
