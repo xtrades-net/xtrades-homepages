@@ -28,25 +28,25 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   productsPages: any = [
       {
         name: 'ThinkorSwim Scripts',
-        url: 'https://enhancedinvestor.squarespace.com/thinkorswim-scripts',
+        url: 'https://tools.xtrades.net/thinkorswim-scripts',
         color: 'rgb(194, 160, 134)',
         backgroundColor: 'rgba(194, 160, 134, 0.1)',
       },
       {
         name: 'Trade-ideas Scanner',
-        url: 'https://enhancedinvestor.squarespace.com/trade-ideas-scanner',
+        url: 'https://tools.xtrades.net/trade-ideas-scanner',
         color: 'rgb(124, 173, 212)',
         backgroundColor: 'rgba(124, 173, 212, 0.1)',
       },
       {
         name: 'E-Trade Pro Scanner',
-        url: 'https://enhancedinvestor.squarespace.com/etrade-pro-scanner',
+        url: 'https://tools.xtrades.net/etrade-pro-scanner',
         color: 'rgb(134, 230, 177)',
         backgroundColor: 'rgba(134, 230, 177, 0.1)',
       },
       {
         name: 'Tools & Services',
-        url: 'https://app.xtrades.net/tools',
+        url: 'https://tools.xtrades.net/',
         color: 'rgb(152, 255, 232)',
         backgroundColor: 'rgba(152, 255, 232, 0.1)',
       },
