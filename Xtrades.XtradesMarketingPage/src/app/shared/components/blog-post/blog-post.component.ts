@@ -131,7 +131,13 @@ export class BlogPostComponent {
       id: '20',
       url: 'differences-between-penny-stocks-and-normal-stocks',
       date: '02.11.2023',
-      title: "What are the differences between Penny Stocks and Normal Stocks?",
+      title: 'What are the differences between Penny Stocks and Normal Stocks?',
+    },
+    {
+      id: '21',
+      url: 'guide-to-options-flow-&-understanding-call-option-sweep',
+      date: '15.11.2023',
+      title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
     },
   ];
 

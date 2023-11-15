@@ -4,12 +4,11 @@
     <meta charset="utf-8" />
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Xtrades is the complete collaboration platform for traders – allowing optimized interaction to ensure consistent success. ... with those that are in the position ..."
-    />
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
-    <meta name="google-site-verification" content="4KDba7DYjZMBQFsTKlvMCoye5BZylvuR7S-d8V-sc7s" />
+    <meta
+      name="google-site-verification"
+      content="4KDba7DYjZMBQFsTKlvMCoye5BZylvuR7S-d8V-sc7s"
+    />
 
     <style>
       .full-screen {
@@ -227,9 +226,12 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- <meta http-equiv="refresh" content=".01;URL='http://topstockalerts.org/'" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="relative inactive-scroll">
@@ -285,7 +287,54 @@
   <img src="./assets/images/mobile-bg-svg.svg" class="bg-image bg-image__mobile" alt="Xtrades Trading Application" /> -->
   </div>
   <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_4Edzg9sIh1ZA2VcpLHdGIrEX5uf45We1rbH2goMPHPj',{api_host:'https://app.posthog.com'})
+    !(function (t, e) {
+      var o, n, p, r;
+      e.__SV ||
+        ((window.posthog = e),
+        (e._i = []),
+        (e.init = function (i, s, a) {
+          function g(t, e) {
+            var o = e.split(".");
+            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+              (t[e] = function () {
+                t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+              });
+          }
+          ((p = t.createElement("script")).type = "text/javascript"),
+            (p.async = !0),
+            (p.src = s.api_host + "/static/array.js"),
+            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(
+              p,
+              r
+            );
+          var u = e;
+          for (
+            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+              u.people = u.people || [],
+              u.toString = function (t) {
+                var e = "posthog";
+                return (
+                  "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                );
+              },
+              u.people.toString = function () {
+                return u.toString(1) + ".people (stub)";
+              },
+              o =
+                "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+                  " "
+                ),
+              n = 0;
+            n < o.length;
+            n++
+          )
+            g(u, o[n]);
+          e._i.push([i, s, a]);
+        }),
+        (e.__SV = 1));
+    })(document, window.posthog || []);
+    posthog.init("phc_4Edzg9sIh1ZA2VcpLHdGIrEX5uf45We1rbH2goMPHPj", {
+      api_host: "https://app.posthog.com",
+    });
   </script>
 </html>

@@ -12,11 +12,11 @@ import { Title_Description } from '../seo-config/seo.constants';
 import { DOCUMENT, Location } from '@angular/common';
 
 @Component({
-  selector: 'app-blog-post-20',
-  templateUrl: './blog-post-20.component.html',
+  selector: 'app-blog-post-21',
+  templateUrl: './blog-post-21.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogPost20Component {
+export class BlogPost21Component {
   @Input() id = 0;
 
   public list = Title_Description.List;
@@ -30,12 +30,17 @@ export class BlogPost20Component {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.id);
-
     const { url } = this.route.snapshot.params;
     let componentObj = this.list.find((obj) => obj.Path === url);
-    this.SEOService.updateTitle(componentObj?.Title || '');
-    this.SEOService.updateDescription(componentObj?.Des || '');
+    this.SEOService.updateTitle(
+      'Guide to Options Flow & Understanding Call Option Sweep'
+    );
+    this.SEOService.updateMetaTitle(
+      'Guide to Options Flow & Understanding Call Option Sweep'
+    );
+    this.SEOService.updateDescription(
+      'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!'
+    );
 
     // the script info -----
     let script = this._renderer2.createElement('script');

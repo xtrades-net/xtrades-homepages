@@ -201,10 +201,19 @@ export class BlogsComponent {
       id: '20',
       url: 'differences-between-penny-stocks-and-normal-stocks',
       snippet:
-        "Why are people so attracted to trading penny stocks?  This is a good question - it’s because penny stocks are more of a short term game.  People are drawn to instant gratification and penny stocks can be a provider for this.  It is a more active form of playing the markets.  You wake up in the morning, check the chat, check the charts and make a semi-informed decision on what trade will go up the most today.  In a sense, some can say it’s a form of betting with a slight edge if you know what you are doing. There’s also a simplicity factor when it comes to trading penny stocks.",
+        'Why are people so attracted to trading penny stocks?  This is a good question - it’s because penny stocks are more of a short term game.  People are drawn to instant gratification and penny stocks can be a provider for this.  It is a more active form of playing the markets.  You wake up in the morning, check the chat, check the charts and make a semi-informed decision on what trade will go up the most today.  In a sense, some can say it’s a form of betting with a slight edge if you know what you are doing. There’s also a simplicity factor when it comes to trading penny stocks.',
       href: '/blogs/differences-between-penny-stocks-and-normal-stocks',
       date: '02.11.2023',
-      title: "What are the differences between Penny Stocks and Normal Stocks?",
+      title: 'What are the differences between Penny Stocks and Normal Stocks?',
+    },
+    {
+      id: '21',
+      url: 'guide-to-options-flow-&-understanding-call-option-sweep',
+      snippet:
+        'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!',
+      href: '/blogs/guide-to-options-flow-&-understanding-call-option-sweep',
+      date: '15.11.2023',
+      title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
     },
   ].reverse();
 

@@ -18,6 +18,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
 import { BlogPost20Component } from './components/blog-post/blog-post-20/blog-post-20.component';
+import { BlogPost21Component } from './components/blog-post/blog-post-21/blog-post-21.component';
 import {
   BlogPost10Component,
   BlogPost11Component,
@@ -72,6 +73,7 @@ import { AccordionModule } from './components/accordion/accordion.module';
     BlogPost18Component,
     BlogPost19Component,
     BlogPost20Component,
+    BlogPost21Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
