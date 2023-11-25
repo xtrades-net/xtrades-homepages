@@ -45,6 +45,7 @@ import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-
 import { MobileAppLinkComponent } from './components/mobile-app-link/mobile-app-link.component';
 import { PopoverModule } from './components/popover/popover.module';
 import { AccordionModule } from './components/accordion/accordion.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { AccordionModule } from './components/accordion/accordion.module';
     VideoHeroModule,
     PopoverModule,
     AccordionModule,
+    DirectivesModule,
   ],
   exports: [
     CommonModule,

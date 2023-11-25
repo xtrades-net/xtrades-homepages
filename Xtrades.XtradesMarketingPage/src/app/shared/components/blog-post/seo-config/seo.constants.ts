@@ -601,7 +601,7 @@ export class Title_Description {
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Xtrades",
-        "url": "https://www.xtrades.net/documentation",
+        "url": "https://xtrades.gitbook.io/documentation/about-us/about-xtrades",
         "potentialAction": {
         "@type": "SearchAction",
         "target": "{search_term_string}",

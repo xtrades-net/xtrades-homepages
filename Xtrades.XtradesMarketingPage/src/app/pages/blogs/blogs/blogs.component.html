@@ -7,6 +7,8 @@
       <app-blog-card *ngFor="let blogPost of blogPosts" class="blogs__blog-post" [id]="blogPost.id" [blogPost]="blogPost"></app-blog-card>
   </div>
 </div>
+
+
 <app-modal [id]="'mailing-modal'" class="modal">
     <div class="column blogs__mailing-list">
       <app-mailing-list></app-mailing-list>

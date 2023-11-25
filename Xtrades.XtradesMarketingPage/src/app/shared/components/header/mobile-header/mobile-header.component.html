@@ -39,12 +39,14 @@
           >
         </span> -->
         <ng-container *ngIf="!hideNavLinks; else notHomePage">
-          <span *ngFor="
+          <span
+            *ngFor="
               let element of headerElements.length !== 0
                 ? headerElements
                 : headerProvider.headerElements
-            ">      
-            <a 
+            "
+          >
+            <a
               class="link"
               [routerLink]="element.directUrl"
               routerLinkActive="active-router-link"
@@ -52,12 +54,18 @@
               >{{ element.title }}</a
             >
           </span>
-          </ng-container>
-          <ng-template #notHomePage>
-            <span>
-              <a class="link" [routerLink]="['/']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-            </span>
-          </ng-template>
+        </ng-container>
+        <ng-template #notHomePage>
+          <span>
+            <a
+              class="link"
+              [routerLink]="['/']"
+              routerLinkActive="active-router-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </span>
+        </ng-template>
         <app-accordion *ngIf="!hideNavLinks">
           <span class="link cursor-pointer" trigger> Our Traders </span>
           <app-ourtraders [isMobile]="true"></app-ourtraders>
@@ -79,7 +87,7 @@
           <a
             class="link"
             target="_blank"
-            href="/documentation"
+            href="https://xtrades.gitbook.io/documentation/about-us/about-xtrades"
             routerLinkActive="active-router-link"
             >Docs</a
           >
