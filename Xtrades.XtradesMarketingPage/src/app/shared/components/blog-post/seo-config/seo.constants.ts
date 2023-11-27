@@ -686,6 +686,65 @@ export class Title_Description {
                 }`,
       ],
     },
+    /// 22-blog
+    {
+      Path: 'guide-to-swing-trading-strategies',
+      Title:
+        'For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.',
+      Spt: [
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.xtrades.net/blogs/guide-to-swing-trading-strategies"
+                  },
+                  "headline": "Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades",
+                  "description": "For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.",
+                  "image": "",
+                  "author": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "url": "https://www.xtrades.net/blogs"
+                  },
+                  "publisher": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                  }
+                  },
+                  "datePublished": "2022-11-15"
+                  }`,
+        `{
+                  "@context": "https://schema.org/",
+                  "@type": "FAQPage",
+                  "mainEntity": [{
+                    "@type": "Question",
+                    "name": "What Is Swing Trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Swing trading is a short-term style of trading that involves holding a stock for a short period of time, typically a few days to a few weeks, to take advantage of price fluctuations. 
+                It’s a strategy that tries to capitalize on more significant price movements but also requires patience compared to day trading."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "What Is XTrades?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. 
+                
+                Gamification of investing refers to adding features that focus on the user experience to make investing fun. 
+                
+                Users on the platform and through the iOS and Android apps can track other investors' advice and track records, allowing for upvoting to improve the investor's advice for other users. 
+                
+                The interactive nature of XTrades provides a more democratic version of investing advice, giving top performers a more extensive reach and exposure than they may otherwise receive."
+                    }
+                  }]
+                }`,
+      ],
+    },
   ];
   public static blogPageScript = `{
         "@context": "https://schema.org/",

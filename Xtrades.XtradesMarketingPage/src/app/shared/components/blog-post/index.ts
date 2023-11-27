@@ -17,3 +17,6 @@ export * from './blog-post-16/blog-post-16.component';
 export * from './blog-post-17/blog-post-17.component';
 export * from './blog-post-18/blog-post-18.component';
 export * from './blog-post-19/blog-post-19.component';
+export * from './blog-post-20/blog-post-20.component';
+export * from './blog-post-21/blog-post-21.component';
+export * from './blog-post-22/blog-post-22.component';

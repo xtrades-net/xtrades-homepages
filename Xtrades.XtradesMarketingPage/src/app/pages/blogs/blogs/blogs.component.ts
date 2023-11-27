@@ -215,6 +215,16 @@ export class BlogsComponent {
       date: '15.11.2023',
       title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
     },
+    {
+      id: '22',
+      url: 'guide-to-swing-trading-strategies',
+      snippet:
+        'For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades...',
+      href: '/blogs/guide-to-swing-trading-strategies',
+      date: '27.11.2023',
+      title:
+        'Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades',
+    },
   ].reverse();
 
   constructor(

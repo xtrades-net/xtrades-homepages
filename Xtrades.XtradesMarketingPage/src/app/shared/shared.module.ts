@@ -19,6 +19,7 @@ import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
 import { BlogPost20Component } from './components/blog-post/blog-post-20/blog-post-20.component';
 import { BlogPost21Component } from './components/blog-post/blog-post-21/blog-post-21.component';
+import { BlogPost22Component } from './components/blog-post/blog-post-22/blog-post-22.component';
 import {
   BlogPost10Component,
   BlogPost11Component,
@@ -75,6 +76,7 @@ import { DirectivesModule } from './directives/directives.module';
     BlogPost19Component,
     BlogPost20Component,
     BlogPost21Component,
+    BlogPost22Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
