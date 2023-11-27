@@ -689,8 +689,8 @@ export class Title_Description {
     /// 22-blog
     {
       Path: 'guide-to-swing-trading-strategies',
-      Title:
-        'For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.',
+      Title: 'XTrades: Unveiling Lucrative Swing Trading Strategies',
+      Des: ' For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.',
       Spt: [
         `{
                   "@context": "https://schema.org",
