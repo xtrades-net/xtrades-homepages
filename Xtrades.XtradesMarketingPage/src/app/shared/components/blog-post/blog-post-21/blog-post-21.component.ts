@@ -68,8 +68,17 @@ export class BlogPost21Component {
     // the script info -----
     let script = this._renderer2.createElement('script');
     script.type = `application/ld+json`;
-    script.text = componentObj?.Spt || ``;
-    this._renderer2.appendChild(this._document.body, script);
+    if (typeof componentObj?.Spt === 'string') {
+      script.text = componentObj?.Spt || ``;
+      this._renderer2.appendChild(this._document.body, script);
+    } else {
+      componentObj?.Spt.forEach((item: string) => {
+        script.text = item || ``;
+        console.log(item);
+
+        this._renderer2.appendChild(this._document.body, script);
+      });
+    }
 
     // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());

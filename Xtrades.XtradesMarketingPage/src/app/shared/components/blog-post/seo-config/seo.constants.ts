@@ -611,7 +611,8 @@ export class Title_Description {
       Path: 'guide-to-options-flow-&-understanding-call-option-sweep',
       Title: 'Guide to Options Flow & Understanding Call Option Sweep',
       Des: 'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!',
-      Spt: `{
+      Spt: [
+        `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
@@ -636,6 +637,54 @@ export class Title_Description {
                 },
                 "datePublished": "2022-11-15"
                 }`,
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                    "@type": "Question",
+                    "name": "Are calls bullish and puts bearish?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Both. Remember you can either buy or sell a call and likewise with puts. So if you BUY A CALL, that is bullish but if you SELL A CALL then its a bearish trade. The same goes for puts; if you BUY A PUT its bearish but if you SELL A PUT its bullish."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Why is selling options more dangerous?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The reason is that selling options gives you the obligation to do something whereas buying options gives you the right, if you want it. If you sell a call you are then obligated to turn over 100 shares if the trade didn’t go your way. If you sell a put you are obligated to buy shares if the trade didn't go your way."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "I bought a call and the stock went up but my profit barely moved or went down, why?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Remember the value of options is composed of intrinsic and extrinsic. If an option’s expiry is too far out or it is way OTM, then option values move slower. ATM and ITM options expiring the same day, 0DTE, are the ones that move more because they expire sooner."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "I always get out of trades and then they take off and I lose money, what am I doing wrong?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "This is very common when starting out if you have not taken the time to develop your trading strategy. Yes strategy includes how to do technical analysis and pick trades but it more importantly tells you when to get out. You must have a plan to take profits as soon as you can while leaving more contracts on the table and continue taking profits. If you exit a trade that was green because it made a sudden move downwards; not only did you lose your unrealized profits but you also cut your chances of making money once that trade rebounds. Watch our strategy videos."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How to check option flow?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Many new traders don’t know what is options flow or how to read it. To check options flow simply go to the options chain on your broker and look for large grouped trades. On Xtrades.net you can simply look for the icon with the waves flowing inside the circle:
+                
+                Call option sweeps: Sweeps are a type of trade made by large investors. While Block trades are trades of 10,000 shares or more made on one exchange. Sweeps on the other hand are large trades made over many exchanges. Sweeps and Blocks are identified, grouped and presented in Options Flow software to help traders get a better idea as to what stocks are being traded by Institutional investors who are the ones that make these types of trades."
+                    }
+                  }']
+                }`,
+      ],
     },
   ];
   public static blogPageScript = `{
