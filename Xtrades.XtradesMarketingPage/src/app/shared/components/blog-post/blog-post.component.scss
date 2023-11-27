@@ -1,38 +1,40 @@
 .column {
-    width: 80%;
-    margin: 0 auto;
-    text-align: justify;
-    @media screen and (max-width: 768px){
-        width: 94%;
-        font-weight: 300;
+  margin: 0 auto;
+  text-align: justify;
+  @media screen and (max-width: 768px) {
+    width: 94%;
+    font-weight: 300;
+  }
+  .faq__article-hero {
+    @media screen and (max-width: 768px) {
+      padding: 0;
     }
-    .faq__article-hero{
-        @media screen and (max-width: 768px){
-           padding: 0;
-        }
+    .faq__article-main {
+      width: 85%;
+      font-size: 18px;
+      @media screen and (max-width: 768px) {
+        font-weight: 400;
+        font-size: 18px;
+      }
     }
-    .faq__article-main{
-        width: 85%;
-        @media screen and (max-width: 768px){
-           width: 85%;
-           font-weight: 400;
-           font-size: 22px;
-        }
+    .faq__article-descripttion,
+    .description {
+      font-size: 14px;
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 18px;
+      }
     }
-    .faq__toggle-button{
-width: 28px;
-height: 28px;
-padding: 0;
-    }
+  }
 
+  .faq__toggle-button {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+  }
 }
 
 h3 {
-    text-align: center !important;
-}
-
-.faqs-icon{
-    display: block;
-    margin: 0 auto;
-    border-radius: 18px;
+  text-align: center !important;
 }
