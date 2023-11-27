@@ -30,11 +30,11 @@ export class BlogPost20Component {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.id);
-
     const { url } = this.route.snapshot.params;
+
     let componentObj = this.list.find((obj) => obj.Path === url);
     this.SEOService.updateTitle(componentObj?.Title || '');
+    this.SEOService.updateMetaTitle(componentObj?.Title || '');
     this.SEOService.updateDescription(componentObj?.Des || '');
 
     // the script info -----

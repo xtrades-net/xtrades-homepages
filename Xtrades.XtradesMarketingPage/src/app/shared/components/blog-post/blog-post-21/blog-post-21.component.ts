@@ -60,17 +60,11 @@ export class BlogPost21Component {
 
   ngOnInit(): void {
     const { url } = this.route.snapshot.params;
-    let componentObj = this.list.find((obj) => obj.Path === url);
-    this.SEOService.updateTitle(
-      'Guide to Options Flow & Understanding Call Option Sweep'
-    );
-    this.SEOService.updateMetaTitle(
-      'Guide to Options Flow & Understanding Call Option Sweep'
-    );
-    this.SEOService.updateDescription(
-      'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!'
-    );
 
+    let componentObj = this.list.find((obj) => obj.Path === url);
+    this.SEOService.updateTitle(componentObj?.Title || '');
+    this.SEOService.updateMetaTitle(componentObj?.Title || '');
+    this.SEOService.updateDescription(componentObj?.Des || '');
     // the script info -----
     let script = this._renderer2.createElement('script');
     script.type = `application/ld+json`;
