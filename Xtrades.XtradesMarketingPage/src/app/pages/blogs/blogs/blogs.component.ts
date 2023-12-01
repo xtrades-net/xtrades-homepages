@@ -225,6 +225,15 @@ export class BlogsComponent {
       title:
         'Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades',
     },
+    {
+      id: '23',
+      url: 'learn-stock-market-trading',
+      snippet:
+        'Tips for getting started beginner day trading, stock options trading, learning stock trading and learning options trading. Help to get a head start...',
+      href: '/blogs/learn-stock-market-trading',
+      date: '01.12.2023',
+      title: 'You want to trade stocks but don’t know where to start',
+    },
   ].reverse();
 
   constructor(

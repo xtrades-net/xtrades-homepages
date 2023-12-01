@@ -20,3 +20,4 @@ export * from './blog-post-19/blog-post-19.component';
 export * from './blog-post-20/blog-post-20.component';
 export * from './blog-post-21/blog-post-21.component';
 export * from './blog-post-22/blog-post-22.component';
+export * from './blog-post-23/blog-post-23.component';

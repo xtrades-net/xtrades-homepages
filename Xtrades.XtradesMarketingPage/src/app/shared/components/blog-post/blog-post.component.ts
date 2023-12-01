@@ -146,6 +146,12 @@ export class BlogPostComponent {
       title:
         'Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades',
     },
+    {
+      id: '23',
+      url: 'learn-stock-market-trading',
+      date: '29.11.2023',
+      title: "You want to trade stocks but don't know where to start",
+    },
   ];
 
   constructor(private router: Router) {

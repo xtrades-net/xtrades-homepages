@@ -715,7 +715,7 @@ export class Title_Description {
                   "url": "https://www.xtrades.net/assets/xtrades-logo.png"
                   }
                   },
-                  "datePublished": "2022-11-15"
+                  "datePublished": "2022-11-27"
                   }`,
         `{
                   "@context": "https://schema.org/",
@@ -743,6 +743,39 @@ export class Title_Description {
                     }
                   }]
                 }`,
+      ],
+    },
+    /// 23-blog
+    {
+      Path: 'learn-stock-market-trading',
+      Title: 'You want to trade stocks but don’t know where to start',
+      Des: 'Tips for getting started beginner day trading, stock options trading, learning stock trading and learning options trading. Help to get a head start.',
+      Spt: [
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.xtrades.net/blogs/learn-stock-market-trading"
+                  },
+                  "headline": "You want to trade stocks but don’t know where to start",
+                  "description": "Tips for getting started beginner day trading, stock options trading, learning stock trading and learning options trading. Help to get a head start.",
+                  "image": "",
+                  "author": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "url": "https://www.xtrades.net/blogs"
+                  },
+                  "publisher": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                  }
+                  },
+                  "datePublished": "2022-12-01"
+                  }`,
       ],
     },
   ];

@@ -74,7 +74,6 @@ export class BlogPost21Component {
     } else {
       componentObj?.Spt.forEach((item: string) => {
         script.text = item || ``;
-        console.log(item);
 
         this._renderer2.appendChild(this._document.body, script);
       });
