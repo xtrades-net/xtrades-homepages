@@ -778,6 +778,39 @@ export class Title_Description {
                   }`,
       ],
     },
+    /// 24-blog
+    {
+      Path: 'best-ai-penny-stocks-to-invest',
+      Title: 'Why people trade penny stocks and how to get started',
+      Des: 'Trading AI penny stocks, cannabis penny stocks, and biotech penny stocks can be risky, but lucrative if you know what you’re doing',
+      Spt: [
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.xtrades.net/blogs/best-ai-penny-stocks-to-invest"
+                  },
+                  "headline": "Why People Trade Penny Stocks and How to Get Started",
+                  "description": "Trading AI penny stocks, cannabis penny stocks, and biotech penny stocks can be risky, but lucrative if you know what you’re doing",
+                  "image": "",
+                  "author": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "url": "https://www.xtrades.net/blogs"
+                  },
+                  "publisher": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                  }
+                  },
+                  "datePublished": "2022-12-04"
+                  }`,
+      ],
+    },
   ];
   public static blogPageScript = `{
         "@context": "https://schema.org/",

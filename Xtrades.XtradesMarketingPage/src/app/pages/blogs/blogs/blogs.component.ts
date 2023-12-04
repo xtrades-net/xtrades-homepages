@@ -234,6 +234,15 @@ export class BlogsComponent {
       date: '01.12.2023',
       title: 'You want to trade stocks but don’t know where to start',
     },
+    {
+      id: '24',
+      url: 'best-ai-penny-stocks-to-invest',
+      snippet:
+        'Trading AI penny stocks, cannabis penny stocks, and biotech penny stocks can be risky, but lucrative if you know what you’re doing...',
+      href: '/blogs/best-ai-penny-stocks-to-invest',
+      date: '04.12.2023',
+      title: 'Why People Trade Penny Stocks and How to Get Started',
+    },
   ].reverse();
 
   constructor(

@@ -149,8 +149,14 @@ export class BlogPostComponent {
     {
       id: '23',
       url: 'learn-stock-market-trading',
-      date: '29.11.2023',
+      date: '01.12.2023',
       title: "You want to trade stocks but don't know where to start",
+    },
+    {
+      id: '24',
+      url: 'best-ai-penny-stocks-to-invest',
+      date: '04.12.2023',
+      title: 'Why People Trade Penny Stocks and How to Get Started',
     },
   ];
 

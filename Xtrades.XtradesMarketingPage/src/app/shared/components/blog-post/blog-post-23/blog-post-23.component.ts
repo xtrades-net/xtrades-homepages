@@ -62,6 +62,7 @@ export class BlogPost23Component {
     const { url } = this.route.snapshot.params;
 
     let componentObj = this.list.find((obj) => obj.Path === url);
+
     this.SEOService.updateTitle(componentObj?.Title || '');
     this.SEOService.updateMetaTitle(componentObj?.Title || '');
     this.SEOService.updateDescription(componentObj?.Des || '');
