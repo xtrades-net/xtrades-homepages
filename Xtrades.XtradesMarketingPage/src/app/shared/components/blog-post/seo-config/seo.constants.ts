@@ -213,17 +213,18 @@ export class Title_Description {
     },
     {
       Path: 'how-to-start-stock-training',
-      Title: 'Stock Market Trading and Stock Options for Beginners',
-      Des: 'Beginner Day Trading free Guide. Explore beginner day trading strategies, stock trading options, and expert insights. Join our Free Community!',
-      Spt: `{
+      Title: 'Trading Stock Options for Beginners | Call & Puts Guide',
+      Des: 'How to trade Call & Put Options like a pro! Options for beginners with Xtrades trading community. Join our Discord to see live technical analysis and trade signals!',
+      Spt: [
+        `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "https://www.xtrades.net/blogs/how-to-start-stock-training"
                 },
-                "headline": "How to Start Stock Trading: The Basics, Tips, and Tricks",
-                "description": "The world of stock trading can be daunting for those who are new to it. This blog post will walk you through everything necessary to get started, from buying your first shares all the way up to achieving success on Wall Street! We&#39;ll cover basic information like how much money one should invest with a brokerage account and some tips &amp; tricks designed just as much towards beginners like yourself looking to make their experience successful.",
+                "headline": "Trading options is different than stocks, but can be incredibly rewarding $$$!",
+                "description": "How to trade Call & Put Options like a pro! Options for beginners with Xtrades trading community. Join our Discord to see live technical analysis and trade signals!",
                 "image": "",
                 "author": {
                 "@type": "Organization",
@@ -238,8 +239,62 @@ export class Title_Description {
                 "url": "https://www.xtrades.net/assets/xtrades-logo.png"
                 }
                 },
-                "datePublished": "2022-07-25"
+                "datePublished": "2023-12-06"
                 }`,
+
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                    "@type": "Question",
+                    "name": "What is Day Trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Day trading refers to a trade made during a single trading day.  This means you are in and out on the same day.  A clear disadvantage is that you get out regardless of whether you took a loss and leave no consideration for a possible recovery in the future.  However if done properly can result in small gains on a daily basis which accumulate over time."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How much money do I need to start day trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "You can get started with as little as $50 or $100.  But you have to be well versed in day trading and technical analysis in order to not lose those $50-$100 on the same day.  It’s probably better to start with $500-$1000."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is day trading suitable for beginners?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "It is suitable but you must dedicate yourself to learning how to do it before you lose money."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I make a living from day trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Definitely.  Many people day-trade stock options for a living!"
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are some of the common option strategies for beginners?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Singles or naked calls and puts are the most common given they are the simplest type of trade to put on and understand.  This refers to buying a single call or single put.  Selling options and spreads are more complex and risky."
+                    },
+                    {
+                      "@type": "Question",
+                      "name": Is trading options harder than stocks?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Trading options is harder than stock trading for beginners, this is because options are more complex and depend not only on the price of the stock, but on different variables such as time to expiration, the overall market volatility and the expectations of other market participants."
+                      }
+                  }']
+                }`,
+      ],
     },
     {
       Path: 'what-are-the-best-social-trading-applications-or-platforms',
