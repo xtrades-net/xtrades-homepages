@@ -663,7 +663,7 @@ export class Title_Description {
 
     /// 21-blog
     {
-      Path: 'guide-to-options-flow-&-understanding-call-option-sweep',
+      Path: 'guide-to-options-flow-and-understanding-call-option-sweep',
       Title: 'Guide to Options Flow & Understanding Call Option Sweep',
       Des: 'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!',
       Spt: [
@@ -672,7 +672,7 @@ export class Title_Description {
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://www.xtrades.net/blogs/guide-to-options-flow-&-understanding-call-option-sweep"
+                "@id": "https://www.xtrades.net/blogs/guide-to-options-flow-and-understanding-call-option-sweep"
                 },
                 "headline": "Options Flow is DIFFERENT! Understanding Call Option Sweep",
                 "description": "How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!",

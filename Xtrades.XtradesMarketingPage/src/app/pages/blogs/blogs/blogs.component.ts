@@ -199,10 +199,10 @@ export class BlogsComponent {
     },
     {
       id: '21',
-      url: 'guide-to-options-flow-&-understanding-call-option-sweep',
+      url: 'guide-to-options-flow-and-understanding-call-option-sweep',
       snippet:
         'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them...',
-      href: '/blogs/guide-to-options-flow-&-understanding-call-option-sweep',
+      href: '/blogs/guide-to-options-flow-and-understanding-call-option-sweep',
       date: '15.11.2023',
       title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
     },

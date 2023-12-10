@@ -135,7 +135,7 @@ export class BlogPostComponent {
     },
     {
       id: '21',
-      url: 'guide-to-options-flow-&-understanding-call-option-sweep',
+      url: 'guide-to-options-flow-and-understanding-call-option-sweep',
       date: '15.11.2023',
       title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
     },
