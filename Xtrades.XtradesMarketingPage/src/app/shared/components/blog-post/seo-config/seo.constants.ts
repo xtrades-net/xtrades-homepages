@@ -866,6 +866,39 @@ export class Title_Description {
                   }`,
       ],
     },
+    /// 25-blog
+    {
+      Path: 'how-to-win-while-swing-trading-stocks-and-options',
+      Title: 'How to Win at Swing Trading Stocks and Options',
+      Des: 'Swing trading, holding on to stocks or options for more than a day, is how most traders operate; here is how to get started on them with help from Xtrades.',
+      Spt: [
+        `{
+                      "@context": "https://schema.org",
+                      "@type": "BlogPosting",
+                      "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://www.xtrades.net/blogs/how-to-win-while-swing-trading-stocks-and-options"
+                      },
+                      "headline": "How to Win at Swing Trading Stocks and Options",
+                      "description": "Swing trading, holding on to stocks or options for more than a day, is how most traders operate; here's how to get started on them with help from Xtrades.",
+                      "image": "",
+                      "author": {
+                      "@type": "Organization",
+                      "name": "Xtrades",
+                      "url": "https://www.xtrades.net/blogs"
+                      },
+                      "publisher": {
+                      "@type": "Organization",
+                      "name": "Xtrades",
+                      "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                      }
+                      },
+                      "datePublished": "2022-12-10"
+                      }`,
+      ],
+    },
   ];
   public static blogPageScript = `{
         "@context": "https://schema.org/",

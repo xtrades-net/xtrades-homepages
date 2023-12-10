@@ -243,6 +243,15 @@ export class BlogsComponent {
       date: '06.12.2023',
       title: 'How to start Stock Trading: The Basics, Tips and Tricks',
     },
+    {
+      id: '25',
+      url: 'how-to-win-while-swing-trading-stocks-and-options',
+      snippet:
+        'Taking a slightly longer view on trading can be very rewarding...',
+      href: '/blogs/how-to-win-while-swing-trading-stocks-and-options',
+      date: '10.12.2023',
+      title: 'How to Win While Swing Trading Stocks and Options',
+    },
   ].reverse();
 
   constructor(

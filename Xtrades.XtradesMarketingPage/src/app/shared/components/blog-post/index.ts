@@ -22,3 +22,4 @@ export * from './blog-post-21/blog-post-21.component';
 export * from './blog-post-22/blog-post-22.component';
 export * from './blog-post-23/blog-post-23.component';
 export * from './blog-post-24/blog-post-24.component';
+export * from './blog-post-25/blog-post-25.component';

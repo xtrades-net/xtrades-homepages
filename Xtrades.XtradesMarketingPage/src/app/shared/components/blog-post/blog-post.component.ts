@@ -158,6 +158,12 @@ export class BlogPostComponent {
       date: '04.12.2023',
       title: 'Why People Trade Penny Stocks and How to Get Started',
     },
+    {
+      id: '25',
+      url: 'how-to-win-while-swing-trading-stocks-and-options',
+      date: '10.12.2023',
+      title: 'How to Win at Swing Trading Stocks and Options',
+    },
   ];
 
   constructor(private router: Router) {
