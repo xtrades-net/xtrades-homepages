@@ -243,58 +243,48 @@ export class Title_Description {
                 }`,
 
         `{
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  "mainEntity": [
-                    {
-                    "@type": "Question",
-                    "name": "What is Day Trading?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Day trading refers to a trade made during a single trading day.  This means you are in and out on the same day.  A clear disadvantage is that you get out regardless of whether you took a loss and leave no consideration for a possible recovery in the future.  However if done properly can result in small gains on a daily basis which accumulate over time."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How much money do I need to start day trading?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "You can get started with as little as $50 or $100.  But you have to be well versed in day trading and technical analysis in order to not lose those $50-$100 on the same day.  It’s probably better to start with $500-$1000."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Is day trading suitable for beginners?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "It is suitable but you must dedicate yourself to learning how to do it before you lose money."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can I make a living from day trading?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Definitely.  Many people day-trade stock options for a living!"
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What are some of the common option strategies for beginners?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Singles or naked calls and puts are the most common given they are the simplest type of trade to put on and understand.  This refers to buying a single call or single put.  Selling options and spreads are more complex and risky."
-                    }
-                  },
-                    {
-                      "@type": "Question",
-                      "name": Is trading options harder than stocks?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Trading options is harder than stock trading for beginners, this is because options are more complex and depend not only on the price of the stock, but on different variables such as time to expiration, the overall market volatility and the expectations of other market participants."
-                      }
-                  }']
-                }`,
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Are calls bullish and puts bearish?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. Remember you can either buy or sell a call and likewise with puts. So if you BUY A CALL, that is bullish but if you SELL A CALL then its a bearish trade. The same goes for puts; if you BUY A PUT its bearish but if you SELL A PUT its bullish."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why is selling options more dangerous?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The reason is that selling options gives you the obligation to do something whereas buying options gives you the right, if you want it. If you sell a call you are then obligated to turn over 100 shares if the trade didn’t go your way. If you sell a put you are obligated to buy shares if the trade didn't go your way."
+            }
+          },{
+            "@type": "Question",
+            "name": "I bought a call and the stock went up but my profit barely moved or went down, why?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remember the value of options is composed of intrinsic and extrinsic. If an option’s expiry is too far out or it is way OTM, then option values move slower. ATM and ITM options expiring the same day, 0DTE, are the ones that move more because they expire sooner."
+            }
+          },{
+            "@type": "Question",
+            "name": "I always get out of trades and then they take off and I lose money, what am I doing wrong?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This is very common when starting out if you have not taken the time to develop your trading strategy. Yes strategy includes how to do technical analysis and pick trades but it more importantly tells you when to get out. You must have a plan to take profits as soon as you can while leaving more contracts on the table and continue taking profits. If you exit a trade that was green because it made a sudden move downwards; not only did you lose your unrealized profits but you also cut your chances of making money once that trade rebounds. Watch our strategy videos."
+            }
+          },{
+            "@type": "Question",
+            "name": "How to check option flow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many new traders don’t know what is options flow or how to read it. To check options flow simply go to the options chain on your broker and look for large grouped trades. On Xtrades.net you can simply look for the icon with the waves flowing inside the circle:
+        
+        Call option sweeps: Sweeps are a type of trade made by large investors. While Block trades are trades of 10,000 shares or more made on one exchange. Sweeps on the other hand are large trades made over many exchanges. Sweeps and Blocks are identified, grouped and presented in Options Flow software to help traders get a better idea as to what stocks are being traded by Institutional investors who are the ones that make these types of trades."
+            }
+          }]
+        }
+        `,
       ],
     },
     {
