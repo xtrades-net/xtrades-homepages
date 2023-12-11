@@ -220,25 +220,25 @@ export class Title_Description {
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://www.xtrades.net/blogs/how-to-start-stock-training"
-                },
+                                    "@type": "WebPage",
+                                    "@id": "https://www.xtrades.net/blogs/how-to-start-stock-training"
+                                    },
                 "headline": "Trading options is different than stocks, but can be incredibly rewarding $$$!",
                 "description": "How to trade Call & Put Options like a pro! Options for beginners with Xtrades trading community. Join our Discord to see live technical analysis and trade signals!",
                 "image": "",
                 "author": {
-                "@type": "Organization",
-                "name": "Xtrades",
-                "url": "https://www.xtrades.net/blogs"
+                          "@type": "Organization",
+                          "name": "Xtrades",
+                          "url": "https://www.xtrades.net/blogs"
                 },
                 "publisher": {
-                "@type": "Organization",
-                "name": "Xtrades",
-                "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.xtrades.net/assets/xtrades-logo.png"
-                }
-                },
+                          "@type": "Organization",
+                          "name": "Xtrades",
+                          "logo": {
+                                  "@type": "ImageObject",
+                                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                                  }
+                          },
                 "datePublished": "2023-12-06"
                 }`,
 
@@ -284,7 +284,8 @@ export class Title_Description {
                     "acceptedAnswer": {
                       "@type": "Answer",
                       "text": "Singles or naked calls and puts are the most common given they are the simplest type of trade to put on and understand.  This refers to buying a single call or single put.  Selling options and spreads are more complex and risky."
-                    },
+                    }
+                  },
                     {
                       "@type": "Question",
                       "name": Is trading options harder than stocks?",
