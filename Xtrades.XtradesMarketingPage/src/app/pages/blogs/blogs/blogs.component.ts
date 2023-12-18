@@ -247,10 +247,19 @@ export class BlogsComponent {
       id: '25',
       url: 'how-to-win-while-swing-trading-stocks-and-options',
       snippet:
-        'Taking a slightly longer view on trading can be very rewarding...',
+        'Taking a slightly longer view on trading can be very rewarding. The beauty of swing trades is often that it gives traders more time to be strategic and to patiently watch their plays work out over a period of days...',
       href: '/blogs/how-to-win-while-swing-trading-stocks-and-options',
       date: '10.12.2023',
       title: 'How to Win While Swing Trading Stocks and Options',
+    },
+    {
+      id: '26',
+      url: 'how-to-manage-risk-with-trading',
+      snippet:
+        'Get tips and strategies for trading options for beginners with X Trades. The expert help you need to succeed at day and swing trading...',
+      href: '/blogs/how-to-manage-risk-with-trading',
+      date: '18.12.2023',
+      title: 'How To Manage Risk With Trading Options For Beginners',
     },
   ].reverse();
 

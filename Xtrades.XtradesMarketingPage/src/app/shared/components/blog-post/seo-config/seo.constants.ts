@@ -734,7 +734,7 @@ export class Title_Description {
     },
     /// 22-blog
     {
-      Path: 'guide-to-swing-trading-strategies',
+      Path: 'how-to-manage-risk-with-trading-options',
       Title: 'XTrades: Unveiling Lucrative Swing Trading Strategies',
       Des: ' For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.',
       Spt: [
@@ -888,6 +888,50 @@ export class Title_Description {
                       },
                       "datePublished": "2022-12-10"
                       }`,
+      ],
+    },
+    /// 26-blog
+    {
+      Path: 'how-to-manage-risk-with-trading',
+      Title: 'Manage Risk With Trading Options For Beginners from X Trades',
+      Des: 'Get tips and strategies for trading options for beginners with X Trades. The expert help you need to succeed at day and swing trading',
+      Spt: [
+        `{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.xtrades.net/blogs/how-to-manage-risk-with-trading"
+          },
+          "headline": "How To Manage Risk With Trading Options For Beginners",
+          "description": "For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.",
+          "image": "",
+          "author": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "url": "https://www.xtrades.net/blogs"
+          },
+          "publisher": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+          }
+          },
+          "datePublished": "2022-11-18"
+          }`,
+        `{
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": "Trading Options For Beginners | How to trade Options",
+          "description": "If you want to learn day and swing trading join our social trading app today! Learn risk management in options trading from the best in the market.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wyiXLPdJ4G0/hqdefault.jpg",
+          "uploadDate": "2023-11-30",
+          "duration": "PT7M40S",
+          "embedUrl": "https://www.youtube.com/embed/wyiXLPdJ4G0?si=_DeJJHTb5zXM0vpu"
+        }
+        `,
       ],
     },
   ];

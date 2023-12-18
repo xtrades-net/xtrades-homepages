@@ -164,6 +164,12 @@ export class BlogPostComponent {
       date: '10.12.2023',
       title: 'How to Win at Swing Trading Stocks and Options',
     },
+    {
+      id: '26',
+      url: 'how-to-manage-risk-with-trading',
+      date: '18.12.2023',
+      title: 'How To Manage Risk With Trading Options For Beginners',
+    },
   ];
 
   constructor(private router: Router) {

@@ -43,6 +43,7 @@ import {
   BlogPost23Component,
   BlogPost24Component,
   BlogPost25Component,
+  BlogPost26Component,
 } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
@@ -83,6 +84,7 @@ import { DirectivesModule } from './directives/directives.module';
     BlogPost23Component,
     BlogPost24Component,
     BlogPost25Component,
+    BlogPost26Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
