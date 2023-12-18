@@ -32,8 +32,6 @@ export class SeoService {
   createCanonicalLink(url: string) {
     let headLinks = this.dom.querySelectorAll('link');
     headLinks.forEach((link) => {
-      if (link.rel === 'canonical') {
-      }
       link.rel === 'canonical' ? link.remove() : '';
     });
     let link: HTMLLinkElement = this.dom.createElement('link');
