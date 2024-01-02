@@ -1,35 +1,76 @@
 @import "../../../../styles/vars";
 
 .blog-card {
-    border-radius: 0 0 10px 10px;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background-color: #161616 !important;
-    border-width: 3px !important;
-    border: 3px solid transparent !important;
-    border-style: solid !important;
-    border-image: linear-gradient( 111.6deg, var(--brand-main-purple) 27.3%, var(--light-purple-detail) 112.7% ) !important;
-    border-image-slice: 1 !important;
-    max-width: 100%;
-    min-height: 200px;
-    height: 100%;
-    max-height: 400px;
-    
-    padding: 45px 15px;
+  border-radius: 0 0 10px 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #081b31 !important;
+  border-radius: 16px;
+  border: 1px #1b3655 solid;
+  min-height: 200px;
+  height: 100%;
 
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .image {
+    height: 160px;
+    width: 100%;
+    background: #143051;
+    border-radius: 10px;
+    margin-bottom: 9px;
+  }
+  .image-default {
+    height: 160px;
+    width: 100%;
+    background-color: #143051;
+    background-image: url("../../../../assets/blogs/default.svg");
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 9px;
+  }
+  &__texts {
+    margin: 45px 15px;
     display: flex;
     justify-content: space-between;
-    &__texts {
-        margin: 45px 15px;
-        display: flex;
-        justify-content: space-between;
+  }
+  &__date {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  &__title {
+    h3 {
+      height: 132px;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 9px;
+      margin-top: 9px;
+      overflow: hidden;
+      //   @media (max-width: $lg) {
+      //     font-size: 14px;
+      //   }
     }
-    &__title {
-        h3 { 
-            height: 60px;
-            @media(max-width: $lg) {
-                font-size: 14px;
-            }
-        }
-    }
+  }
+  .desc {
+    margin: 0;
+    color: #8a94a0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    height: 96px;
+    overflow: hidden;
+  }
+  .link-to-more {
+    font-size: 16px;
+    font-family: Poppins;
+    color: white;
+    font-weight: 600;
+    line-height: 30px;
+  }
 }

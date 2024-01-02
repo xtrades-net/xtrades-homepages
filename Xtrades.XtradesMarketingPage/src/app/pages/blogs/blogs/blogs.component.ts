@@ -187,6 +187,7 @@ export class BlogsComponent {
       href: '/blogs/a-first-of-its-kind-application-for-traders',
       date: '01.12.2022',
       title: "A First Of It's Kind Application For Traders: The Xtrades App",
+      image: 'assets/blogs/19/19-1.png',
     },
     {
       id: '20',
@@ -196,6 +197,7 @@ export class BlogsComponent {
       href: '/blogs/differences-between-penny-stocks-and-normal-stocks',
       date: '02.11.2023',
       title: 'What are the differences between Penny Stocks and Normal Stocks?',
+      image: 'assets/blogs/20/20-1.png',
     },
     {
       id: '21',
@@ -205,6 +207,7 @@ export class BlogsComponent {
       href: '/blogs/guide-to-options-flow-and-understanding-call-option-sweep',
       date: '15.11.2023',
       title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
+      image: 'assets/blogs/21/21-1.png',
     },
     {
       id: '22',
@@ -215,6 +218,7 @@ export class BlogsComponent {
       date: '27.11.2023',
       title:
         'Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades',
+      image: 'assets/blogs/22/xstats.jpg',
     },
     {
       id: '23',
@@ -224,6 +228,7 @@ export class BlogsComponent {
       href: '/blogs/learn-stock-market-trading',
       date: '01.12.2023',
       title: 'You want to trade stocks but don’t know where to start',
+      image: 'assets/blogs/23/success.jpg',
     },
     {
       id: '24',
@@ -233,6 +238,7 @@ export class BlogsComponent {
       href: '/blogs/best-ai-penny-stocks-to-invest',
       date: '04.12.2023',
       title: 'Why People Trade Penny Stocks and How to Get Started',
+      image: 'assets/blogs/24/bars.png',
     },
     {
       id: '12',
@@ -242,6 +248,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-start-stock-training',
       date: '06.12.2023',
       title: 'How to start Stock Trading: The Basics, Tips and Tricks',
+      image: 'assets/blogs/12/options.png',
     },
     {
       id: '25',
@@ -251,6 +258,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-win-while-swing-trading-stocks-and-options',
       date: '10.12.2023',
       title: 'How to Win While Swing Trading Stocks and Options',
+      image: 'assets/blogs/25/buy-hold-sell.jpg',
     },
     {
       id: '26',
@@ -260,6 +268,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-manage-risk-with-trading',
       date: '18.12.2023',
       title: 'How To Manage Risk With Trading Options For Beginners',
+      image: 'assets/blogs/26/video.png',
     },
   ].reverse();
 

@@ -1,12 +1,24 @@
 <div class="gradient-overlay">
-    <div class="blog-card">
-        <div class="blog-card_texts">
-          <span class="post-date">{{blogPost.date}}</span>
-          <a style="color: #ffffff" class="blog-card__title" [href]="blogPost.href"><h3 class="post-title">
-            {{blogPost.title}}
-          </h3></a>
-          <p>{{blogPost.snippet | truncate:[140] }}</p>
-          <a [href]="blogPost.href" class="link-to-more">Continue</a>
-        </div>
+  <div class="blog-card">
+    <div
+      class="image"
+      *ngIf="blogPost.image; else default"
+      [style.background]="
+        'url(' + blogPost.image + ') no-repeat center / cover'
+      "
+    ></div>
+    <ng-template #default>
+      <div class="image-default"></div>
+    </ng-template>
+    <div class="blog-card_texts">
+      <span class="blog-card__date">{{ blogPost.date }}</span>
+      <a style="color: #ffffff" class="blog-card__title" [href]="blogPost.href"
+        ><h3 class="post-title">
+          {{ blogPost.title }}
+        </h3></a
+      >
+      <p class="desc">{{ blogPost.snippet }}</p>
+      <a [href]="blogPost.href" class="link-to-more">read more</a>
     </div>
+  </div>
 </div>
