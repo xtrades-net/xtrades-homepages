@@ -13,8 +13,8 @@
     <div class="blog-card_texts">
       <span class="blog-card__date">{{ blogPost.date }}</span>
       <a style="color: #ffffff" class="blog-card__title" [href]="blogPost.href"
-        ><h3 class="post-title">
-          {{ blogPost.title }}
+        ><h3 class="post-title" style="word-break:keep-all;">
+          {{ blogPost.title | truncate:[58] }}
         </h3></a
       >
       <p class="desc">{{ blogPost.snippet }}</p>
