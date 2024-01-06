@@ -25,9 +25,9 @@ export class AppComponent implements OnInit, OnDestroy {
     });
     window.Intercom('boot', {
       app_id: "kz9zp2wu",
-      email: '',
-      user_id: 'Xtrades Homepage User',
-      created_at: new Date(),
+      //email: '',
+      // user_id: 'Xtrades Homepage User',
+      //created_at: new Date(),
     });
   }
 
