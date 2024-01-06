@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 
 declare global {
@@ -11,7 +11,7 @@ declare global {
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'homepage';
 
   constructor() {}
@@ -29,5 +29,9 @@ export class AppComponent implements OnInit {
       user_id: 'Xtrades Homepage User',
       created_at: new Date(),
     });
+  }
+
+  ngOnDestroy(){
+    window.Intercom('shutdown');
   }
 }
