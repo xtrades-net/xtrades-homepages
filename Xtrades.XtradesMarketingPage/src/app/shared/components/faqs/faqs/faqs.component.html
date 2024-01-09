@@ -1,0 +1,33 @@
+<section class="faq responsive-main-container column">
+  <app-hero class="faq__hero">
+    <div class="faq__main header-1" data-aos="fade-up">
+      Frequently <span class="faq__hero-detail">Asked</span> Questions
+    </div>
+  </app-hero>
+  <div
+    class="faq__questions column cursor-pointer"
+    *ngFor="let item of faqs; let i = index"
+    [attr.data-index]="i"
+    appToggle
+  >
+    <app-hero class="faq__article-hero" data-aos="fade-up">
+      <div class="flex space-between">
+        <div class="faq__article-main">
+          {{ item.question }}
+        </div>
+        <button
+          aria-label="Toggle FAQ"
+          class="faq__toggle-button cursor-pointer"
+        ></button>
+      </div>
+      <div
+        class="faq__article-description description"
+        description
+        [innerHTML]="item.answer"
+      >
+        <!-- {{ item.answer }} -->
+      </div>
+    </app-hero>
+    <app-separator *ngIf="i < faqs.length - 1"></app-separator>
+  </div>
+</section>

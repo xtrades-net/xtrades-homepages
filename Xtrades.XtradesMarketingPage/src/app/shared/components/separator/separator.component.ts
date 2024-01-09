@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SeparatorComponent implements OnInit {
   @Input() isAnimated = false;
+  @Input() width = '100%';
 
   constructor() {}
 

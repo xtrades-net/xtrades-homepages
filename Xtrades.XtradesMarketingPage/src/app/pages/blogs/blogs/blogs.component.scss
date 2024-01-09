@@ -4,13 +4,34 @@
   max-width: 962px;
   justify-content: center;
   margin: 0 auto;
-
-  &__header {
-    color: white;
-    font-size: 48px;
-    font-weight: 700;
+  .top-block {
+    display: flex;
+    justify-content: space-between;
     margin-top: 125px;
+    &__item {
+      width: 50%;
+      .header {
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .desc {
+        color: #8a94a0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        max-width: 400px;
+        text-align: justify;
+        margin-top: 20px;
+        margin-bottom: 25px;
+      }
+    }
+    .last {
+      width: 380px;
+    }
   }
+
   &__mailing-list {
     @media (max-width: $md) {
       max-width: 100%;
@@ -37,4 +58,26 @@
       width: 100%;
     }
   }
+}
+.more {
+  width: 120px;
+  height: 43px;
+  color: #4c719c;
+  border: 1px solid #4c719c;
+  border-radius: 8px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.more:hover {
+  color: #7089a6;
+  border: 1px solid #7089a6;
+}
+.faqs-wrap {
+  margin-bottom: 50px;
 }

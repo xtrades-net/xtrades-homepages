@@ -1,0 +1,42 @@
+<div
+  class="email"
+  [formGroup]="form"
+  [style.width]="width"
+  [style.height]="height"
+>
+  <input
+    formControlName="email"
+    class="email-input"
+    type="text"
+    placeholder="enter your email address"
+    [style.height]="height"
+    [style.width]="width"
+    [style.line-height]="height"
+  /><button
+    [style.background]="buttonBackground"
+    [style.width]="buttonWidth"
+    (click)="onSubmit()"
+  >
+    {{ buttonText }}
+  </button>
+</div>
+<div class="error-wrap">
+  <div
+    class="error"
+    *ngIf="
+      (form.get('email')?.hasError('email') || !form.get('email')?.value) &&
+      form.get('email')?.touched
+    "
+  >
+    Please enter a valid email address
+  </div>
+</div>
+
+<div class="already-subscribed-wrap">
+  <div class="already-subscribed" *ngIf="alreadySubscribed">
+    You've already subscribed. Thanks!
+  </div>
+  <div class="already-subscribed" *ngIf="successfullySubscribed">
+    Subscribed successfully!
+  </div>
+</div>

@@ -5,12 +5,14 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { SharedModule } from '@shared/shared.module';
 import { BlogPostComponent } from '@shared/components/blog-post/blog-post.component';
 import { ModalModule } from '@shared/components/modal/modal.module';
+import { FooterModule } from '@shared/components/footer/footer.module';
 
 @NgModule({
   declarations: [BlogsComponent],
   imports: [
     CommonModule,
     SharedModule,
+    FooterModule,
     RouterModule.forChild([
       {
         path: '',
@@ -18,7 +20,7 @@ import { ModalModule } from '@shared/components/modal/modal.module';
       },
       { path: ':url', component: BlogPostComponent },
     ]),
-    ModalModule
+    ModalModule,
   ],
 })
 export class BlogsModule {}
