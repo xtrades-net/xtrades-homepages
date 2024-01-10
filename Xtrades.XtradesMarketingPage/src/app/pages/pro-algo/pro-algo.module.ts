@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProAlgoComponent } from './pro-algo.component';
-import { FooterModule } from '@shared/components/footer-new/footer.module';
+import { SharedModule } from '@shared/shared.module';
 import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { SwiperModule } from 'swiper/angular';
         component: ProAlgoComponent,
       },
     ]),
-    FooterModule,
+    SharedModule,
     SwiperModule,
   ],
 })

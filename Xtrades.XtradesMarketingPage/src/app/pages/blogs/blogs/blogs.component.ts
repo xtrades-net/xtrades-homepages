@@ -247,6 +247,9 @@ export class BlogsComponent {
       date: '01.12.2023',
       title: 'You want to trade stocks but don’t know where to start',
       image: 'assets/blogs/23/success.jpg',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
     },
     {
       id: '24',
@@ -257,6 +260,9 @@ export class BlogsComponent {
       date: '04.12.2023',
       title: 'Why People Trade Penny Stocks and How to Get Started',
       image: 'assets/blogs/24/bars.png',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
     },
     {
       id: '12',
@@ -277,6 +283,9 @@ export class BlogsComponent {
       date: '10.12.2023',
       title: 'How to Win While Swing Trading Stocks and Options',
       image: 'assets/blogs/25/buy-hold-sell.jpg',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
     },
     {
       id: '26',
@@ -291,12 +300,14 @@ export class BlogsComponent {
     {
       id: '27',
       url: 'why-you-need-real-time-alerts-for-your-stock-trading',
-      snippet:
-        `We'll go over a few easy ways to start utilizing real-time alerts, whether they're real-time stocks trackers, real-time stock news alerts, or real-time trade alerts, for your trading activity...`,
+      snippet: `We'll go over a few easy ways to start utilizing real-time alerts, whether they're real-time stocks trackers, real-time stock news alerts, or real-time trade alerts, for your trading activity...`,
       href: '/blogs/why-you-need-real-time-alerts-for-your-stock-trading',
       date: '10.01.2024',
       title: 'Why You Need Real-Time Alerts for Your Stock Trading',
       image: 'assets/blogs/27/27-1.jpg',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
     },
   ].reverse();
   blogs = this.blogPosts.slice(1, 7);
@@ -329,7 +340,7 @@ export class BlogsComponent {
       );
     } else {
       this.blogs = this.blogs.concat(
-        this.blogPosts.slice(this.blogs.length, this.blogPosts.length + 1)
+        this.blogPosts.slice(this.blogs.length + 1, this.blogPosts.length + 1)
       );
       this.shortView = false;
     }

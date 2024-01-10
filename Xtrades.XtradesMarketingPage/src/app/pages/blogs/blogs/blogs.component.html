@@ -22,10 +22,11 @@
   </div>
   <div class="flex responsive-main-container blogs__blog-posts">
     <app-blog-card
-      *ngFor="let blogPost of blogs"
+      *ngFor="let blogPost of blogs; let i; as: index"
       class="blogs__blog-post"
       [id]="blogPost.id"
       [blogPost]="blogPost"
+      [index]="i"
     ></app-blog-card>
   </div>
 
@@ -45,10 +46,10 @@
     </div>
   </app-modal>
 </div>
-<app-footer
+<app-footer-new
   data-aos-offset="130"
   data-aos-delay="90000"
   [backgroundColor]="'#263247'"
   [withEmail]="true"
 >
-</app-footer>
+</app-footer-new>

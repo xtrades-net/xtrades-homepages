@@ -11,10 +11,24 @@
       <div class="image-default"></div>
     </ng-template>
     <div class="blog-card_texts">
-      <span class="blog-card__date">{{ blogPost.date }}</span>
+      <div class="blog-stats">
+        <span class="blog-card__date">{{ blogPost.date }}</span>
+        <div class="duration-initials">
+          <img src="assets/blogs/clock.svg" alt="clock" /><span>15 min</span>
+          <div class="author-block" *ngIf="blogPost.author; else defaultAuthor">
+            <span class="initials">{{ blogPost.initials }}</span>
+          </div>
+          <ng-template #defaultAuthor>
+            <div class="author-block">
+              <span class="initials">KW</span>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+
       <a style="color: #ffffff" class="blog-card__title" [href]="blogPost.href"
-        ><h3 class="post-title" style="word-break:keep-all;">
-          {{ blogPost.title | truncate:[58] }}
+        ><h3 class="post-title" style="word-break: keep-all">
+          {{ blogPost.title | truncate : [58] }}
         </h3></a
       >
       <p class="desc">{{ blogPost.snippet }}</p>

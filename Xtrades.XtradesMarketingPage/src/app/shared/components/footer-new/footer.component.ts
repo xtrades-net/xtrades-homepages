@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SubscriptionService } from '@core/subscription.service';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-footer-new',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
   isSubscribed = false;
   isLoading = false;
-
+  @Input() backgroundColor: string = '';
+  @Input() withEmail = false;
+  
   constructor(private subscriptionService: SubscriptionService) {}
 
   ngOnInit(): void {}

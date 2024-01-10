@@ -10,7 +10,7 @@ import { IconCardModule } from './components/icon-card/icon-card.module';
 import { SliderModule } from './components/slider/slider.module';
 import { LabelComponent } from './components/label/label.component';
 import { TextSliderModule } from './components/text-slider/text-slider.module';
-import { FooterModule } from './components/footer/footer.module';
+import { FooterComponent } from './components/footer-new/footer.component';
 import { NewsComponent } from './components/news/news.component';
 import { MailingListComponent } from './components/mailing-list/mailing-list.component';
 import { FormsModule } from '@angular/forms';
@@ -96,6 +96,7 @@ import { FaqsComponent } from './components/faqs/faqs/faqs.component';
     MobileAppLinkComponent,
     MailingListNewComponent,
     FaqsComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -109,7 +110,6 @@ import { FaqsComponent } from './components/faqs/faqs/faqs.component';
     IconCardModule,
     SliderModule,
     TextSliderModule,
-    // FooterModule,
     VideoHeroModule,
     PopoverModule,
     AccordionModule,
@@ -126,7 +126,7 @@ import { FaqsComponent } from './components/faqs/faqs/faqs.component';
     SliderModule,
     LabelComponent,
     TextSliderModule,
-    // FooterModule,
+    FooterComponent,
     NewsComponent,
     MailingListComponent,
     BlogCardComponent,
