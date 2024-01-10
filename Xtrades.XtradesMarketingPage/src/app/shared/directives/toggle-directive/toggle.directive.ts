@@ -35,7 +35,7 @@ export class ToggleDirective implements OnInit {
     }
   }
 
-  toggleVisibility() {
+  toggleVisibility() {  
     this.isActive = !this.isActive;
     let mainElement = this.elRef.nativeElement;
     if (mainElement.querySelector('.faq__article-hero')) {

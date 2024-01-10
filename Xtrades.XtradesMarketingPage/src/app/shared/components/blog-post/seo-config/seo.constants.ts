@@ -122,8 +122,8 @@ export class Title_Description {
     },
     {
       Path: 'trading-scripts-and-trading-channels',
-      Title: 'Trading Scripts and Trading Channels',
-      Des: 'Trading Scripts are indicators and strategies made with the help of programming language. Trading channels can be drawn on charts to help see uptrends and downtrends in a stock, commodity, ETF, etc.',
+      Title: 'Trading Channels Strategies and TradingView Scripts',
+      Des: 'Explore effective trading channels and TradingView scripts for stock trading success. Optimize your trades with powerful trading scripts!',
       Spt: `{
             "@context": "https://schema.org",
             "@type": "BlogPosting",
@@ -152,8 +152,8 @@ export class Title_Description {
     },
     {
       Path: 'xtrades-and-penny-stock-alerts',
-      Title: 'Xtrades And Penny Stock Alerts',
-      Des: 'Penny Stock Alerts are signals for potential trades. These alerts usually come from paid services that send out alerts through text messages, emails, or chat rooms.',
+      Title: 'Daily Penny Stock Alerts | Active and Hot Penny Stocks',
+      Des: 'Join our Discord for daily penny stock alerts. Stay informed about the hottest penny stocks, trade alerts, and latest news. Join Xtrades for free!',
       Spt: `{
             "@context": "https://schema.org",
             "@type": "BlogPosting",
@@ -213,33 +213,79 @@ export class Title_Description {
     },
     {
       Path: 'how-to-start-stock-training',
-      Title: 'How to Start Stock Trading: The Basics, Tips, and Tricks',
-      Des: 'Investing in shares may be top notch ideas, but here are some of the inventory marketplace fundamentals each starting investor needs to understand earlier than getting started.',
-      Spt: `{
+      Title: 'Trading Stock Options for Beginners | Call & Puts Guide',
+      Des: 'How to trade Call & Put Options like a pro! Options for beginners with Xtrades trading community. Join our Discord to see live technical analysis and trade signals!',
+      Spt: [
+        `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
                 "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://www.xtrades.net/blogs/how-to-start-stock-training"
-                },
-                "headline": "How to Start Stock Trading: The Basics, Tips, and Tricks",
-                "description": "The world of stock trading can be daunting for those who are new to it. This blog post will walk you through everything necessary to get started, from buying your first shares all the way up to achieving success on Wall Street! We&#39;ll cover basic information like how much money one should invest with a brokerage account and some tips &amp; tricks designed just as much towards beginners like yourself looking to make their experience successful.",
+                                    "@type": "WebPage",
+                                    "@id": "https://www.xtrades.net/blogs/how-to-start-stock-training"
+                                    },
+                "headline": "Trading options is different than stocks, but can be incredibly rewarding $$$!",
+                "description": "How to trade Call & Put Options like a pro! Options for beginners with Xtrades trading community. Join our Discord to see live technical analysis and trade signals!",
                 "image": "",
                 "author": {
-                "@type": "Organization",
-                "name": "Xtrades",
-                "url": "https://www.xtrades.net/blogs"
+                          "@type": "Organization",
+                          "name": "Xtrades",
+                          "url": "https://www.xtrades.net/blogs"
                 },
                 "publisher": {
-                "@type": "Organization",
-                "name": "Xtrades",
-                "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.xtrades.net/assets/xtrades-logo.png"
-                }
-                },
-                "datePublished": "2022-07-25"
+                          "@type": "Organization",
+                          "name": "Xtrades",
+                          "logo": {
+                                  "@type": "ImageObject",
+                                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                                  }
+                          },
+                "datePublished": "2023-12-06"
                 }`,
+
+        `{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Are calls bullish and puts bearish?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. Remember you can either buy or sell a call and likewise with puts. So if you BUY A CALL, that is bullish but if you SELL A CALL then its a bearish trade. The same goes for puts; if you BUY A PUT its bearish but if you SELL A PUT its bullish."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why is selling options more dangerous?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The reason is that selling options gives you the obligation to do something whereas buying options gives you the right, if you want it. If you sell a call you are then obligated to turn over 100 shares if the trade didn’t go your way. If you sell a put you are obligated to buy shares if the trade didn't go your way."
+            }
+          },{
+            "@type": "Question",
+            "name": "I bought a call and the stock went up but my profit barely moved or went down, why?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remember the value of options is composed of intrinsic and extrinsic. If an option’s expiry is too far out or it is way OTM, then option values move slower. ATM and ITM options expiring the same day, 0DTE, are the ones that move more because they expire sooner."
+            }
+          },{
+            "@type": "Question",
+            "name": "I always get out of trades and then they take off and I lose money, what am I doing wrong?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This is very common when starting out if you have not taken the time to develop your trading strategy. Yes strategy includes how to do technical analysis and pick trades but it more importantly tells you when to get out. You must have a plan to take profits as soon as you can while leaving more contracts on the table and continue taking profits. If you exit a trade that was green because it made a sudden move downwards; not only did you lose your unrealized profits but you also cut your chances of making money once that trade rebounds. Watch our strategy videos."
+            }
+          },{
+            "@type": "Question",
+            "name": "How to check option flow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many new traders don’t know what is options flow or how to read it. To check options flow simply go to the options chain on your broker and look for large grouped trades. On Xtrades.net you can simply look for the icon with the waves flowing inside the circle:
+        
+        Call option sweeps: Sweeps are a type of trade made by large investors. While Block trades are trades of 10,000 shares or more made on one exchange. Sweeps on the other hand are large trades made over many exchanges. Sweeps and Blocks are identified, grouped and presented in Options Flow software to help traders get a better idea as to what stocks are being traded by Institutional investors who are the ones that make these types of trades."
+            }
+          }]
+        }
+        `,
+      ],
     },
     {
       Path: 'what-are-the-best-social-trading-applications-or-platforms',
@@ -304,8 +350,8 @@ export class Title_Description {
     },
     {
       Path: 'how-to-make-money-of-penny-stocks',
-      Title: 'How to Make Money off Penny Stocks: The Complete Guide',
-      Des: 'Trading penny stocks has become more popular than ever, but if you&#39;re not using the right strategies, you could lose a lot of money off penny stock.',
+      Title: 'Top Penny Stocks 2024 | Ai Penny Stocks List',
+      Des: 'Find the best AI penny stocks and share trading. Explore our expert insights on investing in penny stocks in 2024!',
       Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
@@ -364,8 +410,8 @@ export class Title_Description {
     },
     {
       Path: 'why-swing-trading',
-      Title: 'Why Swing Trading Is More Lucrative Than Day Trading',
-      Des: 'Find out how day trading differs from swing trading, including how they work, capital requirements, and time commitment..',
+      Title: 'Trading Strategies for Swing Trading Stocks & Options',
+      Des: 'Explore effective swing trading strategies, stocks, and options. Discover the best stocks to swing trade using technical indicators.',
       Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
@@ -424,8 +470,8 @@ export class Title_Description {
     },
     {
       Path: 'why-real-time-alerts-are-essential',
-      Title: 'Why Real-Time Alerts are Essential for Investors',
-      Des: 'A real-time trading alert allows you to stay on top of all relevant information at all times. You&#39;ll be notified immediately if anything changes with your investments, allowing you to make quick decisions.',
+      Title: 'Real-Time Stock Alerts | Free Alerts, News & Stocks Tracking',
+      Des: 'Stay ahead in the market with real-time copy trading. Get free stock price alerts, penny stock updates, and trade alerts. Follow the market trends with XTrades in the United States!',
       Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
@@ -454,9 +500,8 @@ export class Title_Description {
     },
     {
       Path: 'how-to-make-most-of-stock-alerts',
-      Title:
-        'How to Make the Most Out of Stock Alerts: Tips for Maximum Profits',
-      Des: 'If you want to make the most out of stock alerts, make sure you stay updated on the latest market movements and don&#39;t miss out on any profitable opportunities.',
+      Title: 'AI Stock Alerts and Free Swing Trade Signals | XTrades',
+      Des: 'Looking for the best AI stocks? Penny Stock Alerts on Xtrades, Options Signals, and Free Swing Trade Alerts.',
       Spt: `{
                 "@context": "https://schema.org",
                 "@type": "BlogPosting",
@@ -574,6 +619,354 @@ export class Title_Description {
                 "datePublished": "2022-05-14"
                 }`,
     },
+
+    /// 20-blog
+    {
+      Path: 'differences-between-penny-stocks-and-normal-stocks',
+      Title: 'How do Penny Stocks Differ from Normal Stocks?',
+      Des: 'Penny stocks are more of a short term game. People are drawn to instant gratification and penny stocks can be a provider for this. It is a more active form of playing the markets.',
+      Spt: `{
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.xtrades.net/blogs/differences-between-penny-stocks-and-normal-stocks"
+                },
+                "headline": "How do Penny Stocks Differ from Normal Stocks?",
+                "description": "Find the best AI penny stocks and share trading. Explore our expert insights on investing in penny stocks in 2024!",
+                "image": "",
+                "author": {
+                "@type": "Organization",
+                "name": "Xtrades",
+                "url": "https://www.xtrades.net/blogs"
+                },
+                "publisher": {
+                "@type": "Organization",
+                "name": "Xtrades",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                }
+                },
+                "datePublished": "2022-11-02"
+                }`,
+    },
+
+    /// 21-blog
+    {
+      Path: 'guide-to-options-flow-and-understanding-call-option-sweep',
+      Title: 'Guide to Options Flow & Understanding Call Option Sweep',
+      Des: 'How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!',
+      Spt: [
+        `{
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.xtrades.net/blogs/guide-to-options-flow-and-understanding-call-option-sweep"
+                },
+                "headline": "Options Flow is DIFFERENT! Understanding Call Option Sweep",
+                "description": "How to trade options using Options Flow information! Read our guide on call option sweeps & how to make money trading them! Join our Discord to see our option flow scanner!",
+                "image": "",
+                "author": {
+                "@type": "Organization",
+                "name": "Xtrades",
+                "url": "https://www.xtrades.net/blogs"
+                },
+                "publisher": {
+                "@type": "Organization",
+                "name": "Xtrades",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                }
+                },
+                "datePublished": "2022-11-15"
+                }`,
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                    "@type": "Question",
+                    "name": "Are calls bullish and puts bearish?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Both. Remember you can either buy or sell a call and likewise with puts. So if you BUY A CALL, that is bullish but if you SELL A CALL then its a bearish trade. The same goes for puts; if you BUY A PUT its bearish but if you SELL A PUT its bullish."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Why is selling options more dangerous?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The reason is that selling options gives you the obligation to do something whereas buying options gives you the right, if you want it. If you sell a call you are then obligated to turn over 100 shares if the trade didn’t go your way. If you sell a put you are obligated to buy shares if the trade didn't go your way."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "I bought a call and the stock went up but my profit barely moved or went down, why?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Remember the value of options is composed of intrinsic and extrinsic. If an option’s expiry is too far out or it is way OTM, then option values move slower. ATM and ITM options expiring the same day, 0DTE, are the ones that move more because they expire sooner."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "I always get out of trades and then they take off and I lose money, what am I doing wrong?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "This is very common when starting out if you have not taken the time to develop your trading strategy. Yes strategy includes how to do technical analysis and pick trades but it more importantly tells you when to get out. You must have a plan to take profits as soon as you can while leaving more contracts on the table and continue taking profits. If you exit a trade that was green because it made a sudden move downwards; not only did you lose your unrealized profits but you also cut your chances of making money once that trade rebounds. Watch our strategy videos."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How to check option flow?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Many new traders don’t know what is options flow or how to read it. To check options flow simply go to the options chain on your broker and look for large grouped trades. On Xtrades.net you can simply look for the icon with the waves flowing inside the circle:
+                
+                Call option sweeps: Sweeps are a type of trade made by large investors. While Block trades are trades of 10,000 shares or more made on one exchange. Sweeps on the other hand are large trades made over many exchanges. Sweeps and Blocks are identified, grouped and presented in Options Flow software to help traders get a better idea as to what stocks are being traded by Institutional investors who are the ones that make these types of trades."
+                    }
+                  }']
+                }`,
+      ],
+    },
+    /// 22-blog
+    {
+      Path: 'how-to-manage-risk-with-trading-options',
+      Title: 'XTrades: Unveiling Lucrative Swing Trading Strategies',
+      Des: ' For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.',
+      Spt: [
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.xtrades.net/blogs/guide-to-swing-trading-strategies"
+                  },
+                  "headline": "Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades",
+                  "description": "For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.",
+                  "image": "",
+                  "author": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "url": "https://www.xtrades.net/blogs"
+                  },
+                  "publisher": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                  }
+                  },
+                  "datePublished": "2022-11-27"
+                  }`,
+        `{
+                  "@context": "https://schema.org/",
+                  "@type": "FAQPage",
+                  "mainEntity": [{
+                    "@type": "Question",
+                    "name": "What Is Swing Trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Swing trading is a short-term style of trading that involves holding a stock for a short period of time, typically a few days to a few weeks, to take advantage of price fluctuations. 
+                It’s a strategy that tries to capitalize on more significant price movements but also requires patience compared to day trading."
+                    }
+                  },{
+                    "@type": "Question",
+                    "name": "What Is XTrades?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. 
+                
+                Gamification of investing refers to adding features that focus on the user experience to make investing fun. 
+                
+                Users on the platform and through the iOS and Android apps can track other investors' advice and track records, allowing for upvoting to improve the investor's advice for other users. 
+                
+                The interactive nature of XTrades provides a more democratic version of investing advice, giving top performers a more extensive reach and exposure than they may otherwise receive."
+                    }
+                  }]
+                }`,
+      ],
+    },
+    /// 23-blog
+    {
+      Path: 'learn-stock-market-trading',
+      Title: 'You want to trade stocks but don’t know where to start',
+      Des: 'Tips for getting started beginner day trading, stock options trading, learning stock trading and learning options trading. Help to get a head start.',
+      Spt: [
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.xtrades.net/blogs/learn-stock-market-trading"
+                  },
+                  "headline": "You want to trade stocks but don’t know where to start",
+                  "description": "Tips for getting started beginner day trading, stock options trading, learning stock trading and learning options trading. Help to get a head start.",
+                  "image": "",
+                  "author": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "url": "https://www.xtrades.net/blogs"
+                  },
+                  "publisher": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                  }
+                  },
+                  "datePublished": "2022-12-01"
+                  }`,
+      ],
+    },
+    /// 24-blog
+    {
+      Path: 'best-ai-penny-stocks-to-invest',
+      Title: 'Why people trade penny stocks and how to get started',
+      Des: 'Trading AI penny stocks, cannabis penny stocks, and biotech penny stocks can be risky, but lucrative if you know what you’re doing',
+      Spt: [
+        `{
+                  "@context": "https://schema.org",
+                  "@type": "BlogPosting",
+                  "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.xtrades.net/blogs/best-ai-penny-stocks-to-invest"
+                  },
+                  "headline": "Why People Trade Penny Stocks and How to Get Started",
+                  "description": "Trading AI penny stocks, cannabis penny stocks, and biotech penny stocks can be risky, but lucrative if you know what you’re doing",
+                  "image": "",
+                  "author": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "url": "https://www.xtrades.net/blogs"
+                  },
+                  "publisher": {
+                  "@type": "Organization",
+                  "name": "Xtrades",
+                  "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                  }
+                  },
+                  "datePublished": "2022-12-04"
+                  }`,
+      ],
+    },
+    /// 25-blog
+    {
+      Path: 'how-to-win-while-swing-trading-stocks-and-options',
+      Title: 'How to Win at Swing Trading Stocks and Options',
+      Des: 'Swing trading, holding on to stocks or options for more than a day, is how most traders operate; here is how to get started on them with help from Xtrades.',
+      Spt: [
+        `{
+                      "@context": "https://schema.org",
+                      "@type": "BlogPosting",
+                      "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://www.xtrades.net/blogs/how-to-win-while-swing-trading-stocks-and-options"
+                      },
+                      "headline": "How to Win at Swing Trading Stocks and Options",
+                      "description": "Swing trading, holding on to stocks or options for more than a day, is how most traders operate; here's how to get started on them with help from Xtrades.",
+                      "image": "",
+                      "author": {
+                      "@type": "Organization",
+                      "name": "Xtrades",
+                      "url": "https://www.xtrades.net/blogs"
+                      },
+                      "publisher": {
+                      "@type": "Organization",
+                      "name": "Xtrades",
+                      "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+                      }
+                      },
+                      "datePublished": "2022-12-10"
+                      }`,
+      ],
+    },
+    /// 26-blog
+    {
+      Path: 'how-to-manage-risk-with-trading',
+      Title: 'Manage Risk With Trading Options For Beginners from X Trades',
+      Des: 'Get tips and strategies for trading options for beginners with X Trades. The expert help you need to succeed at day and swing trading',
+      Spt: [
+        `{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.xtrades.net/blogs/how-to-manage-risk-with-trading"
+          },
+          "headline": "How To Manage Risk With Trading Options For Beginners",
+          "description": "For traders of all levels, from novice to professional, finding day and swing trading strategies is easy with XTrades. XTrades provides trading opportunities that have disrupted the stale, traditional way of investing by gamifying the investment opportunities. Keep reading to find out more.",
+          "image": "",
+          "author": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "url": "https://www.xtrades.net/blogs"
+          },
+          "publisher": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+          }
+          },
+          "datePublished": "2022-11-18"
+          }`,
+        `{
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": "Trading Options For Beginners | How to trade Options",
+          "description": "If you want to learn day and swing trading join our social trading app today! Learn risk management in options trading from the best in the market.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wyiXLPdJ4G0/hqdefault.jpg",
+          "uploadDate": "2023-11-30",
+          "duration": "PT7M40S",
+          "embedUrl": "https://www.youtube.com/embed/wyiXLPdJ4G0?si=_DeJJHTb5zXM0vpu"
+        }
+        `,
+      ],
+    },
+    // 27-blog
+    {
+      Path: 'why-you-need-real-time-alerts-for-your-stock-trading',
+      Title: 'Why You Need Real-Time Alerts for Your Stock Trading',
+      Des: 'Traders who want to have a life outside of trading must master the use of real-time alerts. You can free up time and attention without missing trades',
+      Spt: [
+        `{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.xtrades.net/blogs/why-you-need-real-time-alerts-for-your-stock-trading"
+          },
+          "headline": "Why You Need Real-Time Alerts for Your Stock Trading",
+          "description": "Traders who want to have a life outside of trading must master the use of real-time alerts. You can free up time and attention without missing trades.",
+          "image": "",
+          "author": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "url": "https://www.xtrades.net/blogs"
+          },
+          "publisher": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+          }
+          },
+          "datePublished": "2024-01-10"
+          }`,
+      ],
+    },
   ];
   public static blogPageScript = `{
         "@context": "https://schema.org/",
@@ -601,7 +994,7 @@ export class Title_Description {
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Xtrades",
-        "url": "https://www.xtrades.net/documentation",
+        "url": "https://xtrades.gitbook.io/documentation/about-us/about-xtrades",
         "potentialAction": {
         "@type": "SearchAction",
         "target": "{search_term_string}",

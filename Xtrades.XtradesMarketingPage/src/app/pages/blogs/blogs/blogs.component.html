@@ -1,14 +1,54 @@
 <app-header></app-header>
 <div class="blogs column">
-  <div class="blogs__header header header-1 header-1-gradient-overlay px-2" data-aos="fade-up">Blogs</div>
-  <div class="card__title header-2" data-aos="fade-up"></div>
-
-  <div class="flex responsive-main-container blogs__blog-posts">
-      <app-blog-card *ngFor="let blogPost of blogPosts" class="blogs__blog-post" [id]="blogPost.id" [blogPost]="blogPost"></app-blog-card>
+  <div class="top-block">
+    <div class="top-block__item">
+      <div class="header" data-aos="fade-up">xBlogs</div>
+      <div class="desc" data-aos="fade-up">
+        Embark on a journey into the dynamic world of stock market trading with
+        Xtrades. Our blog is your go-to resource for insightful analysis, market
+        trends, and expert perspectives that can empower your trading decisions.
+      </div>
+      <app-mailing-list-new
+        [buttonBackground]="'url(assets/blogs/submit.svg)'"
+      ></app-mailing-list-new>
+    </div>
+    <div class="top-block__item last">
+      <app-blog-card
+        class="blogs__blog-post"
+        [id]="blogPosts[0].id"
+        [blogPost]="blogPosts[0]"
+      ></app-blog-card>
+    </div>
   </div>
-</div>
-<app-modal [id]="'mailing-modal'" class="modal">
+  <div class="flex responsive-main-container blogs__blog-posts">
+    <app-blog-card
+      *ngFor="let blogPost of blogs"
+      class="blogs__blog-post"
+      [id]="blogPost.id"
+      [blogPost]="blogPost"
+    ></app-blog-card>
+  </div>
+
+  <button *ngIf="shortView" class="more pointer" (click)="loadMore()">
+    View More
+  </button>
+  <button *ngIf="!shortView" class="more pointer" (click)="showLess()">
+    View Less
+  </button>
+
+  <app-separator></app-separator>
+  <div class="faqs-wrap"><app-faqs></app-faqs></div>
+
+  <app-modal [id]="'mailing-modal'" class="modal">
     <div class="column blogs__mailing-list">
       <app-mailing-list></app-mailing-list>
     </div>
-</app-modal>
+  </app-modal>
+</div>
+<app-footer
+  data-aos-offset="130"
+  data-aos-delay="90000"
+  [backgroundColor]="'#263247'"
+  [withEmail]="true"
+>
+</app-footer>

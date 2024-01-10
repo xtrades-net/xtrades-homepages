@@ -15,17 +15,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Input() isMainHeader = true;
   @Input() headerElements = [];
   @Input() headerElementsLast: HeaderElement[] = [];
-  public hideNavLinks = false;
 
   constructor(
     public headerProvider: HeaderProvider,
     public screenService: ScreenService,
-    private bodyScrolling: BodyScrollingService, 
+    private bodyScrolling: BodyScrollingService,
     private location: Location
   ) {}
 
   isMobile = false;
   isMenuOpened = false;
+  public route = '';
   subscription = new Subscription();
 
   ngOnInit(): void {
@@ -34,12 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         (x) => (this.isMobile = x.width < 992)
       )
     );
-
-    if(this.location.path() === '/blogs'){
-      this.hideNavLinks = true;
-    } else {
-      this.hideNavLinks = false;
-    }
+    this.route = this.location.path();
   }
 
   login(): void {

@@ -131,7 +131,50 @@ export class BlogPostComponent {
       id: '20',
       url: 'differences-between-penny-stocks-and-normal-stocks',
       date: '02.11.2023',
-      title: "What are the differences between Penny Stocks and Normal Stocks?",
+      title: 'What are the differences between Penny Stocks and Normal Stocks?',
+    },
+    {
+      id: '21',
+      url: 'guide-to-options-flow-and-understanding-call-option-sweep',
+      date: '15.11.2023',
+      title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
+    },
+    {
+      id: '22',
+      url: 'guide-to-swing-trading-strategies',
+      date: '27.11.2023',
+      title:
+        'Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades',
+    },
+    {
+      id: '23',
+      url: 'learn-stock-market-trading',
+      date: '01.12.2023',
+      title: "You want to trade stocks but don't know where to start",
+    },
+    {
+      id: '24',
+      url: 'best-ai-penny-stocks-to-invest',
+      date: '04.12.2023',
+      title: 'Why People Trade Penny Stocks and How to Get Started',
+    },
+    {
+      id: '25',
+      url: 'how-to-win-while-swing-trading-stocks-and-options',
+      date: '10.12.2023',
+      title: 'How to Win at Swing Trading Stocks and Options',
+    },
+    {
+      id: '26',
+      url: 'how-to-manage-risk-with-trading',
+      date: '18.12.2023',
+      title: 'How To Manage Risk With Trading Options For Beginners',
+    },
+    {
+      id: '27',
+      url: 'why-you-need-real-time-alerts-for-your-stock-trading',
+      date: '10.01.2024',
+      title: 'Why You Need Real-Time Alerts for Your Stock Trading',
     },
   ];
 

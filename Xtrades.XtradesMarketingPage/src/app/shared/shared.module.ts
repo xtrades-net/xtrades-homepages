@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HeroModule } from './components/hero/hero.module';
 import { CardModule } from './components/card/card.module';
 import { HeaderModule } from './components/header/header.module';
@@ -18,6 +19,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
 import { BlogPost20Component } from './components/blog-post/blog-post-20/blog-post-20.component';
+import { BlogPost21Component } from './components/blog-post/blog-post-21/blog-post-21.component';
+import { BlogPost22Component } from './components/blog-post/blog-post-22/blog-post-22.component';
 import {
   BlogPost10Component,
   BlogPost11Component,
@@ -38,12 +41,20 @@ import {
   BlogPost17Component,
   BlogPost18Component,
   BlogPost19Component,
+  BlogPost23Component,
+  BlogPost24Component,
+  BlogPost25Component,
+  BlogPost26Component,
+  BlogPost27Component,
 } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
 import { MobileAppLinkComponent } from './components/mobile-app-link/mobile-app-link.component';
 import { PopoverModule } from './components/popover/popover.module';
 import { AccordionModule } from './components/accordion/accordion.module';
+import { DirectivesModule } from './directives/directives.module';
+import { MailingListNewComponent } from './components/mailing-list-new/mailing-list-new.component';
+import { FaqsComponent } from './components/faqs/faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -72,14 +83,24 @@ import { AccordionModule } from './components/accordion/accordion.module';
     BlogPost18Component,
     BlogPost19Component,
     BlogPost20Component,
+    BlogPost21Component,
+    BlogPost22Component,
+    BlogPost23Component,
+    BlogPost24Component,
+    BlogPost25Component,
+    BlogPost26Component,
+    BlogPost27Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
     MobileAppLinkComponent,
+    MailingListNewComponent,
+    FaqsComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     CardModule,
     HeaderModule,
     HeroModule,
@@ -88,10 +109,11 @@ import { AccordionModule } from './components/accordion/accordion.module';
     IconCardModule,
     SliderModule,
     TextSliderModule,
-    FooterModule,
+    // FooterModule,
     VideoHeroModule,
     PopoverModule,
     AccordionModule,
+    DirectivesModule,
   ],
   exports: [
     CommonModule,
@@ -104,7 +126,7 @@ import { AccordionModule } from './components/accordion/accordion.module';
     SliderModule,
     LabelComponent,
     TextSliderModule,
-    FooterModule,
+    // FooterModule,
     NewsComponent,
     MailingListComponent,
     BlogCardComponent,
@@ -113,6 +135,8 @@ import { AccordionModule } from './components/accordion/accordion.module';
     TruncatePipe,
     BottomSocialNavComponent,
     MobileAppLinkComponent,
+    MailingListNewComponent,
+    FaqsComponent,
   ],
 })
 export class SharedModule {}

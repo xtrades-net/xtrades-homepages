@@ -9,18 +9,24 @@ import player from 'lottie-web';
 import { HomepageContentComponent } from './homepage-content/homepage-content.component';
 import { MainImageAnimationComponent } from './main-image-animation/main-image-animation.component';
 import { VideoHeroModule } from '@shared/components/video-hero/video-hero.module';
+import { FooterModule } from '@shared/components/footer/footer.module';
 
 export function playerFactory() {
   return player;
 }
 
 @NgModule({
-  declarations: [HomeComponent, MainImageAnimationComponent, HomepageContentComponent],
+  declarations: [
+    HomeComponent,
+    MainImageAnimationComponent,
+    HomepageContentComponent,
+  ],
   imports: [
     SharedModule,
     VideoHeroModule,
     DirectivesModule,
     FormsModule,
+    FooterModule,
     RouterModule.forChild([
       {
         path: '',

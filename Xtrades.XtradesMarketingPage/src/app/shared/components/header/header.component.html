@@ -16,36 +16,37 @@
     />
   </div>
   <div class="header__elements" *ngIf="!isMobile">
-    <ng-container *ngIf="!hideNavLinks; else notHomePage">
-    <span *ngFor="
+    <span
+      *ngFor="
         let element of headerElements.length !== 0
           ? headerElements
           : headerProvider.headerElements
-      ">      
-      <a 
+      "
+    >
+      <a
         class="link"
+        [class.active-router-link]="
+          element.directUrl ? route.includes(element.directUrl) : ''
+        "
         [routerLink]="element.directUrl"
         routerLinkActive="active-router-link"
         [routerLinkActiveOptions]="{ exact: true }"
         >{{ element.title }}</a
       >
     </span>
-    </ng-container>
-    <ng-template #notHomePage>
-      <span>
-        <a class="link" [routerLink]="['/']" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      </span>
-    </ng-template>
+
     <app-popover [width]="'640px'">
-      <a *ngIf="!hideNavLinks" class="link cursor-pointer" trigger>Our Traders</a>
+      <a class="link cursor-pointer" trigger>Our Traders</a>
       <app-ourtraders></app-ourtraders>
     </app-popover>
+
     <app-popover [width]="'300px'">
-      <a *ngIf="!hideNavLinks" class="link cursor-pointer" trigger>Elite Products</a>
+      <a class="link cursor-pointer" trigger>Elite Products</a>
       <app-products></app-products>
     </app-popover>
+
     <span>
-      <a *ngIf="!hideNavLinks"
+      <a
         class="link"
         target="_blank"
         href="https://xtrades.gitbook.io/documentation/alert-capture-bot-xcapture/overview"
@@ -57,7 +58,7 @@
       <a class="link" target="_blank" href="https://app.xtrades.net/" routerLinkActive="active-router-link">20 Day Free Trial</a>
     </span> -->
     <span>
-      <a *ngIf="!hideNavLinks"
+      <a
         class="link"
         target="_blank"
         href="https://xtrades.gitbook.io/documentation/about-us/about-xtrades"

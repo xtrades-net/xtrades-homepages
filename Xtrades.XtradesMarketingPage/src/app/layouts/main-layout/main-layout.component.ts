@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ModalService } from '@shared/components/modal/modal.service';
 
 @Component({
@@ -6,10 +6,9 @@ import { ModalService } from '@shared/components/modal/modal.service';
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.css'],
 })
-export class MainLayoutComponent implements OnInit {
+export class MainLayoutComponent {
+  withEmail = false;
   constructor(private modalService: ModalService) {}
-
-  ngOnInit(): void {}
 
   openErrorModal() {
     this.modalService.open('error-modal');

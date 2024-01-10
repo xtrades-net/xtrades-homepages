@@ -5,11 +5,13 @@ import { FooterComponent } from './footer.component';
 import { SeparatorModule } from '../separator/separator.module';
 import { HeroModule } from '../hero/hero.module';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [FooterComponent],
   imports: [
     CommonModule,
+    SharedModule,
     XButtonModule,
     SeparatorModule,
     HeroModule,
