@@ -23,10 +23,7 @@
 <div class="error-wrap">
   <div
     class="error"
-    *ngIf="
-      (form.get('email')?.hasError('email') || !form.get('email')?.value) &&
-      form.get('email')?.touched
-    "
+    *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched"
   >
     Please enter a valid email address
   </div>
