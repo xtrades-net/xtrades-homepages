@@ -1,220 +1,245 @@
-<section class="footer responsive-main-container column">
-  <div class="footer__cards cards flex">
-    <app-hero class="footer__article-hero left">
-      <div class="footer__article-main header-1">
-        <div class="footer__hero-detail">Billing & General Support</div>
-        <a class="link cursor-pointer" href="mailto:hello@xtrades.net"
-          >hello@xtrades.net</a
-        >
-        <div class="footer__hero-detail padding-top cursor-pointer">
-          <a class="link cursor-pointer" href="http://xtrades.net"
-            ><span>Xtrades</span></a
+<div
+  class="wrap"
+  [ngStyle]="
+    backgroundColor
+      ? { 'background-color': backgroundColor }
+      : { 'background-color': 'transparent' }
+  "
+>
+  <section class="footer responsive-main-container column">
+    <div class="email" *ngIf="withEmail">
+      <div class="title">Join Our Mailing List</div>
+      <app-mailing-list-new
+        [width]="'680px'"
+        [height]="'67px'"
+        [buttonWidth]="'120px'"
+        [buttonBackground]="'url(assets/blogs/send-bg.svg)'"
+        [buttonText]="'SEND'"
+      ></app-mailing-list-new>
+    </div>
+    <app-separator *ngIf="withEmail" [width]="'960px'"></app-separator>
+    <div class="footer__cards cards flex">
+      <app-hero class="footer__article-hero left">
+        <div class="footer__article-main header-1">
+          <div class="footer__hero-detail">Billing & General Support</div>
+          <a class="link cursor-pointer" href="mailto:hello@xtrades.net"
+            >hello@xtrades.net</a
           >
-        </div>
+          <div class="footer__hero-detail padding-top cursor-pointer">
+            <a class="link cursor-pointer" href="http://xtrades.net"
+              ><span>Xtrades</span></a
+            >
+          </div>
 
-        <div class="footer__hero-detail">Los Angeles, CA 90028</div>
-        <a class="link cursor-pointer" href="tel:15307235499">1-530-723-5499</a>
-      </div>
-      <div class="footer__images-container social-links">
-        <div class="footer__image-wrapper1 flex center">
-          <a target="_blank" href="https://www.facebook.com/xtrades/"
-            ><img
-              lazy
-              src="/assets/facebook.svg"
-              class="footer__image"
-              alt="Facebook"
-              width="44"
-              height="40"
-          /></a>
-        </div>
-        &nbsp;
-        <div class="footer__image-wrapper1 flex center">
-          <a
-            target="_blank"
-            href="https://www.instagram.com/accounts/login/?next=/xtradesofficial/"
-            ><img
-              lazy
-              src="/assets/instagram.png"
-              class="footer__image"
-              alt="Instagram"
-              width="40"
-              height="40"
-          /></a>
-        </div>
-        &nbsp;
-        <div class="footer__image-wrapper1 flex center">
-          <a
-            target="_blank"
-            href="https://www.youtube.com/channel/UCeBZOV6oK_4dAOaQCaDnidg"
-            ><img
-              lazy
-              src="/assets/youtube.svg"
-              class="footer__image"
-              alt="YouTube"
-              width="44"
-              height="40"
-          /></a>
-        </div>
-        &nbsp;
-        <div class="footer__image-wrapper1 flex center">
-          <a target="_blank" href="https://twitter.com/xtradesofficial?lang=en"
-            ><img
-              lazy
-              src="/assets/twitter.svg"
-              class="footer__image"
-              alt="Twitter"
-              width="44"
-              height="40"
-          /></a>
-        </div>
-        &nbsp;
-      </div>
-    </app-hero>
-    <div>
-      <div class="footer-element cursor-pointer">
-        <div class="footer-element__content">
-          <span
-            class="footer-element__content__text link"
-            [routerLink]="['terms-and-conditions']"
-            routerLinkActive="active-router-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Terms & Conditions</span
+          <div class="footer__hero-detail">Los Angeles, CA 90028</div>
+          <a class="link cursor-pointer" href="tel:15307235499"
+            >1-530-723-5499</a
           >
         </div>
-      </div>
-      <div class="footer-element cursor-pointer">
-        <div class="footer-element__content">
-          <span
-            class="footer-element__content__text link"
-            [routerLink]="['refund-policy']"
-            routerLinkActive="active-router-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Refund Policy</span
-          >
+        <div class="footer__images-container social-links">
+          <div class="footer__image-wrapper1 flex center">
+            <a target="_blank" href="https://www.facebook.com/xtrades/"
+              ><img
+                lazy
+                src="/assets/facebook.svg"
+                class="footer__image"
+                alt="Facebook"
+                width="44"
+                height="40"
+            /></a>
+          </div>
+          &nbsp;
+          <div class="footer__image-wrapper1 flex center">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/accounts/login/?next=/xtradesofficial/"
+              ><img
+                lazy
+                src="/assets/instagram.png"
+                class="footer__image"
+                alt="Instagram"
+                width="40"
+                height="40"
+            /></a>
+          </div>
+          &nbsp;
+          <div class="footer__image-wrapper1 flex center">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCeBZOV6oK_4dAOaQCaDnidg"
+              ><img
+                lazy
+                src="/assets/youtube.svg"
+                class="footer__image"
+                alt="YouTube"
+                width="44"
+                height="40"
+            /></a>
+          </div>
+          &nbsp;
+          <div class="footer__image-wrapper1 flex center">
+            <a
+              target="_blank"
+              href="https://twitter.com/xtradesofficial?lang=en"
+              ><img
+                lazy
+                src="/assets/twitter.svg"
+                class="footer__image"
+                alt="Twitter"
+                width="44"
+                height="40"
+            /></a>
+          </div>
+          &nbsp;
+        </div>
+      </app-hero>
+      <div>
+        <div class="footer-element cursor-pointer">
+          <div class="footer-element__content">
+            <span
+              class="footer-element__content__text link"
+              [routerLink]="['terms-and-conditions']"
+              routerLinkActive="active-router-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Terms & Conditions</span
+            >
+          </div>
+        </div>
+        <div class="footer-element cursor-pointer">
+          <div class="footer-element__content">
+            <span
+              class="footer-element__content__text link"
+              [routerLink]="['refund-policy']"
+              routerLinkActive="active-router-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Refund Policy</span
+            >
+          </div>
+        </div>
+        <div class="footer-element cursor-pointer">
+          <div class="footer-element__content">
+            <span
+              class="footer-element__content__text link"
+              [routerLink]="['/privacy-policy']"
+              routerLinkActive="active-router-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Privacy Policy</span
+            >
+          </div>
         </div>
       </div>
-      <div class="footer-element cursor-pointer">
-        <div class="footer-element__content">
-          <span
-            class="footer-element__content__text link"
-            [routerLink]="['/privacy-policy']"
-            routerLinkActive="active-router-link"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Privacy Policy</span
-          >
+      <div>
+        <div class="footer__images-container">
+          <div class="footer__image-wrapper flex center">
+            <img
+              lazy
+              src="/assets/paypal.svg"
+              class="footer__image"
+              width="88"
+              height="56"
+              alt="Paypal logo"
+            />
+          </div>
+          <div class="footer__image-wrapper flex center">
+            <img
+              lazy
+              src="/assets/mastercard.svg"
+              width="88"
+              height="56"
+              class="footer__image"
+              alt="Mastercard Logo"
+            />
+          </div>
+          <div class="footer__image-wrapper flex center">
+            <img
+              lazy
+              src="/assets/visa.svg"
+              class="footer__image"
+              width="88"
+              height="56"
+              alt="Visa Logo"
+            />
+          </div>
+          <div class="footer__image-wrapper flex center">
+            <img
+              lazy
+              src="/assets/american-express.svg"
+              width="88"
+              height="56"
+              class="footer__image"
+              alt="American Express Logo"
+            />
+          </div>
+          <div class="footer__image-wrapper flex center">
+            <img
+              lazy
+              src="/assets/discover.svg"
+              width="88"
+              height="56"
+              class="footer__image"
+              alt="Discover Financial Services Logo"
+            />
+          </div>
         </div>
       </div>
     </div>
-    <div>
-      <div class="footer__images-container">
-        <div class="footer__image-wrapper flex center">
-          <img
-            lazy
-            src="/assets/paypal.svg"
-            class="footer__image"
-            width="88"
-            height="56"
-            alt="Paypal logo"
-          />
-        </div>
-        <div class="footer__image-wrapper flex center">
-          <img
-            lazy
-            src="/assets/mastercard.svg"
-            width="88"
-            height="56"
-            class="footer__image"
-            alt="Mastercard Logo"
-          />
-        </div>
-        <div class="footer__image-wrapper flex center">
-          <img
-            lazy
-            src="/assets/visa.svg"
-            class="footer__image"
-            width="88"
-            height="56"
-            alt="Visa Logo"
-          />
-        </div>
-        <div class="footer__image-wrapper flex center">
-          <img
-            lazy
-            src="/assets/american-express.svg"
-            width="88"
-            height="56"
-            class="footer__image"
-            alt="American Express Logo"
-          />
-        </div>
-        <div class="footer__image-wrapper flex center">
-          <img
-            lazy
-            src="/assets/discover.svg"
-            width="88"
-            height="56"
-            class="footer__image"
-            alt="Discover Financial Services Logo"
-          />
-        </div>
-      </div>
-    </div>
+  </section>
+  <app-separator></app-separator>
+  <div class="copyright center">Disclaimer</div>
+  <div class="copyright copyright--text responsive-main-container center">
+    If you do not agree with any term of provision of our Terms and Conditions
+    you should not use our Site, Services, Content or Information. Please be
+    advised that your continued use of the Site, Services, Content, or
+    Information provided shall indicate your consent and agreement to our Terms
+    and Conditions. Xtrades may publish testimonials or descriptions of past
+    performance but these results are NOT typical, are not indicative of future
+    results or performance, and are not intended to be a representation,
+    warranty or guarantee that similar results will be obtained by you. The
+    experience of Xtrade Analysts with trading is not typical, nor is the
+    experience of students featured in testimonials. They are experienced
+    traders. Becoming an experienced trader takes hard work, dedication and a
+    significant amount of time. Your results may differ materially from those
+    expressed or utilized by Xtrades due to a number of factors. Trading is a
+    very high risk activity with low success rate. We do not track the typical
+    results of our current or past students. As a provider of educational
+    courses, we do not have access to the personal trading accounts or brokerage
+    statements of our customers. In fact, available research data suggests that
+    most day traders are NOT profitable. In a research paper published in 2014
+    titled “Do Day Traders Rationally Learn About Their Ability?”, professors
+    from the University of California studied 3.7 billion trades from the Taiwan
+    Stock Exchange between 1992-2006 and found that only 9.81% of day trading
+    volume was generated by predictably profitable traders and that these
+    predictably profitable traders constitute less than 3% of all day traders on
+    an average day. In a 2005 article published in the Journal of Applied
+    Finance titled “The Profitability of Active Stock Traders” professors at the
+    University of Oxford and the University College Dublin found that out of
+    1,146 brokerage accounts day trading the U.S. markets between March 8, 2000
+    and June 13, 2000, only 50% were profitable with an average net profit of
+    $16,619. In a 2003 article published in the Financial Analysts Journal
+    titled “The Profitability of Day Traders”, professors at the University of
+    Texas found that out of 334 brokerage accounts day trading the U.S. markets
+    betwe caen February 1998 and October 1999, only 35% were profitable and only
+    14% generated profits in excess of than $10,000. The range of results in
+    these three studies exemplify the challenge of determining a definitive
+    success rate for day traders. At a minimum, these studies indicate at least
+    50% of aspiring day traders will not be profitable. This reiterates that
+    consistently making money trading stocks is not easy. Day Trading is a high
+    risk activity and can result in the loss of your entire investment. Any
+    trade or investment is at your own risk. Any and all information discussed
+    is for educational and informational purposes only and should not be
+    considered tax, legal or investment advice. A referral to a stock or
+    commodity is not an indication to buy or sell that stock or commodity. This
+    does not represent our full Disclaimer. Citations for Disclaimer Barber,
+    Brad & Lee, Yong-Ill & Liu, Yu-Jane & Odean, Terrance. (2014). Do Day
+    Traders Rationally Learn About Their Ability?. SSRN Electronic Journal.
+    https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2535636 Garvey, Ryan and
+    Murphy, Anthony, The Profitability of Active Stock Traders. Journal of
+    Applied Finance , Vol. 15, No. 2, Fall/Winter 2005. Available at SSRN:
+    https://ssrn.com/abstract=908615 Douglas J. Jordan & J. David Diltz (2003)
+    The Profitability of Day Traders, Financial Analysts Journal, 59:6, 85-94,
+    DOI: https://www.tandfonline.com/doi/abs/10.2469/faj.v59.n6.2578
   </div>
-</section>
-<app-separator></app-separator>
-<div class="copyright center">Disclaimer</div>
-<div class="copyright copyright--text responsive-main-container center">
-  If you do not agree with any term of provision of our Terms and Conditions you
-  should not use our Site, Services, Content or Information. Please be advised
-  that your continued use of the Site, Services, Content, or Information
-  provided shall indicate your consent and agreement to our Terms and
-  Conditions. Xtrades may publish testimonials or descriptions of past
-  performance but these results are NOT typical, are not indicative of future
-  results or performance, and are not intended to be a representation, warranty
-  or guarantee that similar results will be obtained by you. The experience of
-  Xtrade Analysts with trading is not typical, nor is the experience of students
-  featured in testimonials. They are experienced traders. Becoming an
-  experienced trader takes hard work, dedication and a significant amount of
-  time. Your results may differ materially from those expressed or utilized by
-  Xtrades due to a number of factors. Trading is a very high risk activity with
-  low success rate. We do not track the typical results of our current or past
-  students. As a provider of educational courses, we do not have access to the
-  personal trading accounts or brokerage statements of our customers. In fact,
-  available research data suggests that most day traders are NOT profitable. In
-  a research paper published in 2014 titled “Do Day Traders Rationally Learn
-  About Their Ability?”, professors from the University of California studied
-  3.7 billion trades from the Taiwan Stock Exchange between 1992-2006 and found
-  that only 9.81% of day trading volume was generated by predictably profitable
-  traders and that these predictably profitable traders constitute less than 3%
-  of all day traders on an average day. In a 2005 article published in the
-  Journal of Applied Finance titled “The Profitability of Active Stock Traders”
-  professors at the University of Oxford and the University College Dublin found
-  that out of 1,146 brokerage accounts day trading the U.S. markets between
-  March 8, 2000 and June 13, 2000, only 50% were profitable with an average net
-  profit of $16,619. In a 2003 article published in the Financial Analysts
-  Journal titled “The Profitability of Day Traders”, professors at the
-  University of Texas found that out of 334 brokerage accounts day trading the
-  U.S. markets betwe caen February 1998 and October 1999, only 35% were
-  profitable and only 14% generated profits in excess of than $10,000. The range
-  of results in these three studies exemplify the challenge of determining a
-  definitive success rate for day traders. At a minimum, these studies indicate
-  at least 50% of aspiring day traders will not be profitable. This reiterates
-  that consistently making money trading stocks is not easy. Day Trading is a
-  high risk activity and can result in the loss of your entire investment. Any
-  trade or investment is at your own risk. Any and all information discussed is
-  for educational and informational purposes only and should not be considered
-  tax, legal or investment advice. A referral to a stock or commodity is not an
-  indication to buy or sell that stock or commodity. This does not represent our
-  full Disclaimer. Citations for Disclaimer Barber, Brad & Lee, Yong-Ill & Liu,
-  Yu-Jane & Odean, Terrance. (2014). Do Day Traders Rationally Learn About Their
-  Ability?. SSRN Electronic Journal.
-  https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2535636 Garvey, Ryan and
-  Murphy, Anthony, The Profitability of Active Stock Traders. Journal of Applied
-  Finance , Vol. 15, No. 2, Fall/Winter 2005. Available at SSRN:
-  https://ssrn.com/abstract=908615 Douglas J. Jordan & J. David Diltz (2003) The
-  Profitability of Day Traders, Financial Analysts Journal, 59:6, 85-94, DOI:
-  https://www.tandfonline.com/doi/abs/10.2469/faj.v59.n6.2578
-</div>
-<div class="copyright center">
-  Copyright © 2022 <a class="link cursor-pointer" href="/">Xtrades</a>
+  <div class="copyright center">
+    Copyright © 2022 <a class="link cursor-pointer" href="/">Xtrades</a>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HeroModule } from './components/hero/hero.module';
 import { CardModule } from './components/card/card.module';
 import { HeaderModule } from './components/header/header.module';
@@ -51,6 +52,8 @@ import { MobileAppLinkComponent } from './components/mobile-app-link/mobile-app-
 import { PopoverModule } from './components/popover/popover.module';
 import { AccordionModule } from './components/accordion/accordion.module';
 import { DirectivesModule } from './directives/directives.module';
+import { MailingListNewComponent } from './components/mailing-list-new/mailing-list-new.component';
+import { FaqsComponent } from './components/faqs/faqs/faqs.component';
 
 @NgModule({
   declarations: [
@@ -89,10 +92,13 @@ import { DirectivesModule } from './directives/directives.module';
     TruncatePipe,
     BottomSocialNavComponent,
     MobileAppLinkComponent,
+    MailingListNewComponent,
+    FaqsComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     CardModule,
     HeaderModule,
     HeroModule,
@@ -101,7 +107,7 @@ import { DirectivesModule } from './directives/directives.module';
     IconCardModule,
     SliderModule,
     TextSliderModule,
-    FooterModule,
+    // FooterModule,
     VideoHeroModule,
     PopoverModule,
     AccordionModule,
@@ -118,7 +124,7 @@ import { DirectivesModule } from './directives/directives.module';
     SliderModule,
     LabelComponent,
     TextSliderModule,
-    FooterModule,
+    // FooterModule,
     NewsComponent,
     MailingListComponent,
     BlogCardComponent,
@@ -127,6 +133,8 @@ import { DirectivesModule } from './directives/directives.module';
     TruncatePipe,
     BottomSocialNavComponent,
     MobileAppLinkComponent,
+    MailingListNewComponent,
+    FaqsComponent,
   ],
 })
 export class SharedModule {}

@@ -1,0 +1,43 @@
+.email {
+  border: 1px solid #00ede6;
+  border-radius: 10px;
+  background-color: #050f1b;
+  display: flex;
+  justify-content: space-between;
+  .email-input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 22px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  button {
+    height: 100%;
+    border-radius: 9px;
+    cursor: pointer;
+    color: #081b31;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+  }
+  button:hover {
+    filter: brightness(1.3);
+  }
+}
+.error-wrap {
+  margin-top: 3px;
+  padding-left: 3px;
+  font-size: 10px;
+  color: grey;
+  height: 20px;
+}
+.already-subscribed-wrap {
+  font-weight: 500;
+  padding: 1em 0;
+  height: 2em;
+  margin-bottom: 62px;
+}

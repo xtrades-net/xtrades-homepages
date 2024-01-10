@@ -22,6 +22,7 @@ export type BlogPost = {
 })
 export class BlogsComponent {
   id = 1;
+  public shortView = true;
   headerElements = ['Blogs', 'Updates', 'Xhub uploads', 'Ideas', 'Tools'];
   blogPosts: BlogPost[] = [
     {
@@ -32,6 +33,7 @@ export class BlogsComponent {
       date: '13.05.2022',
       href: '/blogs/what-is-webull',
       title: 'What Is Webull? How to Sign Up and What You Need to Know!',
+      image: 'assets/blogs/1/1-1.jpg',
     },
     {
       id: '2',
@@ -41,6 +43,7 @@ export class BlogsComponent {
       date: '14.05.2022',
       href: '/blogs/what-is-tradingview',
       title: 'What is TradingView?',
+      image: 'assets/blogs/2/2-1.jpg',
     },
     {
       id: '3',
@@ -50,6 +53,7 @@ export class BlogsComponent {
       date: '16.05.2022',
       href: '/blogs/copy-trading',
       title: 'Copy Trading: What Investors Need to Know',
+      image: 'assets/blogs/3/3-1.jpg',
     },
     {
       id: '4',
@@ -60,6 +64,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-make-most-of-stock-alerts',
       title:
         'How to Make the Most Out of Stock Alerts: Tips for Maximum Profits',
+      image: 'assets/blogs/4/4-1.png',
     },
     {
       id: '5',
@@ -69,6 +74,7 @@ export class BlogsComponent {
       date: '16.05.2022',
       href: '/blogs/why-real-time-alerts-are-essential',
       title: 'Why Real-Time Alerts are Essential for Investors?',
+      image: 'assets/blogs/5/5-1.jpg',
     },
     {
       id: '6',
@@ -78,6 +84,7 @@ export class BlogsComponent {
       date: '17.05.2022',
       href: '/blogs/how-to-read-option-alerts',
       title: 'How to Read Option Alerts: The Ultimate Guide',
+      image: 'assets/blogs/6/6-1.jpg',
     },
     {
       id: '7',
@@ -87,6 +94,7 @@ export class BlogsComponent {
       date: '31.05.2022',
       href: '/blogs/why-swing-trading',
       title: 'Why Swing Trading Is More Lucrative Than Day Trading',
+      image: 'assets/blogs/7/7-1.jpg',
     },
     {
       id: '8',
@@ -96,6 +104,7 @@ export class BlogsComponent {
       date: '16.06.2022',
       href: '/blogs/getting-started-with-stock-trading',
       title: 'Getting started with Stock Trading. Everything you need to know.',
+      image: 'assets/blogs/8/8-1.jpg',
     },
     {
       id: '9',
@@ -105,6 +114,7 @@ export class BlogsComponent {
       date: '29.06.2022',
       href: '/blogs/how-to-make-money-of-penny-stocks',
       title: 'How to Make Money off Penny Stocks: The Complete Guide',
+      image: 'assets/blogs/9/9-1.png',
     },
     {
       id: '10',
@@ -114,6 +124,7 @@ export class BlogsComponent {
       date: '11.07.2022',
       href: '/blogs/using-stock-alerts-to-improve-your-investing-strategy',
       title: 'Using Stock Alerts to Improve Your Investing Strategy',
+      image: 'assets/blogs/10/10-1.png',
     },
     {
       id: '11',
@@ -123,6 +134,7 @@ export class BlogsComponent {
       href: '/blogs/what-are-the-best-social-trading-applications-or-platforms',
       date: '18.07.2022',
       title: 'What Are The Best Social Trading Applications or Platforms?',
+      image: 'assets/blogs/11/11-1.png',
     },
     {
       id: '13',
@@ -133,6 +145,7 @@ export class BlogsComponent {
       date: '01.08.2022',
       title:
         'How to Make Money in a Bear Market: Tips to Stay Ahead of the Curve',
+      image: 'assets/blogs/13/13-1.png',
     },
     {
       id: '14',
@@ -142,6 +155,7 @@ export class BlogsComponent {
       href: '/blogs/xtrades-and-penny-stock-alerts',
       date: '18.11.2022',
       title: 'Xtrades And Penny Stock Alerts',
+      image: 'assets/blogs/14/14-1.png',
     },
     {
       id: '15',
@@ -151,6 +165,7 @@ export class BlogsComponent {
       href: '/blogs/trading-scripts-and-trading-channels',
       date: '22.11.2022',
       title: 'Trading Scripts and Trading Channels',
+      image: 'assets/blogs/15/15-1.png',
     },
     {
       id: '16',
@@ -160,6 +175,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-start-stock-trading',
       date: '25.11.2022',
       title: 'How To Start Stock Trading',
+      image: 'assets/blogs/16/16-1.png',
     },
     {
       id: '17',
@@ -169,6 +185,7 @@ export class BlogsComponent {
       href: '/blogs/the-rise-of-a-social-trading-application',
       date: '29.11.2022',
       title: 'The Rise Of A Social Trading Application: Xtrades',
+      image: 'assets/blogs/17/17-1.png',
     },
     {
       id: '18',
@@ -178,6 +195,7 @@ export class BlogsComponent {
       href: '/blogs/what-is-copy-trading-how-do-i-get-involved',
       date: '30.11.2022',
       title: 'What Is Copy Trading? How Do I Get Involved?',
+      image: 'assets/blogs/18/18-1.png',
     },
     {
       id: '19',
@@ -187,6 +205,7 @@ export class BlogsComponent {
       href: '/blogs/a-first-of-its-kind-application-for-traders',
       date: '01.12.2022',
       title: "A First Of It's Kind Application For Traders: The Xtrades App",
+      image: 'assets/blogs/19/19-1.png',
     },
     {
       id: '20',
@@ -196,6 +215,7 @@ export class BlogsComponent {
       href: '/blogs/differences-between-penny-stocks-and-normal-stocks',
       date: '02.11.2023',
       title: 'What are the differences between Penny Stocks and Normal Stocks?',
+      image: 'assets/blogs/20/20-1.png',
     },
     {
       id: '21',
@@ -205,6 +225,7 @@ export class BlogsComponent {
       href: '/blogs/guide-to-options-flow-and-understanding-call-option-sweep',
       date: '15.11.2023',
       title: 'Options Flow is DIFFERENT! Understanding Call Option Sweep',
+      image: 'assets/blogs/21/21-1.png',
     },
     {
       id: '22',
@@ -215,6 +236,7 @@ export class BlogsComponent {
       date: '27.11.2023',
       title:
         'Unveiling the Lucrative Realm of Swing Trading: A Deep Dive into Xtrades',
+      image: 'assets/blogs/22/xstats.jpg',
     },
     {
       id: '23',
@@ -224,6 +246,7 @@ export class BlogsComponent {
       href: '/blogs/learn-stock-market-trading',
       date: '01.12.2023',
       title: 'You want to trade stocks but don’t know where to start',
+      image: 'assets/blogs/23/success.jpg',
     },
     {
       id: '24',
@@ -233,6 +256,7 @@ export class BlogsComponent {
       href: '/blogs/best-ai-penny-stocks-to-invest',
       date: '04.12.2023',
       title: 'Why People Trade Penny Stocks and How to Get Started',
+      image: 'assets/blogs/24/bars.png',
     },
     {
       id: '12',
@@ -242,6 +266,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-start-stock-training',
       date: '06.12.2023',
       title: 'How to start Stock Trading: The Basics, Tips and Tricks',
+      image: 'assets/blogs/12/options.png',
     },
     {
       id: '25',
@@ -251,6 +276,7 @@ export class BlogsComponent {
       href: '/blogs/how-to-win-while-swing-trading-stocks-and-options',
       date: '10.12.2023',
       title: 'How to Win While Swing Trading Stocks and Options',
+      image: 'assets/blogs/25/buy-hold-sell.jpg',
     },
     {
       id: '26',
@@ -260,8 +286,10 @@ export class BlogsComponent {
       href: '/blogs/how-to-manage-risk-with-trading',
       date: '18.12.2023',
       title: 'How To Manage Risk With Trading Options For Beginners',
+      image: 'assets/blogs/26/26-1.png',
     },
   ].reverse();
+  blogs = this.blogPosts.slice(1, 7);
 
   constructor(
     private router: Router,
@@ -273,17 +301,34 @@ export class BlogsComponent {
   ) {}
 
   ngOnInit(): void {
-    // the script info -----
     let script = this._renderer2.createElement('script');
     script.type = `application/ld+json`;
     script.text = Title_Description.blogPageScript || ``;
     this._renderer2.appendChild(this._document.body, script);
 
-    // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
   }
   ngAfterViewInit() {
     this.loadingService.removeLoader();
+  }
+
+  loadMore() {
+    if (this.blogPosts.length - this.blogs.length > 6) {
+      this.blogs = this.blogs.concat(
+        this.blogPosts.slice(this.blogs.length + 1, this.blogs.length + 7)
+      );
+    } else {
+      this.blogs = this.blogs.concat(
+        this.blogPosts.slice(this.blogs.length, this.blogPosts.length + 1)
+      );
+      this.shortView = false;
+    }
+  }
+
+  showLess() {
+    this.blogs = this.blogPosts.slice(1, 7);
+    this.shortView = true;
+    scroll(0, 300);
   }
 
   goToBlogPost(event: RouterEvent) {
