@@ -934,6 +934,39 @@ export class Title_Description {
         `,
       ],
     },
+    // 27-blog
+    {
+      Path: 'why-you-need-real-time-alerts-for-your-stock-trading',
+      Title: 'Why You Need Real-Time Alerts for Your Stock Trading',
+      Des: 'Traders who want to have a life outside of trading must master the use of real-time alerts. You can free up time and attention without missing trades',
+      Spt: [
+        `{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.xtrades.net/blogs/why-you-need-real-time-alerts-for-your-stock-trading"
+          },
+          "headline": "Why You Need Real-Time Alerts for Your Stock Trading",
+          "description": "Traders who want to have a life outside of trading must master the use of real-time alerts. You can free up time and attention without missing trades.",
+          "image": "",
+          "author": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "url": "https://www.xtrades.net/blogs"
+          },
+          "publisher": {
+          "@type": "Organization",
+          "name": "Xtrades",
+          "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.xtrades.net/assets/xtrades-logo.png"
+          }
+          },
+          "datePublished": "2024-01-10"
+          }`,
+      ],
+    },
   ];
   public static blogPageScript = `{
         "@context": "https://schema.org/",

@@ -288,6 +288,16 @@ export class BlogsComponent {
       title: 'How To Manage Risk With Trading Options For Beginners',
       image: 'assets/blogs/26/26-1.png',
     },
+    {
+      id: '27',
+      url: 'why-you-need-real-time-alerts-for-your-stock-trading',
+      snippet:
+        `We'll go over a few easy ways to start utilizing real-time alerts, whether they're real-time stocks trackers, real-time stock news alerts, or real-time trade alerts, for your trading activity...`,
+      href: '/blogs/why-you-need-real-time-alerts-for-your-stock-trading',
+      date: '10.01.2024',
+      title: 'Why You Need Real-Time Alerts for Your Stock Trading',
+      image: 'assets/blogs/27/27-1.jpg',
+    },
   ].reverse();
   blogs = this.blogPosts.slice(1, 7);
 

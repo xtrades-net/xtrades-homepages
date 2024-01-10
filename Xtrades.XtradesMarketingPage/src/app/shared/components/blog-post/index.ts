@@ -24,3 +24,4 @@ export * from './blog-post-23/blog-post-23.component';
 export * from './blog-post-24/blog-post-24.component';
 export * from './blog-post-25/blog-post-25.component';
 export * from './blog-post-26/blog-post-26.component';
+export * from './blog-post-27/blog-post-27.component';

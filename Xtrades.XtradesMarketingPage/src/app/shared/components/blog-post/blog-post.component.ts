@@ -170,6 +170,12 @@ export class BlogPostComponent {
       date: '18.12.2023',
       title: 'How To Manage Risk With Trading Options For Beginners',
     },
+    {
+      id: '27',
+      url: 'why-you-need-real-time-alerts-for-your-stock-trading',
+      date: '10.01.2024',
+      title: 'Why You Need Real-Time Alerts for Your Stock Trading',
+    },
   ];
 
   constructor(private router: Router) {
