@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContentScrollService } from './content-scroll-service';
 
 @Component({
   selector: 'app-blog-post',
@@ -290,10 +291,19 @@ export class BlogPostComponent {
       author: 'Omar G Xtrades',
       autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
       initials: 'OG',
+      tableOfContent: [
+        'The market moves fast, you need the tools to keep up with it',
+        'Setting up basic pricing alerts',
+        'Keeping up with news alerts',
+        'Trade alerts keep you on top of your accounts',
+      ],
     },
   ];
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private contentScrollService: ContentScrollService
+  ) {
     this.url =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     this.id = Number(this.blogPosts.find((post) => post.url === this.url)?.id);
@@ -303,5 +313,9 @@ export class BlogPostComponent {
   ngAfterViewInit() {
     document.querySelector('body')?.classList.remove('inactive-scroll');
     document.querySelector('.full-screen')?.classList.remove('full-height');
+  }
+
+  navigateToContent(data: number) {
+    this.contentScrollService.goTo(data);
   }
 }

@@ -55,6 +55,7 @@ import { AccordionModule } from './components/accordion/accordion.module';
 import { DirectivesModule } from './directives/directives.module';
 import { MailingListNewComponent } from './components/mailing-list-new/mailing-list-new.component';
 import { FaqsComponent } from './components/faqs/faqs/faqs.component';
+import { TableOfContentComponent } from './components/blog-post/table-of-content/table-of-content.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { FaqsComponent } from './components/faqs/faqs/faqs.component';
     MobileAppLinkComponent,
     MailingListNewComponent,
     FaqsComponent,
-    FooterComponent
+    FooterComponent,
+    TableOfContentComponent
   ],
   imports: [
     CommonModule,

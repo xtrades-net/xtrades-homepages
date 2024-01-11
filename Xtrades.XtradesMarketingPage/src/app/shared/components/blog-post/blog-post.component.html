@@ -120,9 +120,12 @@
         <app-blog-post-27 [id]="27"></app-blog-post-27>
       </div>
     </div>
-    <!-- <div class="table-of-content">
-      <div class="title">Table of Content</div>
-    </div> -->
+    <div class="table-of-content" *ngIf="post.tableOfContent">
+      <app-table-of-content
+        [data]="post.tableOfContent"
+        (emitNavigation)="navigateToContent($event)"
+      ></app-table-of-content>
+    </div>
   </div>
 </div>
 
