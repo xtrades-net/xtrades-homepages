@@ -5,6 +5,7 @@ import { HeaderProvider } from './header-provider/header-provider';
 import { Subscription } from 'rxjs';
 import { HeaderElement } from './header-models';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +21,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     public headerProvider: HeaderProvider,
     public screenService: ScreenService,
     private bodyScrolling: BodyScrollingService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   isMobile = false;
@@ -35,6 +37,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       )
     );
     this.route = this.location.path();
+  }
+
+  navigateTo(link: any) {
+    this.router.navigate([`/${link}`]);
   }
 
   login(): void {

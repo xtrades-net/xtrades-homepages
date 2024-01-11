@@ -15,14 +15,14 @@
         <span class="blog-card__date">{{ blogPost.date }}</span>
         <div class="duration-initials">
           <img src="assets/blogs/clock.svg" alt="clock" /><span>15 min</span>
-          <div class="author-block" *ngIf="blogPost.author; else defaultAuthor">
+          <div class="author-block" *ngIf="blogPost.author">
             <span class="initials">{{ blogPost.initials }}</span>
           </div>
-          <ng-template #defaultAuthor>
+          <!-- <ng-template #defaultAuthor>
             <div class="author-block">
               <span class="initials">KW</span>
             </div>
-          </ng-template>
+          </ng-template> -->
         </div>
       </div>
 
