@@ -12,7 +12,9 @@
       }}</span>
     </div>
     <div class="duration">
-      <img src="assets/blogs/clock.svg" alt="clock" /><span>{{post.duration}} min</span>
+      <img src="assets/blogs/clock.svg" alt="clock" /><span
+        >{{ post.duration }} min</span
+      >
     </div>
     <div class="author-block" *ngIf="post.author; else defaultAuthor">
       <span class="initials">{{ post.initials }}</span
@@ -118,6 +120,9 @@
       </div>
       <div class="column" *ngIf="id === 27">
         <app-blog-post-27 [id]="27"></app-blog-post-27>
+      </div>
+      <div class="column" *ngIf="id === 28">
+        <app-blog-post-28 [id]="28"></app-blog-post-28>
       </div>
     </div>
     <div class="table-of-content" *ngIf="post.tableOfContent">

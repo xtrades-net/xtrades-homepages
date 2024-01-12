@@ -967,6 +967,39 @@ export class Title_Description {
           }`,
       ],
     },
+    // 28-blog
+    {
+      Path: 'two-secrets-of-successful-stock-traders-good-scripts-and-channel-trading',
+      Title: '2 Stock-Trade Secrets: Scripts and Channel Trading',
+      Des: 'Two important tools for intermediate stock and options traders are learning to use stock scripts (or indicators) and learning to spot trading channels',
+      Spt: [
+        `{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+              "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.xtrades.net/blogs/two-secrets-of-successful-stock-traders-good-scripts-and-channel-trading"
+              },
+          "headline": "Two Secrets of Successful Stock Traders: Good Scripts and Channel Trading",
+          "description": "Two important tools for intermediate stock and options traders are learning to use stock scripts (or indicators) and learning to spot trading channels",
+          "image": "",
+          "author": {
+              "@type": "Person",
+              "name": "Omar G.",
+              "url": "https://app.xtrades.net/coupon/d05oXywq"
+              },        
+          "publisher": {
+              "@type": "Organization",
+              "name": "Xtrades",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.xtrades.net/blogs"
+                  }
+              },
+          "datePublished": "2024-01-12"
+          }`,
+      ],
+    },
   ];
   public static blogPageScript = `{
         "@context": "https://schema.org/",

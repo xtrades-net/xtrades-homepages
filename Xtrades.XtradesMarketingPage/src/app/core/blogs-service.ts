@@ -307,7 +307,7 @@ export class BlogPostsService {
         'Beware The Theta',
         'The 1% Rule',
         'A Stop-Loss Strategy',
-        'Final Thoughts On Trading Options For Beginners'
+        'Final Thoughts On Trading Options For Beginners',
       ],
     },
     {
@@ -329,8 +329,28 @@ export class BlogPostsService {
         'Trade alerts keep you on top of your accounts',
       ],
     },
+    {
+      id: '28',
+      url: 'two-secrets-of-successful-stock-traders-good-scripts-and-channel-trading',
+      snippet: `Two important tools for intermediate stock and options traders are learning to use stock scripts (or indicators) and learning to spot trading channels`,
+      href: '/blogs/two-secrets-of-successful-stock-traders-good-scripts-and-channel-trading',
+      date: '12.01.2024',
+      title:
+        'Two Secrets of Successful Stock Traders: Good Scripts and Channel Trading',
+      image: 'assets/blogs/28/28-1.jpg',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
+      duration: Utils.getDuration(972),
+      tableOfContent: [
+        'Advanced trading involves having the right tools for the job',
+        'Getting started with trading scripts',
+        'How to explore channels for stock-market trading',
+        'Summary',
+      ],
+    },
   ].reverse();
-  
+
   constructor() {}
 
   goTo(data: number): void {
