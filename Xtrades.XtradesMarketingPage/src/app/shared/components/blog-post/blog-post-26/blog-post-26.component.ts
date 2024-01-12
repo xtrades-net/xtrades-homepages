@@ -10,6 +10,8 @@ import { SeoService } from '@shared/service/seo.service';
 import { ActivatedRoute } from '@angular/router';
 import { Title_Description } from '../seo-config/seo.constants';
 import { DOCUMENT, Location } from '@angular/common';
+import { BlogPostsService } from '@core/blogs-service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-blog-post-26',
@@ -19,7 +21,7 @@ import { DOCUMENT, Location } from '@angular/common';
 })
 export class BlogPost26Component {
   @Input() id = 0;
-
+  subscribtion = new Subscription();
   public list = Title_Description.List;
 
   constructor(
@@ -27,6 +29,7 @@ export class BlogPost26Component {
     private SEOService: SeoService,
     private route: ActivatedRoute,
     private _renderer2: Renderer2,
+    private blogPostsService: BlogPostsService,
     @Inject(DOCUMENT) private _document: Document
   ) {}
 
@@ -53,5 +56,19 @@ export class BlogPost26Component {
 
     // add cannonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
+
+    this.subscribtion.add(
+      this.blogPostsService.scrollToSection$.subscribe((data) => {
+        const parentElement = this._renderer2.selectRootElement(`html`, true);
+        const element = document.getElementById(`${data}`);
+        if (element) {
+          const offset = element.getBoundingClientRect().top + window.scrollY;
+          parentElement.scrollTo({
+            top: offset,
+            behavior: 'smooth',
+          });
+        }
+      })
+    );
   }
 }

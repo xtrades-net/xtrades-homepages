@@ -24,11 +24,11 @@
       "
     >
       <a
-        class="link"
+        class="link pointer"
         [class.active-router-link]="
           element.directUrl ? route.includes(element.directUrl) : ''
         "
-        [routerLink]="element.directUrl"
+        (click)="navigateTo(element.directUrl)"
         routerLinkActive="active-router-link"
         [routerLinkActiveOptions]="{ exact: true }"
         >{{ element.title }}</a
@@ -69,7 +69,7 @@
     <span *ngFor="let element of headerProvider.headerElementsLast">
       <a
         class="link"
-        [routerLink]="element.directUrl"
+        (click)="navigateTo(element.directUrl)"
         routerLinkActive="active-router-link"
         [routerLinkActiveOptions]="{ exact: true }"
         >{{ element.title }}</a

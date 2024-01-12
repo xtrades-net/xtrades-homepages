@@ -74,3 +74,28 @@
     line-height: 30px;
   }
 }
+.blog-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.7) !important;
+  .duration-initials {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    .author-block {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      color: #081b31;
+      text-align: center;
+      font-size: 9px;
+      font-style: normal;
+      font-weight: 500;
+      border-radius: 50%;
+      // background-color: #6add34;
+    }
+  }
+}

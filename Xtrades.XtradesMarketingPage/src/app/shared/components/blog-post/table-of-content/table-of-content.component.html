@@ -1,0 +1,12 @@
+<div class="title">Table of content</div>
+<div class="wrap" *ngIf="data.length">
+  <div *ngFor="let item of data; let i = index" class="item">
+    <div class="content-wrap pointer" (click)="emitNavigationToContent(i + 1)">
+      <div class="dot">
+        <div class="inner-dot"></div>
+      </div>
+      <div class="content">{{ item }}</div>
+    </div>
+    <div class="line" *ngIf="i < data.length - 1"></div>
+  </div>
+</div>

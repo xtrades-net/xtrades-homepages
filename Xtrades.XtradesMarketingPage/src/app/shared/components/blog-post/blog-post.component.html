@@ -1,88 +1,138 @@
 <app-header></app-header>
-<div class="blog-post responsive-main-container">
-  <div class="column" *ngIf="id === 1">
-    <app-blog-post-1 [id]="1"></app-blog-post-1>
+<div
+  class="flex center"
+  [style.background]="'url(' + post.image + ') no-repeat center/cover'"
+  style="margin: 0 auto; margin-top: 10px; width: 100vw; height: 450px"
+></div>
+<div class="blog-post">
+  <div class="blog-stats">
+    <div class="date">
+      <img src="assets/blogs/calendar.svg" alt="calendar" /><span>{{
+        post.date
+      }}</span>
+    </div>
+    <div class="duration">
+      <img src="assets/blogs/clock.svg" alt="clock" /><span>{{post.duration}} min</span>
+    </div>
+    <div class="author-block" *ngIf="post.author; else defaultAuthor">
+      <span class="initials">{{ post.initials }}</span
+      ><span class="author-name"
+        ><a [href]="post.autorLink" target="_blank">{{ post.author }}</a></span
+      >
+    </div>
+    <ng-template #defaultAuthor>
+      <div class="author-block">
+        <span class="initials">KW</span
+        ><span class="author-name"
+          ><a
+            href="https://app.xtrades.net/profile/kevin?tab=profile"
+            target="_blank"
+            >Kevin Wan</a
+          ></span
+        >
+      </div>
+    </ng-template>
   </div>
-  <div class="column" *ngIf="id === 2">
-    <app-blog-post-2 [id]="2"></app-blog-post-2>
-  </div>
-  <div class="column" *ngIf="id === 3">
-    <app-blog-post-3 [id]="3"></app-blog-post-3>
-  </div>
-  <div class="column" *ngIf="id === 4">
-    <app-blog-post-4 [id]="4"></app-blog-post-4>
-  </div>
-  <div class="column" *ngIf="id === 5">
-    <app-blog-post-5 [id]="5"></app-blog-post-5>
-  </div>
-  <div class="column" *ngIf="id === 6">
-    <app-blog-post-6 [id]="6"></app-blog-post-6>
-  </div>
-  <div class="column" *ngIf="id === 7">
-    <app-blog-post-7 [id]="7"></app-blog-post-7>
-  </div>
-  <div class="column" *ngIf="id === 8">
-    <app-blog-post-8 [id]="8"></app-blog-post-8>
-  </div>
-  <div class="column" *ngIf="id === 9">
-    <app-blog-post-9 [id]="9"></app-blog-post-9>
-  </div>
-  <div class="column" *ngIf="id === 10">
-    <app-blog-post-10 [id]="10"></app-blog-post-10>
-  </div>
-  <div class="column" *ngIf="id === 11">
-    <app-blog-post-11 [id]="11"></app-blog-post-11>
-  </div>
-  <div class="column" *ngIf="id === 12">
-    <app-blog-post-12 [id]="12"></app-blog-post-12>
-  </div>
-  <div class="column" *ngIf="id === 13">
-    <app-blog-post-13 [id]="13"></app-blog-post-13>
-  </div>
-  <div class="column" *ngIf="id === 14">
-    <app-blog-post-14 [id]="14"></app-blog-post-14>
-  </div>
-  <div class="column" *ngIf="id === 15">
-    <app-blog-post-15 [id]="15"></app-blog-post-15>
-  </div>
-  <div class="column" *ngIf="id === 16">
-    <app-blog-post-16 [id]="16"></app-blog-post-16>
-  </div>
-  <div class="column" *ngIf="id === 17">
-    <app-blog-post-17 [id]="17"></app-blog-post-17>
-  </div>
-  <div class="column" *ngIf="id === 18">
-    <app-blog-post-18 [id]="18"></app-blog-post-18>
-  </div>
-  <div class="column" *ngIf="id === 19">
-    <app-blog-post-19 [id]="19"></app-blog-post-19>
-  </div>
-  <div class="column" *ngIf="id === 20">
-    <app-blog-post-20 [id]="20"></app-blog-post-20>
-  </div>
-  <div class="column" *ngIf="id === 21">
-    <app-blog-post-21 [id]="21"></app-blog-post-21>
-  </div>
-  <div class="column" *ngIf="id === 22">
-    <app-blog-post-22 [id]="22"></app-blog-post-22>
-  </div>
-  <div class="column" *ngIf="id === 23">
-    <app-blog-post-23 [id]="23"></app-blog-post-23>
-  </div>
-  <div class="column" *ngIf="id === 24">
-    <app-blog-post-24 [id]="24"></app-blog-post-24>
-  </div>
-  <div class="column" *ngIf="id === 25">
-    <app-blog-post-25 [id]="25"></app-blog-post-25>
-  </div>
-  <div class="column" *ngIf="id === 26">
-    <app-blog-post-26 [id]="26"></app-blog-post-26>
-  </div>
-  <div class="column" *ngIf="id === 27">
-    <app-blog-post-27 [id]="27"></app-blog-post-27>
+  <div class="content">
+    <div class="blog-content">
+      <h1 class="title">{{ post.title }}</h1>
+      <div class="desc">{{ post.snippet }}</div>
+      <app-separator></app-separator>
+      <div class="column" *ngIf="id === 1">
+        <app-blog-post-1 [id]="1"></app-blog-post-1>
+      </div>
+      <div class="column" *ngIf="id === 2">
+        <app-blog-post-2 [id]="2"></app-blog-post-2>
+      </div>
+      <div class="column" *ngIf="id === 3">
+        <app-blog-post-3 [id]="3"></app-blog-post-3>
+      </div>
+      <div class="column" *ngIf="id === 4">
+        <app-blog-post-4 [id]="4"></app-blog-post-4>
+      </div>
+      <div class="column" *ngIf="id === 5">
+        <app-blog-post-5 [id]="5"></app-blog-post-5>
+      </div>
+      <div class="column" *ngIf="id === 6">
+        <app-blog-post-6 [id]="6"></app-blog-post-6>
+      </div>
+      <div class="column" *ngIf="id === 7">
+        <app-blog-post-7 [id]="7"></app-blog-post-7>
+      </div>
+      <div class="column" *ngIf="id === 8">
+        <app-blog-post-8 [id]="8"></app-blog-post-8>
+      </div>
+      <div class="column" *ngIf="id === 9">
+        <app-blog-post-9 [id]="9"></app-blog-post-9>
+      </div>
+      <div class="column" *ngIf="id === 10">
+        <app-blog-post-10 [id]="10"></app-blog-post-10>
+      </div>
+      <div class="column" *ngIf="id === 11">
+        <app-blog-post-11 [id]="11"></app-blog-post-11>
+      </div>
+      <div class="column" *ngIf="id === 12">
+        <app-blog-post-12 [id]="12"></app-blog-post-12>
+      </div>
+      <div class="column" *ngIf="id === 13">
+        <app-blog-post-13 [id]="13"></app-blog-post-13>
+      </div>
+      <div class="column" *ngIf="id === 14">
+        <app-blog-post-14 [id]="14"></app-blog-post-14>
+      </div>
+      <div class="column" *ngIf="id === 15">
+        <app-blog-post-15 [id]="15"></app-blog-post-15>
+      </div>
+      <div class="column" *ngIf="id === 16">
+        <app-blog-post-16 [id]="16"></app-blog-post-16>
+      </div>
+      <div class="column" *ngIf="id === 17">
+        <app-blog-post-17 [id]="17"></app-blog-post-17>
+      </div>
+      <div class="column" *ngIf="id === 18">
+        <app-blog-post-18 [id]="18"></app-blog-post-18>
+      </div>
+      <div class="column" *ngIf="id === 19">
+        <app-blog-post-19 [id]="19"></app-blog-post-19>
+      </div>
+      <div class="column" *ngIf="id === 20">
+        <app-blog-post-20 [id]="20"></app-blog-post-20>
+      </div>
+      <div class="column" *ngIf="id === 21">
+        <app-blog-post-21 [id]="21"></app-blog-post-21>
+      </div>
+      <div class="column" *ngIf="id === 22">
+        <app-blog-post-22 [id]="22"></app-blog-post-22>
+      </div>
+      <div class="column" *ngIf="id === 23">
+        <app-blog-post-23 [id]="23"></app-blog-post-23>
+      </div>
+      <div class="column" *ngIf="id === 24">
+        <app-blog-post-24 [id]="24"></app-blog-post-24>
+      </div>
+      <div class="column" *ngIf="id === 25">
+        <app-blog-post-25 [id]="25"></app-blog-post-25>
+      </div>
+      <div class="column" *ngIf="id === 26">
+        <app-blog-post-26 [id]="26"></app-blog-post-26>
+      </div>
+      <div class="column" *ngIf="id === 27">
+        <app-blog-post-27 [id]="27"></app-blog-post-27>
+      </div>
+    </div>
+    <div class="table-of-content" *ngIf="post.tableOfContent">
+      <app-table-of-content
+        [data]="post.tableOfContent"
+        (emitNavigation)="navigateToContent($event)"
+      ></app-table-of-content>
+    </div>
   </div>
 </div>
 
-<div class="responsive-main-container column">
-  <app-mailing-list></app-mailing-list>
-</div>
+<app-footer-new
+  data-aos-offset="130"
+  data-aos-delay="90000"
+  [backgroundColor]="'#263247'"
+  [withEmail]="true"
+>
+</app-footer-new>

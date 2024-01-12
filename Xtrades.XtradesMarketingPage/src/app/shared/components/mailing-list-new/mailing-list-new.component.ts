@@ -21,9 +21,7 @@ export class MailingListNewComponent implements OnInit {
   @Input() buttonText: string = '';
 
   constructor(private gtmService: GoogleTagManagerService) {}
-  ngOnInit(): void {
-    console.log(this.buttonBackground);
-  }
+  ngOnInit(): void {}
 
   onSubmit() {
     if (!this.form.valid) {
