@@ -20,9 +20,9 @@
       ></app-blog-card>
     </div>
   </div>
-  <div class="flex responsive-main-container blogs__blog-posts">
+  <div class="flex responsive-main-container blogs__blog-posts" *ngIf="blogPosts.length">
     <app-blog-card
-      *ngFor="let blogPost of blogs; let i; as: index"
+      *ngFor="let blogPost of blogs; let i = index"
       class="blogs__blog-post"
       [id]="blogPost.id"
       [blogPost]="blogPost"

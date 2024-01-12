@@ -14,4 +14,8 @@ export class Utils {
     const parts = value.split(`; ${name}=`);
     return parts.length === 2 ? parts.pop()?.split(';').shift() : '';
   }
+
+  static getDuration(wordsCount:number):number{
+    return Math.trunc(0.25 * wordsCount / 60);
+  }
 }

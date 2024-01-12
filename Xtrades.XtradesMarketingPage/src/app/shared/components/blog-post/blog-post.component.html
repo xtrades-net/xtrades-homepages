@@ -12,15 +12,15 @@
       }}</span>
     </div>
     <div class="duration">
-      <img src="assets/blogs/clock.svg" alt="clock" /><span>15 min</span>
+      <img src="assets/blogs/clock.svg" alt="clock" /><span>{{post.duration}} min</span>
     </div>
-    <div class="author-block" *ngIf="post.author">
+    <div class="author-block" *ngIf="post.author; else defaultAuthor">
       <span class="initials">{{ post.initials }}</span
       ><span class="author-name"
         ><a [href]="post.autorLink" target="_blank">{{ post.author }}</a></span
       >
     </div>
-    <!-- <ng-template #defaultAuthor>
+    <ng-template #defaultAuthor>
       <div class="author-block">
         <span class="initials">KW</span
         ><span class="author-name"
@@ -31,7 +31,7 @@
           ></span
         >
       </div>
-    </ng-template> -->
+    </ng-template>
   </div>
   <div class="content">
     <div class="blog-content">
