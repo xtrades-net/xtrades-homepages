@@ -18,9 +18,6 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { VideoHeroModule } from './components/video-hero/video-hero.module';
 import { TruncatePipe } from './components/blog-card/truncate.pipe';
-import { BlogPost20Component } from './components/blog-post/blog-post-20/blog-post-20.component';
-import { BlogPost21Component } from './components/blog-post/blog-post-21/blog-post-21.component';
-import { BlogPost22Component } from './components/blog-post/blog-post-22/blog-post-22.component';
 import {
   BlogPost10Component,
   BlogPost11Component,
@@ -41,11 +38,15 @@ import {
   BlogPost17Component,
   BlogPost18Component,
   BlogPost19Component,
+  BlogPost20Component,
+  BlogPost21Component,
+  BlogPost22Component,
   BlogPost23Component,
   BlogPost24Component,
   BlogPost25Component,
   BlogPost26Component,
   BlogPost27Component,
+  BlogPost28Component,
 } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
@@ -91,6 +92,7 @@ import { TableOfContentComponent } from './components/blog-post/table-of-content
     BlogPost25Component,
     BlogPost26Component,
     BlogPost27Component,
+    BlogPost28Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,
@@ -98,7 +100,7 @@ import { TableOfContentComponent } from './components/blog-post/table-of-content
     MailingListNewComponent,
     FaqsComponent,
     FooterComponent,
-    TableOfContentComponent
+    TableOfContentComponent,
   ],
   imports: [
     CommonModule,
