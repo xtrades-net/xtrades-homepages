@@ -8,12 +8,21 @@
     display: flex;
     justify-content: space-between;
     margin-top: 125px;
+    @media (max-width: $md) {
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-top: 85px;
+    }
     &__item {
       width: 50%;
       .header {
         color: white;
         font-size: 48px;
         font-weight: 700;
+      }
+      @media (max-width: $md) {
+        width: 100%;
       }
       .desc {
         color: #8a94a0;
@@ -29,12 +38,16 @@
     }
     .last {
       width: 380px;
+      max-width: 100%;
+      @media (max-width: $md) {
+        margin: 0 auto;
+      }
     }
   }
 
   &__mailing-list {
     @media (max-width: $md) {
-      max-width: 100%;
+      max-width: 90%;
     }
   }
   &__blog-posts {
@@ -50,13 +63,19 @@
 
     @media (max-width: $md) {
       max-width: 100%;
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   &__blog-post {
     max-width: 302px;
+    max-width: 90%;
     @media (max-width: $md) {
-      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
     }
+  }
+  @media (max-width: $md) {
+    max-width: 95%;
   }
 }
 .more {
