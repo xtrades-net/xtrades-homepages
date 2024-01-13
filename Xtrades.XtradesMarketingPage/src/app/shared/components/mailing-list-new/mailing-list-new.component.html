@@ -3,6 +3,7 @@
   [formGroup]="form"
   [style.width]="width"
   [style.height]="height"
+  [style.max-width]="'90% !important'"
 >
   <input
     formControlName="email"
@@ -10,7 +11,7 @@
     type="text"
     placeholder="enter your email address"
     [style.height]="height"
-    [style.width]="width"
+    [style.width]="'100%'"
     [style.line-height]="height"
   /><button
     [style.background]="buttonBackground"

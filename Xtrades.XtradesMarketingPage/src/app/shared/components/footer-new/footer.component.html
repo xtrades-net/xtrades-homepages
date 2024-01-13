@@ -4,13 +4,15 @@
       <h6 class="title">Join Our Mailing List</h6>
       <div class="mail-box-input-wrapper">
         <app-mailing-list-new
-        [width]="'680px'"
-        [height]="'67px'"
-        [buttonWidth]="'120px'"
-        [buttonBackground]="'url(assets/blogs/send-bg.svg)'"
-        [buttonText]="'SEND'"
-      ></app-mailing-list-new>
-        <h3 class="success-message" *ngIf="isSubscribed">You've already subscribed. Thanks!</h3>
+          [width]="'680px'"
+          [height]="'67px'"
+          [buttonWidth]="'120px'"
+          [buttonBackground]="'url(assets/blogs/send-bg.svg)'"
+          [buttonText]="'SEND'"
+        ></app-mailing-list-new>
+        <h3 class="success-message" *ngIf="isSubscribed">
+          You've already subscribed. Thanks!
+        </h3>
       </div>
     </div>
     <div class="links-wrapper">
@@ -27,22 +29,44 @@
         </b>
       </div>
       <div class="link-wrapper">
-        <a href="#" onclick="return false;" routerLink="/terms-and-conditions">Terms & Conditions</a>
+        <a href="#" onclick="return false;" routerLink="/terms-and-conditions"
+          >Terms & Conditions</a
+        >
       </div>
       <div>
-        <a class="link-wrapper" href="#" onclick="return false;" routerLink="/refund-policy">Refund Policy</a>
+        <a
+          class="link-wrapper"
+          href="#"
+          onclick="return false;"
+          routerLink="/refund-policy"
+          >Refund Policy</a
+        >
       </div>
       <div class="link-wrapper">
-        <a href="#" onclick="return false;" routerLink="/privacy-policy">Privacy Policy</a>
+        <a href="#" onclick="return false;" routerLink="/privacy-policy"
+          >Privacy Policy</a
+        >
       </div>
     </div>
     <div class="copyright-wrapper">
       <span>© Copyright 2024 - Xtrades. All rights reserved.</span>
       <div class="social">
-        <a href="https://www.facebook.com/xtrades/" target="_blank"><img src="assets/pro-algo/fb.svg" alt="fb"></a>
-        <a href="https://twitter.com/xtradesofficial?lang=en" target="_blank"><img src="assets/pro-algo/twt.svg" alt="tw"></a>
-        <a href="https://www.instagram.com/accounts/login/?next=/xtradesofficial/" target="_blank"><img src="assets/pro-algo/ig.svg" alt="ig"></a>
-        <a href="https://www.linkedin.com/company/xtrades-net/about/" target="_blank"><img src="assets/pro-algo/ln.svg" alt="ln"></a>
+        <a href="https://www.facebook.com/xtrades/" target="_blank"
+          ><img src="assets/pro-algo/fb.svg" alt="fb"
+        /></a>
+        <a href="https://twitter.com/xtradesofficial?lang=en" target="_blank"
+          ><img src="assets/pro-algo/twt.svg" alt="tw"
+        /></a>
+        <a
+          href="https://www.instagram.com/accounts/login/?next=/xtradesofficial/"
+          target="_blank"
+          ><img src="assets/pro-algo/ig.svg" alt="ig"
+        /></a>
+        <a
+          href="https://www.linkedin.com/company/xtrades-net/about/"
+          target="_blank"
+          ><img src="assets/pro-algo/ln.svg" alt="ln"
+        /></a>
       </div>
     </div>
   </div>

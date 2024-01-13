@@ -1,9 +1,13 @@
+:host {
+  max-width: 99%;
+}
 .email {
   border: 1px solid #00ede6;
   border-radius: 10px;
   background-color: #050f1b;
   display: flex;
   justify-content: space-between;
+
   .email-input {
     background-color: transparent;
     outline: none;
