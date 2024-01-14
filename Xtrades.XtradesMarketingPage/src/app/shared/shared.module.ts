@@ -47,6 +47,7 @@ import {
   BlogPost26Component,
   BlogPost27Component,
   BlogPost28Component,
+  BlogPost29Component,
 } from './components/blog-post';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BottomSocialNavComponent } from './components/bottom-social-nav/bottom-social-nav.component';
@@ -93,6 +94,7 @@ import { TableOfContentComponent } from './components/blog-post/table-of-content
     BlogPost26Component,
     BlogPost27Component,
     BlogPost28Component,
+    BlogPost29Component,
     LoaderComponent,
     TruncatePipe,
     BottomSocialNavComponent,

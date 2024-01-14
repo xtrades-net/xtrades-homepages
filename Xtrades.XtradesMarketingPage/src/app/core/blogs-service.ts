@@ -349,6 +349,24 @@ export class BlogPostsService {
         'Summary',
       ],
     },
+    {
+      id: '29',
+      url: 'social-trading-and-how-to-find-a-trading-community',
+      snippet: `Social trading is a new type of trading which takes place in a social trading community. You can join a social trading community on Discord, Reddit or X and take trade alerts from other members, analysts and senior trading experts. Customize your trades based on your personal style and preferences!`,
+      href: '/blogs/social-trading-and-how-to-find-a-trading-community',
+      date: '13.01.2024',
+      title: 'Social Trading and How to Find a Trading Community',
+      image: 'assets/blogs/29/29-1.jpg',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
+      duration: Utils.getDuration(2494),
+      tableOfContent: [
+        'What is Social Trading?',
+        'How I got into it?',
+        'What is so important about social trading?',
+      ],
+    },
   ].reverse();
 
   constructor() {}
