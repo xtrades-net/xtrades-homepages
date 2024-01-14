@@ -26,3 +26,4 @@ export * from './blog-post-25/blog-post-25.component';
 export * from './blog-post-26/blog-post-26.component';
 export * from './blog-post-27/blog-post-27.component';
 export * from './blog-post-28/blog-post-28.component';
+export * from './blog-post-29/blog-post-29.component';
