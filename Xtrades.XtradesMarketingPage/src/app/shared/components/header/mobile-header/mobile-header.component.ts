@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 import { ScreenService } from 'src/app/core/screen.service';
 import { HeaderProvider } from '../header-provider/header-provider';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-header',
@@ -26,7 +27,8 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
   constructor(
     public headerProvider: HeaderProvider,
     public screenService: ScreenService,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   @Output() triggerClose = new EventEmitter<Event>();
@@ -53,6 +55,9 @@ export class MobileHeaderComponent implements OnInit, OnDestroy {
     this.triggerClose.emit();
   }
 
+  navigateTo(link: any) {
+    this.router.navigate([`/${link}`]);
+  }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
