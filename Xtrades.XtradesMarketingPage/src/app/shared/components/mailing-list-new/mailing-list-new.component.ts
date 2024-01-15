@@ -1,9 +1,6 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SubscriptionService } from '@core/subscription.service';
-import { GoogleTagManagerService } from 'angular-google-tag-manager';
-import { Subscription } from 'rxjs';
-import { Utils } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-mailing-list-new',
@@ -13,7 +10,6 @@ import { Utils } from 'src/app/utils/utils';
 export class MailingListNewComponent implements OnInit {
   public alreadySubscribed = false;
   public successfullySubscribed = false;
-  private subscribtion = new Subscription;
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
   });
@@ -24,8 +20,8 @@ export class MailingListNewComponent implements OnInit {
   @Input() buttonWidth: string = '54px';
   @Input() buttonText: string = '';
 
-  constructor(private gtmService: GoogleTagManagerService, private mailSubscribtion: SubscriptionService) {}
-  @ViewChild('alreadySubscribed') alreadySubscribedEmail!: ElementRef;
+  constructor(private mailSubscribtion: SubscriptionService) {}
+
   ngOnInit(): void {}
 
   onSubmit() {

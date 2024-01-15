@@ -7,15 +7,14 @@
                         class="mailing-list__hero-detail">List</span>
                 </div>
             </app-hero>
-            <form (ngSubmit)="onSubmit()">
+            <form [formGroup]="form">
                 <div class="form-group mailing-list__form">
                     <label for="email" class="mailing-list__label">Email</label>
                     <div class="overlay relative">
-                        <input type="email" class="mailing-list__input form-control" name="email" id="email" ngModel
-                            placeholder="Enter your email address" required #email="ngModel"
-                            (input)="validateEmail(email.value)" [(ngModel)]="emailModel.email" />
-                        <button type="submit" class="btn btn-success mailing-list__btn cursor-pointer absolute"
-                            [disabled]="email.errors?.['pattern']">Sign Up</button>
+                        <input type="email" class="mailing-list__input form-control" name="email" id="email"
+                            placeholder="Enter your email address" required 
+                            formControlName="email"/>
+                        <button (click)="onSubmit()" class="btn btn-success mailing-list__btn cursor-pointer absolute">Sign Up</button>
                     </div>
                     <div class="already-subscribed-wrap">
                         <div class="already-subscribed" *ngIf="alreadySubscribed">
