@@ -5,9 +5,9 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ScreenService } from '@core/screen.service';
-import * as _ from 'lodash';
-import { SubscribeService } from '../modal/subscribe-modal/subscribe.service';
 import { GoogleTagManagerService } from 'angular-google-tag-manager';
+import { SubscriptionService } from '@core/subscription.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-mailing-list',
@@ -15,21 +15,17 @@ import { GoogleTagManagerService } from 'angular-google-tag-manager';
   styleUrls: ['./mailing-list.component.scss'],
 })
 export class MailingListComponent {
-  @ViewChild('email') input: ElementRef | any;
-  emailModel = {
-    email: '',
-  };
+  form = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+  });
 
-  isEmailValid = false;
   alreadySubscribed = false;
   successfullySubscribed = false;
   alreadySubscribedStore = false;
 
   constructor(
     public screenService: ScreenService,
-    private subscribeService: SubscribeService,
-    private cdr: ChangeDetectorRef,
-    private gtmService: GoogleTagManagerService
+    private mailSubscribtion: SubscriptionService,
   ) {}
 
   handleGoToBetaAppClick(): void {
@@ -37,50 +33,30 @@ export class MailingListComponent {
   }
 
   onSubmit() {
-    if (!this.emailModel.email || !this.isEmailValid) {
+    if (!this.form.valid) {
       return;
+    } else {
+      this.subscribe();
     }
-    this.confirmSubscription();
   }
 
-  validateEmail = _.debounce((email: string) => {
-    const regularExpression =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const oldEmailValidity = this.isEmailValid;
-    this.isEmailValid = regularExpression.test(email.toLowerCase());
-    if (oldEmailValidity !== this.isEmailValid) {
-      this.cdr.markForCheck();
-    }
-  }, 200);
-
-  confirmSubscription() {
-    if (!this.alreadySubscribedStore) {
-      this.gtmService.pushTag({
-        event: 'mailingList',
-        email: this.input.value,
-      });
-      this.successfullySubscribed = true;
+  subscribe() {
+    this.mailSubscribtion.saveSubscriber(this.form.get('email')?.value)
+    .then(response => {
+       this.successfullySubscribed = true;
       setTimeout(() => {
         this.successfullySubscribed = false;
-        this.subscribeSuccess();
       }, 3000);
-    } else {
+    })
+    .catch(error => {
       this.alreadySubscribed = true;
       setTimeout(() => {
         this.alreadySubscribed = false;
       }, 3000);
-    }
-    // this.subscribeService
-    //   .subscribeToMainHomepageList(this.input.value)
-    //   .subscribe({
-    //     next: (v) => this.subscribeSuccess(),
-    //     error: (e) => alert('something went wrong :(, please try again later'),
-    //   });
-  }
-
-  subscribeSuccess() {
-    localStorage.setItem('isSubscribed', 'true');
-    this.emailModel.email = '';
-    this.alreadySubscribedStore = true;
+    });
+    // this.gtmService.pushTag({
+    //   event: 'mailingList',
+    //   email: this.form.get('email')?.value,
+    // });
   }
 }

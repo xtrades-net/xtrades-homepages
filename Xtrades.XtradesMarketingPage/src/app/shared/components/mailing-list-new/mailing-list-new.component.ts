@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { GoogleTagManagerService } from 'angular-google-tag-manager';
+import { SubscriptionService } from '@core/subscription.service';
 
 @Component({
   selector: 'app-mailing-list-new',
@@ -20,51 +20,35 @@ export class MailingListNewComponent implements OnInit {
   @Input() buttonWidth: string = '54px';
   @Input() buttonText: string = '';
 
-  constructor(private gtmService: GoogleTagManagerService) {}
+  constructor(private mailSubscribtion: SubscriptionService) {}
+
   ngOnInit(): void {}
 
   onSubmit() {
     if (!this.form.valid) {
       return;
     } else {
-      this.confirmSubscription();
+      this.subscribe();
     }
   }
 
-  confirmSubscription() {
-    const subscribedEmails = JSON.parse(
-      localStorage.getItem('subscribedEmails') || '[]'
-    );
-    if (subscribedEmails.length) {
-      const existingEmail = subscribedEmails.find((el: string) => {
-        return el === this.form.get('email')?.value;
-      });
-      if (existingEmail) {
-        this.alreadySubscribed = true;
-        setTimeout(() => {
-          this.alreadySubscribed = false;
-        }, 3000);
-      } else {
-        this.subscribeSuccess();
-      }
-    } else {
-      this.subscribeSuccess();
-    }
-  }
-
-  subscribeSuccess() {
-    this.gtmService.pushTag({
-      event: 'mailingList',
-      email: this.form.get('email')?.value,
+  subscribe() {
+    this.mailSubscribtion.saveSubscriber(this.form.get('email')?.value)
+    .then(response => {
+       this.successfullySubscribed = true;
+      setTimeout(() => {
+        this.successfullySubscribed = false;
+      }, 3000);
+    })
+    .catch(error => {
+      this.alreadySubscribed = true;
+      setTimeout(() => {
+        this.alreadySubscribed = false;
+      }, 3000);
     });
-    this.successfullySubscribed = true;
-    setTimeout(() => {
-      this.successfullySubscribed = false;
-    }, 3000);
-    const subscribedEmails = JSON.parse(
-      localStorage.getItem('subscribedEmails') || '[]'
-    );
-    subscribedEmails.push(this.form.get('email')?.value);
-    localStorage.setItem('subscribedEmails', JSON.stringify(subscribedEmails));
+    // this.gtmService.pushTag({
+    //   event: 'mailingList',
+    //   email: this.form.get('email')?.value,
+    // });
   }
 }

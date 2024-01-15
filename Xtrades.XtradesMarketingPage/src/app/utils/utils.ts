@@ -18,4 +18,14 @@ export class Utils {
   static getDuration(wordsCount:number):number{
     return Math.trunc(0.25 * wordsCount / 60);
   }
+
+  static validationError(data: any) {
+    let result = '';
+    data.error.error.validationErrors.forEach((err: any) => {
+      err.messages.forEach((message: any) => {
+        result += message + '\n';
+      });
+    });
+    return result;
+  }
 }
