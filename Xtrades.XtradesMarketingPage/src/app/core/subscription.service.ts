@@ -10,12 +10,6 @@ export class SubscriptionService {
 
   saveSubscriber(email: string): Promise<any> {
     return firstValueFrom(
-      this.httpService.post(
-        'https://xtradessubscribe-7u2jd6lnuq-uc.a.run.app',
-        {
-          email,
-        }
-      )
-    );
+      this.httpService.post(`https://app.xtrades.net/api/v2/MailingList/add/${email}`, {}));
   }
 }
