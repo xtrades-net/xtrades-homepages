@@ -126,6 +126,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
   isEmailValid = false;
   alreadySubscribed = false;
   showReadMoreSection = false;
+  public showPromo = false;
 
   constructor(
     public screenService: ScreenService,
@@ -155,6 +156,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
       .subscribe((res) => {
         this.testimonials = res.data;
       });
+    this.checkActivePromo();
   }
 
   ngAfterViewInit(): void {
@@ -217,5 +219,34 @@ export class HomeComponent implements AfterViewInit, OnInit {
       }
     };
     window.requestAnimationFrame(step);
+  }
+
+  private checkActivePromo() {
+    if (localStorage.getItem('active-promo')) {
+      const currentStep = +localStorage.getItem('active-promo-counter')!;
+      if (currentStep < 3) {
+        localStorage.setItem('active-promo-counter', `${currentStep + 1}`);
+        this.showPromo = true;
+      } else {
+        localStorage.setItem('active-promo-finished', 'true');
+        localStorage.removeItem('active-promo');
+      }
+    } else if (
+      !localStorage.getItem('active-promo') &&
+      !localStorage.getItem('active-promo-finished')
+    ) {
+      localStorage.setItem('active-promo', 'true');
+      localStorage.setItem('active-promo-counter', '1');
+      const currentStep = +localStorage.getItem('active-promo-counter')!;
+      this.showPromo = true;
+    }
+  }
+
+  public proceedPromoLink(): void {
+    window.open('https://forms.gle/fH72RrSPW6uWZznK9', '_blank');
+  }
+
+  clearStorage(): void {
+    localStorage.clear();
   }
 }

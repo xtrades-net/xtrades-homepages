@@ -166,8 +166,8 @@
     }
   }
 }
-ol{
-  list-style: none; 
+ol {
+  list-style: none;
 }
 
 .xtrades-edge {
@@ -353,4 +353,47 @@ ol{
 
 .pull-down {
   padding-top: 24px;
+}
+
+.promo-wrapper {
+  width: 1243px;
+  min-height: 113px;
+  max-width: 100%;
+  height: fit-content;
+  background-color: white;
+  top: 140px;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-radius: 6px;
+  padding: 20px 20px 25px 20px;
+  background: url("../../../assets/promo.svg") center/cover no-repeat;
+  .promo-text {
+    margin: 0 auto;
+    margin-bottom: 8px;
+    color: #060e1f;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .promo-sub-text {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    .apply {
+      color: #081b31;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+  }
 }
