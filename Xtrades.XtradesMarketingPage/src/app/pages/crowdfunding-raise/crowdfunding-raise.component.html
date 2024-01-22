@@ -1,0 +1,141 @@
+<app-header></app-header>
+<div class="content column">
+  <div class="top-block">
+    <div class="top-block__item">
+      <h1 class="header" data-aos="fade-up">
+        Join the wait list to become apart of<br />
+        the Xtrades Seed round?
+      </h1>
+      <div class="desc" data-aos="fade-up">
+        A pre-ipo investment of $10,000 in Robinhood would now be $3.3M and in
+        Coinbase, over $1M. Do the math yourself, and decide for yourself if
+        we're who you want to bet on. Our seed round is CAPPED to $1.235m and we
+        are only allowing this amount to be raised for our company.
+      </div>
+      <a
+        class="join-link"
+        href="https://forms.gle/3ovRD3LKCcDLG9LU9"
+        target="_blank"
+        >Join Waitlist</a
+      >
+    </div>
+    <div class="top-block__item last">
+      <img class="image" src="assets/fundraising/img.svg" alt="flower" />
+    </div>
+  </div>
+  <app-separator></app-separator>
+  <div class="advantages-wrap">
+    <div class="title">
+      How does Xtrades Save Financial Hobbyists Money and Time?
+    </div>
+    <div class="steps-wrap">
+      <div
+        *ngFor="let step of [1, 2, 3, 4, 5]; let i = index"
+        class="step"
+        data-aos="flip-left"
+        [ngStyle]="{
+          'background-image': 'url(assets/fundraising/step-' + (i + 1) + '.svg)'
+        }"
+      ></div>
+    </div>
+    <div class="steps-content-wrap">
+      <div
+        *ngFor="let step of stepContent; let i = index"
+        class="step-content"
+        data-aos="fade-up"
+      >
+        <div class="step-count">0{{ i + 1 }}</div>
+        <div class="step-text">{{ step }}</div>
+      </div>
+    </div>
+  </div>
+  <app-separator></app-separator>
+  <div class="stats-wrap">
+    <div class="stats-list" data-aos="fade-right">
+      <div class="title">
+        We are a <br />social trading platform that heavily uses A.I. and
+        Machine Learning to benefit our users.
+      </div>
+      <ul class="list-wrap">
+        <li *ngFor="let item of statsContent">
+          <img src="assets/fundraising/check.svg" alt="Check" /><span>{{
+            item
+          }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="stats-grid" data-aos="fade-left"><div class="image"></div></div>
+  </div>
+  <div class="offers-wrap">
+    <div class="offers" data-aos="fade-right">
+      <div class="title">Xtrades Offers</div>
+      <div class="grid">
+        <div *ngFor="let item of offersList">
+          <div
+            class="image"
+            [style.background-image]="'url(' + item.img + ')'"
+          ></div>
+          <div class="text">{{ item.value }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="streams" data-aos="fade-left">
+      <div class="title">Unlimited Revenue Streams</div>
+      <div class="grid">
+        <div class="grid-item" *ngFor="let item of streamsList">
+          <div
+            class="image"
+            [style.background-image]="'url(' + item.img + ')'"
+          ></div>
+          <div class="text">{{ item.value }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="testimonials-wrap">
+  <div class="testimonials" data-aos="fade-up">
+    <div class="testimonials-content">
+      <div class="title">Testimonials</div>
+      <div class="slide">
+        <app-text-slider
+          [testimonials]="testimonials"
+          [type]="'promo'"
+        ></app-text-slider>
+      </div>
+    </div>
+    <div class="testimonials-image"></div>
+  </div>
+</div>
+<div class="content">
+  <div
+    class="title"
+    style="text-align: center; margin-top: 52px; margin-bottom: 40px"
+  >
+    RoyBaty Machine Learning Model
+  </div>
+  <div class="machine-learning" data-aos="flip-right">
+    <div class="content-1"></div>
+    <div class="content-2"></div>
+  </div>
+  <div class="manifest">
+    <div class="text" data-aos="flip-left">
+      <div class="text-top-block">
+        <div class="title">Metcalfes Law</div>
+        <div class="text-content">
+          Our company thrives on the metcalfes law theory. A network effect
+          waiting to happen as we continuously build features around A.I. and
+          Machine Learning that perform better with larger samples of retail
+          trading data
+        </div>
+      </div>
+      <div class="text-bottom-block">
+        <div class="dot"></div>
+        non-profitable mfi
+      </div>
+    </div>
+    <div class="image" data-aos="flip-right"></div>
+  </div>
+</div>
+<app-footer-new [backgroundColor]="'#263247'" [withEmail]="true">
+</app-footer-new>

@@ -78,6 +78,13 @@ const routes: Routes = [
             (m) => m.ConfirmationModule
           ),
       },
+      // {
+      //   path: 'crowdfunding',
+      //   loadChildren: () =>
+      //     import(
+      //       '../../pages/crowdfunding-raise/crowdfunding-raise.module'
+      //     ).then((m) => m.CrowdfundingRaiseModule),
+      // },
     ],
   },
 ];

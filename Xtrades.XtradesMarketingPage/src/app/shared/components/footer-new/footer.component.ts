@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SubscriptionService } from '@core/subscription.service';
 
 @Component({
@@ -11,8 +12,11 @@ export class FooterComponent implements OnInit {
   isLoading = false;
   @Input() backgroundColor: string = '';
   @Input() withEmail = false;
-  
-  constructor(private subscriptionService: SubscriptionService) {}
+
+  constructor(
+    private subscriptionService: SubscriptionService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -44,5 +48,9 @@ export class FooterComponent implements OnInit {
         myForm?.controls?.subscriberEmail?.errors?.pattern) &&
       myForm?.submitted
     );
+  }
+
+  navigate(link: string) {
+    this.router.navigate([link]);
   }
 }
