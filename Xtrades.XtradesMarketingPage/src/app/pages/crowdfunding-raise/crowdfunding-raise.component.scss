@@ -28,8 +28,7 @@
       flex-direction: column;
       gap: 30px;
       max-width: 100%;
-      margin: 0 auto;
-      margin-top: 65px;
+      margin: 65px auto 0;
     }
     &__item {
       width: 100%;
@@ -123,11 +122,9 @@
   }
   .steps-content-wrap {
     width: 920px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 65px;
+    margin: 20px auto 65px;
     @media (max-width: $md) {
       flex-direction: column;
       max-width: 80%;
@@ -165,7 +162,7 @@
     .title {
       margin-bottom: 20px;
       color: #fff;
-      font-family: Outfit;
+      font-family: "Outfit", sans-serif;
       font-size: 30px;
       font-style: normal;
       font-weight: 700;
@@ -173,14 +170,14 @@
     }
     .list-wrap {
       list-style: none;
-      padding-left: 0px;
+      padding-left: 0;
       li {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 20px;
         color: #f0fbff;
-        font-family: "Poppins";
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -360,7 +357,7 @@
     justify-content: space-between;
     width: 300px;
     margin-right: 47px;
-    padding: 0px;
+    padding: 0;
     .text-top-block {
       .text-content {
         color: #f0fbff;
