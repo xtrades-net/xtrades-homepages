@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { OnInit } from '@angular/core';
+import { AfterViewInit, OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { LoadingService } from '@core/loading.service';
 import { filter } from 'rxjs';
 import { SwiperOptions } from 'swiper';
 
@@ -9,7 +10,7 @@ import { SwiperOptions } from 'swiper';
   templateUrl: './crowdfunding-raise.component.html',
   styleUrls: ['./crowdfunding-raise.component.scss'],
 })
-export class CrowdfundingRaiseComponent implements OnInit {
+export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit {
   public stepContent = [
     '100% Technology Backed Transparency',
     'Choose who to learn and choose who to follow based on statistics',
@@ -77,7 +78,10 @@ export class CrowdfundingRaiseComponent implements OnInit {
   };
   public testimonialsSwiper: any = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private loadingService: LoadingService
+  ) {}
 
   ngOnInit(): void {
     this.http
@@ -94,5 +98,9 @@ export class CrowdfundingRaiseComponent implements OnInit {
       .subscribe((res) => {
         this.testimonials = res.data;
       });
+  }
+
+  ngAfterViewInit(): void {
+    this.loadingService.removeLoader();
   }
 }
