@@ -3,13 +3,12 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
-  ElementRef,
+  ElementRef, OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { ScreenService } from '@core/screen.service';
 import { SwiperOptions } from 'swiper';
-import { HttpClient } from '@angular/common/http';
 import * as _ from 'lodash';
 import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
@@ -18,13 +17,14 @@ import { LoadingService } from '@core/loading.service';
 import { SeoService } from '@shared/service/seo.service';
 import { Location } from '@angular/common';
 import {TestimonialModel, TestimonialsService} from "@core/testimonials.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements AfterViewInit, OnInit {
+export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('email') input: ElementRef | any;
   sliderImages: Array<any> = [
     {
@@ -127,6 +127,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
   alreadySubscribed = false;
   showReadMoreSection = false;
   public showPromo = false;
+  private subscription: Subscription = new Subscription();
 
   constructor(
     public screenService: ScreenService,
@@ -135,26 +136,15 @@ export class HomeComponent implements AfterViewInit, OnInit {
     private loadingService: LoadingService,
     private SEOService: SeoService,
     private location: Location,
-    private http: HttpClient,
     private testimonialsService: TestimonialsService,
   ) {}
 
   ngOnInit(): void {
     // add canonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
-    if (this.testimonialsService.testimonials.length > 0) {
-      this.testimonials = this.testimonialsService.testimonials;
-    } else {
-      this.http
-        .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
-        .subscribe((res) => {
-          if(res.data) {
-            this.testimonials = res.data;
-            console.log(res.data)
-            this.testimonialsService.testimonials = res.data;
-          }
-        });
-    }
+    this.subscription.add(this.testimonialsService.getTestimonials().subscribe(data=>{
+      this.testimonials = data;
+    }));
     this.checkActivePromo();
   }
 
@@ -236,7 +226,6 @@ export class HomeComponent implements AfterViewInit, OnInit {
     ) {
       localStorage.setItem('active-promo', 'true');
       localStorage.setItem('active-promo-counter', '1');
-      const currentStep = +localStorage.getItem('active-promo-counter')!;
       this.showPromo = true;
     }
   }
@@ -245,7 +234,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
     window.open('https://forms.gle/fH72RrSPW6uWZznK9', '_blank');
   }
 
-  clearStorage(): void {
-    localStorage.clear();
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

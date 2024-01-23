@@ -1,16 +1,15 @@
-import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, OnInit } from '@angular/core';
+import {AfterViewInit, OnDestroy, OnInit} from '@angular/core';
 import { Component } from '@angular/core';
 import { LoadingService } from '@core/loading.service';
-import { SwiperOptions } from 'swiper';
 import {TestimonialModel, TestimonialsService} from "@core/testimonials.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-crowdfunding-raise',
   templateUrl: './crowdfunding-raise.component.html',
   styleUrls: ['./crowdfunding-raise.component.scss'],
 })
-export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit {
+export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit, OnDestroy {
   public stepContent = [
     '100% Technology Backed Transparency',
     'Choose who to learn and choose who to follow based on statistics',
@@ -51,45 +50,25 @@ export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit {
     { value: 'Ad Revenue', img: 'assets/fundraising/stream-5.svg' },
     { value: 'Partnerships', img: 'assets/fundraising/stream-6.svg' },
   ];
-
   public testimonials: TestimonialModel[] = [];
+  private subscription: Subscription = new Subscription();
 
-  public readonly config: SwiperOptions = {
-    slidesPerView: 1,
-    spaceBetween: 50,
-    pagination: true,
-    scrollbar: true,
-    zoom: {
-      maxRatio: 2,
-    },
-    watchOverflow: true,
-    navigation: {
-      nextEl: '.detailed-swiper-button-next',
-      prevEl: '.detailed-swiper-button-prev',
-    },
-  };
   constructor(
-    private http: HttpClient,
     private loadingService: LoadingService,
     private testimonialsService: TestimonialsService,
   ) {}
 
   ngOnInit(): void {
-    if (this.testimonialsService.testimonials.length > 0) {
-      this.testimonials = this.testimonialsService.testimonials;
-    } else {
-      this.http
-        .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
-        .subscribe((res) => {
-          if(res.data) {
-            this.testimonials = res.data;
-            this.testimonialsService.testimonials = res.data;
-          }
-        });
-    }
+     this.subscription.add(this.testimonialsService.getTestimonials().subscribe(data=>{
+       this.testimonials = data;
+     }));
   }
 
   ngAfterViewInit(): void {
     this.loadingService.removeLoader();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

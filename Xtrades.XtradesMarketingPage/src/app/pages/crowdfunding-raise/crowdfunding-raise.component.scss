@@ -11,7 +11,6 @@
    line-height: 30px;
   }
 }
-
 .content {
   max-width: 960px;
   justify-content: center;
@@ -23,7 +22,7 @@
   .top-block {
     display: flex;
     justify-content: space-between;
-    margin-top: 125px;
+    margin-top: 75px;
     @media (max-width: $md) {
       flex-direction: column;
       gap: 30px;
@@ -31,12 +30,14 @@
       margin: 65px auto 0;
     }
     &__item {
-      width: 100%;
       .header {
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
         line-height: 60px;
+        margin-top: 5px;
+        width: 604px;
+        max-width: 100%;
         @media (max-width: $md) {
           font-size: 32px;
           line-height: 36px;
@@ -53,6 +54,7 @@
         line-height: 32px;
         margin-top: 20px;
         margin-bottom: 20px;
+        max-width: 500px;
       }
       .join-link {
         display: block;
@@ -75,7 +77,7 @@
     }
     .last {
       width: 30%;
-      height: 585px;
+      height: 565px;
       min-width: 413px;
       max-width: 100%;
       background: url("../../../assets/fundraising/main.svg") center/cover
@@ -124,7 +126,7 @@
     width: 920px;
     display: flex;
     justify-content: space-between;
-    margin: 20px auto 65px;
+    margin: 29px auto 65px;
     @media (max-width: $md) {
       flex-direction: column;
       max-width: 80%;
@@ -210,10 +212,10 @@
 .offers-wrap {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 110px;
   @media (max-width: $md) {
     flex-direction: column;
-    max-width: 80%;
+    align-items: center;
   }
   .offers {
     width: 370px;
@@ -299,7 +301,7 @@
 .testimonials-wrap {
   background-color: #18396b;
   padding-top: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
   .testimonials {
     max-width: 960px;
     margin: 0 auto;
@@ -322,26 +324,10 @@
 }
 .machine-learning {
   display: flex;
-  .content-1 {
-    width: 348px;
-    height: 359px;
-    background: url("../../../assets/fundraising/machine-learning-1.svg")
-      center/contain no-repeat;
-    @media (max-width: $md) {
-      height: 150px;
-    }
-  }
-  .content-2 {
-    width: 613px;
-    height: 359px;
-    background: url("../../../assets/fundraising/machine-learning-2.svg")
-      center/contain no-repeat;
-    @media (max-width: $md) {
-      height: 150px;
-    }
-  }
+  height: 359px;
+  max-width: 100%;
+  background: url("../../../assets/fundraising/machine-learning.svg") center/contain no-repeat;
 }
-
 .manifest {
   height: 409px;
   display: flex;
@@ -350,6 +336,7 @@
   @media (max-width: $md) {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
   .text {
     display: flex;
