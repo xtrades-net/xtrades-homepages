@@ -1,8 +1,10 @@
 import {AfterViewInit, OnDestroy, OnInit} from '@angular/core';
 import { Component } from '@angular/core';
 import { LoadingService } from '@core/loading.service';
-import {TestimonialModel, TestimonialsService} from "@core/testimonials.service";
+import {TestimonialsService} from "@core/testimonials.service";
 import {Subscription} from "rxjs";
+import {TestimonialModel} from "../../models/testimonial.model";
+import {sliderType} from "../../models/slider.model";
 
 @Component({
   selector: 'app-crowdfunding-raise',
@@ -52,6 +54,7 @@ export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit, OnDest
   ];
   public testimonials: TestimonialModel[] = [];
   private subscription: Subscription = new Subscription();
+  public slider: sliderType  = sliderType.promo;
 
   constructor(
     private loadingService: LoadingService,

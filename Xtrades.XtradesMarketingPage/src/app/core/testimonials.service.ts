@@ -1,15 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {LoadingService} from "@core/loading.service";
 import {map, Observable} from "rxjs";
+import {TestimonialModel} from "../models/testimonial.model";
 
-export interface TestimonialModel {
-  username: string;
-  attachments: any[];
-  avatar: string;
-  content:string;
-  dateTime: Date;
-}
 @Injectable({
   providedIn: 'root',
 })

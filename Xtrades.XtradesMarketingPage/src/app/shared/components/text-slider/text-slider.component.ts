@@ -6,6 +6,8 @@ import SwiperCore, {
   Scrollbar,
   Autoplay,
 } from 'swiper';
+import {TestimonialModel} from "../../../models/testimonial.model";
+import {sliderType} from "../../../models/slider.model";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
@@ -33,6 +35,7 @@ export class TextSliderComponent {
       prevEl: '.button-prev',
     },
   };
-  @Input() testimonials: any = [];
-  @Input() type = '';
+  @Input() testimonials: TestimonialModel[] = [];
+  @Input() type: sliderType = sliderType.default;
 }
+

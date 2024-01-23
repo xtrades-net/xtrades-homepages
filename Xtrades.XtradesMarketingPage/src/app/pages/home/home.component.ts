@@ -16,8 +16,9 @@ import { LoadingService } from '@core/loading.service';
 
 import { SeoService } from '@shared/service/seo.service';
 import { Location } from '@angular/common';
-import {TestimonialModel, TestimonialsService} from "@core/testimonials.service";
+import { TestimonialsService} from "@core/testimonials.service";
 import {Subscription} from "rxjs";
+import {TestimonialModel} from "../../models/testimonial.model";
 
 @Component({
   selector: 'app-home',
