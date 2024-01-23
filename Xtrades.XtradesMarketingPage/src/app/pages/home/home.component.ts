@@ -14,10 +14,10 @@ import * as _ from 'lodash';
 import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
 import { LoadingService } from '@core/loading.service';
-import { filter } from 'rxjs/operators';
 
 import { SeoService } from '@shared/service/seo.service';
 import { Location } from '@angular/common';
+import {TestimonialModel, TestimonialsService} from "@core/testimonials.service";
 
 @Component({
   selector: 'app-home',
@@ -102,7 +102,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
       prevEl: '.button-prev',
     },
   };
-  testimonials = [];
+  testimonials: TestimonialModel[] = [];
   faqs = [
     {
       question: 'Is Xtrades Worth It?',
@@ -135,27 +135,26 @@ export class HomeComponent implements AfterViewInit, OnInit {
     private loadingService: LoadingService,
     private SEOService: SeoService,
     private location: Location,
-    private http: HttpClient
+    private http: HttpClient,
+    private testimonialsService: TestimonialsService,
   ) {}
 
   ngOnInit(): void {
-    // add cannonical link in page ---
+    // add canonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
-
-    this.http
-      .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
-      .pipe(
-        filter(
-          (res) =>
-            (res.data = res.data.filter(
-              (data: { username: string }) =>
-                data.username !== 'ScaredShirtless'
-            ))
-        )
-      )
-      .subscribe((res) => {
-        this.testimonials = res.data;
-      });
+    if (this.testimonialsService.testimonials.length > 0) {
+      this.testimonials = this.testimonialsService.testimonials;
+    } else {
+      this.http
+        .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
+        .subscribe((res) => {
+          if(res.data) {
+            this.testimonials = res.data;
+            console.log(res.data)
+            this.testimonialsService.testimonials = res.data;
+          }
+        });
+    }
     this.checkActivePromo();
   }
 

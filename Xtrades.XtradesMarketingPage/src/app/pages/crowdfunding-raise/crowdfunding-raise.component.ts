@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { LoadingService } from '@core/loading.service';
-import { filter } from 'rxjs';
 import { SwiperOptions } from 'swiper';
+import {TestimonialModel, TestimonialsService} from "@core/testimonials.service";
 
 @Component({
   selector: 'app-crowdfunding-raise',
@@ -52,15 +52,7 @@ export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit {
     { value: 'Partnerships', img: 'assets/fundraising/stream-6.svg' },
   ];
 
-  public testimonials = [
-    {
-      rate: '5',
-      title: 'Intuitive platform and excellent community',
-      author: 'MO Leadership Coach , 10/10/2023',
-      // eslint-disable-next-line max-len
-      text: `I've had the privilege of being a lifetime member of Xtrades for over three years now, and the experience has been nothing short of transformative.`,
-    },
-  ];
+  public testimonials: TestimonialModel[] = [];
 
   public readonly config: SwiperOptions = {
     slidesPerView: 1,
@@ -76,28 +68,25 @@ export class CrowdfundingRaiseComponent implements OnInit, AfterViewInit {
       prevEl: '.detailed-swiper-button-prev',
     },
   };
-  public testimonialsSwiper: any = [];
-
   constructor(
     private http: HttpClient,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private testimonialsService: TestimonialsService,
   ) {}
 
   ngOnInit(): void {
-    this.http
-      .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
-      .pipe(
-        filter(
-          (res) =>
-            (res.data = res.data.filter(
-              (data: { username: string }) =>
-                data.username !== 'ScaredShirtless'
-            ))
-        )
-      )
-      .subscribe((res) => {
-        this.testimonials = res.data;
-      });
+    if (this.testimonialsService.testimonials.length > 0) {
+      this.testimonials = this.testimonialsService.testimonials;
+    } else {
+      this.http
+        .get<any>('https://app.xtrades.net/api/v2/Testimonials/testimonials')
+        .subscribe((res) => {
+          if(res.data) {
+            this.testimonials = res.data;
+            this.testimonialsService.testimonials = res.data;
+          }
+        });
+    }
   }
 
   ngAfterViewInit(): void {
