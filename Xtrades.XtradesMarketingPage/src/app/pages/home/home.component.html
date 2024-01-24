@@ -1,4 +1,14 @@
 <app-header></app-header>
+<div class="promo-wrapper" data-aos="fade-down" *ngIf="showPromo">
+  <div class="promo-text">
+    Xtrades.net Is opening their first and only public investment round!
+  </div>
+  <div class="promo-sub-text">
+    <span class="apply pointer" (click)="proceedPromoLink()">Apply Here</span>
+    to have a piece at the ground floor
+  </div>
+</div>
+<!-- <button (click)="clearStorage()">clear storage</button> -->
 <section
   class="hero flex grid-container relative"
   [class.responsive-main-container]="

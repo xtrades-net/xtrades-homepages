@@ -14,6 +14,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pro-algo/pro-algo.module').then((m) => m.ProAlgoModule),
   },
+  {
+    path: 'crowdfunding',
+    loadChildren: () =>
+      import('./layouts/promo-layout/promo-layout.module').then(
+        (m) => m.PromoLayoutModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 

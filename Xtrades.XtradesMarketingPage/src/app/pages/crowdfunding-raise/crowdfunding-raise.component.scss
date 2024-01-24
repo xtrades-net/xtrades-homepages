@@ -1,0 +1,383 @@
+@import "../../../styles/vars";
+
+.title {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  line-height: 39px;
+  @media (max-width: $md) {
+   font-size: 28px;
+   line-height: 30px;
+  }
+}
+.content {
+  max-width: 960px;
+  justify-content: center;
+  margin: 0 auto;
+  @media (max-width: $md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .top-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    @media (max-width: $md) {
+      flex-direction: column;
+      gap: 30px;
+      max-width: 100%;
+      margin: 65px auto 0;
+    }
+    &__item {
+      .header {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        margin-top: 5px;
+        width: 604px;
+        max-width: 100%;
+        @media (max-width: $md) {
+          font-size: 32px;
+          line-height: 36px;
+        }
+      }
+      @media (max-width: $md) {
+        width: 100%;
+      }
+      .desc {
+        color: #bacdea;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 500px;
+      }
+      .join-link {
+        display: block;
+        width: 180px;
+        height: 70px;
+        background: linear-gradient(256deg, #00fdb9 0%, #00e5fd 100%);
+        color: #081b31;
+        border-radius: 8px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 70px;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .join-link:hover {
+        filter: brightness(1.3);
+      }
+    }
+    .last {
+      width: 30%;
+      height: 565px;
+      min-width: 413px;
+      max-width: 100%;
+      background: url("../../../assets/fundraising/main.svg") center/cover
+        no-repeat;
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
+  }
+}
+.advantages-wrap {
+  .title {
+    text-align: center;
+    line-height: 50px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    @media (max-width: $md) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+  .steps-wrap {
+    width: 900px;
+    height: 120px;
+    background: url("../../../assets/fundraising/steps-bg.png") center/cover
+      no-repeat;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $md) {
+      display: none;
+    }
+
+    .step {
+      width: 140px;
+      height: 140px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      background-position-y: -15px;
+      border-radius: 50%;
+    }
+  }
+  .steps-content-wrap {
+    width: 920px;
+    display: flex;
+    justify-content: space-between;
+    margin: 29px auto 65px;
+    @media (max-width: $md) {
+      flex-direction: column;
+      max-width: 80%;
+    }
+    .step-content {
+      flex: 1;
+      padding-left: 25px;
+      .step-count {
+        color: #07afec;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+      }
+      .step-text {
+        color: #a8b1c0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+.stats-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  @media (max-width: $md) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats-list {
+    width: 342px;
+    .title {
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: "Outfit", sans-serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 39px;
+    }
+    .list-wrap {
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        color: #f0fbff;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+  .stats-grid {
+    width: 584px;
+    height: 646px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media (max-width: $md) {
+      width: 282px;
+      height: 323px;
+    }
+    .image {
+      background: url("../../../assets/fundraising/stats-bg.svg") center/contain
+        no-repeat;
+      width: 560px;
+      height: 632px;
+      @media (max-width: $md) {
+        width: 280px;
+        height: 316px;
+      }
+    }
+  }
+}
+.offers-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 110px;
+  @media (max-width: $md) {
+    flex-direction: column;
+    align-items: center;
+  }
+  .offers {
+    width: 370px;
+    @media (max-width: $md) {
+      width: 330px;
+    }
+    .grid {
+      margin-top: 31px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .image {
+        width: 175px;
+        height: 100px;
+        background-size: 150%;
+        background-position: center;
+        background-position-y: -24px;
+        background-repeat: no-repeat;
+        @media (max-width: $md) {
+          width: 140px;
+          height: 90px;
+          background-position-y: -14px;
+        }
+      }
+      .text {
+        color: #f0fbff;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 15px;
+        @media (max-width: $md) {
+         width: 140px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .streams {
+    width: 510px;
+    margin-bottom: 100px;
+    @media (max-width: $md) {
+      width: 350px;
+      margin-top: 40px;
+    }
+    .grid {
+      margin-top: 31px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      .grid-item {
+        width: 245px;
+        height: 100px;
+        border-radius: 20px;
+        background-color: #18396b;
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        @media (max-width: $md) {
+          width: 155px;
+          text-align: center;
+        }
+        .image {
+          width: 100px;
+          height: 100px;
+          background-size: 200%;
+          background-position: center;
+          background-position-y: -23px;
+          background-repeat: no-repeat;
+          border-radius: 20px;
+          @media (max-width: $md) {
+            display: none;
+          }
+        }
+        .text {
+          width: 145px;
+        }
+      }
+    }
+  }
+}
+.testimonials-wrap {
+  background-color: #18396b;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  .testimonials {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 58px;
+    &-content {
+      width: 600px;
+      @media (max-width: $md) {
+        width: 340px;
+        padding: 20px;
+      }
+    }
+    &-image {
+      width: 300px;
+      height: 346px;
+      background: url("../../../assets/fundraising/app-screen.svg")
+        center/contain no-repeat;
+    }
+  }
+}
+.machine-learning {
+  display: flex;
+  height: 359px;
+  max-width: 100%;
+  background: url("../../../assets/fundraising/machine-learning.svg") center/contain no-repeat;
+}
+.manifest {
+  height: 409px;
+  display: flex;
+  margin-top: 94px;
+  margin-bottom: 94px;
+  @media (max-width: $md) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    margin-right: 47px;
+    padding: 0;
+    .text-top-block {
+      .text-content {
+        color: #f0fbff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        margin-top: 14px;
+      }
+      @media (max-width: $md) {
+        margin-bottom: 30px;
+      }
+    }
+    .text-bottom-block {
+      display: flex;
+      align-items: center;
+      .dot {
+        background-color: #ffc737;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+    }
+  }
+  .image {
+    width: 613px;
+    background: url("../../../assets/fundraising/manifest.svg") center/contain
+      no-repeat;
+    height: 472px;
+    @media (max-width: $md) {
+      width: 306px;
+      height: 236px;
+    }
+  }
+}
