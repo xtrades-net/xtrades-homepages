@@ -189,3 +189,15 @@ td {
   font-style: italic;
   text-align: center;
 }
+
+.table {
+  @media (max-width: $xs) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .table-block-item:nth-child(1) {
+    @media (max-width: $xs) {
+      width: 30%;
+    }
+  }
+}
