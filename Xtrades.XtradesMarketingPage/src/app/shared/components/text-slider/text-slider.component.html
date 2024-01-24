@@ -2,7 +2,7 @@
   <div class="content__swiper-container">
     <swiper class="swiper" [config]="config">
       <ng-template swiperSlide *ngFor="let item of testimonials">
-        <div class="slide column slider-container" *ngIf="type !== 'promo'">
+        <div class="slide column slider-container" *ngIf="type !== currentSliderType.promo">
           <div class="swiper-zoom-container">
             <div class="gradient-overlay">
               <div
@@ -53,7 +53,7 @@
         </div>
         <div
           class="swiper-pagination"
-          [ngStyle]="type === 'promo' ? { 'margin-top': '50px' } : {}"
+          [ngStyle]="type === currentSliderType.promo ? { 'margin-top': '50px' } : {}"
         ></div>
         <div class="swiper-scrollbar" *ngIf="type !== currentSliderType.promo"></div>
 
