@@ -37,5 +37,6 @@ export class TextSliderComponent {
   };
   @Input() testimonials: TestimonialModel[] = [];
   @Input() type: sliderType = sliderType.default;
+  public currentSliderType = sliderType;
 }
 

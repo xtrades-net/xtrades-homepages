@@ -33,7 +33,7 @@
         </div>
         <div
           class="slide column slider-container"
-          *ngIf="testimonials && testimonials.length > 0 && type === 'promo'"
+          *ngIf="testimonials && testimonials.length > 0 && type === currentSliderType.promo"
         >
           <div class="slide">
             <div class="stars"></div>
@@ -55,14 +55,14 @@
           class="swiper-pagination"
           [ngStyle]="type === 'promo' ? { 'margin-top': '50px' } : {}"
         ></div>
-        <div class="swiper-scrollbar" *ngIf="type !== 'promo'"></div>
+        <div class="swiper-scrollbar" *ngIf="type !== currentSliderType.promo"></div>
 
         <div
-          *ngIf="testimonials.length !== 1 && type !== 'promo'"
+          *ngIf="testimonials.length !== 1 && type !== currentSliderType.promo"
           class="swiper-button-prev cursor-pointer button-prev"
         ></div>
         <div
-          *ngIf="testimonials.length !== 1 && type !== 'promo'"
+          *ngIf="testimonials.length !== 1 && type !== currentSliderType.promo"
           class="swiper-button-next cursor-pointer button-next"
         ></div>
       </ng-template>
