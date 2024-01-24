@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export class Title_Description {
   public static List = [
     {
@@ -1031,6 +1032,40 @@ export class Title_Description {
               },
           "datePublished": "2024-01-14"
           }`,
+      ],
+    },
+    // 30-blog
+    {
+      Path: 'tradersync-comparison-vs-xtrades',
+      Title:
+        'Understanding The Differences Between Xtrades And TraderSync: A Comprehensive Comparison',
+      Des: 'If you’re curious about the differences between XTrades and TraderSync, our comprehensive guide will help you find the right platform to make the best decisions with your trading strategies. From using the stocks tracker in real time tools to understanding how does a trading journal work, check out our comprehensive comparison',
+      Spt: [
+        `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+                "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.xtrades.net/blogs/tradersync-comparison-vs-xtrades"
+                },
+            "headline": "Understanding The Differences Between Xtrades And TraderSync: A Comprehensive Comparison",
+            "description": "If you’re curious about the differences between XTrades and TraderSync, our comprehensive guide will help you find the right platform to make the best decisions with your trading strategies. From using the stocks tracker in real time tools to understanding how does a trading journal work, check out our comprehensive comparison",
+            "image": "",
+            "author": {
+                "@type": "Person",
+                "name": "Omar G.",
+                "url": "https://app.xtrades.net/coupon/d05oXywq"
+                },        
+            "publisher": {
+                "@type": "Organization",
+                "name": "Xtrades",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.xtrades.net/blogs"
+                    }
+                },
+            "datePublished": "2024-01-24"
+            }`,
       ],
     },
   ];
