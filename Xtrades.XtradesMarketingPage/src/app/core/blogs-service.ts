@@ -332,7 +332,7 @@ export class BlogPostsService {
     {
       id: '28',
       url: 'two-secrets-of-successful-stock-traders-good-scripts-and-channel-trading',
-      snippet: `Two important tools for intermediate stock and options traders are learning to use stock scripts (or indicators) and learning to spot trading channels`,
+      snippet: `Two important tools for intermediate stock and options traders are learning to use stock scripts (or indicators) and learning to spot trading channels.`,
       href: '/blogs/two-secrets-of-successful-stock-traders-good-scripts-and-channel-trading',
       date: '12.01.2024',
       title:
@@ -365,6 +365,25 @@ export class BlogPostsService {
         'What is Social Trading?',
         'How I got into it?',
         'What is so important about social trading?',
+      ],
+    },
+    {
+      id: '30',
+      url: 'tradersync-comparison-vs-xtrades',
+      snippet: `If you’re curious about the differences between XTrades and TraderSync, our comprehensive guide will help you find the right platform to make the best decisions with your trading strategies. From using the stocks tracker in real time tools to understanding how does a trading journal work, check out our comprehensive comparison.`,
+      href: '/blogs/tradersync-comparison-vs-xtrades',
+      date: '24.01.2024',
+      title:
+        'Understanding The Differences Between Xtrades And TraderSync: A Comprehensive Comparison',
+      image: 'assets/blogs/30/30-1.jpg',
+      author: 'Omar G Xtrades',
+      autorLink: 'https://app.xtrades.net/coupon/d05oXywq',
+      initials: 'OG',
+      duration: Utils.getDuration(1188),
+      tableOfContent: [
+        'XTrades And TraderSync At A Glance',
+        'A Brief Overview Of Both Xtrades And TraderSync',
+        'Key Features Of XTrades And TraderSync: A Side-By-Side Comparison',
       ],
     },
   ].reverse();
