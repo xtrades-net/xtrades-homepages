@@ -6,7 +6,6 @@ import { SeparatorModule } from '../separator/separator.module';
 import { HeroModule } from '../hero/hero.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@shared/shared.module';
-import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [FooterComponent],
@@ -17,7 +16,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     SeparatorModule,
     HeroModule,
     RouterModule,
-    MatTooltipModule,
   ],
   exports: [FooterComponent],
 })
