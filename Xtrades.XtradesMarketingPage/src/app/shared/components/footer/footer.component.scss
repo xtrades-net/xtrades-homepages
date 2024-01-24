@@ -96,3 +96,23 @@
     margin-bottom: 45px;
   }
 }
+
+.disclaimer{
+  position: absolute;
+  width: 50vw;
+  height: fit-content;
+  bottom: 112px;
+  margin: 0 auto;
+  margin-left: 25vw;
+  text-align: center;
+  border: 1px solid #aac0f037;
+  background-color: #182847;
+  opacity: 0.78;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  @media (max-width: $md) {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}

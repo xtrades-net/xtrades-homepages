@@ -1,5 +1,6 @@
 <div
   class="wrap"
+  style="position: relative;"
   [ngStyle]="
     backgroundColor
       ? { 'background-color': backgroundColor }
@@ -185,8 +186,9 @@
     </div>
   </section>
   <app-separator></app-separator>
-  <div class="copyright center">Disclaimer</div>
-  <div class="copyright copyright--text responsive-main-container center">
+  <div class="copyright disclaimer-switcher pointer" style="display: flex; margin: 0 auto; max-width: fit-content">Disclaimer</div>
+  <div class="disclaimer" data-aos="flip-down" *ngIf="showDisclaimer">{{disclaimer}}</div>
+  <!-- <div class="copyright copyright--text responsive-main-container center">
     If you do not agree with any term of provision of our Terms and Conditions
     you should not use our Site, Services, Content or Information. Please be
     advised that your continued use of the Site, Services, Content, or
@@ -238,7 +240,7 @@
     https://ssrn.com/abstract=908615 Douglas J. Jordan & J. David Diltz (2003)
     The Profitability of Day Traders, Financial Analysts Journal, 59:6, 85-94,
     DOI: https://www.tandfonline.com/doi/abs/10.2469/faj.v59.n6.2578
-  </div>
+  </div> -->
   <div class="copyright center">
     Copyright © 2022 <a class="link cursor-pointer" href="/">Xtrades</a>
   </div>
