@@ -28,25 +28,15 @@
           <a href="tel:1-530-723-5499">1-530-723-5499</a>
         </b>
       </div>
-      <div class="link-wrapper">
-        <a href="#" onclick="return false;" routerLink="/terms-and-conditions"
-          >Terms & Conditions</a
-        >
-      </div>
-      <div>
-        <a
-          class="link-wrapper"
-          href="#"
-          onclick="return false;"
-          routerLink="/refund-policy"
-          >Refund Policy</a
-        >
-      </div>
-      <div class="link-wrapper">
-        <a href="#" onclick="return false;" routerLink="/privacy-policy"
-          >Privacy Policy</a
-        >
-      </div>
+      <button class="link-wrapper" (click)="navigate('/terms-and-conditions')">
+        Terms & Conditions
+      </button>
+      <button class="link-wrapper" (click)="navigate('/refund-policy')">
+        Refund Policy
+      </button>
+      <button class="link-wrapper" (click)="navigate('/privacy-policy')">
+        Privacy Policy
+      </button>
     </div>
     <div class="copyright-wrapper">
       <span>© Copyright 2024 - Xtrades. All rights reserved.</span>
