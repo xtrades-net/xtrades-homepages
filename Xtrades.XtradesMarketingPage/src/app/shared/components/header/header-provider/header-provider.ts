@@ -12,7 +12,7 @@ export class HeaderProvider {
       HeaderElement.apply({ title: 'Home', directUrl: '' }),
       HeaderElement.apply({ title: 'xBlog', directUrl: 'blogs' }),
       HeaderElement.apply({
-        title: 'Crowdfunding Raise',
+        title: 'Seed Round',
         directUrl: 'crowdfunding',
       }),
     ]);
