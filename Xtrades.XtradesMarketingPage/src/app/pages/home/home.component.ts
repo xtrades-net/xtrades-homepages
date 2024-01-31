@@ -3,7 +3,8 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
-  ElementRef, OnDestroy,
+  ElementRef,
+  OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -13,12 +14,12 @@ import * as _ from 'lodash';
 import { ExtendedCounterAnimationOptions } from '../../animations/animations';
 import { SubscribeService } from '@shared/components/modal/subscribe-modal/subscribe.service';
 import { LoadingService } from '@core/loading.service';
-
 import { SeoService } from '@shared/service/seo.service';
 import { Location } from '@angular/common';
-import { TestimonialsService} from "@core/testimonials.service";
-import {Subscription} from "rxjs";
-import {TestimonialModel} from "../../models/testimonial.model";
+import { TestimonialsService } from '@core/testimonials.service';
+import { Subscription } from 'rxjs';
+import { TestimonialModel } from '../../models/testimonial.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -138,14 +139,17 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     private SEOService: SeoService,
     private location: Location,
     private testimonialsService: TestimonialsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     // add canonical link in page ---
     this.SEOService.createCanonicalLink(this.location.path());
-    this.subscription.add(this.testimonialsService.getTestimonials().subscribe(data=>{
-      this.testimonials = data;
-    }));
+    this.subscription.add(
+      this.testimonialsService.getTestimonials().subscribe((data) => {
+        this.testimonials = data;
+      })
+    );
     this.checkActivePromo();
   }
 
@@ -232,7 +236,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   public proceedPromoLink(): void {
-    window.open('https://forms.gle/fH72RrSPW6uWZznK9', '_blank');
+    this.router.navigate(['/crowdfunding']);
   }
 
   ngOnDestroy(): void {

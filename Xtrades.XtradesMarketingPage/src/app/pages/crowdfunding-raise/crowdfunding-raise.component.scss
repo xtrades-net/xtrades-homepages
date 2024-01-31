@@ -7,8 +7,8 @@
   font-family: "Outfit", sans-serif;
   line-height: 39px;
   @media (max-width: $md) {
-   font-size: 28px;
-   line-height: 30px;
+    font-size: 28px;
+    line-height: 30px;
   }
 }
 .content {
@@ -36,6 +36,7 @@
         font-weight: 700;
         line-height: 60px;
         margin-top: 5px;
+        margin-bottom: 0;
         width: 604px;
         max-width: 100%;
         @media (max-width: $md) {
@@ -48,13 +49,16 @@
       }
       .desc {
         color: #bacdea;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
+        font-weight: 300;
+        line-height: 28px;
         margin-top: 20px;
         margin-bottom: 20px;
         max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
       .join-link {
         display: block;
@@ -77,10 +81,10 @@
     }
     .last {
       width: 30%;
-      height: 565px;
+      height: 600px;
       min-width: 413px;
       max-width: 100%;
-      background: url("../../../assets/fundraising/main.svg") center/cover
+      background: url("../../../assets/fundraising/main.svg") center/105%
         no-repeat;
       @media (max-width: $md) {
         display: none;
@@ -248,7 +252,7 @@
         line-height: normal;
         margin-bottom: 15px;
         @media (max-width: $md) {
-         width: 140px;
+          width: 140px;
           margin-bottom: 5px;
         }
       }
@@ -326,7 +330,8 @@
   display: flex;
   height: 359px;
   max-width: 100%;
-  background: url("../../../assets/fundraising/machine-learning.svg") center/contain no-repeat;
+  background: url("../../../assets/fundraising/machine-learning.svg")
+    center/contain no-repeat;
 }
 .manifest {
   height: 409px;
