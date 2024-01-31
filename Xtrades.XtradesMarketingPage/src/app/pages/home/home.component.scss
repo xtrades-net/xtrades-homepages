@@ -65,7 +65,12 @@
   }
   &__buttons-row {
     padding: 15px 0;
-
+    align-items: center;
+    .buttons-row__enter {
+      @media (max-width: $sl) {
+        margin-bottom: 130px;
+      }
+    }
     .text-container {
       // padding: 0 0 15px 0;
       bottom: 25%;
@@ -367,6 +372,22 @@ ol {
   border-radius: 6px;
   padding: 20px 20px 25px 20px;
   background: url("../../../assets/promo.svg") center/cover no-repeat;
+  @media (max-width: 375px) {
+    position: absolute;
+    z-index: 8;
+    top: 725px;
+    width: 100vw;
+    left: 0;
+    height: 78px;
+    max-height: 78px;
+    min-height: 78px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 41px;
+    padding: 11px 20px;
+    border-radius: 0px;
+    background: url("../../../assets/promo-mob.svg") center/cover no-repeat;
+  }
   .promo-text {
     margin: 0 auto;
     margin-bottom: 8px;
@@ -376,6 +397,15 @@ ol {
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
+    @media (max-width: 375px) {
+      color: #060e1f;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: left;
+      margin-bottom: 0;
+    }
   }
   .promo-sub-text {
     color: #fff;
@@ -385,6 +415,9 @@ ol {
     line-height: 30px;
     margin: 0 auto;
     text-align: center;
+    @media (max-width: 375px) {
+      text-align: left;
+    }
     .apply {
       color: #081b31;
       text-align: center;
@@ -394,6 +427,24 @@ ol {
       line-height: 30px;
       letter-spacing: 1.6px;
       text-transform: uppercase;
+      @media (max-width: 375px) {
+        text-align: left;
+        color: #081b31;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+    }
+    .apply-text {
+      @media (max-width: 375px) {
+        display: none;
+      }
+    }
+    .apply:hover {
+      color: #15406d;
     }
   }
 }
