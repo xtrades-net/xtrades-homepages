@@ -1,5 +1,10 @@
 <app-header></app-header>
-<div class="promo-wrapper" data-aos="fade-down" *ngIf="showPromo">
+<div
+  class="promo-wrapper pointer"
+  data-aos="fade-down"
+  *ngIf="showPromo"
+  (click)="proceedPromoLink()"
+>
   <div class="promo-text">
     Xtrades.net Is opening their first and only public investment round!
   </div>
