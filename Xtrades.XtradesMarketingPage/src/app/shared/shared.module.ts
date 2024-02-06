@@ -59,6 +59,7 @@ import { DirectivesModule } from './directives/directives.module';
 import { MailingListNewComponent } from './components/mailing-list-new/mailing-list-new.component';
 import { FaqsComponent } from './components/faqs/faqs/faqs.component';
 import { TableOfContentComponent } from './components/blog-post/table-of-content/table-of-content.component';
+import { DisclaimerComponent } from './components/disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -105,6 +106,7 @@ import { TableOfContentComponent } from './components/blog-post/table-of-content
     FaqsComponent,
     FooterComponent,
     TableOfContentComponent,
+    DisclaimerComponent,
   ],
   imports: [
     CommonModule,
@@ -145,6 +147,7 @@ import { TableOfContentComponent } from './components/blog-post/table-of-content
     MobileAppLinkComponent,
     MailingListNewComponent,
     FaqsComponent,
+    DisclaimerComponent,
   ],
 })
 export class SharedModule {}
