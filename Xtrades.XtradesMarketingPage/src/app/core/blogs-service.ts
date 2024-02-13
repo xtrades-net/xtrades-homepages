@@ -386,6 +386,27 @@ export class BlogPostsService {
         'Key Features Of XTrades And TraderSync: A Side-By-Side Comparison',
       ],
     },
+    {
+      id: '31',
+      url: 'stock-and-options-trading-journal',
+      snippet: `A stock trading journal is a tool to keep track of the trades you make in order to explore where you are most profitable in your stock or options trade!`,
+      href: '/blogs/stock-and-options-trading-journal',
+      date: '13.02.2024',
+      title: 'Stock & Options Trading Journal',
+      image: 'assets/blogs/default-img.svg',
+      author: 'Marciokoko',
+      autorLink: 'https://app.xtrades.net/profile/marciokoko',
+      initials: 'MC',
+      duration: Utils.getDuration(1912),
+      tableOfContent: [
+        'What should a Stock or Options Trading Journal have?',
+        'Data Points for a successful Trading Tracker System',
+        'Free Options Trading Tracker Features: Profit % Leaderboard',
+        'Using the Trading Journal Leaderboard Tracker to Find Winning Trades',
+        'Boost Your Options Trading Performance Using a Trading Journal & Analyzing the Data',
+        'Why should I use stock trading journal software? Final Thoughts'
+      ],
+    },
   ].reverse();
 
   constructor() {}

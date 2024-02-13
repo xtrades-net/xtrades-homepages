@@ -1068,6 +1068,39 @@ export class Title_Description {
             }`,
       ],
     },
+    // 31-blog
+    {
+      Path: 'stock-and-options-trading-journal',
+      Title: 'Stock & Options Trading Journal',
+      Des: 'A stock trading journal is a tool to keep track of the trades you make in order to explore where you are most profitable in your stock or options trade!',
+      Spt: [
+        `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+                "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.xtrades.net/blogs/stock-and-options-trading-journal"
+                },
+            "headline": "Stock & Options Trading Journal",
+            "description": "A stock trading journal is a tool to keep track of the trades you make in order to explore where you are most profitable in your stock or options trade!",
+            "image": "",
+            "author": {
+                "@type": "Person",
+                "name": "Marciokoko",
+                "url": "https://app.xtrades.net/profile/marciokoko"
+                },        
+            "publisher": {
+                "@type": "Organization",
+                "name": "Xtrades",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.xtrades.net/blogs"
+                    }
+                },
+            "datePublished": "2024-02-13"
+            }`,
+      ],
+    },
   ];
 
   public static blogPageScript = `{
