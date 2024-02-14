@@ -10,8 +10,9 @@ import { SubscriptionService } from '@core/subscription.service';
 export class FooterComponent implements OnInit {
   isSubscribed = false;
   isLoading = false;
-  @Input() backgroundColor: string = '';
+  @Input() visibleDisclaimer = false;
   @Input() withEmail = false;
+  @Input() theme = 'dark-theme';
 
   constructor(
     private subscriptionService: SubscriptionService,

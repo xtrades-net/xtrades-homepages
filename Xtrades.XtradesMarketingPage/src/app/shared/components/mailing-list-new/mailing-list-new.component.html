@@ -2,6 +2,7 @@
   class="email"
   [formGroup]="form"
   [style.width]="width"
+  [ngClass]="theme"
   [style.height]="height"
   [style.max-width]="'90vw !important'"
 >
@@ -13,11 +14,7 @@
     [style.height]="height"
     [style.width]="'100%'"
     [style.line-height]="height"
-  /><button
-    [style.background]="buttonBackground"
-    [style.width]="buttonWidth"
-    (click)="onSubmit()"
-  >
+  /><button [style.width]="buttonWidth" (click)="onSubmit()">
     {{ buttonText }}
   </button>
 </div>
@@ -30,7 +27,7 @@
   </div>
 </div>
 
-<div class="already-subscribed-wrap" >
+<div class="already-subscribed-wrap">
   <div class="already-subscribed" *ngIf="alreadySubscribed">
     You've already subscribed. Thanks!
   </div>
