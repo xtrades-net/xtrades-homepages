@@ -3,6 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
+  },
+  {
     path: 'pro-algo',
     loadChildren: () =>
       import('./pages/pro-algo/pro-algo.module').then((m) => m.ProAlgoModule),
@@ -13,11 +18,6 @@ const routes: Routes = [
       import('./pages/crowdfunding-raise/crowdfunding-raise.module').then(
         (m) => m.CrowdfundingRaiseModule
       ),
-  },
-  {
-    path: '',
-    loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'refund-policy',
