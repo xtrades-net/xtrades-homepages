@@ -203,23 +203,6 @@ input {
   &:focus-visible {
     outline: none;
   }
-
-  &::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    //color: #ffffff;
-    //opacity: 1;
-    /* Firefox */
-  }
-
-  &:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    //color: var(--x-text-gray-placeholder);
-  }
-
-  &::-ms-input-placeholder {
-    /* Microsoft Edge */
-    //color: var(--x-text-gray-placeholder);
-  }
 }
 
 .inactive-scroll {
