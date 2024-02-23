@@ -1,159 +1,168 @@
-<app-header></app-header>
-<div class="content column">
-  <div class="top-block">
-    <div class="top-block__item">
-      <div data-aos="fade-up">
-        <h1 class="header">
-          Invest in the Future of Trader Collaboration <br />
-        </h1>
-        <span style="font-size: 28px; font-weight: 300"
-          >at the ground floor</span
+<div class="wrap">
+  <app-header></app-header>
+  <div class="content column">
+    <div class="top-block">
+      <div class="top-block__item">
+        <div data-aos="fade-up">
+          <h1 class="header">
+            Invest in the Future of Trader Collaboration <br />
+          </h1>
+          <span style="font-size: 28px; font-weight: 300"
+            >at the ground floor</span
+          >
+        </div>
+        <div class="desc" data-aos="fade-right">
+          <div>
+            We're looking to present an opportunity directly TO the members that
+            believe in us, the ability to invest in a growing startup catering
+            to trader collaboration and interaction.
+          </div>
+          <div>
+            If you believe this is a growing market, and there is a community
+            online that needs to be catered to, then this might be an
+            opportunity for you to work with us.
+          </div>
+          <div>
+            At Xtrades, we're proud to reward the users that contribute and
+            helped grow our social network from the inside out.
+            <ul>
+              <li>Founding Members</li>
+              <li>Current Members</li>
+              <li>Lifetime Members</li>
+            </ul>
+            will all receive priority access to the fundraise, with the ability
+            to receive up to 92% bonus shares depending on initiative to invest,
+            capital allocation, and loyalty/qualifications based on Xtrades
+            status.
+          </div>
+        </div>
+        <a
+          class="join-link"
+          href="https://forms.gle/3ovRD3LKCcDLG9LU9"
+          target="_blank"
+          >Join Waitlist</a
         >
       </div>
-      <div class="desc" data-aos="fade-right">
-        <div>
-          We're looking to present an opportunity directly TO the members that
-          believe in us, the ability to invest in a growing startup catering to
-          trader collaboration and interaction.
-        </div>
-        <div>
-          If you believe this is a growing market, and there is a community
-          online that needs to be catered to, then this might be an opportunity
-          for you to work with us.
-        </div>
-        <div>
-          At Xtrades, we're proud to reward the users that contribute and helped
-          grow our social network from the inside out.
-          <ul>
-            <li>Founding Members</li>
-            <li>Current Members</li>
-            <li>Lifetime Members</li>
-          </ul>
-          will all receive priority access to the fundraise, with the ability to
-          receive up to 92% bonus shares depending on initiative to invest,
-          capital allocation, and loyalty/qualifications based on Xtrades
-          status.
-        </div>
-      </div>
-      <a
-        class="join-link"
-        href="https://forms.gle/3ovRD3LKCcDLG9LU9"
-        target="_blank"
-        >Join Waitlist</a
-      >
+      <div class="top-block__item last"></div>
     </div>
-    <div class="top-block__item last"></div>
-  </div>
-  <app-separator></app-separator>
-  <div class="advantages-wrap">
-    <div class="title">
-      How does Xtrades Save Financial Hobbyists Money and Time?
-    </div>
-    <div class="steps-wrap">
-      <div
-        *ngFor="let _ of [1, 2, 3, 4, 5]; let i = index"
-        class="step"
-        data-aos="flip-left"
-        [ngStyle]="{
-          'background-image': 'url(assets/fundraising/step-' + (i + 1) + '.svg)'
-        }"
-      ></div>
-    </div>
-    <div class="steps-content-wrap">
-      <div
-        *ngFor="let step of stepContent; let i = index"
-        class="step-content"
-        data-aos="fade-up"
-      >
-        <div class="step-count">0{{ i + 1 }}</div>
-        <div class="step-text">{{ step }}</div>
-      </div>
-    </div>
-  </div>
-  <app-separator></app-separator>
-  <div class="stats-wrap">
-    <div class="stats-list" data-aos="fade-right">
+    <app-separator></app-separator>
+    <div class="advantages-wrap">
       <div class="title">
-        We are a <br />social trading platform that heavily uses A.I. and
-        Machine Learning to benefit our users.
+        How does Xtrades Save Financial Hobbyists Money and Time?
       </div>
-      <ul class="list-wrap">
-        <li *ngFor="let item of statsContent">
-          <img src="assets/fundraising/check.svg" alt="Check" /><span>{{
-            item
-          }}</span>
-        </li>
-      </ul>
-    </div>
-    <div class="stats-grid" data-aos="fade-left"><div class="image"></div></div>
-  </div>
-  <div class="offers-wrap">
-    <div class="offers" data-aos="fade-right">
-      <div class="title">Xtrades Offers</div>
-      <div class="grid">
-        <div *ngFor="let item of offersList">
-          <div
-            class="image"
-            [style.background-image]="'url(' + item.img + ')'"
-          ></div>
-          <div class="text">{{ item.value }}</div>
+      <div class="steps-wrap">
+        <div
+          *ngFor="let _ of [1, 2, 3, 4, 5]; let i = index"
+          class="step"
+          data-aos="flip-left"
+          [ngStyle]="{
+            'background-image':
+              'url(assets/fundraising/step-' + (i + 1) + '.svg)'
+          }"
+        ></div>
+      </div>
+      <div class="steps-content-wrap">
+        <div
+          *ngFor="let step of stepContent; let i = index"
+          class="step-content"
+          data-aos="fade-up"
+        >
+          <div class="step-count">0{{ i + 1 }}</div>
+          <div class="step-text">{{ step }}</div>
         </div>
       </div>
     </div>
-    <div class="streams" data-aos="fade-left">
-      <div class="title">Unlimited Revenue Streams</div>
-      <div class="grid">
-        <div class="grid-item" *ngFor="let item of streamsList">
-          <div
-            class="image"
-            [style.background-image]="'url(' + item.img + ')'"
-          ></div>
-          <div class="text">{{ item.value }}</div>
+    <app-separator></app-separator>
+    <div class="stats-wrap">
+      <div class="stats-list" data-aos="fade-right">
+        <div class="title">
+          We are a <br />social trading platform that heavily uses A.I. and
+          Machine Learning to benefit our users.
+        </div>
+        <ul class="list-wrap">
+          <li *ngFor="let item of statsContent">
+            <img src="assets/fundraising/check.svg" alt="Check" /><span>{{
+              item
+            }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="stats-grid" data-aos="fade-left">
+        <div class="image"></div>
+      </div>
+    </div>
+    <div class="offers-wrap">
+      <div class="offers" data-aos="fade-right">
+        <div class="title">Xtrades Offers</div>
+        <div class="grid">
+          <div *ngFor="let item of offersList">
+            <div
+              class="image"
+              [style.background-image]="'url(' + item.img + ')'"
+            ></div>
+            <div class="text">{{ item.value }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="streams" data-aos="fade-left">
+        <div class="title">Unlimited Revenue Streams</div>
+        <div class="grid">
+          <div class="grid-item" *ngFor="let item of streamsList">
+            <div
+              class="image"
+              [style.background-image]="'url(' + item.img + ')'"
+            ></div>
+            <div class="text">{{ item.value }}</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="testimonials-wrap">
-  <div class="testimonials" data-aos="fade-up">
-    <div class="testimonials-content">
-      <div class="title">Testimonials</div>
-      <div class="slide">
-        <app-text-slider
-          [testimonials]="testimonials"
-          [type]="slider"
-        ></app-text-slider>
+  <div class="testimonials-wrap">
+    <div class="testimonials" data-aos="fade-up">
+      <div class="testimonials-content">
+        <div class="title">Testimonials</div>
+        <div class="slide">
+          <app-text-slider
+            [testimonials]="testimonials"
+            [type]="slider"
+          ></app-text-slider>
+        </div>
       </div>
+      <div class="testimonials-image"></div>
     </div>
-    <div class="testimonials-image"></div>
   </div>
-</div>
-<div class="content">
-  <div
-    class="title"
-    style="text-align: center; margin-top: 52px; margin-bottom: 40px"
+  <div class="content">
+    <div
+      class="title"
+      style="text-align: center; margin-top: 52px; margin-bottom: 40px"
+    >
+      RoyBaty Machine Learning Model
+    </div>
+    <div class="machine-learning" data-aos="flip-right"></div>
+    <div class="manifest">
+      <div class="text" data-aos="flip-left">
+        <div class="text-top-block">
+          <div class="title">Metcalfes Law</div>
+          <div class="text-content">
+            Our company thrives on the metcalfes law theory. A network effect
+            waiting to happen as we continuously build features around A.I. and
+            Machine Learning that perform better with larger samples of retail
+            trading data
+          </div>
+        </div>
+        <div class="text-bottom-block">
+          <div class="dot"></div>
+          non-profitable mfi
+        </div>
+      </div>
+      <div class="image" data-aos="flip-right"></div>
+    </div>
+  </div>
+  <app-footer-new
+    [theme]="'dark-theme'"
+    [withEmail]="true"
+    [visibleDisclaimer]="true"
   >
-    RoyBaty Machine Learning Model
-  </div>
-  <div class="machine-learning" data-aos="flip-right"></div>
-  <div class="manifest">
-    <div class="text" data-aos="flip-left">
-      <div class="text-top-block">
-        <div class="title">Metcalfes Law</div>
-        <div class="text-content">
-          Our company thrives on the metcalfes law theory. A network effect
-          waiting to happen as we continuously build features around A.I. and
-          Machine Learning that perform better with larger samples of retail
-          trading data
-        </div>
-      </div>
-      <div class="text-bottom-block">
-        <div class="dot"></div>
-        non-profitable mfi
-      </div>
-    </div>
-    <div class="image" data-aos="flip-right"></div>
-  </div>
+  </app-footer-new>
 </div>
-<app-footer-new [backgroundColor]="'#263247'" [withEmail]="true">
-</app-footer-new>

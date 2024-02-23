@@ -19,14 +19,13 @@
   }
 
   &:hover {
-    color: #fff !important;
+    color: rgba(193, 209, 150, 0.262);
 
     &:before {
       opacity: 1;
     }
   }
 }
-
 
 .scroller {
   overflow-y: scroll;

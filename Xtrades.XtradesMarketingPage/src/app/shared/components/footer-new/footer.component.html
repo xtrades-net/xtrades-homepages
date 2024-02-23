@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" [ngClass]="theme">
   <div class="wrapper">
     <div class="mail-box">
       <h6 class="title">Join Our Mailing List</h6>
@@ -7,7 +7,7 @@
           [width]="'680px'"
           [height]="'67px'"
           [buttonWidth]="'120px'"
-          [buttonBackground]="'url(assets/blogs/send-bg.svg)'"
+          [theme]="theme"
           [buttonText]="'SEND'"
         ></app-mailing-list-new>
         <h3 class="success-message" *ngIf="isSubscribed">
@@ -38,7 +38,7 @@
         Privacy Policy
       </button>
     </div>
-    <app-disclaimer></app-disclaimer>
+    <app-disclaimer *ngIf="visibleDisclaimer"></app-disclaimer>
     <div class="copyright-wrapper">
       <span>© Copyright 2024 - Xtrades. All rights reserved.</span>
       <div class="social">
