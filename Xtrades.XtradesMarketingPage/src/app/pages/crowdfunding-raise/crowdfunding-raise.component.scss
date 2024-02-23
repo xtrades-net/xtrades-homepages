@@ -1,5 +1,10 @@
 @import "../../../styles/vars";
 
+.wrap {
+  background: linear-gradient(180deg, #1e4783 0%, #0c274f 24.38%);
+  color: #f4f9ff;
+  display: block;
+}
 .title {
   font-size: 36px;
   font-style: normal;

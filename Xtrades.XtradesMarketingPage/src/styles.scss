@@ -71,7 +71,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-display: swap;
-  background-color: var(--brand-black);
+  background-color: #081b31;
   color: var(--white);
   --x-button-padding: 1.125em 1.825em;
   --x-button-font-size: 1em;
@@ -202,23 +202,6 @@ input {
 
   &:focus-visible {
     outline: none;
-  }
-
-  &::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #ffffff;
-    //opacity: 1;
-    /* Firefox */
-  }
-
-  &:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: var(--x-text-gray-placeholder);
-  }
-
-  &::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: var(--x-text-gray-placeholder);
   }
 }
 

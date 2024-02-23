@@ -45,6 +45,6 @@ export class ModalComponent implements OnInit, OnDestroy {
   close(): void {
     this.element.style.display = 'none';
     document.body.classList.remove('modal-open');
-    document.querySelectorAll('video').forEach(vid => vid.pause());
+    document.querySelectorAll('video').forEach((vid) => vid.pause());
   }
 }

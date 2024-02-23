@@ -5,9 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./layouts/main-layout/main-layout.module').then(
-        (m) => m.MainLayoutModule
-      ),
+      import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'pro-algo',
@@ -17,8 +15,65 @@ const routes: Routes = [
   {
     path: 'crowdfunding',
     loadChildren: () =>
-      import('./layouts/promo-layout/promo-layout.module').then(
-        (m) => m.PromoLayoutModule
+      import('./pages/crowdfunding-raise/crowdfunding-raise.module').then(
+        (m) => m.CrowdfundingRaiseModule
+      ),
+  },
+  {
+    path: 'refund-policy',
+    loadChildren: () =>
+      import('./pages/refundpolicy/refundpolicy.module').then(
+        (m) => m.RefundPolicyModule
+      ),
+  },
+  {
+    path: 'privacy-policy',
+    loadChildren: () =>
+      import('./pages/privacypolicy/privacypolicy.module').then(
+        (m) => m.PrivacyPolicyModule
+      ),
+  },
+  {
+    path: 'terms-and-conditions',
+    loadChildren: () =>
+      import('./pages/terms-and-conditions/terms-and-conditions.module').then(
+        (m) => m.TermsAndConditionsModule
+      ),
+  },
+  {
+    path: 'plans',
+    loadChildren: () =>
+      import('./pages/membership/membership.module').then(
+        (m) => m.MembershipModule
+      ),
+  },
+  {
+    path: 'blogs',
+    loadChildren: () =>
+      import('./pages/blogs/blogs.module').then((m) => m.BlogsModule),
+  },
+  {
+    path: 'militarydiscount',
+    loadChildren: () =>
+      import('./pages/discount/discount.module').then((m) => m.DiscountModule),
+  },
+  {
+    path: 'ourtraders',
+    loadChildren: () =>
+      import('./pages/ourtraders/ourtraders.module').then(
+        (m) => m.OurTradersModule
+      ),
+  },
+  {
+    path: 'elite-products',
+    loadChildren: () =>
+      import('./pages/products/products.module').then((m) => m.ProductsModule),
+  },
+  {
+    path: 'confirmation',
+    loadChildren: () =>
+      import('./pages/confirmation/confirmation.module').then(
+        (m) => m.ConfirmationModule
       ),
   },
   { path: '**', redirectTo: '' },

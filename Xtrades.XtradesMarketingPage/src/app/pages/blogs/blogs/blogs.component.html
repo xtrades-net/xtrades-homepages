@@ -8,9 +8,7 @@
         Xtrades. Our blog is your go-to resource for insightful analysis, market
         trends, and expert perspectives that can empower your trading decisions.
       </div>
-      <app-mailing-list-new
-        [buttonBackground]="'url(assets/blogs/submit.svg)'"
-      ></app-mailing-list-new>
+      <app-mailing-list-new></app-mailing-list-new>
     </div>
     <div class="top-block__item last">
       <app-blog-card
@@ -20,7 +18,10 @@
       ></app-blog-card>
     </div>
   </div>
-  <div class="flex responsive-main-container blogs__blog-posts" *ngIf="blogPosts.length">
+  <div
+    class="flex responsive-main-container blogs__blog-posts"
+    *ngIf="blogPosts.length"
+  >
     <app-blog-card
       *ngFor="let blogPost of blogs; let i = index"
       class="blogs__blog-post"
@@ -46,10 +47,5 @@
     </div>
   </app-modal>
 </div>
-<app-footer-new
-  data-aos-offset="130"
-  data-aos-delay="90000"
-  [backgroundColor]="'#263247'"
-  [withEmail]="true"
->
+<app-footer-new data-aos-offset="130" data-aos-delay="90000" [withEmail]="true">
 </app-footer-new>

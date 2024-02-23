@@ -2,9 +2,7 @@
   max-width: 99%;
 }
 .email {
-  border: 1px solid #00ede6;
   border-radius: 10px;
-  background-color: #050f1b;
   display: flex;
   justify-content: space-between;
 
@@ -12,7 +10,6 @@
     background-color: transparent;
     outline: none;
     border: none;
-    color: #fff;
     padding: 22px;
     font-size: 14px;
     font-style: normal;
@@ -44,4 +41,27 @@
   padding: 1em 0;
   height: 2em;
   margin-bottom: 32px;
+}
+
+.dark-theme {
+  border: 1px solid #00ede6;
+  background-color: #081b31;
+  input {
+    color: #ffffff;
+  }
+  button {
+    background: url("../../../../assets/blogs/send-bg.svg") center/cover
+      no-repeat;
+  }
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #445a63;
+  input {
+    color: #445a63;
+  }
+  button {
+    background: linear-gradient(214deg, #19c7f2 0%, #00a5ea 100%);
+  }
 }

@@ -9,8 +9,6 @@
 }
 
 .footer {
-  background: #263247;
-
   .mail-box {
     padding: 49px 0 0px 100px;
     border-bottom: 1px solid rgba(96, 96, 96, 0.5);
@@ -19,7 +17,6 @@
       font-weight: 600;
       font-size: 24px;
       line-height: 16px;
-      color: #ffffff;
       margin: 0 0 45px;
     }
 
@@ -84,7 +81,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    color: #ffffff;
     white-space: nowrap;
 
     .link-wrapper {
@@ -96,7 +92,6 @@
     button,
     a {
       text-decoration: none;
-      color: #ffffff;
       cursor: pointer;
     }
   }
@@ -105,12 +100,11 @@
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    color: #ffffff;
     font-weight: 300;
     margin-top: 40px;
     .social {
       display: flex;
-      gap: 20px;
+      gap: 10px;
       align-items: center;
       padding-bottom: 42px;
       @media (max-width: $md) {
@@ -156,5 +150,35 @@
       gap: 20px;
       text-align: center;
     }
+  }
+}
+.dark-theme {
+  background-color: #263247;
+  color: #ffffff;
+  a,
+  button {
+    color: #ffffff;
+  }
+}
+.light-theme {
+  background-color: #f8f9fd;
+  color: #445a63;
+  .link-wrapper,
+  .copyright-wrapper {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    span {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+
+  a,
+  button {
+    color: #263247;
   }
 }
