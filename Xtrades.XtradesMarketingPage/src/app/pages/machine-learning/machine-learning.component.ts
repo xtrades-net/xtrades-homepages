@@ -12,4 +12,8 @@ export class MachineLearningComponent {
   openModal() {
     this.isModalShown = true;
   }
+
+  navigateToPlans(): void {
+    window.open('https://app.xtrades.net/plans', '_blank');
+  }
 }

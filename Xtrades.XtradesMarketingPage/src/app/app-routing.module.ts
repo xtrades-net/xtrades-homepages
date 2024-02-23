@@ -76,6 +76,13 @@ const routes: Routes = [
         (m) => m.ConfirmationModule
       ),
   },
+  {
+    path: 'mlmodel',
+    loadChildren: () =>
+      import('./pages/machine-learning/machine-learning.module').then(
+        (m) => m.MachineLearningModule
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
 
