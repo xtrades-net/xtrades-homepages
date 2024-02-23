@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="wrap">
+  <div class="wrapper">
+    <div class="title">Machine Learning Model Algo Signals</div>
+    <div class="subtitle">$50/month or $15 with Elite Membership.</div>
+    <div class="content">
+      <p>
+        Our machine learning algorithm is a formula we’ve developed that
+        crowdsourced 300K+ trades to learn and determine its own selection of
+        high probability trades. With this formula, it will provide a Silver or
+        Gold Checkmark, which indicates it’s likening for a trade. Gold being
+        more favorable than silver, but also coming less frequently.
+      </p>
+      <p>
+        This isn’t financial advice, nor is it something you should 100% put
+        your money into. This is simply an assisting data science driven
+        indication system that theoretically has a 72% win rate with 14% average
+        gain per trade according to our 284 trade sample that operated via a
+        bearmarket
+      </p>
+      <p>
+        Our bot also has a profit taking protection system to remain risk averse
+        and preserving to wins.
+      </p>
+      <p>
+        This bot is not something that you can plug your broker into and follow
+        - it’s a visual / manual system that places checkmarks ON signals inside
+        of our Discord. You’d have to be looking atthe Discord’s trades from the
+        Traders in there, and it’s pretty much just a cherry on top.
+      </p>
+      <p>
+        In this example, you can see the trader was provided a Silver Checkmark,
+        which means it’s a good trade, but it can be better (if it had a gold
+        checkmark)
+      </p>
+    </div>
+    <img src="assets/mlmodel/image-1.svg" alt="screenshot" />
+    <p style="margin-top: 40px; margin-bottom: 20px">
+      Here’s an example of a
+      <span style="color: #d39b0b">gold checkmarked</span> trade where the
+      estimated win rate is 80.79%.
+    </p>
+    <img src="assets/mlmodel/image-2.svg" alt="screenshot" />
+    <div class="buttons">
+      <button class="without-elite pointer" (click)="openModal()">
+        Sign Up without Elite
+      </button>
+      <button class="with-elite pointer">Sign Up with Elite</button>
+    </div>
+  </div>
+  <app-footer-new [theme]="'light-theme'"></app-footer-new>
+</div>
+<app-default-modal
+  [width]="'370px'"
+  [height]="'356px'"
+  [id]="'mlmodel-modal'"
+  *ngIf="isModalShown"
+  (closeModal)="isModalShown = false"
+>
+  <div class="modal">
+    <div class="logo"></div>
+    <div class="title">
+      SIGN UP FOR<br />
+      MACHINE LEARNING MODEL ALGO SIGNAL
+    </div>
+    <div class="content">
+      Login or Signup if you did not have an account yet for Elite plan and
+      Machine Learning model algo signal
+    </div>
+    <div class="buttons">
+      <button class="login-btn pointer">login</button>
+      <button class="elite-signup-btn pointer">signup for elite plan</button>
+    </div>
+  </div></app-default-modal
+>

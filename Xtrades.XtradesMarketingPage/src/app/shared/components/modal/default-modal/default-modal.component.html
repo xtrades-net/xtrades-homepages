@@ -1,0 +1,15 @@
+<div class="modal" data-aos="fade-up">
+  <div
+    class="modal-body"
+    [style.background]="background"
+    [style.width]="width"
+    [style.height]="height"
+    [style.border-radius]="'20px'"
+  >
+    <ng-content></ng-content>
+  </div>
+
+  <div class="close-btn" (click)="close()"></div>
+</div>
+
+<div class="modal__background"></div>
