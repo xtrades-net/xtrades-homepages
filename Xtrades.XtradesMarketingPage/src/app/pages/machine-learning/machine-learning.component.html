@@ -42,10 +42,10 @@
     </p>
     <img src="assets/mlmodel/image-2.svg" alt="screenshot" />
     <div class="buttons">
-      <button class="without-elite pointer" (click)="openModal()">
+      <button class="without-elite pointer" (click)="openModal('', 'signup')">
         Sign Up without Elite
       </button>
-      <button class="with-elite pointer">Sign Up with Elite</button>
+      <button class="with-elite pointer" (click)="showConfirmationModal()">Sign Up with Elite</button>
     </div>
   </div>
   <app-footer-new [theme]="'light-theme'"></app-footer-new>
@@ -68,8 +68,8 @@
       Machine Learning model algo signal
     </div>
     <div class="buttons">
-      <button class="login-btn pointer">login</button>
-      <button class="elite-signup-btn pointer" (click)="navigateToPlans()">signup for elite plan</button>
+      <button class="login-btn pointer" (click)="openModal('', 'signup')">login</button>
+      <button class="elite-signup-btn pointer" (click)="openModal('plans', 'elitealgo')">signup for elite plan</button>
     </div>
   </div></app-default-modal
 >
