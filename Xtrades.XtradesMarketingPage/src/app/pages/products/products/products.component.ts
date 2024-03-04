@@ -27,12 +27,12 @@ export class ProductsComponent implements OnInit, AfterViewInit {
   @Input() isMobile: boolean = false;
 
   productsPages: any = [
-    // {
-    //   name: 'Machine Learning Model',
-    //   url: '/mlmodel',
-    //   color: 'rgb(199, 206, 142)',
-    //   backgroundColor: 'rgba(193, 209, 150, 0.14)',
-    // },
+    {
+      name: 'Machine Learning Model',
+      url: '/mlmodel',
+      color: 'rgb(199, 206, 142)',
+      backgroundColor: 'rgba(193, 209, 150, 0.14)',
+    },
     {
       name: 'ThinkorSwim Scripts',
       url: 'https://tools.xtrades.net/thinkorswim-scripts',

@@ -9,7 +9,11 @@ export class MachineLearningComponent {
   public isModalShown = false;
   constructor() {}
 
-  openModal() {
+  showConfirmationModal() {
     this.isModalShown = true;
+  }
+
+  openModal(path: string, param: string): void {
+    window.open(`https://app.xtrades.net/${path}?modal=${param}`, '_blank');
   }
 }
