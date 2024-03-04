@@ -9,6 +9,7 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
 import { VideoModalComponent } from './video-modal/video-modal.component';
 import { ThankYouModalComponent } from './thank-you-modal/thank-you-modal.component';
+import { DefaultModalComponent } from './default-modal/default-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ThankYouModalComponent } from './thank-you-modal/thank-you-modal.compon
     ErrorModalComponent,
     VideoModalComponent,
     ThankYouModalComponent,
+    DefaultModalComponent,
   ],
   exports: [
     ModalComponent,
@@ -24,6 +26,7 @@ import { ThankYouModalComponent } from './thank-you-modal/thank-you-modal.compon
     ErrorModalComponent,
     VideoModalComponent,
     ThankYouModalComponent,
+    DefaultModalComponent,
   ],
   imports: [
     CommonModule,
