@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { IntercomService } from '@core/services/intercom.service';
+import { ModalService } from '@shared/components/modal/modal.service';
 import * as AOS from 'aos';
 
 declare global {
@@ -14,7 +16,10 @@ declare global {
 export class AppComponent implements OnInit, OnDestroy {
   title = 'homepage';
 
-  constructor() {}
+  constructor(
+    private intercomService: IntercomService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit() {
     AOS.init({
@@ -23,15 +28,23 @@ export class AppComponent implements OnInit, OnDestroy {
       offset: 40,
       once: true,
     });
-    window.Intercom('boot', {
-      app_id: "kz9zp2wu",
-      //email: '',
-      // user_id: 'Xtrades Homepage User',
-      //created_at: new Date(),
-    });
+
+    this.intercomService.init();
+
+    setTimeout(() => {
+      this.intercomService.show();
+    }, 30000);
   }
 
-  ngOnDestroy(){
-    window.Intercom('shutdown');
+  openErrorModal() {
+    this.modalService.open('error-modal');
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
+  }
+
+  ngOnDestroy(): void {
+    this.intercomService.shutdown();
   }
 }

@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div class="router-outlet" appInactivity minHeight>
+  <router-outlet></router-outlet>
+</div>
+
+<app-subscribe-modal
+  [modalId]="'subscribe-modal'"
+  (triggerCloseModal)="closeModal($event)"
+></app-subscribe-modal>
+<app-error-modal
+  [modalId]="'error-modal'"
+  (triggerCloseModal)="closeModal($event)"
+></app-error-modal>
+<!-- <app-bottom-social-nav></app-bottom-social-nav> -->

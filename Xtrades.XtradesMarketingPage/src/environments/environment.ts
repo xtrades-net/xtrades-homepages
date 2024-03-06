@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  intercomID: 'kz9zp2wu',
+  storageBaseUrl: 'https://xtradescoreprod.blob.core.windows.net',
 };
 
 /*
