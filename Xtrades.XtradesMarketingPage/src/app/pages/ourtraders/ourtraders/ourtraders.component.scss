@@ -18,6 +18,8 @@
 
     .scroller {
       max-height: 10000px;
+      flex-grow: 0;
+      flex-shrink: 0;
     }
 
     .small,
@@ -26,6 +28,7 @@
     }
 
     .small {
+      display: flex;
       flex-direction: row;
       overflow-x: auto;
       overflow-y: hidden;
@@ -109,12 +112,19 @@
   }
 }
 
-.profile-text {
-  padding: 15px;
+.role {
+  padding: 0px 5px;
 }
 
-.small {
-  width: 30%;
+.role:hover {
+  transition: color 0.15s ease-in-out;
+  color: #fff !important;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-text {
+  padding: 15px;
 }
 
 .huge {
@@ -141,4 +151,41 @@
 
 .align-center {
   align-items: center;
+}
+
+.role-0 {
+  color: rgb(241, 196, 15);
+  background-color: rgba(241, 196, 15, 0.1);
+}
+.role-1 {
+  color: rgb(41, 255, 181);
+  background-color: rgba(41, 255, 181, 0.1);
+}
+.role-2 {
+  color: rgb(152, 255, 232);
+  background-color: rgba(152, 255, 232, 0.1);
+}
+.role-3 {
+  color: rgb(80, 184, 151);
+  background-color: rgba(80, 184, 151, 0.1);
+}
+.role-4 {
+  color: rgb(186, 251, 132);
+  background-color: rgba(186, 251, 132, 0.1);
+}
+.role-5 {
+  color: rgb(134, 230, 177);
+  background-color: rgba(134, 230, 177, 0.1);
+}
+.role-6 {
+  color: rgb(124, 173, 212);
+  background-color: rgba(124, 173, 212, 0.1);
+}
+.role-7 {
+  color: rgb(194, 160, 134);
+  background-color: rgba(194, 160, 134, 0.1);
+}
+.trader-icon {
+  width: 24px;
+  height: 24px;
 }

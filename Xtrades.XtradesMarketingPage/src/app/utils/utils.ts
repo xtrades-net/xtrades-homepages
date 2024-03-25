@@ -1,3 +1,5 @@
+import { environment } from '@environments/environment';
+
 export class Utils {
   static isDevOrLocalhost() {
     return (
@@ -15,8 +17,8 @@ export class Utils {
     return parts.length === 2 ? parts.pop()?.split(';').shift() : '';
   }
 
-  static getDuration(wordsCount:number):number{
-    return Math.trunc(0.25 * wordsCount / 60);
+  static getDuration(wordsCount: number): number {
+    return Math.trunc((0.25 * wordsCount) / 60);
   }
 
   static validationError(data: any) {
@@ -27,5 +29,22 @@ export class Utils {
       });
     });
     return result;
+  }
+
+  static async getImageUrl(
+    userId: string,
+    defaultUrl: string = 'assets/missing-avatar.png'
+  ): Promise<string> {
+    try {
+      const url = `${environment.storageBaseUrl}/avatars/${userId}.png`;
+      const response = await fetch(url);
+      if (response.ok) {
+        return url;
+      } else {
+        return defaultUrl;
+      }
+    } catch (err) {
+      return defaultUrl;
+    }
   }
 }
