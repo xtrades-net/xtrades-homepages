@@ -60,7 +60,6 @@ export class OurTradersComponent implements OnInit, AfterViewInit {
           });
         });
         this.traders = this.allRoles[0].traders;
-        console.log(this.traders);
       }
     });
   }

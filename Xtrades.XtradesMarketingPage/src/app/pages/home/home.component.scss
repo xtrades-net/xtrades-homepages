@@ -360,33 +360,32 @@ ol {
   padding-top: 24px;
 }
 
-.promo-wrapper {
+.promo {
   width: 1243px;
-  min-height: 113px;
   max-width: 100%;
   height: fit-content;
-  background-color: white;
   top: 140px;
   margin: 0 auto;
   margin-top: 70px;
+  @media (max-width: $xs) {
+    position: absolute;
+    z-index: 8;
+    top: 725px;
+    width: 100vw;
+    left: 0;
+    margin: 0 auto;
+    margin-top: 41px;
+  }
+}
+.promo-wrapper {
+  width: 100%;
   border-radius: 6px;
   padding: 20px 20px 25px 20px;
   background: url("../../../assets/promo.svg") center/cover no-repeat;
   @media (max-width: $sl) {
     background: url("../../../assets/promo-mob.svg") center/cover no-repeat;
   }
-  @media (max-width: 375px) {
-    position: absolute;
-    z-index: 8;
-    top: 725px;
-    width: 100vw;
-    left: 0;
-    height: 78px;
-    max-height: 78px;
-    min-height: 78px;
-    background-color: white;
-    margin: 0 auto;
-    margin-top: 41px;
+  @media (max-width: $xs) {
     padding: 11px 20px;
     border-radius: 0px;
     background: url("../../../assets/promo-mob.svg") center/cover no-repeat;
@@ -400,7 +399,7 @@ ol {
     font-style: normal;
     font-weight: 600;
     line-height: 30px;
-    @media (max-width: 375px) {
+    @media (max-width: $xs) {
       color: #060e1f;
       font-size: 14px;
       font-style: normal;
@@ -408,6 +407,7 @@ ol {
       line-height: 18px;
       text-align: left;
       margin-bottom: 0;
+      line-height: 16px;
     }
   }
   .promo-sub-text {
@@ -418,8 +418,10 @@ ol {
     line-height: 30px;
     margin: 0 auto;
     text-align: center;
-    @media (max-width: 375px) {
+    @media (max-width: $xs) {
       text-align: left;
+      line-height: 14px;
+      font-size: 14px;
     }
     .apply {
       color: #081b31;
@@ -430,7 +432,7 @@ ol {
       line-height: 30px;
       letter-spacing: 1.6px;
       text-transform: uppercase;
-      @media (max-width: 375px) {
+      @media (max-width: $xs) {
         text-align: left;
         color: #081b31;
         font-size: 12px;
@@ -442,7 +444,7 @@ ol {
       }
     }
     .apply-text {
-      @media (max-width: 375px) {
+      @media (max-width: $xs) {
         display: none;
       }
     }
